@@ -1,0 +1,22 @@
+# Site navigation links
+
+- title: Articles
+  url: /articles/
+  excerpt: "My blog"
+  image:
+
+- title: Projects
+  url: 
+  excerpt:
+  image:
+
+- title: Archives
+  url: /archives/
+  excerpt:
+  image:
+
+- title: About
+  url:  /about/
+  excerpt:
+  image:
+

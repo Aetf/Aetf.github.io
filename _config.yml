@@ -1,0 +1,44 @@
+# Site wide configuration
+title: Unlimited Code Works
+subtitle: A pessimist because of intelligence, but an optimist because of will.
+description: Personal site for Aetf
+logo: # 120x120 px default image used for Twitter summary card
+teaser: # 400x250 px default teaser image used in image archive grid
+locale: zh-CN
+url:
+
+# Default settings for posts
+defaults:
+    -
+      scope:
+        path: ""
+        type: "posts"
+      values:
+        comments: true
+        share: false
+
+# Site owner
+owner:
+  name: Aetf
+  email: aetf@unlimitedcodeworks.xyz
+  twitter:
+  google:
+    ad-client: 
+    ad-slot: 
+  bio: 
+  avatar: bio-photo.jpg # 160x160 px image for author byline
+
+# Plugin settings
+disqus-shortname: unlimitedcodeworks
+
+# Jekyll configuration
+sass:
+    sass_dir: _sass
+    style: compressed
+permalink: /:categories/:title/
+markdown: kramdown
+highlighter: pygments
+gems:
+  - jekyll-sitemap
+include: ["_pages"]
+exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]
