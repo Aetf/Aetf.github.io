@@ -1,0 +1,63 @@
+{
+          "folders":
+          [
+                    {
+                               "path": "_posts",
+                               "name": "Posts",
+                               "follow_symlinks": true
+                    },
+                    {
+                               "path": "_pages",
+                               "name": "Pages",
+                               "follow_symlinks": true
+                    },
+                    {
+                               "path": "_data",
+                               "name": "Data",
+                               "follow_symlinks": true
+                    },
+                     {
+                               "path": "_includes",
+                               "name": "Includes",
+                               "follow_symlinks": true
+                    },
+                    {
+                               "path": "_layouts",
+                               "name": "Layouts",
+                               "follow_symlinks": true
+                    },
+                    {
+                               "path": "_posts",
+                               "name": "Posts",
+                               "follow_symlinks": true
+                    },
+                    
+                    {
+                               "path": "_templates",
+                               "name": "Templates",
+                               "follow_symlinks": true
+                    },
+                    {
+                               "path": "_sass",
+                               "name": "SASS Files",
+                               "follow_symlinks": true
+                    },
+                    {
+                               "path": "css",
+                               "name": "CSS Files",
+                               "follow_symlinks": true
+                    },
+                    {
+                               "path": "js",
+                               "name": "JS Files",
+                               "follow_symlinks": true
+                    },
+                    {
+                               "path": ".",
+                               "name": "Root",
+                               "follow_symlinks": true,
+                               "file_exclude_patterns": ["*.swp", "CNAME", "Gemfile", "Gemfile.lock", "Gruntfile.js", "*.png", "*.json", "*.ico"],
+                               "folder_exclude_patterns": ["*"]
+                     },
+          ]
+}
