@@ -79,8 +79,18 @@ SOCIAL = (('github', 'http://github.com/Aetf'),)
 #TEMPLATE_PAGES = {'pages/jinja2_template.html': 'jinja2_template.html'}
 
 # Plugins
-PLUGIN_PATHS = ['plugins']
+PLUGIN_PATHS = ['plugins', 'filters']
 PLUGINS = []
+
+# Jinja filters
+def filter_sidebar(value):
+    if value.startswith('archives') or value.startswith('category'):
+        return 'right-sidebar'
+    elif value == 'index':
+        return 'index'
+    else:
+        return 'no-sidebar'
+JINJA_FILTERS = {'sidebar': filter_sidebar}
 
 # code blocks with line numbers
 PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
