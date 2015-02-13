@@ -32,31 +32,33 @@ function alive() {
 }
 
 function shut_down(){
-  PID=$(cat $SRV_PID)
+  PID=$(cat $SRV_PID 2>/dev/null)
   if [[ $? -eq 0 ]]; then
     if alive $PID; then
       echo "Stopping HTTP server"
       kill $PID
     else
-      echo "Stale PID, deleting"
+      echo "Deleting stale PID file for HTTP server"
     fi
     rm $SRV_PID
   else
     echo "HTTP server PIDFile not found"
   fi
 
-  PID=$(cat $PELICAN_PID)
+  PID=$(cat $PELICAN_PID 2>/dev/null)
   if [[ $? -eq 0 ]]; then
     if alive $PID; then
       echo "Killing Pelican"
       kill $PID
     else
-      echo "Stale PID, deleting"
+      echo "Deleting stale PID file for Pelican"
     fi
     rm $PELICAN_PID
   else
     echo "Pelican PIDFile not found"
   fi
+
+  echo 'Pelican and HTTP server processes all stoped.'
 }
 
 function start_up(){

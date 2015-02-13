@@ -3,10 +3,10 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Aetf'
 SITENAME = 'Unlimited Code Works'
-SITEURL = 'http://unlimitedcodeworks.xyz'
+SITEURL = ''
 TIMEZONE = 'Asia/Shanghai'
 
-# can be useful in development, but set to False when you're ready to publish
+# can be useful in development, overrided to False in publishconf.py
 RELATIVE_URLS = True
 
 # File structures
@@ -22,10 +22,6 @@ ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 AUTHOR_SAVE_AS = ''
-IGNORE_FILES = [
-        '*.sublime-project',
-        '*.sublime-workspace',
-        ]
 
 # Theme and related settings
 THEME = 'themes/twenty-pelican-html5up'
@@ -43,10 +39,18 @@ DEFAULT_PAGES_ON_MENU = True
 
 # Feed settings
 FEED_ATOM = None
+FEED_ALL_ATOM = None
+AUTHOR_FEED_ATOM = None
+CATEGORY_FEED_ATOM = None
 FEED_RSS = None
-FEED_DOMAIN = SITEURL
-FEED_ALL_RSS = 'feeds/all.rss.xml'
-CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
+FEED_ALL_RSS = None
+CATEGORY_FEED_RSS = None
+AUTHOR_FEED_RSS = None
+# above disabled for develop, overrided to following values in publishconf.py
+feed_rss = None
+feed_all_rss = 'feeds/all.rss.xml'
+category_feed_rss = 'feeds/%s.rss.xml'
+
 
 # Tag clouds
 TAG_CLOUD_STEPS = 4
@@ -83,13 +87,10 @@ PLUGIN_PATHS = ['plugins', 'filters']
 PLUGINS = []
 
 # Jinja filters
-def filter_sidebar(value):
-    if value.startswith('archives') or value.startswith('category'):
-        return 'right-sidebar'
-    elif value == 'index':
-        return 'index'
-    else:
-        return 'no-sidebar'
+import sys
+import os
+sys.path.append(os.curdir)
+from filters.sidebar import filter_sidebar
 JINJA_FILTERS = {'sidebar': filter_sidebar}
 
 # code blocks with line numbers

@@ -13,8 +13,14 @@ from pelicanconf import *
 SITEURL = 'http://unlimitedcodeworks.xyz'
 RELATIVE_URLS = False
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+try:
+    FEED_ATOM = feed_atom
+    FEED_ALL_ATOM = feed_all_atom
+    CATEGORY_FEED_ATOM = category_feed_atom
+    FEED_RSS = feed_rss
+    FEED_ALL_RSS = feed_all_rss
+    CATEGORY_FEED_RSS = category_feed_rss
+except: pass
 
 DELETE_OUTPUT_DIRECTORY = True
 
