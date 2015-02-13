@@ -15,6 +15,7 @@ PAGE_PATHS = ['pages']
 STATIC_PATHS = [
     'images',
     'extra/robots.txt',
+    'extra/CNAME',
     ]
 ARTICLE_PATHS = ['']
 ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
@@ -64,6 +65,7 @@ DEFAULT_METADATA = (('Author', 'Aetf'),
 # Path-specific metadata
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/CNAME': {'path': 'CNAME'},
     }
 
 # Additional links
