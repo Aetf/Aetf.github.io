@@ -18,11 +18,32 @@ STATIC_PATHS = [
     'extra/CNAME',
     ]
 ARTICLE_PATHS = ['']
+
+# Url structures
 ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
+ARTICLE_LANG_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}-{lang}/'
+ARTICLE_LANG_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}-{lang}/index.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
+PAGE_LANG_URL = '{slug}-{lang}/'
+PAGE_LANG_SAVE_AS = '{slug}-{lang}/index.html'
+CATEGORY_URL = 'category/{slug}/'
+CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+TAG_URL = 'tags/{slug}/'
+TAG_SAVE_AS = 'tags/{slug}/index.html'
+AUTHOR_URL = ''
 AUTHOR_SAVE_AS = ''
+
+YEAR_ARCHIVE_SAVE_AS = ''
+MONTH_ARCHIVE_SAVE_AS = ''
+DAY_ARCHIVE_SAVE_AS = ''
+ARCHIVES_SAVE_AS = 'archives.html'
+AUTHORS_SAVE_AS = ''
+CATEGORIES_SAVE_AS = 'categories.html'
+TAGS_SAVE_AS = 'tags.html'
+#TAGS_SAVE_AS = ''
+INDEX_SAVE_AS = 'index.html'
 
 # Theme and related settings
 THEME = 'themes/twenty-pelican-html5up'
@@ -81,8 +102,6 @@ SOCIAL = (('github', 'http://github.com/Aetf'),)
 
 # custom page generated with a jinja2 template
 #TEMPLATE_PAGES = {'pages/jinja2_template.html': 'jinja2_template.html'}
-
-
 
 # Plugins
 PLUGIN_PATHS = [
