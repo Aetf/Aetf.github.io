@@ -1,17 +1,27 @@
 {
-	"folders":
-	[
-		{
-			"follow_symlinks": true,
-			"path": ".",
+    "folders": [
+        {
+            "follow_symlinks": true,
+            "path": ".",
             "folder_exclude_patterns": [
-                        "__pycache__",
-                        "cache"
+                "__pycache__",
+                "cache"
             ],
             "file_exclude_patterns": [
-                        "*.swp",
-                        "*.pid"
+                "*.swp",
+                "*.pid"
             ]
-		}
-	]
+        }
+    ],
+    "build_systems": [
+        {
+            "cmd": [
+                "python",
+                "-u",
+                "$file"
+            ],
+            "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+            "selector": "source.python"
+        }
+    ]
 }
