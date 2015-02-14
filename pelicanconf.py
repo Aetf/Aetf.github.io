@@ -16,7 +16,7 @@ STATIC_PATHS = [
     'images',
     'extra/robots.txt',
     'extra/CNAME',
-    ]
+]
 ARTICLE_PATHS = ['']
 
 # Url structures
@@ -85,7 +85,7 @@ DEFAULT_METADATA = (('yeah', 'it is'),)
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/CNAME': {'path': 'CNAME'},
-    }
+}
 
 # Additional links
 LINKS = (('Biologeek', 'http://biologeek.org'),
