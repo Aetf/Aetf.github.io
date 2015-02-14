@@ -52,15 +52,13 @@ feed_rss = None
 feed_all_rss = 'feeds/all.rss.xml'
 category_feed_rss = 'feeds/%s.rss.xml'
 
-
 # Tag clouds
 TAG_CLOUD_STEPS = 4
 TAG_CLOUD_MAX_ITEMS = 100
 
 # Global metadata to all the contents
 DEFAULT_DATE = 'fs'
-DEFAULT_METADATA = (('Author', 'Aetf'),
-                    ('yeah', 'it is'),)
+DEFAULT_METADATA = (('yeah', 'it is'),)
 
 # Path-specific metadata
 EXTRA_PATH_METADATA = {
@@ -84,9 +82,26 @@ SOCIAL = (('github', 'http://github.com/Aetf'),)
 # custom page generated with a jinja2 template
 #TEMPLATE_PAGES = {'pages/jinja2_template.html': 'jinja2_template.html'}
 
+
+
 # Plugins
-PLUGIN_PATHS = ['plugins', 'filters']
-PLUGINS = []
+PLUGIN_PATHS = [
+    'plugins',
+]
+PLUGINS = [
+    'cjk_auto_spacing.cjk_auto_spacing',
+    'render_math',
+    'md_yaml.md_yaml.md_yaml',
+    'random_article.random_article',
+    'optimize_images.optimize_images',
+    'related_posts.related_posts',
+]
+# Plugin settings
+# Random article
+RANDOM = 'random.html'
+# Related posts
+RELATED_POSTS_MAX = 5
+#RELATED_POSTS_SKIP_SAME_CATEGORY = True
 
 # Jinja filters
 import sys

@@ -1,0 +1,9 @@
+[submodule "plugins/cjk_auto_spacing"]
+	path = plugins/cjk_auto_spacing
+	url = https://github.com/yuex/cjk-auto-spacing.git
+[submodule "plugins/md_yaml"]
+	path = plugins/md_yaml
+	url = https://github.com/joachimneu/pelican-md-yaml.git
+[submodule "plugins/pelicanfly"]
+	path = plugins/pelicanfly
+	url = https://github.com/bmcorser/pelicanfly.git
