@@ -1,10 +1,13 @@
-.DS_Store
-.hg*
-static/images/f_logo_wht.svg
-static/images/me.jpg
-__pycache__
-cache
+# Output directory
 output/
+
+# Editor files
 *.sublime-workspace
 *.swp
-*.pid
+
+# Python virtual environment
+build-tools/venv/*
+
+# Develop runtime generated files
+build-tools/*.pid
+__pycache__

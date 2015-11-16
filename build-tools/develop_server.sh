@@ -2,21 +2,27 @@
 ##
 # This section should match your Makefile
 ##
-PY=${PY:-python3}
-PELICAN=${PELICAN:-pelican}
+SELFDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BUILDTOOLS=${SELFDIR}
+VENVDIR=${BUILDTOOLS}/venv
+
+PIP=${VENVDIR}/bin/pip
+PY=${VENVDIR}/bin/python
+
+PELICAN=${VENVDIR}/bin/pelican
 PELICANOPTS=
 
-BASEDIR=$(pwd)
+BASEDIR=${SELFDIR}/..
 INPUTDIR=$BASEDIR/content
 OUTPUTDIR=$BASEDIR/output
-CONFFILE=$BASEDIR/pelicanconf.py
+CONFFILE=$BASEDIR/config.py
 
 ###
 # Don't change stuff below here unless you are sure
 ###
 
-SRV_PID=$BASEDIR/srv.pid
-PELICAN_PID=$BASEDIR/pelican.pid
+SRV_PID=$BUILDTOOLS/srv.pid
+PELICAN_PID=$BUILDTOOLS/pelican.pid
 
 function usage(){
   echo "usage: $0 (stop) (start) (restart) [port]"
@@ -32,33 +38,31 @@ function alive() {
 }
 
 function shut_down(){
-  PID=$(cat $SRV_PID 2>/dev/null)
+  PID=$(cat $SRV_PID)
   if [[ $? -eq 0 ]]; then
     if alive $PID; then
       echo "Stopping HTTP server"
       kill $PID
     else
-      echo "Deleting stale PID file for HTTP server"
+      echo "Stale PID, deleting"
     fi
     rm $SRV_PID
   else
     echo "HTTP server PIDFile not found"
   fi
 
-  PID=$(cat $PELICAN_PID 2>/dev/null)
+  PID=$(cat $PELICAN_PID)
   if [[ $? -eq 0 ]]; then
     if alive $PID; then
       echo "Killing Pelican"
       kill $PID
     else
-      echo "Deleting stale PID file for Pelican"
+      echo "Stale PID, deleting"
     fi
     rm $PELICAN_PID
   else
     echo "Pelican PIDFile not found"
   fi
-
-  echo 'Pelican and HTTP server processes all stoped.'
 }
 
 function start_up(){
