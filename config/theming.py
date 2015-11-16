@@ -17,10 +17,6 @@ DIRECT_TEMPLATES = ['index', 'archives', 'blog']
 BLOG_URL = 'blog'
 BLOG_SAVE_AS = 'blog/index.html'
 
-SITESUBTITLE = 'A pessimist because of intelligence, but an optimist because of will.'
-SITE_TITLE_LABEL = "Unlimited Code Works"
-SITE_SUBTITLE_LABEL = "Engineer & Tinkerer."
-SITE_DESCRIPTION = 'My name is Aetf. This is my personal blog.'
 
 AVATAR_IMG = 'assets/img/avatar.jpg'
 # COVER_IMG = "images/covers/red.png"
@@ -40,7 +36,17 @@ SOCIAL = {
 # Custom Contents
 # ==================================
 
-# Legal
+# Title & subtitle
+SITE_TITLE_LABEL = "Unlimited Code Works"
+SITE_SUBTITLE_LABEL = 'A pessimist because of intelligence, but an optimist because of will.'
+
+# Description in metadata
+SITE_DESCRIPTION = 'My name is Aetf. This is my personal blog.'
+
+# A single paragraph before contact me buttons in landing page's contact section
+CONTACT_ME_DESCRIPTION = ''
+
+# Legal in footnote
 SITE_LICENSE = """
 <div xmlns:cc="http://creativecommons.org/ns#"
 	 xmlns:dct="http://purl.org/dc/terms/"
@@ -52,6 +58,7 @@ SITE_LICENSE = """
 </div>
 """
 
+# About me section in landing page
 LANDING_PAGE_ABOUT = { 'details':
 """
 My name is Aetf. 
