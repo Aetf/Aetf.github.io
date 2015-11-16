@@ -6,7 +6,7 @@
             "folder_exclude_patterns": [
                 "__pycache__",
                 "cache",
-                "build-tools/venv"
+                "tools/venv"
             ],
             "file_exclude_patterns": [
                 "*.swp",
