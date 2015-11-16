@@ -15,7 +15,7 @@ PELICANOPTS=
 BASEDIR=${SELFDIR}/..
 INPUTDIR=$BASEDIR/content
 OUTPUTDIR=$BASEDIR/output
-CONFFILE=$BASEDIR/config.py
+CONFFILE=$BASEDIR/config/main.py
 
 ###
 # Don't change stuff below here unless you are sure

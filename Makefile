@@ -10,8 +10,8 @@ PELICANOPTS= -d
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
-CONFFILE=$(BASEDIR)/config.py
-PUBLISHCONF=$(BASEDIR)/publish.py
+CONFFILE=$(BASEDIR)/config/main.py
+PUBLISHCONF=$(BASEDIR)/config/publish.py
 
 GITHUB_PAGES_BRANCH=master
 
@@ -26,12 +26,13 @@ ifeq ($(RELATIVE), 1)
 endif
 
 help:
-	@echo 'Makefile for a pelican Web site                                        '
-	@echo '                                                                       '
-	@echo 'Usage:                                                                 '
+	@echo 'Makefile for a pelican Web site                                           '
+	@echo '                                                                          '
+	@echo 'Usage:                                                                    '
 	@echo '   make prepare                        install dependencies               '
 	@echo '   make html                           (re)generate the web site          '
 	@echo '   make clean                          remove the generated files         '
+	@echo '   make distclean                      remove all untracked files         '
 	@echo '   make regenerate                     regenerate files upon modification '
 	@echo '   make publish                        generate using production settings '
 	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
@@ -39,10 +40,10 @@ help:
 	@echo '   make devserver [PORT=8000]          start/restart develop_server.sh    '
 	@echo '   make stopserver                     stop local server                  '
 	@echo '   make github                         upload the web site via gh-pages   '
-	@echo '                                                                       '
-	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html'
+	@echo '                                                                          '
+	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
-	@echo '                                                                       '
+	@echo '                                                                          '
 
 $(PELICAN): $(BUILDTOOLS)/requirements.pip
 	pyvenv $(VENVDIR)
@@ -55,6 +56,9 @@ html: $(PELICAN)
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
+
+distclean:
+	git clean -fxd
 
 regenerate: $(PELICAN)
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -91,4 +95,4 @@ github: publish
 	$(VENVDIR)/bin/ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	#git push origin $(GITHUB_PAGES_BRANCH)
 
-.PHONY: html help clean prepare regenerate serve serve-global devserver publish github
+.PHONY: html help clean distclean prepare regenerate serve serve-global devserver publish github
