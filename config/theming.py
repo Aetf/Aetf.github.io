@@ -46,7 +46,7 @@ SITE_DESCRIPTION = 'My name is Aetf. This is my personal blog.'
 # A single paragraph before contact me buttons in landing page's contact section
 CONTACT_ME_DESCRIPTION = ''
 
-# Legal in footnote
+# Legal note in footer
 SITE_LICENSE = """
 <div xmlns:cc="http://creativecommons.org/ns#"
 	 xmlns:dct="http://purl.org/dc/terms/"
