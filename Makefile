@@ -5,7 +5,7 @@ PIP?=$(VENVDIR)/bin/pip
 PY?=$(VENVDIR)/bin/python
 
 PELICAN?=$(VENVDIR)/bin/pelican
-PELICANOPTS= -d
+PELICANOPTS= -d --ignore-cache
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/blog
