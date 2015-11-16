@@ -45,13 +45,13 @@ help:
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
 
-$(PELICAN): $(BUILDTOOLS)/requirements.pip
+$(VENVDIR)/pyvenv.cfg: $(BUILDTOOLS)/requirements.pip
 	pyvenv $(VENVDIR)
 	$(PIP) install -r $<
 
-prepare: $(PELICAN)
+prepare: $(VENVDIR)/pyvenv.cfg
 
-html: $(PELICAN)
+html: prepare
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:
@@ -60,10 +60,10 @@ clean:
 distclean:
 	git clean -fxd
 
-regenerate: $(PELICAN)
+regenerate: prepare
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
-serve: $(PELICAN)
+serve: prepare
 ifdef PORT
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server $(PORT)
 else
@@ -77,18 +77,18 @@ else
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server 80 0.0.0.0
 endif
 
-devserver: $(PELICAN)
+devserver: prepare
 ifdef PORT
 	$(BUILDTOOLS)/develop_server.sh restart $(PORT)
 else
 	$(BUILDTOOLS)/develop_server.sh restart
 endif
 
-stopserver: $(PELICAN)
+stopserver: prepare
 	$(BUILDTOOLS)/develop_server.sh stop
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
-publish: $(PELICAN)
+publish: prepare
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 github: publish
