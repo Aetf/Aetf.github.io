@@ -26,9 +26,9 @@ AVATAR_IMG = 'assets/img/avatar.jpg'
 # ==================================
 SOCIAL = {
         'Github': 'http://github.com/Aetf',
-        'Email': 'mailto:aetf@unlimitedcodeworks.xyz',
+        'Email': 'aetf@unlimitedcodeworks.xyz',
 		#'Twitter': 'http://twitter.com/xxxxxx',
-        #'GooglePlus': 'https://plus.google.com/+xxxxxx/posts'
+        #'Google+': 'https://plus.google.com/+xxxxxx/posts'
 }
 
 
