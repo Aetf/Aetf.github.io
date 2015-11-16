@@ -8,7 +8,9 @@
 # ==================================
 # Theme
 # ==================================
-#THEME = 'themes/twenty-pelican-html5up'
+# NOTE: THEME is relative to main config file
+#THEME = '../themes/twenty-pelican-html5up'
+
 SITESUBTITLE = 'A pessimist because of intelligence, but an optimist because of will.'
 
 

@@ -1,13 +1,13 @@
-# Output directory
-output/
+# Generated files
+build/
 
 # Editor files
 *.sublime-workspace
 *.swp
 
 # Python virtual environment
-build-tools/venv/*
+tools/venv
 
 # Develop runtime generated files
-build-tools/*.pid
+*.pid
 __pycache__

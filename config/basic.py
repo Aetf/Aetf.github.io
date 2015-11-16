@@ -20,7 +20,10 @@ DEFAULT_LANG = 'zh'
 # ==================================
 # File Structures
 # ==================================
-PATH = 'blog'
+# NOTE: PATH, OUTPUT_PATH, CACHE_PATH is relative to main config file
+PATH = '../blog'
+OUTPUT_PATH = '../build/output'
+CACHE_PATH = '../build/cache'
 
 # Followings are relative to PATH
 ARTICLE_PATHS = ['']

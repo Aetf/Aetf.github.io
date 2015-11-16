@@ -1,4 +1,4 @@
-BUILDTOOLS=$(CURDIR)/build-tools
+BUILDTOOLS=$(CURDIR)/tools
 VENVDIR=$(BUILDTOOLS)/venv
 
 PIP?=$(VENVDIR)/bin/pip
@@ -8,8 +8,8 @@ PELICAN?=$(VENVDIR)/bin/pelican
 PELICANOPTS= -d
 
 BASEDIR=$(CURDIR)
-INPUTDIR=$(BASEDIR)/content
-OUTPUTDIR=$(BASEDIR)/output
+INPUTDIR=$(BASEDIR)/blog
+OUTPUTDIR=$(BASEDIR)/build/output
 CONFFILE=$(BASEDIR)/config/main.py
 PUBLISHCONF=$(BASEDIR)/config/publish.py
 
