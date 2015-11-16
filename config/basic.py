@@ -5,6 +5,7 @@
 # * Basic Info
 # * File Structures
 # * URL Mappings
+# * Default Metadata
 
 # ==================================
 # Basic Info
@@ -36,10 +37,10 @@ STATIC_PATHS = ['assets']
 INDEX_SAVE_AS = 'index.html'
 
 # Articles
-ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
-ARTICLE_LANG_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}-{lang}/'
-ARTICLE_LANG_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}-{lang}/index.html'
+ARTICLE_URL = 'blog/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
+ARTICLE_LANG_URL = 'blog/{date:%Y}/{date:%b}/{date:%d}/{slug}-{lang}/'
+ARTICLE_LANG_SAVE_AS = 'blog/{date:%Y}/{date:%b}/{date:%d}/{slug}-{lang}/index.html'
 
 # Pages
 PAGE_URL = '{slug}/'
@@ -76,3 +77,8 @@ ARCHIVES_SAVE_AS = 'archives.html'
 EXTRA_PATH_METADATA = {
     'assets/misc/CNAME': {'path': 'CNAME'},
 }
+
+# ==================================
+# Default Metadata
+# ==================================
+DEFAULT_DATE = 'fs'

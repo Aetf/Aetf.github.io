@@ -14,3 +14,8 @@ DISQUS_SITENAME = 'unlimitedcodeworks'
 # Google Analytics
 # ==================================
 GOOGLE_ANALYTICS = ""
+
+# ==================================
+# Mixpanel Analytics
+# ==================================
+MIXPANEL_ANALYTICS = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"

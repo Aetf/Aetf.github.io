@@ -8,8 +8,7 @@ from feeds import *
 from services import *
 from theming import *
 from typesetting import *
-
-print("PATH is", PATH)
+from plugins import *
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
