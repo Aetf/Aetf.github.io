@@ -19,7 +19,7 @@ BLOG_SAVE_AS = 'blog/index.html'
 
 
 AVATAR_IMG = 'assets/img/avatar.jpg'
-# COVER_IMG = "images/covers/red.png"
+COVER_IMG = "assets/img/cover.png"
 
 # ==================================
 # Social Links
@@ -38,7 +38,7 @@ SOCIAL = {
 
 # Title & subtitle
 SITE_TITLE_LABEL = "Unlimited Code Works"
-SITE_SUBTITLE_LABEL = 'A pessimist because of intelligence, but an optimist because of will.'
+SITE_SUBTITLE_LABEL = 'A pessimist because of intelligence, <br/>but an optimist because of will.'
 
 # Description in metadata
 SITE_DESCRIPTION = 'My name is Aetf. This is my personal blog.'
