@@ -76,6 +76,5 @@ I’ve been on the seemingly never ending quest of completing IMDb’s top 250 m
 On this website, I intend to share interesting projects I’m currently working on
 or have worked on in the past, partly also as a way of establishing an archive.
 If you find anything interesting, feel absolutely free to get in touch with me.
-</p></div>
-"""
-}
+</p>
+"""}
