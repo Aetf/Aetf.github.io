@@ -1,7 +1,8 @@
-rotate animation for FAB
 color change animation for FAB
-add main link when FAB is scrolled
 make FAB colorful
+[DONE] add main link when FAB is scrolled
+rotate animation for FAB
+
 material design navigation bar
 archives page
 per year archives page
@@ -9,3 +10,6 @@ per month archives page
 per day archives page
 tags page
 categories page
+
+try matrilized card for articles
+try chips for tags
