@@ -1,7 +1,7 @@
 [DONE] color change animation for FAB
-make FAB colorful
+[DONE] make FAB colorful
+add label next to FAB menu
 [DONE] add main link when FAB is scrolled
-rotate animation for FAB
 
 change scroll speed
 fix search bar
@@ -16,3 +16,4 @@ categories page
 
 try matrilized card for articles
 try chips for tags
+rotate animation for FAB
