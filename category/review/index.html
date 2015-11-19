@@ -61,7 +61,7 @@ mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
     <!-- end Mixpanel -->
 
 <script>
-mixpanel.track("Page", {"Name": "Aetf", "page": "Archives", "url": "archives.html" });
+    mixpanel.track("Page", {"Name": "Home Page", "url": "category/review/index.html"  }) ;
 </script>
 </head>
 
@@ -77,28 +77,20 @@ mixpanel.track("Page", {"Name": "Aetf", "page": "Archives", "url": "archives.htm
 
 <!--<div class="content-block">-->
     <div class="content-block">
-        <header class="intro-header-article pure-g"
+        <header class="intro pure-g"
 style="background-image: url('assets/img/cover.png');">
-<div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
-<div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
-    <h1 class="article-heading">All Posts</h1>
+<div class="pure-u-1-4 pure-u-md-1-4 pure-u-lg-1-4"></div>
+<div class="pure-u-1-2 pure-u-md-1-2 pure-u-lg-1-2 center-align">
+    <div class="avatarBox">
+        <img src="assets/img/avatar.jpg">
+    </div>
+    <div class="">
+        <h1 class="brand-heading">Unlimited Code Works</h1>
+        <p class="intro-text">A pessimist because of intelligence, <br/>but an optimist because of will.</p>
+    </div>
 </div>
         </header>
 
-        <div class="ucw-nav" style="position: relative; top: -64px;">
-            <nav>
-                <div class="nav-wrapper blue lighten-1">
-                    <div class="">
-                       <a href="#!" class="breadcrumb">This</a>
-                       <a href="#!" class="breadcrumb">Nav</a>
-                       <a href="#!" class="breadcrumb">Is</a>
-                       <a href="#!" class="breadcrumb">Still</a> 
-                       <a href="#!" class="breadcrumb">Under</a> 
-                       <a href="#!" class="breadcrumb">Construction</a> 
-                    </div>
-                </div>
-            </nav>
-        </div>
 
         <div class="fixed-action-btn fab">
             <ul>
@@ -107,24 +99,70 @@ style="background-image: url('assets/img/cover.png');">
             <i class="material-icons">search</i>
         </a>
     </li>
+    <li>
+        <a href='#about' class="page-scroll btn-floating yellow darken-1">
+            <i class="material-icons">info_outline</i>
+        </a>
+    </li>
+    <li>
+        <a href='#contact' class="page-scroll btn-floating green">
+            <i class="material-icons">forum</i>
+        </a>
+    </li>
             </ul>
             <a href='http://unlimitedcodeworks.xyz/blog'
-               class="btn-floating btn-large grey page-scroll">
-                <i class="material-icons md-light">keyboard_arrow_left</i>
+               class="btn-floating btn-large white page-scroll">
+                <i class="material-icons md-dark">menu</i>
             </a>
         </div>
         <main class="pure-g">
-<div class="pure-u-1-6 pure-u-md-1-4 pure-u-lg-1-4"></div>
-<div class="pure-u-2-3 pure-u-md-1-2 pure-u-lg-1-2">
-    <h2>2015</h2>
-    <ul>
-        <li><a href="blog/2015/11月/18/a-really-complex-markdown-test/">A really complex markdown test</a></li>
-        <li><a href="blog/2015/11月/18/my-super-post/">My super title2</a></li>
-    </ul>
-    <h2>2010</h2>
-    <ul>
-        <li><a href="blog/2010/12月/03/my-first-review/">My First Review</a></li>
-    </ul>
+<div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
+<div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
+    <!-- About Section -->
+    <section id="about" class="content-section text-center" href="#">
+        <h2 class="center-align">About Me</h2>
+        
+<p>
+My name is Aetf. 
+I’ve dabbled with mobile application and web development, home automation and photography. 
+I’m currently working towards a Master’s degree in Computer Science.
+</p>
+<img src="images/coverPicture.jpg" alt="Alt text! And a picture of me!" style="width:100%">
+<p></p>
+<p>
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+</p>
+<p>
+On this website, I intend to share interesting projects I’m currently working on
+or have worked on in the past, partly also as a way of establishing an archive.
+If you find anything interesting, feel absolutely free to get in touch with me.
+</p>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section" href="#">
+    <h2 class="center-align">Contact Me</h2>
+    <p></p>
+
+
+    <p class="center-align"><a href="mailto:aetf@unlimitedcodeworks.xyz">aetf@unlimitedcodeworks.xyz</a></p>
+    <div class="pure-u-1-4"></div>
+    <div class="pure-u-1-2 center-align">
+            <a href="http://github.com/Aetf" class="btn social-btn waves-effect waves-light">
+                <i class="fa fa-github fa-fw"></i><span class="network-name">Github</span>
+            </a>
+            <a href="https://mozillians.org/en-US/u/Aetf/" class="btn social-btn waves-effect waves-light">
+                <i class="fa fa-firefox fa-fw"></i><span class="network-name">Mozillian</span>
+            </a>
+            <a href="https://plus.google.com/+余佩峰/posts" class="btn social-btn waves-effect waves-light">
+                <i class="fa fa-google-plus fa-fw"></i><span class="network-name">Google+</span>
+            </a>
+    </div>
+    </section>
 </div>
         </main>
     </div>
@@ -215,7 +253,7 @@ style="background-image: url('assets/img/cover.png');">
                 )
             );
         new Waypoint({
-            element: $(".article-heading")[0],
+            element: $(".avatarBox")[0],
             handler: function(direction) {
                 var scrolled = (direction === 'down');
                 if (scrolled) {
@@ -228,12 +266,14 @@ style="background-image: url('assets/img/cover.png');">
                     menuItem.detach();
                     $(".fixed-action-btn a.btn-large").attr("href", "http://unlimitedcodeworks.xyz/blog");
                     $('.fixed-action-btn .btn-large .material-icons')
-                        .text("keyboard_arrow_left");
+                        .text("menu");
                 }
                 $('.fixed-action-btn').toggleClass('scrolled', scrolled);
                 $('.fixed-action-btn .btn-large').toggleClass('blue', scrolled);
-                $('.fixed-action-btn .btn-large').toggleClass('grey', !scrolled);
-             }
+                $('.fixed-action-btn .btn-large').toggleClass('white', !scrolled);
+                $('.fixed-action-btn a.btn-large i').toggleClass('md-light', scrolled);
+                $('.fixed-action-btn a.btn-large i').toggleClass('md-dark', !scrolled);
+            }
         });
         $(".fixed-action-btn").hover(function() {
                 $('.fixed-action-btn').not('.scrolled')
@@ -243,7 +283,7 @@ style="background-image: url('assets/img/cover.png');">
             function() {
                 $('.fixed-action-btn').not('.scrolled')
                     .find('.btn-large .material-icons')
-                    .text('keyboard_arrow_left');
+                    .text('menu');
             });
 
         new Waypoint({

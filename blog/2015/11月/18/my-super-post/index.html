@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="My name is Aetf. This is my personal blog." />
+        <meta name="description" content="Short version for index and feeds" />
 
     <meta name="author" content="Aetf" />
     <meta name="copyright" content="Aetf" />
@@ -15,8 +15,10 @@
     <meta name="twitter:card" content="summary">
 
     <title>
-Unlimited Code Works    </title>
+My super title2 - Unlimited Code Works
+    </title>
 
+    <meta name="keywords" content="pelican, publishing, misc, " />
 
     <!-- Pure CSS Base and Grid-->
     <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css">
@@ -61,7 +63,7 @@ mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
     <!-- end Mixpanel -->
 
 <script>
-mixpanel.track("Page", {"Name": "Aetf", "page": "Archives", "url": "archives.html" });
+    mixpanel.track("Page", {"Name": "My super title2", "url": "blog/2015/11月/18/my-super-post/index.html"  });
 </script>
 </head>
 
@@ -78,11 +80,16 @@ mixpanel.track("Page", {"Name": "Aetf", "page": "Archives", "url": "archives.htm
 <!--<div class="content-block">-->
     <div class="content-block">
         <header class="intro-header-article pure-g"
-style="background-image: url('assets/img/cover.png');">
+>
 <div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
 <div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
-    <h1 class="article-heading">All Posts</h1>
-</div>
+    <h1 class="article-heading">My super title2</h1>
+<span class="meta last-updated">
+	Published on 
+	<time pubdate="pubdate" datetime="2015-11-18T21:07:46.838496-05:00">
+		11月 18, 2015
+	</time>
+</span></div>
         </header>
 
         <div class="ucw-nav" style="position: relative; top: -64px;">
@@ -114,18 +121,35 @@ style="background-image: url('assets/img/cover.png');">
             </a>
         </div>
         <main class="pure-g">
-<div class="pure-u-1-6 pure-u-md-1-4 pure-u-lg-1-4"></div>
-<div class="pure-u-2-3 pure-u-md-1-2 pure-u-lg-1-2">
-    <h2>2015</h2>
-    <ul>
-        <li><a href="blog/2015/11月/18/a-really-complex-markdown-test/">A really complex markdown test</a></li>
-        <li><a href="blog/2015/11月/18/my-super-post/">My super title2</a></li>
-    </ul>
-    <h2>2010</h2>
-    <ul>
-        <li><a href="blog/2010/12月/03/my-first-review/">My First Review</a></li>
-    </ul>
+<div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
+<div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
+    <article>
+        <div class="entry-content">
+            <p>This is the content of my super blog post keyboard.</p>
+        </div>
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'unlimitedcodeworks'; // required: replace example with your forum shortname
+            var disqus_identifier = 'my-super-post';
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+    </section>
+    </article>
 </div>
+<hr>
         </main>
     </div>
 

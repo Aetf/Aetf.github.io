@@ -15,8 +15,12 @@
     <meta name="twitter:card" content="summary">
 
     <title>
-Unlimited Code Works    </title>
+Search -Unlimited Code Works    </title>
 
+<!-- Optional Open Sans font -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
+<link href="/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
 
     <!-- Pure CSS Base and Grid-->
     <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css">
@@ -59,10 +63,6 @@ Unlimited Code Works    </title>
     for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
 mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
     <!-- end Mixpanel -->
-
-<script>
-mixpanel.track("Page", {"Name": "Aetf", "page": "Archives", "url": "archives.html" });
-</script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -81,7 +81,7 @@ mixpanel.track("Page", {"Name": "Aetf", "page": "Archives", "url": "archives.htm
 style="background-image: url('assets/img/cover.png');">
 <div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
 <div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
-    <h1 class="article-heading">All Posts</h1>
+    <h1 class="article-heading">A Search</h1>
 </div>
         </header>
 
@@ -102,30 +102,33 @@ style="background-image: url('assets/img/cover.png');">
 
         <div class="fixed-action-btn fab">
             <ul>
-    <li>
-        <a href='#search' class="page-scroll btn-floating grey">
-            <i class="material-icons">search</i>
-        </a>
-    </li>
             </ul>
-            <a href='http://unlimitedcodeworks.xyz/blog'
+            <a href='http://unlimitedcodeworks.xyz/'
                class="btn-floating btn-large grey page-scroll">
                 <i class="material-icons md-light">keyboard_arrow_left</i>
             </a>
         </div>
         <main class="pure-g">
-<div class="pure-u-1-6 pure-u-md-1-4 pure-u-lg-1-4"></div>
-<div class="pure-u-2-3 pure-u-md-1-2 pure-u-lg-1-2">
-    <h2>2015</h2>
-    <ul>
-        <li><a href="blog/2015/11月/18/a-really-complex-markdown-test/">A really complex markdown test</a></li>
-        <li><a href="blog/2015/11月/18/my-super-post/">My super title2</a></li>
-    </ul>
-    <h2>2010</h2>
-    <ul>
-        <li><a href="blog/2010/12月/03/my-first-review/">My First Review</a></li>
-    </ul>
+<div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
+<div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
+    <div class="search-button">
+        <form id="search" class="floating-search"
+              action="http://unlimitedcodeworks.xyz/search.html"
+              onsubmit="return validateForm(this.elements['q'].value);">
+            <input id="tipue_search_input" class="search-query"
+                    type="search" name="q" autocomplete=off
+                    placeholder="Search">
+        </form>
+    </div>
+    <div id="tipue_search_content">
+        <div class="tipue_search_spinner">
+            <div class="tipue_search_rect1"></div>
+            <div class="tipue_search_rect2"></div>
+            <div class="rect3"></div>
+        </div>
+    </div>
 </div>
+<hr>
         </main>
     </div>
 
@@ -207,11 +210,11 @@ style="background-image: url('assets/img/cover.png');">
     <script type="text/javascript">
         var menuItem = $(document.createElement('li'))
             .append($(document.createElement('a'))
-                .attr("href", "http://unlimitedcodeworks.xyz/blog")
+                .attr("href", "http://unlimitedcodeworks.xyz/")
                 .addClass('page-scroll btn-floating red')
                 .append($(document.createElement('i'))
                     .addClass('material-icons')
-                    .text('description')
+                    .text('home')
                 )
             );
         new Waypoint({
@@ -226,7 +229,7 @@ style="background-image: url('assets/img/cover.png');">
                         .text('keyboard_arrow_up');
                 } else {
                     menuItem.detach();
-                    $(".fixed-action-btn a.btn-large").attr("href", "http://unlimitedcodeworks.xyz/blog");
+                    $(".fixed-action-btn a.btn-large").attr("href", "http://unlimitedcodeworks.xyz/");
                     $('.fixed-action-btn .btn-large .material-icons')
                         .text("keyboard_arrow_left");
                 }
@@ -238,7 +241,7 @@ style="background-image: url('assets/img/cover.png');">
         $(".fixed-action-btn").hover(function() {
                 $('.fixed-action-btn').not('.scrolled')
                     .find('.btn-large .material-icons')
-                    .text('description');
+                    .text('home');
             },
             function() {
                 $('.fixed-action-btn').not('.scrolled')
@@ -259,6 +262,19 @@ style="background-image: url('assets/img/cover.png');">
         });
 
     </script>
+
+<!-- Tipue Search scripts -->
+<script src="/theme/tipuesearch/tipuesearch_set.js"></script>
+<script src="/theme/tipuesearch/tipuesearch.custom.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch({
+            showTitleCount: false,
+            mode: 'json',
+            contentLocation: 'http://unlimitedcodeworks.xyz/tipuesearch_content.json'
+        });
+    });
+</script>
 
 </body>
 </html>

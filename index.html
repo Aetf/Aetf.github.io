@@ -1,249 +1,304 @@
-    <!-- Banner -->
-      <section id="banner">
+<!DOCTYPE html>
+<html lang="en">
 
-        <!--
-          ".inner" is set up as an inline-block so it automatically expands
-          in both directions to fit whatever's inside it. This means it won't
-          automatically wrap lines, so be sure to use line breaks where
-          appropriate (<br />).
-        -->
-        <div class="inner">
-
-          <header>
-            <h2>TWENTY</h2>
-          </header>
-          <p>This is <strong>Twenty</strong>, a free<br />
-          responsive template<br />
-          by <a href="http://html5up.net">HTML5 UP</a>.</p>
-          <footer>
-            <ul class="buttons vertical">
-              <li><a href="#main" class="button fit scrolly">Tell Me More</a></li>
-            </ul>
-          </footer>
-
-        </div>
-
-      </section><html>
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="/theme/js/jquery.min.js"></script>
-    <script src="/theme/js/jquery.dropotron.min.js"></script>
-    <script src="/theme/js/skel.min.js"></script>
-    <script src="/theme/js/skel-layers.min.js"></script>
-    <script src="/theme/js/init.js"></script>
-    <link rel="stylesheet" href="/theme/css/pygment.css" />
-    <noscript>
-        <link rel="stylesheet" href="/theme/css/skel.css" />
-        <link rel="stylesheet" href="/theme/css/style.css" />
-        <link rel="stylesheet" href="/theme/css/style-noscript.css" />
-    </noscript>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link  href="http://fonts.lug.ustc.edu.cn/css?family=Anonymous+Pro:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >
-    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My name is Aetf. This is my personal blog." />
 
-    <title>Unlimited Code Works </title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Aetf" />
+    <meta name="copyright" content="Aetf" />
+
+
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary">
+
+    <title>
+Unlimited Code Works    </title>
+
+
+    <!-- Pure CSS Base and Grid-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Pacifico|Nova+Round|EB+Garamond|Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Tipue Search CSS for search box-->
+    <link href="/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/theme/css/pelican-smoothie.css" rel="stylesheet">
+    <link href="/theme/css/pygment.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
+    <!-- end Mixpanel -->
+
+<script>
+    mixpanel.track("Page", {"Name": "Home Page", "url": "index.html"  }) ;
+</script>
 </head>
 
-<body class="index loading">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
+    <div class="search-button">
+        <form id="search" class="floating-search"
+              action="http://unlimitedcodeworks.xyz/search.html"
+              onsubmit="return validateForm(this.elements['q'].value);">
+            <input type="search" class="search-query" placeholder="Search" name="q">
+        </form>
+    </div>
 
-
-    <!-- Header -->
-    <header id="header" class="alt">
-        <h1 class="logo">
-            <a href="http://unlimitedcodeworks.xyz">Unlimited Code Works, design Twenty <span> by html5 up</span></a>
-        </h1>
-        <nav id="nav">
-            <ul>
-                <!-- <li class="current"><a href="index.html">Welcome</a></li> -->
-                <li class="submenu">
-                    <a href="http://unlimitedcodeworks.xyz/">Blog</a>
-                    <ul>
-                    </ul>
-                </li>
-                <li><a href="#" class="button special">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
-
-<!-- Main -->
-<article id="main">
-
-  <header class="special container">
-    <span class="icon fa-bar-chart-o"></span>
-    <h2>As this is my <strong>twentieth</strong> freebie for HTML5 UP<br />
-    I decided to give it a really creative name.</h2>
-    <p>Turns out <strong>Twenty</strong> was the best I could come up with. Anyway, lame name aside,<br />
-    it's minimally designed, fully responsive, built on HTML5/CSS3/<strong>skel</strong>,
-    and, like all my stuff,<br />
-    released for free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0</a> license. Have fun!</p>
-  </header>
-
-  <!-- One -->
-  <section class="wrapper style2 container special-alt">
-    <div class="row half">
-      <div class="8u">
-
-        <header>
-          <h2>Behold the <strong>icons</strong> that visualize what you’re all about. or just take up space. your call bro.</h2>
+<!--<div class="content-block">-->
+    <div class="content-block">
+        <header class="intro pure-g"
+style="background-image: url('assets/img/cover.png');">
+<div class="pure-u-1-4 pure-u-md-1-4 pure-u-lg-1-4"></div>
+<div class="pure-u-1-2 pure-u-md-1-2 pure-u-lg-1-2 center-align">
+    <div class="avatarBox">
+        <img src="assets/img/avatar.jpg">
+    </div>
+    <div class="">
+        <h1 class="brand-heading">Unlimited Code Works</h1>
+        <p class="intro-text">A pessimist because of intelligence, <br/>but an optimist because of will.</p>
+    </div>
+</div>
         </header>
-        <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.</p>
-        <footer>
-          <ul class="buttons">
-            <li><a href="#" class="button">Find Out More</a></li>
-          </ul>
-        </footer>
 
-      </div>
-      <div class="4u skel-cell-important">
 
-        <ul class="feature-icons">
-          <li><span class="icon fa-clock-o"><span class="label">Feature 1</span></span></li>
-          <li><span class="icon fa-volume-up"><span class="label">Feature 2</span></span></li>
-          <li><span class="icon fa-laptop"><span class="label">Feature 3</span></span></li>
-          <li><span class="icon fa-inbox"><span class="label">Feature 4</span></span></li>
-          <li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
-          <li><span class="icon fa-cog"><span class="label">Feature 6</span></span></li>
-        </ul>
+        <div class="fixed-action-btn fab">
+            <ul>
+    <li>
+        <a href='#search' class="page-scroll btn-floating grey">
+            <i class="material-icons">search</i>
+        </a>
+    </li>
+    <li>
+        <a href='#about' class="page-scroll btn-floating yellow darken-1">
+            <i class="material-icons">info_outline</i>
+        </a>
+    </li>
+    <li>
+        <a href='#contact' class="page-scroll btn-floating green">
+            <i class="material-icons">forum</i>
+        </a>
+    </li>
+            </ul>
+            <a href='http://unlimitedcodeworks.xyz/blog'
+               class="btn-floating btn-large white page-scroll">
+                <i class="material-icons md-dark">menu</i>
+            </a>
+        </div>
+        <main class="pure-g">
+<div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
+<div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
+    <!-- About Section -->
+    <section id="about" class="content-section text-center" href="#">
+        <h2 class="center-align">About Me</h2>
+        
+<p>
+My name is Aetf. 
+I’ve dabbled with mobile application and web development, home automation and photography. 
+I’m currently working towards a Master’s degree in Computer Science.
+</p>
+<img src="images/coverPicture.jpg" alt="Alt text! And a picture of me!" style="width:100%">
+<p></p>
+<p>
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+</p>
+<p>
+On this website, I intend to share interesting projects I’m currently working on
+or have worked on in the past, partly also as a way of establishing an archive.
+If you find anything interesting, feel absolutely free to get in touch with me.
+</p>
 
-      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section" href="#">
+    <h2 class="center-align">Contact Me</h2>
+    <p></p>
+
+
+    <p class="center-align"><a href="mailto:aetf@unlimitedcodeworks.xyz">aetf@unlimitedcodeworks.xyz</a></p>
+    <div class="pure-u-1-4"></div>
+    <div class="pure-u-1-2 center-align">
+            <a href="http://github.com/Aetf" class="btn social-btn waves-effect waves-light">
+                <i class="fa fa-github fa-fw"></i><span class="network-name">Github</span>
+            </a>
+            <a href="https://mozillians.org/en-US/u/Aetf/" class="btn social-btn waves-effect waves-light">
+                <i class="fa fa-firefox fa-fw"></i><span class="network-name">Mozillian</span>
+            </a>
+            <a href="https://plus.google.com/+余佩峰/posts" class="btn social-btn waves-effect waves-light">
+                <i class="fa fa-google-plus fa-fw"></i><span class="network-name">Google+</span>
+            </a>
     </div>
-  </section>
-
-  <!-- Two -->
-  <section class="wrapper style1 container special">
-    <div class="row">
-
-
-    </div> <!-- /.row -->
-
-
-<div class="row ">
-
-    <div class="4u pagination-left">
-        <section>
-            <header>
-                &nbsp;
-            </header>
-        </section>
+    </section>
+</div>
+        </main>
     </div>
 
-    <div class="4u pagination-middle">
-        <section>
-            <header>Page 1 / 1</header>
-        </section>
-    </div>
-
-    <div class="4u pagination-right">
-        <section>
-            <header>
-            </header>
-        </section>
-    </div>
-
+    <!-- Footer -->
+    <footer>
+        <div id="footer" class="center-align">
+            
+<div xmlns:cc="http://creativecommons.org/ns#"
+	 xmlns:dct="http://purl.org/dc/terms/"
+	 about="http://unlimitedcodeworks.xyz/">
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+		<img alt="Creative Commons License" style="border-width:0"
+			 src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+	</a>
+	<br />
+	All content by Aetf on this page is licensed under a 
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+	Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+	</a>.
+	<br />
+	The overall theme is modified and thus largely based on
+	<a href="https://github.com/kdheepak89/pelican-smoothie">smoothie</a>
+	by <a href="http://kdheepak.com/">Dheepak Krishnamurthy</a>.
 </div>
 
-
-  </section> <!-- /section -->
-
-</article>
-
-<!-- Three -->
-<section class="wrapper style3 container special">
-
-  <header class="major">
-    <h2>Next look at this <strong>cool stuff</strong></h2>
-  </header>
-
-  <div class="row">
-    <div class="6u">
-
-      <section>
-        <a href="#" class="image feature"><img src="theme/images/pic01.jpg" alt="" /></a>
-        <header>
-          <h3>A Really Fast Train</h3>
-        </header>
-        <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-      </section>
-
-    </div>
-    <div class="6u">
-
-      <section>
-        <a href="#" class="image feature"><img src="theme/images/pic02.jpg" alt="" /></a>
-        <header>
-          <h3>An Airport Terminal</h3>
-        </header>
-        <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-      </section>
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="6u">
-
-      <section>
-        <a href="#" class="image feature"><img src="theme/images/pic03.jpg" alt="" /></a>
-        <header>
-          <h3>Hyperspace Travel</h3>
-        </header>
-        <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-      </section>
-
-    </div>
-    <div class="6u">
-
-      <section>
-        <a href="#" class="image feature"><img src="theme/images/pic04.jpg" alt="" /></a>
-        <header>
-          <h3>And Another Train</h3>
-        </header>
-        <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-      </section>
-
-    </div>
-  </div>
-
-  <footer class="major">
-    <ul class="buttons">
-      <li><a href="#" class="button">See More</a></li>
-    </ul>
-  </footer>
-
-</section><!-- CTA -->
-<section id="cta">
-
-    <header>
-        <h2>Ready to do <strong>something</strong>?</h2>
-        <p>Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.</p>
-    </header>
-    <footer>
-        <ul class="buttons">
-            <li><a href="#" class="button special">Take My Money</a></li>
-            <li><a href="#" class="button">LOL Wut</a></li>
-        </ul>
+        </div>
     </footer>
 
-</section>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-<!-- Footer -->
-<footer id="footer">
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.js"></script>
 
-    <ul class="icons">
-        <li>
-          <a href="http://github.com/Aetf" class="icon circle fa fa-github"><span class="label">github</span></a>
-        </li>
-    </ul>
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 
-    <span class="copyright">&copy; Untitled. All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+    <!-- iPython Notebook script -->
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/javascript">
+        init_mathjax = function() {
+            if (window.MathJax) {
+                // MathJax loaded
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    },
+                    displayAlign: 'left', // Change this to 'center' to center equations.
+                    "HTML-CSS": {
+                        styles: {'.MathJax_Display': {"margin": 0}}
+                    }
+                });
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            }
+        }
+        init_mathjax();
+    </script>
 
-</footer>
+    <!-- iPython Notebook script for collapsing and expanding code -->
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $("div.collapseheader").click(function () {
+            $header = $(this).children("span").first();
+            $codearea = $(this).children(".input_area");
+            console.log($(this).children());
+            $codearea.slideToggle(500, function () {
+                $header.text(function () {
+                    return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
+                });
+            });
+        });
+        });
+    </script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/theme/js/pelican-smoothie.js"></script>
+    <script type="text/javascript">
+        var menuItem = $(document.createElement('li'))
+            .append($(document.createElement('a'))
+                .attr("href", "http://unlimitedcodeworks.xyz/blog")
+                .addClass('page-scroll btn-floating red')
+                .append($(document.createElement('i'))
+                    .addClass('material-icons')
+                    .text('description')
+                )
+            );
+        new Waypoint({
+            element: $(".avatarBox")[0],
+            handler: function(direction) {
+                var scrolled = (direction === 'down');
+                if (scrolled) {
+                    $(".fixed-action-btn ul").append(menuItem);
+
+                    $(".fixed-action-btn a.btn-large").attr("href", "#page-top");
+                    $('.fixed-action-btn .btn-large .material-icons')
+                        .text('keyboard_arrow_up');
+                } else {
+                    menuItem.detach();
+                    $(".fixed-action-btn a.btn-large").attr("href", "http://unlimitedcodeworks.xyz/blog");
+                    $('.fixed-action-btn .btn-large .material-icons')
+                        .text("menu");
+                }
+                $('.fixed-action-btn').toggleClass('scrolled', scrolled);
+                $('.fixed-action-btn .btn-large').toggleClass('blue', scrolled);
+                $('.fixed-action-btn .btn-large').toggleClass('white', !scrolled);
+                $('.fixed-action-btn a.btn-large i').toggleClass('md-light', scrolled);
+                $('.fixed-action-btn a.btn-large i').toggleClass('md-dark', !scrolled);
+            }
+        });
+        $(".fixed-action-btn").hover(function() {
+                $('.fixed-action-btn').not('.scrolled')
+                    .find('.btn-large .material-icons')
+                    .text('description');
+            },
+            function() {
+                $('.fixed-action-btn').not('.scrolled')
+                    .find('.btn-large .material-icons')
+                    .text('menu');
+            });
+
+        new Waypoint({
+            element: $('.ucw-nav'),
+            handler: function(direction) {
+                var shouldBeStuck = direction === "down";
+                var wrapperHeight = shouldBeStuck ?
+                    $('.ucw-nav nav').outerHeight(true) : '';
+
+                $('.ucw-nav').height(wrapperHeight);
+                $('.ucw-nav').toggleClass('navbar-fixed', shouldBeStuck);
+            }
+        });
+
+    </script>
+
 </body>
 </html>

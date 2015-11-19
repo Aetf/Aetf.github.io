@@ -15,7 +15,8 @@
     <meta name="twitter:card" content="summary">
 
     <title>
-Unlimited Code Works    </title>
+Page Not Found - Unlimited Code Works
+    </title>
 
 
     <!-- Pure CSS Base and Grid-->
@@ -61,7 +62,7 @@ mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
     <!-- end Mixpanel -->
 
 <script>
-mixpanel.track("Page", {"Name": "Aetf", "page": "Archives", "url": "archives.html" });
+    mixpanel.track("Page", {"Name": "Page Not Found", "url": "404.html"  }) ;
 </script>
 </head>
 
@@ -81,7 +82,7 @@ mixpanel.track("Page", {"Name": "Aetf", "page": "Archives", "url": "archives.htm
 style="background-image: url('assets/img/cover.png');">
 <div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
 <div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
-    <h1 class="article-heading">All Posts</h1>
+    <h1 class="article-heading">Page Not Found</h1>
 </div>
         </header>
 
@@ -108,24 +109,19 @@ style="background-image: url('assets/img/cover.png');">
         </a>
     </li>
             </ul>
-            <a href='http://unlimitedcodeworks.xyz/blog'
+            <a href='http://unlimitedcodeworks.xyz/'
                class="btn-floating btn-large grey page-scroll">
                 <i class="material-icons md-light">keyboard_arrow_left</i>
             </a>
         </div>
         <main class="pure-g">
-<div class="pure-u-1-6 pure-u-md-1-4 pure-u-lg-1-4"></div>
-<div class="pure-u-2-3 pure-u-md-1-2 pure-u-lg-1-2">
-    <h2>2015</h2>
-    <ul>
-        <li><a href="blog/2015/11月/18/a-really-complex-markdown-test/">A really complex markdown test</a></li>
-        <li><a href="blog/2015/11月/18/my-super-post/">My super title2</a></li>
-    </ul>
-    <h2>2010</h2>
-    <ul>
-        <li><a href="blog/2010/12月/03/my-first-review/">My First Review</a></li>
-    </ul>
+<div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
+<div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
+    <div class="entry-content">
+        <p>Oops! The page you were looking for was not found.</p>
+    </div>
 </div>
+<hr>
         </main>
     </div>
 
@@ -207,11 +203,11 @@ style="background-image: url('assets/img/cover.png');">
     <script type="text/javascript">
         var menuItem = $(document.createElement('li'))
             .append($(document.createElement('a'))
-                .attr("href", "http://unlimitedcodeworks.xyz/blog")
+                .attr("href", "http://unlimitedcodeworks.xyz/")
                 .addClass('page-scroll btn-floating red')
                 .append($(document.createElement('i'))
                     .addClass('material-icons')
-                    .text('description')
+                    .text('home')
                 )
             );
         new Waypoint({
@@ -226,7 +222,7 @@ style="background-image: url('assets/img/cover.png');">
                         .text('keyboard_arrow_up');
                 } else {
                     menuItem.detach();
-                    $(".fixed-action-btn a.btn-large").attr("href", "http://unlimitedcodeworks.xyz/blog");
+                    $(".fixed-action-btn a.btn-large").attr("href", "http://unlimitedcodeworks.xyz/");
                     $('.fixed-action-btn .btn-large .material-icons')
                         .text("keyboard_arrow_left");
                 }
@@ -238,7 +234,7 @@ style="background-image: url('assets/img/cover.png');">
         $(".fixed-action-btn").hover(function() {
                 $('.fixed-action-btn').not('.scrolled')
                     .find('.btn-large .material-icons')
-                    .text('description');
+                    .text('home');
             },
             function() {
                 $('.fixed-action-btn').not('.scrolled')
