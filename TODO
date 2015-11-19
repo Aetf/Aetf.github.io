@@ -9,6 +9,11 @@ fix search bar
 add load indicator in search page
 change scroll speed
 
+fix anchor and nav bar (see http://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header)
+    use js to emulate all elements with a id
+
+add toc as FAB menu on article page
+
 material design navigation bar
 archives page (partially done)
     per year archives page
