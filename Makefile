@@ -93,6 +93,6 @@ publish: prepare
 
 github: publish
 	$(VENVDIR)/bin/ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
-	#git push origin $(GITHUB_PAGES_BRANCH)
+	git push origin $(GITHUB_PAGES_BRANCH)
 
 .PHONY: html help clean distclean prepare regenerate serve serve-global devserver publish github
