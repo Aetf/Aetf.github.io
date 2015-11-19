@@ -51,29 +51,40 @@ CONTACT_ME_DESCRIPTION = ''
 SITE_LICENSE = """
 <div xmlns:cc="http://creativecommons.org/ns#"
 	 xmlns:dct="http://purl.org/dc/terms/"
-	 about="http://kdheepak.com/">
-	All content by Aetf on this page is licensed under a
+	 about="http://unlimitedcodeworks.xyz/">
 	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-		Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+		<img alt="Creative Commons License" style="border-width:0"
+			 src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+	</a>
+	<br />
+	All content by Aetf on this page is licensed under a 
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+	Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
 	</a>.
+	<br />
+	The overall theme is modified and thus largely based on
+	<a href="https://github.com/kdheepak89/pelican-smoothie">smoothie</a>
+	by <a href="http://kdheepak.com/">Dheepak Krishnamurthy</a>.
 </div>
 """
 
 # About me section in landing page
 LANDING_PAGE_ABOUT = { 'details':
 """
+<p>
 My name is Aetf. 
 I’ve dabbled with mobile application and web development, home automation and photography. 
-I’m currently working towards a Master’s degree in Electrical Engineering.
-</p><p>
+I’m currently working towards a Master’s degree in Computer Science.
+</p>
 <img src="images/coverPicture.jpg" alt="Alt text! And a picture of me!" style="width:100%">
-</p><p>
-I love reading up on the history of places.
-My dream is that one day I’d have travelled to every country in the world (Four down, 192 to go!).
-I love watching movies and having discussions with friends about them. 
-I’ve been on the seemingly never ending quest of completing IMDb’s top 250 movies of all time 
-(An embarrassingly small 91 down, 159 to go). I love reading books and comic books. 
-
+<p></p>
+<p>
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+</p>
+<p>
 On this website, I intend to share interesting projects I’m currently working on
 or have worked on in the past, partly also as a way of establishing an archive.
 If you find anything interesting, feel absolutely free to get in touch with me.
