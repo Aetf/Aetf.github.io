@@ -1,19 +1,22 @@
 [DONE] color change animation for FAB
 [DONE] make FAB colorful
-add label next to FAB menu
+add label next to FAB menu (see MFB.js)
 [DONE] add main link when FAB is scrolled
 
-change scroll speed
 fix search bar
+    auto hide
+    auto focus
+add load indicator in search page
+change scroll speed
 
 material design navigation bar
-archives page
-per year archives page
-per month archives page
-per day archives page
+archives page (partially done)
+    per year archives page
+    per month archives page
+    per day archives page
 tags page
 categories page
 
 try matrilized card for articles
-try chips for tags
+try chips for tags (in header area)
 rotate animation for FAB
