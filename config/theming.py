@@ -13,7 +13,7 @@
 THEME = '../themes/smoothie'
 
 # smoothie uses a non-standard `blog` template for the list of articles
-DIRECT_TEMPLATES = ['index', 'archives', 'blog']
+DIRECT_TEMPLATES = ['index', 'archives', 'blog', 'search']
 BLOG_URL = 'blog'
 BLOG_SAVE_AS = 'blog/index.html'
 
@@ -27,8 +27,9 @@ COVER_IMG = "assets/img/cover.png"
 SOCIAL = {
         'Github': 'http://github.com/Aetf',
         'Email': 'aetf@unlimitedcodeworks.xyz',
+        'Mozillian': 'https://mozillians.org/en-US/u/Aetf/',
 		#'Twitter': 'http://twitter.com/xxxxxx',
-        #'Google+': 'https://plus.google.com/+xxxxxx/posts'
+        'Google+': 'https://plus.google.com/+余佩峰/posts'
 }
 
 
