@@ -51,12 +51,12 @@ PAGE_LANG_SAVE_AS = '{slug}-{lang}/index.html'
 # Categories
 CATEGORY_URL = 'category/{slug}/'
 CATEGORY_SAVE_AS = 'category/{slug}/index.html'
-CATEGORIES_SAVE_AS = 'categories.html'
+CATEGORIES_SAVE_AS = 'category/index.html'
 
 # Tags
 TAG_URL = 'tags/{slug}/'
 TAG_SAVE_AS = 'tags/{slug}/index.html'
-TAGS_SAVE_AS = 'tags.html'
+TAGS_SAVE_AS = 'tags/index.html'
 
 # Author
 AUTHOR_URL = ''
