@@ -50,6 +50,7 @@ Search -Unlimited Code Works    </title>
 
     <!-- Custom CSS -->
     <link href="/theme/css/pelican-smoothie.css" rel="stylesheet">
+    <link href="/theme/css/fab.css" rel="stylesheet">
     <link href="/theme/css/pygment.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -103,7 +104,7 @@ style="background-image: url('assets/img/cover.png');">
         <div class="fixed-action-btn fab">
             <ul>
             </ul>
-            <a href='http://unlimitedcodeworks.xyz/'
+            <a href='http://unlimitedcodeworks.xyz/' fab-label='Home'
                class="btn-floating btn-large grey page-scroll">
                 <i class="material-icons md-light">keyboard_arrow_left</i>
             </a>
@@ -211,6 +212,7 @@ style="background-image: url('assets/img/cover.png');">
         var menuItem = $(document.createElement('li'))
             .append($(document.createElement('a'))
                 .attr("href", "http://unlimitedcodeworks.xyz/")
+                .attr("fab-label", "Home")
                 .addClass('page-scroll btn-floating red')
                 .append($(document.createElement('i'))
                     .addClass('material-icons')
@@ -225,11 +227,13 @@ style="background-image: url('assets/img/cover.png');">
                     $(".fixed-action-btn ul").append(menuItem);
 
                     $(".fixed-action-btn a.btn-large").attr("href", "#page-top");
+                    $(".fixed-action-btn a.btn-large").attr("fab-label", "Back to Top");
                     $('.fixed-action-btn .btn-large .material-icons')
                         .text('keyboard_arrow_up');
                 } else {
                     menuItem.detach();
                     $(".fixed-action-btn a.btn-large").attr("href", "http://unlimitedcodeworks.xyz/");
+                    $(".fixed-action-btn a.btn-large").attr("fab-label", "Home");
                     $('.fixed-action-btn .btn-large .material-icons')
                         .text("keyboard_arrow_left");
                 }

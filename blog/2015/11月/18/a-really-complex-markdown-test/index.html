@@ -48,6 +48,7 @@ A really complex markdown test - Unlimited Code Works
 
     <!-- Custom CSS -->
     <link href="/theme/css/pelican-smoothie.css" rel="stylesheet">
+    <link href="/theme/css/fab.css" rel="stylesheet">
     <link href="/theme/css/pygment.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -110,12 +111,12 @@ mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
         <div class="fixed-action-btn fab">
             <ul>
     <li>
-        <a href='#search' class="page-scroll btn-floating grey">
+        <a href='#search' class="page-scroll btn-floating grey" fab-label='Search'>
             <i class="material-icons">search</i>
         </a>
     </li>
             </ul>
-            <a href='http://unlimitedcodeworks.xyz/blog'
+            <a href='http://unlimitedcodeworks.xyz/blog' fab-label='Blog'
                class="btn-floating btn-large grey page-scroll">
                 <i class="material-icons md-light">keyboard_arrow_left</i>
             </a>
@@ -1119,6 +1120,7 @@ _   underscore
         var menuItem = $(document.createElement('li'))
             .append($(document.createElement('a'))
                 .attr("href", "http://unlimitedcodeworks.xyz/blog")
+                .attr("fab-label", "Blog")
                 .addClass('page-scroll btn-floating red')
                 .append($(document.createElement('i'))
                     .addClass('material-icons')
@@ -1133,11 +1135,13 @@ _   underscore
                     $(".fixed-action-btn ul").append(menuItem);
 
                     $(".fixed-action-btn a.btn-large").attr("href", "#page-top");
+                    $(".fixed-action-btn a.btn-large").attr("fab-label", "Back to Top");
                     $('.fixed-action-btn .btn-large .material-icons')
                         .text('keyboard_arrow_up');
                 } else {
                     menuItem.detach();
                     $(".fixed-action-btn a.btn-large").attr("href", "http://unlimitedcodeworks.xyz/blog");
+                    $(".fixed-action-btn a.btn-large").attr("fab-label", "Blog");
                     $('.fixed-action-btn .btn-large .material-icons')
                         .text("keyboard_arrow_left");
                 }

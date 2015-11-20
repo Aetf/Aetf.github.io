@@ -1,0 +1,52 @@
+.fixed-action-btn.fab {
+    bottom: 7.5%;
+    right: 3.95%;
+    text-align: center;
+}
+
+.fixed-action-btn.fab.scrolled a:hover {
+    background-color: #092AF6;
+}
+
+.fixed-action-btn.fab ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.fixed-action-btn.fab a {
+    -webkit-transition: background-color 500ms ease;
+    -moz-transition: background-color 500ms ease;
+    -o-transition: background-color 500ms ease;
+    transition: background-color 500ms ease;
+    overflow: visible;
+}
+
+.fixed-action-btn.fab a[fab-label]:after {
+  content: attr(fab-label);
+  opacity: 0;
+  transition: all 0.3s;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-weight: normal;
+  pointer-events: none;
+  line-height: normal;
+  margin-top: -11px;
+  padding: 4px 10px;
+  position: absolute;
+  top: 50%;
+  right: 4.5em;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.fixed-action-btn.fab a[fab-label]:hover:after {
+  content: attr(fab-label);
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.fixed-action-btn.fab ul a[fab-label]::after{
+  right: 3.8em;
+}

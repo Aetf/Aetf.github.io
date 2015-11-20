@@ -46,6 +46,7 @@ Unlimited Code Works    </title>
 
     <!-- Custom CSS -->
     <link href="/theme/css/pelican-smoothie.css" rel="stylesheet">
+    <link href="/theme/css/fab.css" rel="stylesheet">
     <link href="/theme/css/pygment.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -95,22 +96,22 @@ style="background-image: url('assets/img/cover.png');">
         <div class="fixed-action-btn fab">
             <ul>
     <li>
-        <a href='#search' class="page-scroll btn-floating grey">
+        <a href='#search' class="page-scroll btn-floating grey" fab-label='Search'>
             <i class="material-icons">search</i>
         </a>
     </li>
     <li>
-        <a href='#about' class="page-scroll btn-floating yellow darken-1">
+        <a href='#about' class="page-scroll btn-floating yellow darken-1" fab-label='About Me'>
             <i class="material-icons">info_outline</i>
         </a>
     </li>
     <li>
-        <a href='#contact' class="page-scroll btn-floating green">
+        <a href='#contact' class="page-scroll btn-floating green" fab-label='Contact Me'>
             <i class="material-icons">forum</i>
         </a>
     </li>
             </ul>
-            <a href='http://unlimitedcodeworks.xyz/blog'
+            <a href='http://unlimitedcodeworks.xyz/blog' fab-label='Blog'
                class="btn-floating btn-large white page-scroll">
                 <i class="material-icons md-dark">menu</i>
             </a>
@@ -246,6 +247,7 @@ If you find anything interesting, feel absolutely free to get in touch with me.
         var menuItem = $(document.createElement('li'))
             .append($(document.createElement('a'))
                 .attr("href", "http://unlimitedcodeworks.xyz/blog")
+                .attr("fab-label", "Blog")
                 .addClass('page-scroll btn-floating red')
                 .append($(document.createElement('i'))
                     .addClass('material-icons')
@@ -260,11 +262,13 @@ If you find anything interesting, feel absolutely free to get in touch with me.
                     $(".fixed-action-btn ul").append(menuItem);
 
                     $(".fixed-action-btn a.btn-large").attr("href", "#page-top");
+                    $(".fixed-action-btn a.btn-large").attr("fab-label", "Back to Top");
                     $('.fixed-action-btn .btn-large .material-icons')
                         .text('keyboard_arrow_up');
                 } else {
                     menuItem.detach();
                     $(".fixed-action-btn a.btn-large").attr("href", "http://unlimitedcodeworks.xyz/blog");
+                    $(".fixed-action-btn a.btn-large").attr("fab-label", "Blog");
                     $('.fixed-action-btn .btn-large .material-icons')
                         .text("menu");
                 }

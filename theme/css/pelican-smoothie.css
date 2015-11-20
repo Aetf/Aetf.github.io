@@ -464,39 +464,7 @@ code {
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
 .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
 
-.fixed-action-btn.fab {
-    bottom: 7.5%;
-    right: 3.95%;
-    text-align: center;
-}
 
-.fixed-action-btn.scrolled a:hover {
-    background-color: #092AF6;
-}
-
-.fixed-action-btn ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.fixed-action-btn a {
-    -webkit-transition: background-color 500ms ease;
-    -moz-transition: background-color 500ms ease;
-    -o-transition: background-color 500ms ease;
-    transition: background-color 500ms ease;
-}
-
-@media(min-width:992px){
-    .fixed-action-btn {
-        /*margin-left:-12.5%;*/
-    }
-}
-
-@media(max-width:767px) {
-    .fixed-action-btn {
-        /*top: 2em;*/
-    }
-}
 
 @media(min-width:767px) {
     #about {
@@ -552,14 +520,6 @@ input[type=search] {
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
 	display: none;
-}
-
-.fixed-action-btn .search-button{
-display: none
-}
-
-.fixed-action-btn.active .search-button{
-display: block
 }
 
 .search-button {
@@ -648,11 +608,6 @@ a.anchor-link {
  }
 
 @media(max-width:767px) {
-
-    header .fixed-action-btn {
-        position: fixed;
-        top: 2em;
-    }
 
     ul.banner-social-buttons li {
         display: block;
