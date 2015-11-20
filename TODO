@@ -2,13 +2,14 @@
 [DONE] make FAB colorful
 [DONE] add label next to FAB menu (see MFB.js)
 [DONE] add main link when FAB is scrolled
-[DONE]relative value of FAB position
+    fix when main link not display correctly when it is added while FAB is opened
+[DONE] relative value of FAB position
 
 fix search bar
     auto hide
     auto focus
 add load indicator in search page
-change scroll speed
+[DONE] change scroll speed
 
 fix anchor and nav bar (see http://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header)
     use js to emulate all elements with a id
