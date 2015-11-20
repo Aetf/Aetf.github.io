@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="page-top"  lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -66,7 +66,7 @@ mixpanel.track("Page", {"Name": "Aetf", "page": "Archives", "url": "archives.htm
 </script>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body data-spy="scroll" data-target=".navbar-fixed-top">
 
     <div class="search-button">
         <form id="search" class="floating-search"
@@ -110,7 +110,7 @@ style="background-image: url('assets/img/cover.png');">
     </li>
             </ul>
             <a href='http://unlimitedcodeworks.xyz/blog' fab-label='Blog'
-               class="btn-floating btn-large grey page-scroll">
+               class="btn-floating btn-large grey smooth-scroll">
                 <i class="material-icons md-light">keyboard_arrow_left</i>
             </a>
         </div>
@@ -160,7 +160,7 @@ style="background-image: url('assets/img/cover.png');">
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
 
     <!-- Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
@@ -204,65 +204,22 @@ style="background-image: url('assets/img/cover.png');">
     </script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="/theme/js/pelican-smoothie.js"></script>
     <script type="text/javascript">
-        var menuItem = $(document.createElement('li'))
-            .append($(document.createElement('a'))
-                .attr("href", "http://unlimitedcodeworks.xyz/blog")
-                .attr("fab-label", "Blog")
-                .addClass('page-scroll btn-floating red')
-                .append($(document.createElement('i'))
-                    .addClass('material-icons')
-                    .text('description')
-                )
-            );
-        new Waypoint({
-            element: $(".article-heading")[0],
-            handler: function(direction) {
-                var scrolled = (direction === 'down');
-                if (scrolled) {
-                    $(".fixed-action-btn ul").append(menuItem);
-
-                    $(".fixed-action-btn a.btn-large").attr("href", "#page-top");
-                    $(".fixed-action-btn a.btn-large").attr("fab-label", "Back to Top");
-                    $('.fixed-action-btn .btn-large .material-icons')
-                        .text('keyboard_arrow_up');
-                } else {
-                    menuItem.detach();
-                    $(".fixed-action-btn a.btn-large").attr("href", "http://unlimitedcodeworks.xyz/blog");
-                    $(".fixed-action-btn a.btn-large").attr("fab-label", "Blog");
-                    $('.fixed-action-btn .btn-large .material-icons')
-                        .text("keyboard_arrow_left");
-                }
-                $('.fixed-action-btn').toggleClass('scrolled', scrolled);
-                $('.fixed-action-btn .btn-large').toggleClass('blue', scrolled);
-                $('.fixed-action-btn .btn-large').toggleClass('grey', !scrolled);
-             }
-        });
-        $(".fixed-action-btn").hover(function() {
-                $('.fixed-action-btn').not('.scrolled')
-                    .find('.btn-large .material-icons')
-                    .text('description');
-            },
-            function() {
-                $('.fixed-action-btn').not('.scrolled')
-                    .find('.btn-large .material-icons')
-                    .text('keyboard_arrow_left');
-            });
-
-        new Waypoint({
-            element: $('.ucw-nav'),
-            handler: function(direction) {
-                var shouldBeStuck = direction === "down";
-                var wrapperHeight = shouldBeStuck ?
-                    $('.ucw-nav nav').outerHeight(true) : '';
-
-                $('.ucw-nav').height(wrapperHeight);
-                $('.ucw-nav').toggleClass('navbar-fixed', shouldBeStuck);
-            }
-        });
-
+        // Pass Jinja template variables to js
+        var ucw = ucw || {};
+        ucw.waypoint_selector = '.article-heading';
+        ucw.fab_main_link = 'http://unlimitedcodeworks.xyz/blog';
+        ucw.fab_main_label = 'Blog';
+        ucw.fab_main_icon = 'keyboard_arrow_left';
+        ucw.fab_main_icon_class = 'md-light';
+        ucw.fab_main_icon_hover = 'description';
+        ucw.fab_main_color = 'grey';
+        ucw.fab_main_color_dark = 'blue';
+        ucw.fab_main_link = 'http://unlimitedcodeworks.xyz/blog';
+        ucw.fab_toggled_state = function(scrolled) {
+         }
     </script>
+    <script src="/theme/js/pelican-smoothie.js"></script>
 
 </body>
 </html>
