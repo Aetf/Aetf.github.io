@@ -2,6 +2,7 @@
 [DONE] make FAB colorful
 add label next to FAB menu (see MFB.js)
 [DONE] add main link when FAB is scrolled
+relative value of FAB position
 
 fix search bar
     auto hide
