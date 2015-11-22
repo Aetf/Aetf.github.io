@@ -8,18 +8,18 @@
 [DONE] change scroll speed
 
 [DONE] fix anchor and nav bar (see http://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header)
-
-add toc as FAB menu on article page
-
-add tags to article header
-    try chips for tags (in header area)
-
 material design navigation bar
+
+[DONE] add tags to article header
+[DONE]    try chips for tags (in header area)
+
 archives page (partially done)
     per year archives page
     per month archives page
     per day archives page
 tags page
+
+add toc as FAB menu on article page
 
 fix search bar
     auto hide

@@ -1,26 +1,30 @@
 ---
 Title: A really complex markdown test
+Subtitle: really complex, indeed
+Date: 2015-11-18
+Modified: 2015-11-22 14:40
+Tags: Test, Markdown
 ---
 
 *   [Overview](#overview)
-    *   [Philosophy](#philosophy)
-    *   [Inline HTML](#html)
-    *   [Automatic Escaping for Special Characters](#autoescape)
+    +   [Philosophy](#philosophy)
+    +   [Inline HTML](#html)
+    +   [Automatic Escaping for Special Characters](#autoescape)
 *   [Block Elements](#block)
-    *   [Paragraphs and Line Breaks](#p)
-    *   [Headers](#header)
-    *   [Blockquotes](#blockquote)
-    *   [Lists](#list)
-    *   [Code Blocks](#precode)
-    *   [Horizontal Rules](#hr)
+    +   [Paragraphs and Line Breaks](#p)
+    +   [Headers](#header)
+    +   [Blockquotes](#blockquote)
+    +   [Lists](#list)
+    +   [Code Blocks](#precode)
+    +   [Horizontal Rules](#hr)
 *   [Span Elements](#span)
-    *   [Links](#link)
-    *   [Emphasis](#em)
-    *   [Code](#code)
-    *   [Images](#img)
+    +   [Links](#link)
+    +   [Emphasis](#em)
+    +   [Code](#code)
+    +   [Images](#img)
 *   [Miscellaneous](#misc)
-    *   [Backslash Escapes](#backslash)
-    *   [Automatic Links](#autolink)
+    +   [Backslash Escapes](#backslash)
+    +   [Automatic Links](#autolink)
 
 
 **Note:** This document is itself written using Markdown; you
