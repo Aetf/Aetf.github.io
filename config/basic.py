@@ -15,8 +15,17 @@ SITENAME = 'Unlimited Code Works'
 # Site URL should be left empty when deployment local
 SITEURL = ''
 
+# Time and locale
+DEFAULT_LANG = 'en'
+
 TIMEZONE = 'America/Detroit'
-DEFAULT_LANG = 'zh'
+
+LOCALE = ['en_US', 'zh_CN']
+DATE_FORMATS = {
+    'en': ('en_US','%a, %b %d, %Y'),
+    'zh': ('zh_CN','%Y-%m-%d (%a)'),
+}
+DEFAULT_DATE_FORMAT = '%a, %d %b %Y'
 
 # ==================================
 # File Structures
@@ -37,16 +46,16 @@ STATIC_PATHS = ['assets']
 INDEX_SAVE_AS = 'index.html'
 
 # Articles
-ARTICLE_URL = 'blog/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
-ARTICLE_LANG_URL = 'blog/{date:%Y}/{date:%b}/{date:%d}/{slug}-{lang}/'
-ARTICLE_LANG_SAVE_AS = 'blog/{date:%Y}/{date:%b}/{date:%d}/{slug}-{lang}/index.html'
+ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+ARTICLE_LANG_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{lang}/{slug}/'
+ARTICLE_LANG_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{lang}/{slug}/index.html'
 
 # Pages
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
-PAGE_LANG_URL = '{slug}-{lang}/'
-PAGE_LANG_SAVE_AS = '{slug}-{lang}/index.html'
+PAGE_LANG_URL = '{lang}/{slug}/'
+PAGE_LANG_SAVE_AS = '{lang}/{slug}/index.html'
 
 # Categories
 CATEGORY_URL = 'category/{slug}/'
