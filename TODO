@@ -19,7 +19,7 @@ archives page (partially done)
     per day archives page
 tags page
 
-add toc as FAB menu on article page
+add toc as right sidebar on article page (see http://materializecss.com/buttons.html for example)
 
 fix search bar
     auto hide
