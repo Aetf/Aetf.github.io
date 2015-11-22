@@ -2,19 +2,17 @@
 [DONE] make FAB colorful
 [DONE] add label next to FAB menu (see MFB.js)
 [DONE] add main link when FAB is scrolled
-    fix when main link not display correctly when it is added while FAB is opened
+[DONE]     fix the main link is not display correctly when it is added while FAB is opened
 [DONE] relative value of FAB position
 
-fix search bar
-    auto hide
-    auto focus
-add load indicator in search page
 [DONE] change scroll speed
 
-fix anchor and nav bar (see http://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header)
-    use js to emulate all elements with a id
+[DONE] fix anchor and nav bar (see http://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header)
 
 add toc as FAB menu on article page
+
+add tags to article header
+    try chips for tags (in header area)
 
 material design navigation bar
 archives page (partially done)
@@ -22,8 +20,11 @@ archives page (partially done)
     per month archives page
     per day archives page
 tags page
-categories page
+
+fix search bar
+    auto hide
+    auto focus
+add load indicator in search page
 
 try matrilized card for articles
-try chips for tags (in header area)
 rotate animation for FAB
