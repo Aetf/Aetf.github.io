@@ -13,6 +13,11 @@ material design navigation bar
 [DONE] add tags to article header
 [DONE]    try chips for tags (in header area)
 
+[DONE] add jinja helper filters
+[DONE]    absolute url
+[DONE]    string format
+[DONE]    datetime format from period tuple
+
 archives page (partially done)
     per year archives page
     per month archives page
@@ -20,6 +25,8 @@ archives page (partially done)
 tags page
 
 add toc as right sidebar on article page (see http://materializecss.com/buttons.html for example)
+
+reconsider pure grid size for md and small screens
 
 fix search bar
     auto hide
