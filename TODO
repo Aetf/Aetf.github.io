@@ -18,10 +18,10 @@ material design navigation bar
 [DONE]    string format
 [DONE]    datetime format from period tuple
 
-archives page (partially done)
-    per year archives page
-    per month archives page
-    per day archives page
+[DONE] archives page (partially done)
+[DONE]     per year archives page
+[DONE]     per month archives page
+[DONE]     per day archives page
 tags page
 
 add toc as right sidebar on article page (see http://materializecss.com/buttons.html for example)
