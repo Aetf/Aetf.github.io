@@ -1,8 +1,8 @@
-from filters.strfmt import strfmt
-from filters.periodfmt import periodfmt
+from filters.strfmt import strfmt, datestrfmt, periodToDate
 from filters.absurl import absurl
 filters = {
 	"absurl": absurl,
-	"periodfmt": periodfmt,
-	"strfmt": strfmt
+	"strfmt": strfmt,
+	"datestrfmt": datestrfmt,
+	"periodToDate": periodToDate
 }

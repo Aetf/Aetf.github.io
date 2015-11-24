@@ -57,26 +57,33 @@ PAGE_SAVE_AS = '{slug}/index.html'
 PAGE_LANG_URL = '{lang}/{slug}/'
 PAGE_LANG_SAVE_AS = '{lang}/{slug}/index.html'
 
-# Categories
-CATEGORY_URL = 'category/{slug}/'
-CATEGORY_SAVE_AS = 'category/{slug}/index.html'
-CATEGORIES_SAVE_AS = 'category/index.html'
-
 # Tags
 TAG_URL = 'tags/{slug}/'
 TAG_SAVE_AS = 'tags/{slug}/index.html'
+TAGS_URL = 'tags/'
 TAGS_SAVE_AS = 'tags/index.html'
 
-# Author
+# Archives
+YEAR_ARCHIVE_URL = 'archives/{date:%Y}/'
+YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html'
+MONTH_ARCHIVE_URL = 'archives/{date:%Y}/{date:%m}/'
+MONTH_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/{date:%m}/index.html'
+DAY_ARCHIVE_URL = 'archives/{date:%Y}/{date:%m}/{date:%d}/'
+DAY_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/{date:%m}/{date:%d}/index.html'
+ARCHIVES_URL = 'archives/'
+ARCHIVES_SAVE_AS = 'archives/index.html'
+
+# Categories: disabled
+CATEGORY_URL = ''
+CATEGORY_SAVE_AS = ''
+CATEGORIES_URL = ''
+CATEGORIES_SAVE_AS = ''
+
+# Author: disabled
 AUTHOR_URL = ''
 AUTHOR_SAVE_AS = ''
+AUTHORS_URL = ''
 AUTHORS_SAVE_AS = ''
-
-# Archives
-YEAR_ARCHIVE_SAVE_AS = ''
-MONTH_ARCHIVE_SAVE_AS = ''
-DAY_ARCHIVE_SAVE_AS = ''
-ARCHIVES_SAVE_AS = 'archives.html'
 
 # Static files
 #STATIC_URL = '{path}'
