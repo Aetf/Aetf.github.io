@@ -37,7 +37,6 @@ Unlimited Code Works    </title>
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Pacifico|Nova+Round|EB+Garamond|Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -62,7 +61,7 @@ mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
     <!-- end Mixpanel -->
 
 <script>
-    mixpanel.track("Page", {"Name": "Home Page", "url": "category/review/index.html"  }) ;
+mixpanel.track("Page", {"Name": "Aetf", "page": "Period Archives", "url": "archives/2010/12/index.html" });
 </script>
 </head>
 
@@ -78,92 +77,63 @@ mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
 
 <!--<div class="content-block">-->
     <div class="content-block">
-        <header class="intro pure-g"
+        <header class="intro-header-page pure-g"
 style="background-image: url('assets/img/cover.png');">
-<div class="pure-u-1-4 pure-u-md-1-4 pure-u-lg-1-4"></div>
-<div class="pure-u-1-2 pure-u-md-1-2 pure-u-lg-1-2 center-align">
-    <div class="avatarBox">
-        <img src="assets/img/avatar.jpg">
-    </div>
-    <div class="">
-        <h1 class="brand-heading">Unlimited Code Works</h1>
-        <p class="intro-text">A pessimist because of intelligence, <br/>but an optimist because of will.</p>
-    </div>
+<div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
+<div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
+        <h1 class="article-heading">Archives for 2010-12</h1>
 </div>
         </header>
 
+        <!--
+        <div class="ucw-nav">
+            <nav>
+                <div class="nav-wrapper blue lighten-1">
+                    <ul class="left hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <li><a href="collapsible.html">JavaScript</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        -->
 
         <div class="fixed-action-btn fab">
             <ul>
     <li>
-        <a href='#search' class="smooth-scroll btn-floating grey" fab-label='Search'>
+        <a href='#search' class="page-scroll btn-floating grey" fab-label='Search'>
             <i class="material-icons">search</i>
         </a>
     </li>
     <li>
-        <a href='#about' class="smooth-scroll btn-floating yellow darken-1" fab-label='About Me'>
-            <i class="material-icons">info_outline</i>
+        <a href="http://unlimitedcodeworks.xyz/blog" class="page-scroll btn-floating green" fab-label='Blog'>
+            <i class="material-icons">description</i>
         </a>
     </li>
-    <li>
-        <a href='#contact' class="smooth-scroll btn-floating green" fab-label='Contact Me'>
-            <i class="material-icons">forum</i>
-        </a>
-    </li>
+                <li id='fab_alt_main'>
+                     <a href="http://unlimitedcodeworks.xyz/archives/2010/" fab-label="Year Archives"
+                        class="page-scroll btn-floating red">
+                         <i class="material-icons">storage</i>
+                     </a>
+                 </li>
             </ul>
-            <a href='http://unlimitedcodeworks.xyz/blog' fab-label='Blog'
-               class="btn-floating btn-large white smooth-scroll">
-                <i class="material-icons md-dark">menu</i>
+            <a href='http://unlimitedcodeworks.xyz/archives/2010/' fab-label='Year Archives'
+               class="btn-floating btn-large blue smooth-scroll">
+                <i class="material-icons md-light">keyboard_arrow_left</i>
             </a>
         </div>
         <main class="pure-g">
-<div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
-<div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
-    <!-- About Section -->
-    <section id="about" class="content-section text-center" href="#">
-        <h2 class="center-align">About Me</h2>
-        
-<p>
-My name is Aetf. 
-I’ve dabbled with mobile application and web development, home automation and photography. 
-I’m currently working towards a Master’s degree in Computer Science.
-</p>
-<img src="images/coverPicture.jpg" alt="Alt text! And a picture of me!" style="width:100%">
-<p></p>
-<p>
-The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
-The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
-The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
-The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
-</p>
-<p>
-On this website, I intend to share interesting projects I’m currently working on
-or have worked on in the past, partly also as a way of establishing an archive.
-If you find anything interesting, feel absolutely free to get in touch with me.
-</p>
-
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="content-section" href="#">
-    <h2 class="center-align">Contact Me</h2>
-    <p></p>
-
-
-    <p class="center-align"><a href="mailto:aetf@unlimitedcodeworks.xyz">aetf@unlimitedcodeworks.xyz</a></p>
-    <div class="pure-u-1-4"></div>
-    <div class="pure-u-1-2 center-align">
-            <a href="http://github.com/Aetf" class="btn social-btn waves-effect waves-light">
-                <i class="fa fa-github fa-fw"></i><span class="network-name">Github</span>
-            </a>
-            <a href="https://mozillians.org/en-US/u/Aetf/" class="btn social-btn waves-effect waves-light">
-                <i class="fa fa-firefox fa-fw"></i><span class="network-name">Mozillian</span>
-            </a>
-            <a href="https://plus.google.com/+余佩峰/posts" class="btn social-btn waves-effect waves-light">
-                <i class="fa fa-google-plus fa-fw"></i><span class="network-name">Google+</span>
-            </a>
-    </div>
-    </section>
+<div class="pure-u-1-6 pure-u-md-1-4 pure-u-lg-5-24"></div>
+<div class="pure-u-2-3 pure-u-md-1-2 pure-u-lg-14-24">
+	<h2>
+    	<a href="http://unlimitedcodeworks.xyz/archives/2010/12/03/">
+    	2010-12-03
+    	</a>
+    </h2>
+    <ul>
+        <li><a href="http://unlimitedcodeworks.xyz/blog/2010/12/03/my-first-review/">My First Review</a></li>
+    </ul>
 </div>
         </main>
     </div>
@@ -245,19 +215,17 @@ If you find anything interesting, feel absolutely free to get in touch with me.
     <script type="text/javascript">
         // Pass Jinja template variables to js
         var ucw = ucw || {};
-        ucw.waypoint_selector = '.avatarBox';
-        ucw.fab_main_link = 'http://unlimitedcodeworks.xyz/blog';
-        ucw.fab_main_label = 'Blog';
-        ucw.fab_main_icon = 'menu';
-        ucw.fab_main_icon_class = 'md-dark';
-        ucw.fab_main_icon_hover = 'description';
-        ucw.fab_main_color = 'white';
+        ucw.waypoint_selector = '.article-heading';
+        ucw.fab_main_link = 'http://unlimitedcodeworks.xyz/archives/2010/';
+        ucw.fab_main_label = 'Year Archives';
+        ucw.fab_main_icon = 'keyboard_arrow_left';
+        ucw.fab_main_icon_class = 'md-light';
+        ucw.fab_main_icon_hover = 'storage';
+        ucw.fab_main_color = 'blue';
         ucw.fab_main_color_dark = 'blue';
-        ucw.fab_main_link = 'http://unlimitedcodeworks.xyz/blog';
+        ucw.fab_main_link = 'archives/2010/';
         ucw.fab_toggled_state = function(scrolled) {
-            $('.fixed-action-btn a.btn-large i').toggleClass('md-light', scrolled);
-            $('.fixed-action-btn a.btn-large i').toggleClass('md-dark', !scrolled);
-        }
+         }
     </script>
     <script src="/theme/js/pelican-smoothie.js"></script>
 

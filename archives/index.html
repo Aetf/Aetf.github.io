@@ -61,7 +61,7 @@ mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
     <!-- end Mixpanel -->
 
 <script>
-mixpanel.track("Page", {"Name": "Aetf", "page": "Tag: publishing", "url": "tags/publishing/index.html" });
+mixpanel.track("Page", {"Name": "Aetf", "page": "Archives", "url": "archives/index.html" });
 </script>
 </head>
 
@@ -81,7 +81,7 @@ mixpanel.track("Page", {"Name": "Aetf", "page": "Tag: publishing", "url": "tags/
 style="background-image: url('assets/img/cover.png');">
 <div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
 <div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
-    <h1 class="article-heading">Tag: publishing</h1>
+    <h1 class="article-heading">Archives</h1>
 </div>
         </header>
 
@@ -107,13 +107,13 @@ style="background-image: url('assets/img/cover.png');">
         </a>
     </li>
                 <li id='fab_alt_main'>
-                     <a href="http://unlimitedcodeworks.xyz/tags" fab-label="Tags"
+                     <a href="http://unlimitedcodeworks.xyz/blog" fab-label="Blog"
                         class="page-scroll btn-floating red">
-                         <i class="material-icons">local_offer</i>
+                         <i class="material-icons">description</i>
                      </a>
                  </li>
             </ul>
-            <a href='http://unlimitedcodeworks.xyz/tags' fab-label='Tags'
+            <a href='http://unlimitedcodeworks.xyz/blog' fab-label='Blog'
                class="btn-floating btn-large blue smooth-scroll">
                 <i class="material-icons md-light">keyboard_arrow_left</i>
             </a>
@@ -121,8 +121,22 @@ style="background-image: url('assets/img/cover.png');">
         <main class="pure-g">
 <div class="pure-u-1-6 pure-u-md-1-4 pure-u-lg-5-24"></div>
 <div class="pure-u-2-3 pure-u-md-1-2 pure-u-lg-14-24">
+    <h2>
+        <a href="http://unlimitedcodeworks.xyz/archives/2015/">
+        2015
+        </a>
+    </h2>
     <ul>
         <li><a href="http://unlimitedcodeworks.xyz/blog/2015/11/18/my-super-post/">My super title2</a></li>
+        <li><a href="http://unlimitedcodeworks.xyz/blog/2015/11/18/a-really-complex-markdown-test/">A really complex markdown test</a></li>
+    </ul>
+    <h2>
+        <a href="http://unlimitedcodeworks.xyz/archives/2010/">
+        2010
+        </a>
+    </h2>
+    <ul>
+        <li><a href="http://unlimitedcodeworks.xyz/blog/2010/12/03/my-first-review/">My First Review</a></li>
     </ul>
 </div>
         </main>
@@ -206,14 +220,14 @@ style="background-image: url('assets/img/cover.png');">
         // Pass Jinja template variables to js
         var ucw = ucw || {};
         ucw.waypoint_selector = '.article-heading';
-        ucw.fab_main_link = 'http://unlimitedcodeworks.xyz/tags';
-        ucw.fab_main_label = 'Tags';
+        ucw.fab_main_link = 'http://unlimitedcodeworks.xyz/blog';
+        ucw.fab_main_label = 'Blog';
         ucw.fab_main_icon = 'keyboard_arrow_left';
         ucw.fab_main_icon_class = 'md-light';
-        ucw.fab_main_icon_hover = 'local_offer';
+        ucw.fab_main_icon_hover = 'description';
         ucw.fab_main_color = 'blue';
         ucw.fab_main_color_dark = 'blue';
-        ucw.fab_main_link = 'tags';
+        ucw.fab_main_link = 'blog';
         ucw.fab_toggled_state = function(scrolled) {
          }
     </script>

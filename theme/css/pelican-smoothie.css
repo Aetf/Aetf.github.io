@@ -13,19 +13,18 @@ body {
 
 }
 
-
 html {
     width: 100%;
     height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lobster Two', cursive;
-    margin: 50px 0 25px;
-    font-size: 2em;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
+h1 { font-size: 3.56rem;}
+h2 { font-size: 2.92rem;}
+h3 { font-size: 2.28rem;}
+h4 { font-size: 1.64rem;}
+h5 { font-size: 1rem;}
+h6 { font-size: 1rem;}
+
 article p {
     text-align: justify;
     -ms-word-break: break-word;
@@ -181,21 +180,6 @@ hr {
     }
 }
 
-.intro {
-    /*margin-bottom: 5em;*/
-    height: auto;
-    width: 100%;
-    color: #fff;
-    background: no-repeat bottom center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    background-color: #03ABF4;
-    padding: 50px 0 50px 0;
-    border-radius: 25px 25px 0px 0px;
-}
-
 .content-block {
     margin-top: 2.5%;
     margin-bottom: 5%;
@@ -212,7 +196,7 @@ hr {
     padding-top: 2.5em;
 }
 
-.intro-header-article {
+.intro-header-article, .intro-header-page {
     background-color: #03ABF4;
  /*   background:  no-repeat bottom center scroll; */
     -webkit-background-size: cover;
@@ -220,35 +204,55 @@ hr {
     background-size: cover;
     -o-background-size: cover;
     margin-bottom: 50px;
-    padding: 10rem 0 10rem 0;
+    padding: 8rem 0 12rem 0;
     border-radius: 25px 25px 0px 0px;
+    line-height: 0;
 }
 
-.intro-header-article .intro { font-weight: 300; font-size: 1.5rem; }
-.intro-header-article h1 { font-size: 4rem; margin: 0; }
-@media screen and (max-width: 480px) { .intro-header-article h1 { font-size: 2rem; } }
-.intro-header-article p { margin: 0; }
-.intro-header-article .date { margin-top: 2rem; }
-
-.intro {
-    vertical-align: middle;
+.intro-header-page {
+    padding: 10rem 0 10rem 0;
 }
 
-.intro .brand-heading {
-    font-size: 40px;
+.intro-header-article .article-meta-wrapper {
+    position: relative;
+}
+.intro-header-article .article-meta-wrapper .article-meta {
+    position: absolute;
+    line-height: normal;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.intro-header-article p, .intro-header-page p {
+    margin: 0;
+}
+
+.intro-header-article time, .intro-header-page time {
+    border-bottom: 1px dashed #fff;
+    text-decoration: none;
+}
+
+
+.intro-header-article .article-heading, .intro-header-page .article-heading {
     font-family: 'Nova Round', cursive;
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
     color: white;
+    letter-spacing: 1px;
+}
+@media screen and (max-width: 480px) {
+    .intro-header-article .article-heading, .intro-header-page .article-heading {
+        font-size: 2rem;
+    }
 }
 
-.intro .intro-text {
-    font-size: 18px;
+.intro-header-article .article-subheading, .intro-header-page .article-subheading {
     font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    margin: 0 1em 0 0;
     color: white;
-}
-
-.intro-header-article .article-heading {
-    font-family: 'Nova Round', cursive;
-    color: white;
+    letter-spacing: 1px;
 }
 
 .intro-header-article .last-updated {
@@ -256,8 +260,45 @@ hr {
     color: white;
 }
 
-.intro-header-article .article-subheading {
+.intro-header-article .article-tags {
+    margin-top: 1rem;
+}
+.intro-header-article .article-tags .chip {
+    background-color: #efefef;
+}
+.intro-header-article .article-tags a {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.intro {
+    /*margin-bottom: 5em;*/
+    height: auto;
+    width: 100%;
+    color: #fff;
+    background: no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-color: #03ABF4;
+    padding: 50px 0 50px 0;
+    border-radius: 25px 25px 0px 0px;
+    vertical-align: middle;
+}
+
+.intro .brand-heading {
+    margin: 50px 0 25px 0;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Nova Round', cursive;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.intro .intro-text {
+    font-size: 18px;
     font-family: 'Permanent Marker', cursive;
+    color: white;
 }
 
 @media(min-width:768px) {
@@ -648,6 +689,10 @@ div[aria-expanded="true"] {
 
 .btn-large i {
     font-size: 2rem;
+}
+
+.ucw-nav {
+    position: relative;
 }
 
 .ucw-nav .nav-wrapper {

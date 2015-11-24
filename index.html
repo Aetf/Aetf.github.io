@@ -37,7 +37,6 @@ Unlimited Code Works    </title>
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Pacifico|Nova+Round|EB+Garamond|Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -110,6 +109,12 @@ style="background-image: url('assets/img/cover.png');">
             <i class="material-icons">forum</i>
         </a>
     </li>
+                <li id='fab_alt_main'>
+                     <a href="http://unlimitedcodeworks.xyz/blog" fab-label="Blog"
+                        class="page-scroll btn-floating red">
+                         <i class="material-icons">description</i>
+                     </a>
+                 </li>
             </ul>
             <a href='http://unlimitedcodeworks.xyz/blog' fab-label='Blog'
                class="btn-floating btn-large white smooth-scroll">
@@ -253,7 +258,7 @@ If you find anything interesting, feel absolutely free to get in touch with me.
         ucw.fab_main_icon_hover = 'description';
         ucw.fab_main_color = 'white';
         ucw.fab_main_color_dark = 'blue';
-        ucw.fab_main_link = 'http://unlimitedcodeworks.xyz/blog';
+        ucw.fab_main_link = 'blog';
         ucw.fab_toggled_state = function(scrolled) {
             $('.fixed-action-btn a.btn-large i').toggleClass('md-light', scrolled);
             $('.fixed-action-btn a.btn-large i').toggleClass('md-dark', !scrolled);

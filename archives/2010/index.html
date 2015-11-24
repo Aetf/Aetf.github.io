@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Short version for index and feeds" />
+    <meta name="description" content="My name is Aetf. This is my personal blog." />
 
     <meta name="author" content="Aetf" />
     <meta name="copyright" content="Aetf" />
@@ -15,10 +15,8 @@
     <meta name="twitter:card" content="summary">
 
     <title>
-My super title2 - Unlimited Code Works
-    </title>
+Unlimited Code Works    </title>
 
-    <meta name="keywords" content="pelican, publishing, misc, " />
 
     <!-- Pure CSS Base and Grid-->
     <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css">
@@ -39,7 +37,6 @@ My super title2 - Unlimited Code Works
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Pacifico|Nova+Round|EB+Garamond|Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -64,7 +61,7 @@ mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
     <!-- end Mixpanel -->
 
 <script>
-    mixpanel.track("Page", {"Name": "My super title2", "url": "blog/2015/11月/18/my-super-post/index.html"  });
+mixpanel.track("Page", {"Name": "Aetf", "page": "Period Archives", "url": "archives/2010/index.html" });
 </script>
 </head>
 
@@ -80,33 +77,27 @@ mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
 
 <!--<div class="content-block">-->
     <div class="content-block">
-        <header class="intro-header-article pure-g"
->
+        <header class="intro-header-page pure-g"
+style="background-image: url('assets/img/cover.png');">
 <div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
 <div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
-    <h1 class="article-heading">My super title2</h1>
-<span class="meta last-updated">
-	Published on 
-	<time pubdate="pubdate" datetime="2015-11-18T21:07:46.838496-05:00">
-		11月 18, 2015
-	</time>
-</span></div>
+        <h1 class="article-heading">Archives for 2010</h1>
+</div>
         </header>
 
-        <div class="ucw-nav" style="position: relative; top: -64px;">
+        <!--
+        <div class="ucw-nav">
             <nav>
                 <div class="nav-wrapper blue lighten-1">
-                    <div class="">
-                       <a href="#!" class="breadcrumb">This</a>
-                       <a href="#!" class="breadcrumb">Nav</a>
-                       <a href="#!" class="breadcrumb">Is</a>
-                       <a href="#!" class="breadcrumb">Still</a> 
-                       <a href="#!" class="breadcrumb">Under</a> 
-                       <a href="#!" class="breadcrumb">Construction</a> 
-                    </div>
+                    <ul class="left hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <li><a href="collapsible.html">JavaScript</a></li>
+                    </ul>
                 </div>
             </nav>
         </div>
+        -->
 
         <div class="fixed-action-btn fab">
             <ul>
@@ -115,42 +106,35 @@ mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
             <i class="material-icons">search</i>
         </a>
     </li>
+    <li>
+        <a href="http://unlimitedcodeworks.xyz/blog" class="page-scroll btn-floating green" fab-label='Blog'>
+            <i class="material-icons">description</i>
+        </a>
+    </li>
+                <li id='fab_alt_main'>
+                     <a href="http://unlimitedcodeworks.xyz/archives" fab-label="All Archives"
+                        class="page-scroll btn-floating red">
+                         <i class="material-icons">storage</i>
+                     </a>
+                 </li>
             </ul>
-            <a href='http://unlimitedcodeworks.xyz/blog' fab-label='Blog'
-               class="btn-floating btn-large grey smooth-scroll">
+            <a href='http://unlimitedcodeworks.xyz/archives' fab-label='All Archives'
+               class="btn-floating btn-large blue smooth-scroll">
                 <i class="material-icons md-light">keyboard_arrow_left</i>
             </a>
         </div>
         <main class="pure-g">
-<div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
-<div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
-    <article>
-        <div class="entry-content">
-            <p>This is the content of my super blog post keyboard.</p>
-        </div>
-    <hr />
-    <section class="comments" id="comments">
-        <h2>Comments</h2>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'unlimitedcodeworks'; // required: replace example with your forum shortname
-            var disqus_identifier = 'my-super-post';
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function () {
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-    </section>
-    </article>
+<div class="pure-u-1-6 pure-u-md-1-4 pure-u-lg-5-24"></div>
+<div class="pure-u-2-3 pure-u-md-1-2 pure-u-lg-14-24">
+    <h2>
+    	<a href="http://unlimitedcodeworks.xyz/archives/2010/12/">
+    	December
+    	</a>
+    </h2>
+    <ul>
+        <li><a href="http://unlimitedcodeworks.xyz/blog/2010/12/03/my-first-review/">My First Review</a></li>
+    </ul>
 </div>
-<hr>
         </main>
     </div>
 
@@ -232,14 +216,14 @@ mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
         // Pass Jinja template variables to js
         var ucw = ucw || {};
         ucw.waypoint_selector = '.article-heading';
-        ucw.fab_main_link = 'http://unlimitedcodeworks.xyz/blog';
-        ucw.fab_main_label = 'Blog';
+        ucw.fab_main_link = 'http://unlimitedcodeworks.xyz/archives';
+        ucw.fab_main_label = 'All Archives';
         ucw.fab_main_icon = 'keyboard_arrow_left';
         ucw.fab_main_icon_class = 'md-light';
-        ucw.fab_main_icon_hover = 'description';
-        ucw.fab_main_color = 'grey';
+        ucw.fab_main_icon_hover = 'storage';
+        ucw.fab_main_color = 'blue';
         ucw.fab_main_color_dark = 'blue';
-        ucw.fab_main_link = 'http://unlimitedcodeworks.xyz/blog';
+        ucw.fab_main_link = 'archives';
         ucw.fab_toggled_state = function(scrolled) {
          }
     </script>
