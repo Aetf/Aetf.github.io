@@ -15,6 +15,9 @@ PUBLISHCONF=$(BASEDIR)/config/publish.py
 
 GITHUB_PAGES_BRANCH=master
 
+SSH_HOST=vps-trans
+SSH_TARGET_DIR=/home/aetf/WebRoot/blog
+
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
 	PELICANOPTS += -D
@@ -40,6 +43,7 @@ help:
 	@echo '   make devserver [PORT=8000]          start/restart develop_server.sh    '
 	@echo '   make stopserver                     stop local server                  '
 	@echo '   make github                         upload the web site via gh-pages   '
+	@echo '   make upload                         upload the web site via rsync+ssh  '
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
@@ -95,4 +99,7 @@ github: publish
 	$(VENVDIR)/bin/ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push origin $(GITHUB_PAGES_BRANCH)
 
-.PHONY: html help clean distclean prepare regenerate serve serve-global devserver publish github
+upload: publish
+	rsync -P -rvzc --delete $(OUTPUTDIR)/ $(SSH_HOST):$(SSH_TARGET_DIR)
+
+.PHONY: html help clean distclean prepare regenerate serve serve-global devserver publish github ssh_upload rsync_upload
