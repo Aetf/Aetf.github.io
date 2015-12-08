@@ -15,7 +15,7 @@ from main import *
 # ==================================
 # Basic Info Override
 # ==================================
-SITEURL = 'http://unlimitedcodeworks.xyz'
+SITEURL = 'https://unlimitedcodeworks.xyz'
 
 # ==================================
 # Feeds Override
