@@ -1,8 +1,8 @@
 ---
 Title: A really complex markdown test
 Subtitle: really complex, indeed
-Date: 2015-11-18
-Modified: 2015-11-22 14:40
+Date: 1970-11-18
+Modified: 1970-11-22 14:40
 Tags: Test, Markdown
 ---
 
