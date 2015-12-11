@@ -25,9 +25,10 @@ material design navigation bar
 [DONE] tags page
 [DONE] tag cloud data weight incorrect
 
-add Feed button
+[DONE] add Feed button
 
 choose better markdown theme
+    better code block
 
 add toc as right sidebar on article page (see http://materializecss.com/buttons.html for example)
 
