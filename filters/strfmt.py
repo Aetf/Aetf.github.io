@@ -26,3 +26,8 @@ def datestrfmt(value, year = 1, month = 1, day = 1, **kwargs):
 
 def strfmt(value, **kwargs):
 	return value.format(**kwargs);
+
+def nonetoempty(value):
+	if value:
+		return value
+	return ''

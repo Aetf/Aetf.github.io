@@ -20,8 +20,8 @@ SITEURL = 'https://unlimitedcodeworks.xyz'
 # ==================================
 # Feeds Override
 # ==================================
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+FEED_DOMAIN = SITEURL
+FEED_ATOM = 'feed'
 
 # ==================================
 # Services Integration Override
