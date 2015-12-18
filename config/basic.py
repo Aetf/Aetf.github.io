@@ -92,6 +92,7 @@ AUTHORS_SAVE_AS = ''
 # Special handles for files that should appear at root level
 EXTRA_PATH_METADATA = {
     'assets/misc/CNAME': {'path': 'CNAME'},
+    'assets/misc/robots.txt': {'path': 'robots.txt'},
 }
 
 # ==================================
