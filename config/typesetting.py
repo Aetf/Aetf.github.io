@@ -9,7 +9,7 @@
 # ==================================
 # Pagination
 # ==================================
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = False
 
 # ==================================
 # Typogrify
