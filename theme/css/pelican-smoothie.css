@@ -2,13 +2,13 @@
  */
 
 body {
-    width: 95%;
+    width: 90%;
     height: 93.5%;
     font-family: 'Arvo', serif;
     font-size: 16px;
     color: #000;
     background-color: #FFF8DC;
-    margin-left: 2.5%;
+    margin-left: 5%;
     margin-top: 2.5%;
 
 }
@@ -37,7 +37,9 @@ article p {
 
 #about p {
     text-align: justify;
+    margin: 0 0 30px;
 }
+
 p {
     margin: 0 0 25px;
     font-size: 16px;

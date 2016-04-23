@@ -11,6 +11,8 @@
     <meta name="copyright" content="Aetf" />
 
 
+    <link rel="alternate" type="application/atom+xml" href="https://unlimitedcodeworks.xyz/feed" />
+
     <meta property="og:type" content="article" />
     <meta name="twitter:card" content="summary">
 
@@ -19,12 +21,13 @@ Unlimited Code Works    </title>
 
 
     <!-- Pure CSS Base and Grid-->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/base-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-min.css">
     <!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
     <![endif]-->
     <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
     <!--<![endif]-->
 
     <!-- Materialize CSS -->
@@ -33,10 +36,10 @@ Unlimited Code Works    </title>
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Pacifico|Nova+Round|EB+Garamond|Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker|Pacifico|Nova+Round|EB+Garamond|Kaushan+Script' rel='stylesheet' type='text/css'>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -46,6 +49,7 @@ Unlimited Code Works    </title>
     <!-- Custom CSS -->
     <link href="/theme/css/pelican-smoothie.css" rel="stylesheet">
     <link href="/theme/css/fab.css" rel="stylesheet">
+    <link href="/theme/css/markdown-foghorn.css" rel="stylesheet">
     <link href="/theme/css/pygment.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -69,7 +73,7 @@ mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
 
     <div class="search-button">
         <form id="search" class="floating-search"
-              action="http://unlimitedcodeworks.xyz/search.html"
+              action="https://unlimitedcodeworks.xyz/search.html"
               onsubmit="return validateForm(this.elements['q'].value);">
             <input type="search" class="search-query" placeholder="Search" name="q">
         </form>
@@ -107,55 +111,304 @@ style="background-image: url('assets/img/cover.png');">
         </a>
     </li>
     <li>
-        <a href='http://unlimitedcodeworks.xyz/archives/' class="page-scroll btn-floating green" fab-label='Archives'>
+        <a rel="alternate" type="application/atom+xml"
+           href='https://unlimitedcodeworks.xyz/feed'
+           class="page-scroll btn-floating orange"
+           fab-label='Feeds'>
+            <i class="fa fa-rss"></i>
+        </a>
+    </li>
+    <li>
+        <a href='https://unlimitedcodeworks.xyz/archives/' class="page-scroll btn-floating green" fab-label='Archives'>
             <i class="material-icons">storage</i>
         </a>
     </li>
     <li>
-        <a href='http://unlimitedcodeworks.xyz/tags/' class="page-scroll btn-floating teal" fab-label='Tags'>
+        <a href='https://unlimitedcodeworks.xyz/tags/' class="page-scroll btn-floating teal" fab-label='Tags'>
             <i class="material-icons">local_offer</i>
         </a>
     </li>
+
                 <li id='fab_alt_main'>
-                     <a href="http://unlimitedcodeworks.xyz/" fab-label="Home"
+                     <a href="https://unlimitedcodeworks.xyz/" fab-label="Home"
                         class="page-scroll btn-floating red">
                          <i class="material-icons">home</i>
                      </a>
                  </li>
             </ul>
-            <a href='http://unlimitedcodeworks.xyz/' fab-label='Home'
+            <a href='https://unlimitedcodeworks.xyz/' fab-label='Home'
                class="btn-floating btn-large blue smooth-scroll">
                 <i class="material-icons md-light">keyboard_arrow_left</i>
             </a>
         </div>
         <main class="pure-g">
-    <div class="pure-u-1-6 pure-u-md-1-4 pure-u-lg-5-24"></div>
-    <div class="pure-u-2-3 pure-u-md-1-2 pure-u-lg-14-24">
+    <div class="pure-u-1-6 pure-u-md-1-4 pure-u-lg-4-24"></div>
+    <div class="pure-u-2-3 pure-u-md-1-2 pure-u-lg-16-24">
             <div class="post-preview">
-                    <a class="blog-index-title" href="http://unlimitedcodeworks.xyz/blog/2015/11/18/my-super-post/">
-                        <h2 class="post-title">My super title2</h2>
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2016/04/23/gsoc-kdevelop-lldb-support/">
+                        <h2 class="post-title">GSoC 2016: LLDB Support for KDevelop</h2>
                     </a>
                     <p class="post-meta">
                         Posted on
-                        <time pubdate="pubdate" datetime="2015-11-18T21:07:46.838496-05:00">
-                            Wed, Nov 18, 2015
+                        <time pubdate="pubdate" datetime="2016-04-23T02:07:21-04:00">
+                            Sat, Apr 23, 2016
                         </time>
                     </p>
             </div>
-            <div class="entry-content"><p>Short version for index and feeds</p></div>
-            <a rel="full-article" href="http://unlimitedcodeworks.xyz/blog/2015/11/18/my-super-post/"
+            <div class="entry-content"><p>I've always wanted to ...</p></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2016/04/23/gsoc-kdevelop-lldb-support/"
                class="waves-effect waves-light btn btn-default">
                 <i class="material-icons right"></i>Read On
             </a>
             <div class="post-preview">
-                    <a class="blog-index-title" href="http://unlimitedcodeworks.xyz/blog/2015/11/18/a-really-complex-markdown-test/">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2015/12/08/full-https-now/">
+                        <h2 class="post-title">全站启用HTTPS兼第一篇非测试文章</h2>
+                    </a>
+                    <p class="post-meta">
+                        Posted on
+                        <time pubdate="pubdate" datetime="2015-12-08T19:01:14-05:00">
+                            Tue, Dec 08, 2015
+                        </time>
+                    </p>
+            </div>
+            <div class="entry-content"><ul>
+<li>虽然一直在准备，然而没想到第一篇正式的文章会是这样呢(苦笑)。</li>
+<li>从买下域名开始，差不多已经一年了 ...</li></ul></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2015/12/08/full-https-now/"
+               class="waves-effect waves-light btn btn-default">
+                <i class="material-icons right"></i>Read On
+            </a>
+            <div class="post-preview">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2013/12/23/njupt-1362-qi-che-jia-you-xing-shi-wen-ti/">
+                        <h2 class="post-title">NJUPT 1362 汽车加油行驶问题</h2>
+                    </a>
+                    <p class="post-meta">
+                        Posted on
+                        <time pubdate="pubdate" datetime="2013-12-23T15:23:00-05:00">
+                            Mon, Dec 23, 2013
+                        </time>
+                    </p>
+            </div>
+            <div class="entry-content"><p>嗯。。还是算法复习用到了的，竟然还有OJ上有这道题，所以过了一下</p>
+<p>参考是 ...</p></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2013/12/23/njupt-1362-qi-che-jia-you-xing-shi-wen-ti/"
+               class="waves-effect waves-light btn btn-default">
+                <i class="material-icons right"></i>Read On
+            </a>
+            <div class="post-preview">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2013/12/22/weighted-graph-template/">
+                        <h2 class="post-title">带权图模板</h2>
+                    </a>
+                    <p class="post-meta">
+                        Posted on
+                        <time pubdate="pubdate" datetime="2013-12-22T23:40:00-05:00">
+                            Sun, Dec 22, 2013
+                        </time>
+                    </p>
+            </div>
+            <div class="entry-content"><p>使用前向星方法（应该是吧？我着实不确定这种我不知道从哪看到之后一直在用的存储方法究竟叫什么= =）存储的带权图，实现了通用的DFS和BFS算法 ...</p></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2013/12/22/weighted-graph-template/"
+               class="waves-effect waves-light btn btn-default">
+                <i class="material-icons right"></i>Read On
+            </a>
+            <div class="post-preview">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2013/02/16/usaco-314-shaping-regions/">
+                        <h2 class="post-title">USACO 3.1.4 Shaping Regions</h2>
+                    </a>
+                    <p class="post-meta">
+                        Posted on
+                        <time pubdate="pubdate" datetime="2013-02-16T22:19:00-05:00">
+                            Sat, Feb 16, 2013
+                        </time>
+                    </p>
+            </div>
+            <div class="entry-content"><p>比较基础的矩形切割，是POJ 2528 Mayor's ...</p></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2013/02/16/usaco-314-shaping-regions/"
+               class="waves-effect waves-light btn btn-default">
+                <i class="material-icons right"></i>Read On
+            </a>
+            <div class="post-preview">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2013/02/16/poj-2528-mayors-posters/">
+                        <h2 class="post-title">POJ 2528 Mayor's posters</h2>
+                    </a>
+                    <p class="post-meta">
+                        Posted on
+                        <time pubdate="pubdate" datetime="2013-02-16T19:29:00-05:00">
+                            Sat, Feb 16, 2013
+                        </time>
+                    </p>
+            </div>
+            <div class="entry-content"><p>这一题多数用的是线段树+离散化，但是今天正好看到矩阵切割，所以就用矩阵切割试了一下。</p>
+<p>参考了http ...</p></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2013/02/16/poj-2528-mayors-posters/"
+               class="waves-effect waves-light btn btn-default">
+                <i class="material-icons right"></i>Read On
+            </a>
+            <div class="post-preview">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2013/02/15/usaco-311-agri-net/">
+                        <h2 class="post-title">USACO 3.1.1 Agri-Net</h2>
+                    </a>
+                    <p class="post-meta">
+                        Posted on
+                        <time pubdate="pubdate" datetime="2013-02-15T20:49:00-05:00">
+                            Fri, Feb 15, 2013
+                        </time>
+                    </p>
+            </div>
+            <div class="entry-content"><p>标准的最小生成树，用了Kruskal算法，写了一个可以以后用的并查集类。</p>
+<div class="highlight"><pre><span class="cm">/*</span>
+<span class="cm">ID: xjtuacm1 ...</span></pre></div></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2013/02/15/usaco-311-agri-net/"
+               class="waves-effect waves-light btn btn-default">
+                <i class="material-icons right"></i>Read On
+            </a>
+            <div class="post-preview">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2013/02/15/usaco-243-cow-tours/">
+                        <h2 class="post-title">USACO 2.4.3 Cow Tours</h2>
+                    </a>
+                    <p class="post-meta">
+                        Posted on
+                        <time pubdate="pubdate" datetime="2013-02-15T20:46:00-05:00">
+                            Fri, Feb 15, 2013
+                        </time>
+                    </p>
+            </div>
+            <div class="entry-content"><p>floyd + dfs染色。</p>
+<p>重点是添加新的边之后的field的直径等于</p>
+<p>1.原来两个field的直径 ...</p></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2013/02/15/usaco-243-cow-tours/"
+               class="waves-effect waves-light btn btn-default">
+                <i class="material-icons right"></i>Read On
+            </a>
+            <div class="post-preview">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2013/02/15/usaco-244-bessie-come-home/">
+                        <h2 class="post-title">USACO 2.4.4 Bessie Come Home</h2>
+                    </a>
+                    <p class="post-meta">
+                        Posted on
+                        <time pubdate="pubdate" datetime="2013-02-15T20:40:00-05:00">
+                            Fri, Feb 15, 2013
+                        </time>
+                    </p>
+            </div>
+            <div class="entry-content"><p>带权边的Dijkstra</p>
+<div class="highlight"><pre><span class="cm">/*</span>
+<span class="cm">ID: xjtuacm1</span>
+<span class="cm">PROG: comehome ...</span></pre></div></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2013/02/15/usaco-244-bessie-come-home/"
+               class="waves-effect waves-light btn btn-default">
+                <i class="material-icons right"></i>Read On
+            </a>
+            <div class="post-preview">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2013/02/15/usaco-242-overfencing/">
+                        <h2 class="post-title">USACO 2.4.2 Overfencing</h2>
+                    </a>
+                    <p class="post-meta">
+                        Posted on
+                        <time pubdate="pubdate" datetime="2013-02-15T20:33:00-05:00">
+                            Fri, Feb 15, 2013
+                        </time>
+                    </p>
+            </div>
+            <div class="entry-content"><p>题意是给你一个迷宫，有两个出口，找出最长的从迷宫内任意一点到出口的最短距离。</p>
+<p>一开始想到的是dijkstra，在两个出口分别运行一次 ...</p></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2013/02/15/usaco-242-overfencing/"
+               class="waves-effect waves-light btn btn-default">
+                <i class="material-icons right"></i>Read On
+            </a>
+            <div class="post-preview">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2013/02/07/hdu-3234-exclusive-or/">
+                        <h2 class="post-title">HDU 3234 Exclusive-OR</h2>
+                    </a>
+                    <p class="post-meta">
+                        Posted on
+                        <time pubdate="pubdate" datetime="2013-02-07T23:15:00-05:00">
+                            Thu, Feb 07, 2013
+                        </time>
+                    </p>
+            </div>
+            <div class="entry-content"><p>扩展的并查集，参考了以下两个，结合了一下，然后对Query的部分有一些改动，主要是用了map来判断出现次数的奇偶 ...</p></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2013/02/07/hdu-3234-exclusive-or/"
+               class="waves-effect waves-light btn btn-default">
+                <i class="material-icons right"></i>Read On
+            </a>
+            <div class="post-preview">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2013/02/05/usaco-241-the-tamworth-two/">
+                        <h2 class="post-title">USACO 2.4.1 The Tamworth Two</h2>
+                    </a>
+                    <p class="post-meta">
+                        Posted on
+                        <time pubdate="pubdate" datetime="2013-02-05T20:29:00-05:00">
+                            Tue, Feb 05, 2013
+                        </time>
+                    </p>
+            </div>
+            <div class="entry-content"><p>牛和农夫按照固定的走法在10x10的地图中走，每分钟走一步，求经过几分钟相遇。永远不能相遇输出0。</p>
+<p>纯模拟的题 ...</p></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2013/02/05/usaco-241-the-tamworth-two/"
+               class="waves-effect waves-light btn btn-default">
+                <i class="material-icons right"></i>Read On
+            </a>
+            <div class="post-preview">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2013/02/05/usaco-235-controlling-companies/">
+                        <h2 class="post-title">USACO 2.3.5 Controlling Companies</h2>
+                    </a>
+                    <p class="post-meta">
+                        Posted on
+                        <time pubdate="pubdate" datetime="2013-02-05T16:36:00-05:00">
+                            Tue, Feb 05, 2013
+                        </time>
+                    </p>
+            </div>
+            <div class="entry-content"><p>恩，暴力解决。</p>
+<p>参考了http://haipeng31.blog ...</p></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2013/02/05/usaco-235-controlling-companies/"
+               class="waves-effect waves-light btn btn-default">
+                <i class="material-icons right"></i>Read On
+            </a>
+            <div class="post-preview">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2013/02/05/usaco-231-longest-prefix/">
+                        <h2 class="post-title">USACO 2.3.1 Longest Prefix</h2>
+                    </a>
+                    <p class="post-meta">
+                        Posted on
+                        <time pubdate="pubdate" datetime="2013-02-05T14:44:00-05:00">
+                            Tue, Feb 05, 2013
+                        </time>
+                    </p>
+            </div>
+            <div class="entry-content"><p>题目意思就是给定1～200个短的Primitive (长度1～10)，以及一个长字符串 ...</p></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2013/02/05/usaco-231-longest-prefix/"
+               class="waves-effect waves-light btn btn-default">
+                <i class="material-icons right"></i>Read On
+            </a>
+            <div class="post-preview">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/2013/02/05/meaning-of-i18n-l10n/">
+                        <h2 class="post-title">i18n和l10n的意思</h2>
+                    </a>
+                    <p class="post-meta">
+                        Posted on
+                        <time pubdate="pubdate" datetime="2013-02-05T13:55:00-05:00">
+                            Tue, Feb 05, 2013
+                        </time>
+                    </p>
+            </div>
+            <div class="entry-content"><ul>
+<li>经常在网上看到i18n和l10n的说法，于是很好奇它们的意思<ul>
+<li>i18n是internationalization (国际化)的缩写 ...</li></ul></li></ul></div>
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/2013/02/05/meaning-of-i18n-l10n/"
+               class="waves-effect waves-light btn btn-default">
+                <i class="material-icons right"></i>Read On
+            </a>
+            <div class="post-preview">
+                    <a class="blog-index-title" href="https://unlimitedcodeworks.xyz/blog/1970/11/18/a-really-complex-markdown-test/">
                         <h2 class="post-title">A really complex markdown test</h2>
                             <h3 class="post-subtitle">really complex, indeed</h3>
                     </a>
                     <p class="post-meta">
                         Posted on
-                        <time pubdate="pubdate" datetime="2015-11-18T00:00:00-05:00">
-                            Wed, Nov 18, 2015
+                        <time pubdate="pubdate" datetime="1970-11-18T00:00:00-05:00">
+                            Wed, Nov 18, 1970
                         </time>
                     </p>
             </div>
@@ -164,23 +417,7 @@ style="background-image: url('assets/img/cover.png');">
 <li><a href="#philosophy">Philosophy</a></li>
 <li><a href="#html">Inline HTML</a></li>
 <li><a href="#autoescape">Automatic ...</a></li></ul></li></ul></div>
-            <a rel="full-article" href="http://unlimitedcodeworks.xyz/blog/2015/11/18/a-really-complex-markdown-test/"
-               class="waves-effect waves-light btn btn-default">
-                <i class="material-icons right"></i>Read On
-            </a>
-            <div class="post-preview">
-                    <a class="blog-index-title" href="http://unlimitedcodeworks.xyz/blog/2010/12/03/my-first-review/">
-                        <h2 class="post-title">My First Review</h2>
-                    </a>
-                    <p class="post-meta">
-                        Posted on
-                        <time pubdate="pubdate" datetime="2010-12-03T10:20:00-05:00">
-                            Fri, Dec 03, 2010
-                        </time>
-                    </p>
-            </div>
-            <div class="entry-content"><p>Following is a review of ...</p></div>
-            <a rel="full-article" href="http://unlimitedcodeworks.xyz/blog/2010/12/03/my-first-review/"
+            <a rel="full-article" href="https://unlimitedcodeworks.xyz/blog/1970/11/18/a-really-complex-markdown-test/"
                class="waves-effect waves-light btn btn-default">
                 <i class="material-icons right"></i>Read On
             </a>
@@ -224,7 +461,7 @@ style="background-image: url('assets/img/cover.png');">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 
     <!-- iPython Notebook script -->
-    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     <script type="text/javascript">
         init_mathjax = function() {
             if (window.MathJax) {
@@ -266,7 +503,7 @@ style="background-image: url('assets/img/cover.png');">
         // Pass Jinja template variables to js
         var ucw = ucw || {};
         ucw.waypoint_selector = '.article-heading';
-        ucw.fab_main_link = 'http://unlimitedcodeworks.xyz/';
+        ucw.fab_main_link = 'https://unlimitedcodeworks.xyz/';
         ucw.fab_main_label = 'Home';
         ucw.fab_main_icon = 'keyboard_arrow_left';
         ucw.fab_main_icon_class = 'md-light';

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html id="page-top"  lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="虽然一直在准备，然而没想到第一篇正式的文章会是这样呢(苦笑)。 从买下域名开始，差不多已经一年了 ..." />
+
+    <meta name="author" content="Aetf" />
+    <meta name="copyright" content="Aetf" />
+
+
+    <link rel="alternate" type="application/atom+xml" href="https://unlimitedcodeworks.xyz/feed" />
+
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary">
+
+    <title>
+全站启用HTTPS兼第一篇非测试文章 - Unlimited Code Works
+    </title>
+
+    <meta name="keywords" content="https, ssl, meta, letsencrypt, misc, " />
+
+    <!-- Pure CSS Base and Grid-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/base-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-min.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker|Pacifico|Nova+Round|EB+Garamond|Kaushan+Script' rel='stylesheet' type='text/css'>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Tipue Search CSS for search box-->
+    <link href="/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/theme/css/pelican-smoothie.css" rel="stylesheet">
+    <link href="/theme/css/fab.css" rel="stylesheet">
+    <link href="/theme/css/markdown-foghorn.css" rel="stylesheet">
+    <link href="/theme/css/pygment.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
+    <!-- end Mixpanel -->
+
+<script>
+    mixpanel.track("Page", {"Name": "全站启用HTTPS兼第一篇非测试文章", "url": "blog/2015/12/08/full-https-now/index.html"  });
+</script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <div class="search-button">
+        <form id="search" class="floating-search"
+              action="https://unlimitedcodeworks.xyz/search.html"
+              onsubmit="return validateForm(this.elements['q'].value);">
+            <input type="search" class="search-query" placeholder="Search" name="q">
+        </form>
+    </div>
+
+<!--<div class="content-block">-->
+    <div class="content-block">
+        <header class="intro-header-article pure-g"
+>
+<div class="pure-u-1">
+    <h1 class="article-heading center-align">全站启用HTTPS兼第一篇非测试文章</h1>
+</div>
+
+    <div class="article-meta-wrapper pure-u-1">
+        <div class="article-meta">
+            <div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
+            <div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
+<span class="meta last-updated">		Published on
+		<time pubdate="pubdate" datetime="2015-12-08T19:01:14-05:00"
+		      title="2015-12-08T19:01:14-05:00">Tue, Dec 08, 2015</time>
+</span>            </div>
+            <div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
+            <div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
+                <div class="article-tags">
+                    <div class="chip">
+                        <a href="https://unlimitedcodeworks.xyz/tags/https/">https</a>
+                    </div>
+                    <div class="chip">
+                        <a href="https://unlimitedcodeworks.xyz/tags/ssl/">ssl</a>
+                    </div>
+                    <div class="chip">
+                        <a href="https://unlimitedcodeworks.xyz/tags/meta/">meta</a>
+                    </div>
+                    <div class="chip">
+                        <a href="https://unlimitedcodeworks.xyz/tags/letsencrypt/">letsencrypt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </header>
+
+        <!--
+        <div class="ucw-nav">
+            <nav>
+                <div class="nav-wrapper blue lighten-1">
+                    <ul class="left hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <li><a href="collapsible.html">JavaScript</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        -->
+
+        <div class="fixed-action-btn fab">
+            <ul>
+    <li>
+        <a href='#search' class="page-scroll btn-floating grey" fab-label='Search'>
+            <i class="material-icons">search</i>
+        </a>
+    </li>
+                <li id='fab_alt_main'>
+                     <a href="https://unlimitedcodeworks.xyz/blog" fab-label="Blog"
+                        class="page-scroll btn-floating red">
+                         <i class="material-icons">description</i>
+                     </a>
+                 </li>
+            </ul>
+            <a href='https://unlimitedcodeworks.xyz/blog' fab-label='Blog'
+               class="btn-floating btn-large blue smooth-scroll">
+                <i class="material-icons md-light">keyboard_arrow_left</i>
+            </a>
+        </div>
+        <main class="pure-g">
+<div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-4-24"></div>
+<div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-16-24">
+    <article>
+        <div class="entry-content markdown">
+            <ul>
+<li>虽然一直在准备，然而没想到第一篇正式的文章会是这样呢(苦笑)。</li>
+<li>从买下域名开始，差不多已经一年了。<ul>
+<li>中间因为毕业设计还有出国，这件事就搁置了</li>
+<li>最近受到<a href="http://silentming.net/">朋友</a>刺激才重新开始准备<ul>
+<li>说起来友链部分也没有做呢</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>果然开博客不是一件容易的事情<ul>
+<li>域名的调整<ul>
+<li>从Namecheap迁移到Cloudflare想要至少部分使用HTTPS</li>
+<li>再从Cloudflare迁移回来，因为Cloudflare没法用自定义邮件服务，我的IP又正好处于黑名单不能自己搭邮件服务器</li>
+</ul>
+</li>
+<li>服务器的调整<ul>
+<li>通过<a href="https://letsencrypt.org/">Let‘s encrypt</a>获得SSL证书，启用全站HTTPS (终于说到题目)</li>
+<li>从Github Page转移到自己的服务器上，也是为了Let's encrypt的认证方便</li>
+<li>也许以后还会重新转移到Cloudflare，毕竟自己的小服务器各地访问速度应该还是不如CDN加速的好</li>
+</ul>
+</li>
+<li>主题的修改<ul>
+<li>找到符合心意的主题不容易</li>
+<li>现在的主题经过大幅度修改后还算可以(自认为)，最近真是前端技能猛长</li>
+<li>目前主题还不完善，搜索功能导航栏等等还在建设中，以后有机会再完成吧</li>
+<li>还是尽快开始写点儿东西会比较好</li>
+</ul>
+</li>
+<li>i18n的处理现在还不完善<ul>
+<li>现在还是有点儿纠结究竟是做中文，英文还是两者</li>
+<li>这个问题也是日后再处理吧，TODO列表永远在变长也是无可奈何不是么</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>关于文章<ul>
+<li>一开始应该会先把很久之前刷ACM题的一些题解搬过来吧，至少充下场面什么的</li>
+<li>然后是一些自己在做的pet project，想要做的idea的介绍，能吸引一些人气就好了 (虽然也没期待这儿会有什么人气就是了)</li>
+<li>也许还会有一些关于我目前在进行的学业上的研究的记录，如果可以的话也会放上来</li>
+<li>还有凭心情看情况的一些杂七杂八的东西</li>
+</ul>
+</li>
+<li>关于这个list<ul>
+<li>曾经看了网上一个短篇推理小说里写到完全用list的方式来写blog，(<a href="http://www.douban.com/group/topic/20715065/">这里</a>，原链接已经失效所以链了Google搜索的第一个结果)</li>
+<li>简直就是不会组织语言还想写blog的我的救星啊</li>
+<li>所以虽然不知道能坚持到什么时候，什么程度，还是决定试试看</li>
+</ul>
+</li>
+</ul>
+        </div>
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'unlimitedcodeworks'; // required: replace example with your forum shortname
+            var disqus_identifier = 'full-https-now';
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+    </section>
+    </article>
+</div>
+<hr>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div id="footer" class="center-align">
+            
+<div xmlns:cc="http://creativecommons.org/ns#"
+	 xmlns:dct="http://purl.org/dc/terms/"
+	 about="http://unlimitedcodeworks.xyz/">
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+		<img alt="Creative Commons License" style="border-width:0"
+			 src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+	</a>
+	<br />
+	All content by Aetf on this page is licensed under a 
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+	Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+	</a>.
+	<br />
+	The overall theme is modified and thus largely based on
+	<a href="https://github.com/kdheepak89/pelican-smoothie">smoothie</a>
+	by <a href="http://kdheepak.com/">Dheepak Krishnamurthy</a>.
+</div>
+
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+    <!-- iPython Notebook script -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/javascript">
+        init_mathjax = function() {
+            if (window.MathJax) {
+                // MathJax loaded
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    },
+                    displayAlign: 'left', // Change this to 'center' to center equations.
+                    "HTML-CSS": {
+                        styles: {'.MathJax_Display': {"margin": 0}}
+                    }
+                });
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            }
+        }
+        init_mathjax();
+    </script>
+
+    <!-- iPython Notebook script for collapsing and expanding code -->
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $("div.collapseheader").click(function () {
+            $header = $(this).children("span").first();
+            $codearea = $(this).children(".input_area");
+            console.log($(this).children());
+            $codearea.slideToggle(500, function () {
+                $header.text(function () {
+                    return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
+                });
+            });
+        });
+        });
+    </script>
+
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript">
+        // Pass Jinja template variables to js
+        var ucw = ucw || {};
+        ucw.waypoint_selector = '.article-heading';
+        ucw.fab_main_link = 'https://unlimitedcodeworks.xyz/blog';
+        ucw.fab_main_label = 'Blog';
+        ucw.fab_main_icon = 'keyboard_arrow_left';
+        ucw.fab_main_icon_class = 'md-light';
+        ucw.fab_main_icon_hover = 'description';
+        ucw.fab_main_color = 'blue';
+        ucw.fab_main_color_dark = 'blue';
+        ucw.fab_main_link = 'blog';
+        ucw.fab_toggled_state = function(scrolled) {
+         }
+    </script>
+    <script src="/theme/js/pelican-smoothie.js"></script>
+
+</body>
+</html>

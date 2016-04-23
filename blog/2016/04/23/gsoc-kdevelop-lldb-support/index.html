@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html id="page-top"  lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="I&#39;ve always wanted to ..." />
+
+    <meta name="author" content="Aetf" />
+    <meta name="copyright" content="Aetf" />
+
+
+    <link rel="alternate" type="application/atom+xml" href="https://unlimitedcodeworks.xyz/feed" />
+
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary">
+
+    <title>
+GSoC 2016: LLDB Support for KDevelop - Unlimited Code Works
+    </title>
+
+    <meta name="keywords" content="GSoC2016, c++, LLDB, KDE, KDevelop, OpenSource, misc, " />
+
+    <!-- Pure CSS Base and Grid-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/base-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-min.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker|Pacifico|Nova+Round|EB+Garamond|Kaushan+Script' rel='stylesheet' type='text/css'>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Tipue Search CSS for search box-->
+    <link href="/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/theme/css/pelican-smoothie.css" rel="stylesheet">
+    <link href="/theme/css/fab.css" rel="stylesheet">
+    <link href="/theme/css/markdown-foghorn.css" rel="stylesheet">
+    <link href="/theme/css/pygment.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");</script>
+    <!-- end Mixpanel -->
+
+<script>
+    mixpanel.track("Page", {"Name": "GSoC 2016: LLDB Support for KDevelop", "url": "blog/2016/04/23/gsoc-kdevelop-lldb-support/index.html"  });
+</script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <div class="search-button">
+        <form id="search" class="floating-search"
+              action="https://unlimitedcodeworks.xyz/search.html"
+              onsubmit="return validateForm(this.elements['q'].value);">
+            <input type="search" class="search-query" placeholder="Search" name="q">
+        </form>
+    </div>
+
+<!--<div class="content-block">-->
+    <div class="content-block">
+        <header class="intro-header-article pure-g"
+>
+<div class="pure-u-1">
+    <h1 class="article-heading center-align">GSoC 2016: LLDB Support for KDevelop</h1>
+</div>
+
+    <div class="article-meta-wrapper pure-u-1">
+        <div class="article-meta">
+            <div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
+            <div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
+<span class="meta last-updated">		Published on
+		<time pubdate="pubdate" datetime="2016-04-23T02:07:21-04:00"
+		      title="2016-04-23T02:07:21-04:00">Sat, Apr 23, 2016</time>
+</span>            </div>
+            <div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-5-24"></div>
+            <div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-14-24">
+                <div class="article-tags">
+                    <div class="chip">
+                        <a href="https://unlimitedcodeworks.xyz/tags/gsoc2016/">GSoC2016</a>
+                    </div>
+                    <div class="chip">
+                        <a href="https://unlimitedcodeworks.xyz/tags/c/">c++</a>
+                    </div>
+                    <div class="chip">
+                        <a href="https://unlimitedcodeworks.xyz/tags/lldb/">LLDB</a>
+                    </div>
+                    <div class="chip">
+                        <a href="https://unlimitedcodeworks.xyz/tags/kde/">KDE</a>
+                    </div>
+                    <div class="chip">
+                        <a href="https://unlimitedcodeworks.xyz/tags/kdevelop/">KDevelop</a>
+                    </div>
+                    <div class="chip">
+                        <a href="https://unlimitedcodeworks.xyz/tags/opensource/">OpenSource</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </header>
+
+        <!--
+        <div class="ucw-nav">
+            <nav>
+                <div class="nav-wrapper blue lighten-1">
+                    <ul class="left hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <li><a href="collapsible.html">JavaScript</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        -->
+
+        <div class="fixed-action-btn fab">
+            <ul>
+    <li>
+        <a href='#search' class="page-scroll btn-floating grey" fab-label='Search'>
+            <i class="material-icons">search</i>
+        </a>
+    </li>
+                <li id='fab_alt_main'>
+                     <a href="https://unlimitedcodeworks.xyz/blog" fab-label="Blog"
+                        class="page-scroll btn-floating red">
+                         <i class="material-icons">description</i>
+                     </a>
+                 </li>
+            </ul>
+            <a href='https://unlimitedcodeworks.xyz/blog' fab-label='Blog'
+               class="btn-floating btn-large blue smooth-scroll">
+                <i class="material-icons md-light">keyboard_arrow_left</i>
+            </a>
+        </div>
+        <main class="pure-g">
+<div class="pure-u-5-24 pure-u-md-5-24 pure-u-lg-4-24"></div>
+<div class="pure-u-14-24 pure-u-md-14-24 pure-u-lg-16-24">
+    <article>
+        <div class="entry-content markdown">
+            <p>I've always wanted to participate the <a href="http://summerofcode.withgoogle.com/">Google Code of Summer</a>. It's cool and an super legitimate experience to put on CV, isn't it? Anyway, what's more exciting is that my first time proposal was accepted! </p>
+<p>So I think it might be a good chance to also post this on the blog, which may probably keeps me writing more things and make the blog more... I mean, make it less like unmaintained XD</p>
+<p>The big plan is, writing a series of articles as the project goes on and making them kind of status updates. Let see how far I can go though :P</p>
+<h2>Introduction</h2>
+<p>Enabling KDevelop to use LLDB as a debugging backend, which would be especially useful on Max OS X and Windows, where gdb support is rather scarce, and it can also help people that want to switch to lldb on linux (like me!) by adding decent IDE support.</p>
+<h2>Project Goals</h2>
+<p>LLDB support in similar feature-completeness as current GDB support. The user should be able to select what debugger to use intuitively on a per launch configuration base. The following function should be supported.</p>
+<ul>
+<li>Debug session management: begin, kill, restart</li>
+<li>Set breakpoints<ul>
+<li>breakpoint list</li>
+<li>enable/disable breakpoints</li>
+<li>conditional breakpoints</li>
+</ul>
+</li>
+<li>Information inspection<ul>
+<li>Frame Stack: threads, call stack</li>
+<li>Local variables</li>
+<li>Symbol info when hovering mouse over the symbol</li>
+<li>Disassembler</li>
+<li>Register</li>
+</ul>
+</li>
+<li>Debug commands: next, step, jump, run to the end of function, arbitrary lldb command</li>
+<li>Attach to a running process</li>
+<li>Examine core file</li>
+<li>Remote debug</li>
+<li>Drkonqi support</li>
+</ul>
+<h2>Implementation</h2>
+<p>The whole work can be broken down to three major parts.</p>
+<ul>
+<li><strong>Communication with LLDB</strong>: Implement a wrapper class that hides all hassles communicating with LLDB and provide a consistent api that is agnostic to specific communication methods, be it inter-processes or direct library link.</li>
+<li><strong>LLDB Specific Classes</strong>: Implementation of LLDB specific controllers and manager classes. This includes <code>DebugSession</code> and friends, <code>*Controller</code> classes and config page factories. This part is higher level than the first one, but still remains LLDB specific, thus must be implemented separately from GDB variants.</li>
+<li><strong>UI and Other</strong>: Hook the UI with the LLDB backend built from the above two parts. This part has the potential to share a large amount of code with GDB. However, currently all UI widgets are bounded to GDB backend. Thus refactors on these classes are needed to split common code out.</li>
+</ul>
+<h4>Relation with current GDB Plugin</h4>
+<p>Right now the debugger code in kdevplatform only provides very basic facilities to build a debug plugin. Most heavey works are still done in <code>GDBDebugger::CppDebuggerPlugin</code>. An investigation into the code shows that there are planty part of code that is debugger backend agnostic, and could be reused by LLDB plugin.</p>
+<p>The ideal/desired design would be extract all debugger backend agnostic into kdevplatform and let GDB and LLDB plugin built on top of that. But we risk breaking the existing GDB plugin which already does a good job. Therefore, I plan to first focus on implementation of LLDB plugin with a copy of all needed classes in kdevplatform, and only after the LLDB plugin reaches a rather mature state, shall we begin port GDB to use the new infrastructure.</p>
+<h4>Communication with LLDB</h4>
+<p>This can be done by expose a interface class with all available lldb commands and internally delegate the command execution to one of the LLDB interface mentioned below. Other parts of the LLDB debugger plugin will rely solely on the interface class to post lldb commands/jobs. This design is similar to what is used in <code>GDBDebugger::CppDebuggerPlugin</code>. This is the foundation of all other parts of the plugin, so I plan to make this part solid by my best effect before moving on to the next part.</p>
+<h6>Possible LLDB Interface to Use</h6>
+<p>LLDB released LLDB-MI on 2014, and there is another project LLDBMI2 that does the same thing. Along with those, there is the good old C++ API. Further investigation and evaluation is needed to finally determine on which one to use. Here just list a brief description of each choise.</p>
+<ul>
+<li><a href="http://www.codeplay.com/portal/lldb-mi-driver---part-1-introduction">LLDB-MI</a><ul>
+<li>Included in the LLDB source code, which means better support</li>
+<li>A good separation of input/factory/output</li>
+<li>Seems only support remote debugging</li>
+<li>Limited command implemented at the time of the blog written (might have been changed since then)</li>
+</ul>
+</li>
+<li><a href="https://github.com/freedib/lldbmi2">LLDBMI2</a><ul>
+<li>Seems to be a simple MI interface to LLDB, which is more lightweight than LLDB-MI</li>
+<li>Not official but actively maintained</li>
+<li>Only support local debugging and only support Mac OS X</li>
+</ul>
+</li>
+<li><a href="http://lldb.llvm.org/cpp_reference/html/index.html">C++ API</a><ul>
+<li>Directly link to LLDB, which should be fast and the API is mature</li>
+<li>Must find a way to protect ourselves from debugger crashes</li>
+<li>Write from scratch, can't reuse MI code for GDB</li>
+</ul>
+</li>
+</ul>
+<h4>Implement LLDB Specific Classes</h4>
+<p>These classes is higher level than the above, and is the major classes that teach KDevelop how to use LLDB to debug.</p>
+<p><code>IDebugSession</code> represents a specific debug session with a debugger of some type. Currently GDBDebugger provides an implementation <code>DebugSession</code>, but it contains GDB specific code. The same applies to other classes such as <code>BreakpointController</code> and <code>FrameStackModel</code>.</p>
+<p>LLDB of course should be configured differently than GDB. Currently, the user can tune various options for GDB in the launcher configuration page. This should be extended to let the user change the debugger used for a particular debug launcher and configure separately.</p>
+<p>Here is a brief list of related classes</p>
+<ul>
+<li>DebugSession<ul>
+<li>BreakpointController</li>
+<li>VariableController</li>
+<li>FrameStackModel</li>
+</ul>
+</li>
+<li>ConfigPageFactory</li>
+<li>Launcher and jobs<ul>
+<li>DebugJob</li>
+</ul>
+</li>
+</ul>
+<h4>Move non GDB Specific Classes to KDevPlatform</h4>
+<p>As said above, the GDBDebugger plugin contains many non GDB specific code. Rather than rewrite the same thing for LLDB debugger plugin, I plan to reuse these code as much as possible. This includes UI widgets for different tool views, context menu items and dialogs. Drkonqi and the glue code between user action and <code>IDebugSession</code> methods are other parts that can be potentially reused.</p>
+<ul>
+<li>UI<ul>
+<li>ToolViews<ul>
+<li>RegisterView</li>
+<li>DisassembleWidget</li>
+<li>GDBOutputWidget</li>
+<li>MemoryViewDlg</li>
+</ul>
+</li>
+<li>Context Menu</li>
+<li>Dialogs<ul>
+<li>DebugTracingDialog</li>
+<li>SelectCoreDialog</li>
+<li>ProcessSelection</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Drkonqi</li>
+<li>DebugSession management</li>
+</ul>
+<h4>PretteyPrinters</h4>
+<p>These scripts are used to make C++/STL and Qt objects easier for the user to read. Currently I'm not sure if they are still needed for LLDB. If so, this might need to be ported to LLDB data formatters.</p>
+<h4>Tests</h4>
+<p>The importance of tests can never be over emphasized. I'm going to start with the same unit tests as GDB when applicable and add other tests when find problems during the implementation.</p>
+<h2>Timeline</h2>
+<h4>Milestones</h4>
+<ul>
+<li><strong>April 22</strong> (2 weeks): If accepted, I will start by contributing little bug fixes to KDevelop to get familiar with the code base. Besides that, the most work for this period will be investigating and playing with different ways to talk with lldb. It is important to have this period before actually starting coding, as the decision of which LLDB interface to use would affect the overall stability and quality of the plugin, and it deserves some careful thought.</li>
+<li><strong>May 6</strong> (3.5 weeks): Around this time, I should have done some demos on talking to LLDB. Use this experience gained from previous weeks, I will start actually build the communication infrastructure with LLDB. This could be a totally rewrite from stratch or an extension of the previous demo depends on what method I choose.</li>
+<li><strong>May 31</strong> (3 weeks): We should have a final communication infrastructure with LLDB (part 1) now. And based on that, I can start implement most of the important controllers and managers for the plugin, including <code>IPlugin</code>, <code>IDebugSession</code> and friends.</li>
+<li><strong>June 21</strong> (4 weeks): Most of the important controllers and mangers (part 2) should have been implemented at this time. Although they may still contain stub methods which are related to UI setups and Drkonqi. I give this period the longest time because in my opinion, it is the UI that actually talks to users, and any small bug in it will frustrate them. Thus I not only need to implement them, but also polish them to some extent.</li>
+<li><strong>July 19</strong> (4 weeks): The whole plugin should work for simple use cases by then. And the last 4 weeks are used to revise and finialize the code to fix any remaining bugs as well as move non GDB specific classes into kdevplatform.git. This period also serves as a buffer as we are always optimistic in estimating works and it always turns out to take longer!</li>
+<li><strong>Augest 15</strong>: Fine tune and bug fixes done, project finish.</li>
+</ul>
+<h4>Availability</h4>
+<p>I will stay at the university for research during the summer break, which basically is another project to do. However, the time schedule for the research is flexible, and two project at the same time is the regular workload for a normal semaster. So I believe I can manage my time accrodingly and there shouldn't be a problem.</p>
+<h2>About me</h2>
+<p>My name is Peifeng Yu, a master student at the University of Michigan majoring in Computer Science. I've been using KDE as my major desktop for years and really enjoy the amount of customization it allows. As a programmer, I use KDevelop for most of my projects because of its better support for CMake based projects (and yes, sometimes QtCreator if I'm using qmake ;-) ). I was excited when it first announced the integration with clang compiler. Now here's opportunity to integrate further with llvm toolchain and it would be exciting if I can contribute to it.</p>
+<p>As for the skills, I've been programming in C++ for about 5 years and it's my favorite language. I consider myself an experienced C++ programmer thanks to my experience on ACM/ICPC during my undergraduate, which sharpened my program skills and helped me gain more insight in algorithms.</p>
+<p>And I love Qt, which makes coding a pleasure. Although not worked on very big projects (That's why GSoC!), I have several little programs written in C++/Qt including my graduate project, which are all hosted on Github. Apart from that, I'm always curious about language implementation details and have read a lot about C++ and Qt internals. These knowledge seems unnecessary on the first sight, but they do help me handle tricky situations when the code goes wrong. CMake and Git are also my friends, which I use on a daily basis.</p>
+<p>Besides that, I have a strong background on all basic software related fields, such as algorithm, data structure, compiler, computer archetecture and operating systems, as learnt in my undergraduate (Software Engineering, Xi'an Jiaotong University) and graduate (Computer Science, University of Michigan) study.</p>
+        </div>
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'unlimitedcodeworks'; // required: replace example with your forum shortname
+            var disqus_identifier = 'gsoc-kdevelop-lldb-support';
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+    </section>
+    </article>
+</div>
+<hr>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div id="footer" class="center-align">
+            
+<div xmlns:cc="http://creativecommons.org/ns#"
+	 xmlns:dct="http://purl.org/dc/terms/"
+	 about="http://unlimitedcodeworks.xyz/">
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+		<img alt="Creative Commons License" style="border-width:0"
+			 src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+	</a>
+	<br />
+	All content by Aetf on this page is licensed under a 
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+	Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+	</a>.
+	<br />
+	The overall theme is modified and thus largely based on
+	<a href="https://github.com/kdheepak89/pelican-smoothie">smoothie</a>
+	by <a href="http://kdheepak.com/">Dheepak Krishnamurthy</a>.
+</div>
+
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+    <!-- iPython Notebook script -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/javascript">
+        init_mathjax = function() {
+            if (window.MathJax) {
+                // MathJax loaded
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    },
+                    displayAlign: 'left', // Change this to 'center' to center equations.
+                    "HTML-CSS": {
+                        styles: {'.MathJax_Display': {"margin": 0}}
+                    }
+                });
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            }
+        }
+        init_mathjax();
+    </script>
+
+    <!-- iPython Notebook script for collapsing and expanding code -->
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $("div.collapseheader").click(function () {
+            $header = $(this).children("span").first();
+            $codearea = $(this).children(".input_area");
+            console.log($(this).children());
+            $codearea.slideToggle(500, function () {
+                $header.text(function () {
+                    return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
+                });
+            });
+        });
+        });
+    </script>
+
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript">
+        // Pass Jinja template variables to js
+        var ucw = ucw || {};
+        ucw.waypoint_selector = '.article-heading';
+        ucw.fab_main_link = 'https://unlimitedcodeworks.xyz/blog';
+        ucw.fab_main_label = 'Blog';
+        ucw.fab_main_icon = 'keyboard_arrow_left';
+        ucw.fab_main_icon_class = 'md-light';
+        ucw.fab_main_icon_hover = 'description';
+        ucw.fab_main_color = 'blue';
+        ucw.fab_main_color_dark = 'blue';
+        ucw.fab_main_link = 'blog';
+        ucw.fab_toggled_state = function(scrolled) {
+         }
+    </script>
+    <script src="/theme/js/pelican-smoothie.js"></script>
+
+</body>
+</html>

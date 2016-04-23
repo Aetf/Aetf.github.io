@@ -1,6 +1,6 @@
 .fixed-action-btn.fab {
     bottom: 7.5%;
-    right: 3.95%;
+    right: 6%;
     text-align: center;
 }
 
@@ -49,4 +49,8 @@
 
 .fixed-action-btn.fab ul a[fab-label]::after{
   right: 3.8em;
+}
+
+.fixed-action-btn.fab .btn-floating i.fa {
+  padding-left: 0.11em;
 }
