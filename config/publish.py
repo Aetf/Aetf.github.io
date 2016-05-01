@@ -21,7 +21,8 @@ SITEURL = 'https://unlimitedcodeworks.xyz'
 # Feeds Override
 # ==================================
 FEED_DOMAIN = SITEURL
-FEED_ATOM = 'feed'
+FEED_ATOM = 'feed/all'
+TAG_FEED_ATOM = 'feed/tags/%s'
 
 # ==================================
 # Services Integration Override
