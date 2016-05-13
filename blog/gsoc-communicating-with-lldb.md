@@ -1,7 +1,7 @@
 ---
 Title: "GSoC 2016: Communicating with LLDB"
 Tags: [GSoC2016, c++, LLDB, KDE, KDevelop, OpenSource]
-Date: Sat Apr 23 02:07:21 EDT 2016
+Date: Fri May 13 15:36:17 EDT 2016
 Slug: gsoc-communicating-with-lldb
 Status: draft
 ---
