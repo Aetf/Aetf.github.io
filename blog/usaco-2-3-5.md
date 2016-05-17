@@ -2,6 +2,7 @@
 Title: USACO 2.3.5 Controlling Companies
 Tags: [ACM, USACO]
 Date: 2013-02-05 16:36
+Gittime: off
 ---
 恩，暴力解决。
 

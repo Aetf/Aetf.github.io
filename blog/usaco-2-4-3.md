@@ -2,6 +2,7 @@
 Title: USACO 2.4.3 Cow Tours
 Tags: [ACM, USACO, DFS, Floyd]
 Date: 2013-02-15 20:46
+Gittime: off
 ---
 
 floyd + dfs染色。

@@ -2,6 +2,7 @@
 Title: USACO 2.3.1 Longest Prefix
 Tags: [ACM,USACO,Trie,DP]
 Date: 2013-02-05 14:44
+Gittime: off
 ---
 题目意思就是给定1～200个短的Primitive (长度1～10)，以及一个长字符串 (长度200,000以内)，需要找出由这些Primitive任意重复连接形成的后者的最长前缀。
 

@@ -11,7 +11,7 @@
 # ==================================
 # NOTE: PLUGIN_PATHS is relative to main config file
 PLUGIN_PATHS = ["../plugins"]
-PLUGINS = ['md-metayaml', 'tipue_search', 'tag_cloud']
+PLUGINS = ['md-metayaml', 'tipue_search', 'tag_cloud', 'filetime_from_git']
 
 # ==================================
 # Per Plugin Settings
@@ -28,6 +28,9 @@ TAG_CLOUD_MAX_ITEMS = 100
 ## The tag cloud ordering scheme.
 ## Valid values: random, alphabetically, alphabetically-rev, size and size-rev
 TAG_CLOUD_SORTING = 'random'
+
+# filetime_from_git
+GIT_FILETIME_FOLLOW = True
 
 # ==================================
 # Jinja Filters

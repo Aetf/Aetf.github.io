@@ -2,6 +2,7 @@
 Title: USACO 3.1.4 Shaping Regions
 Tags: [ACM, USACO, Rect-Cutting]
 Date: 2013-02-16 22:19
+Gittime: off
 ---
 
 比较基础的矩形切割，是POJ 2528 Mayor's posters的二维版。

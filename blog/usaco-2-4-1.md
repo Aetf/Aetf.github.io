@@ -2,6 +2,7 @@
 Title: USACO 2.4.1 The Tamworth Two
 Tags: [ACM, USACO]
 Date: 2013-02-05 20:29
+Gittime: off
 ---
 牛和农夫按照固定的走法在10x10的地图中走，每分钟走一步，求经过几分钟相遇。永远不能相遇输出0。
 

@@ -2,6 +2,7 @@
 Title: USACO 2.4.2 Overfencing
 Tags: [ACM, USACO, BFS]
 Date: 2013-02-15 20:33
+Gittime: off
 ---
 题意是给你一个迷宫，有两个出口，找出最长的从迷宫内任意一点到出口的最短距离。
 

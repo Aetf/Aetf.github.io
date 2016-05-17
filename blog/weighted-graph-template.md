@@ -3,6 +3,7 @@ Title: 带权图模板
 Slug: weighted-graph-template
 Tags: [ACM, BFS, DFS, ForwardStar, Functor]
 Date: 2013-12-22 23:40
+Gittime: off
 ---
 
 使用前向星方法（应该是吧？我着实不确定这种我不知道从哪看到之后一直在用的存储方法究竟叫什么= =）存储的带权图，实现了通用的DFS和BFS算法，可以通过函数对象使用。

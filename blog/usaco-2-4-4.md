@@ -2,6 +2,7 @@
 Title: USACO 2.4.4 Bessie Come Home
 Tags: [ACM, USACO, Dijkstra]
 Date: 2013-02-15 20:40
+Gittime: off
 ---
 
 带权边的Dijkstra

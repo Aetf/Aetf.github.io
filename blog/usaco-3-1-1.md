@@ -2,6 +2,7 @@
 Title: USACO 3.1.1 Agri-Net
 Tags: [ACM, USACO, MST, Kruskal, Union-Find]
 Date: 2013-02-15 20:49
+Gittime: off
 ---
 
 标准的最小生成树，用了Kruskal算法，写了一个可以以后用的并查集类。
