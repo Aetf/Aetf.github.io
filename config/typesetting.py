@@ -4,6 +4,7 @@
 # Including:
 # * Pagination
 # * Typogrify
+# * Markdown Extensions
 # * Theme Awared Settings
 
 # ==================================
@@ -15,6 +16,11 @@ DEFAULT_PAGINATION = False
 # Typogrify
 # ==================================
 TYPOGRIFY = False
+
+# ==================================
+# Markdown Extensions
+# ==================================
+MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra']
 
 # ==================================
 # Theme Awared Settings
