@@ -13,7 +13,7 @@ DISQUS_SITENAME = 'unlimitedcodeworks'
 # ==================================
 # Google Analytics
 # ==================================
-GOOGLE_ANALYTICS = ""
+GOOGLE_ANALYTICS = "UA-77865381-1"
 
 # ==================================
 # Mixpanel Analytics
