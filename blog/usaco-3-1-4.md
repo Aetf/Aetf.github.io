@@ -15,7 +15,7 @@ Gittime: off
 
 恩，其实我一直没搞懂为啥给数据的时候llx和lly是真正的坐标值，而urx和ury却必须减一之后再用...
 
-```c++
+```cpp
 /*
 ID: xjtuacm1
 PROG: rect1

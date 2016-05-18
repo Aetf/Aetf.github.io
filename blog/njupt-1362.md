@@ -11,13 +11,13 @@ Gittime: off
 
 大体思路就是首先分点，记录同一位置不同剩余油量的花费。
 
-```c++
+```cpp lineno=False
 int cost[N+1][N+1][K+1];
 ```
 
 然后从起点开始一点一点扩展，分别判断有和没有加油站的情况走到4个方向上是否是更优的花费。有点儿类似Dijkstra最短路的感觉。
 
-```c++
+```cpp
 #include <iostream>
 #include <queue>
 #include <cstring>

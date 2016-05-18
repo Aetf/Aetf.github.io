@@ -7,7 +7,7 @@ Gittime: off
 
 带权边的Dijkstra
 
-```c++
+```cpp
 /*
 ID: xjtuacm1
 PROG: comehome

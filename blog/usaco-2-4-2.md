@@ -10,7 +10,7 @@ Gittime: off
 
 然后想到其实分别从两个出口作BFS，标注每个点的距离即可。
 
-```c++
+```cpp
 /*
 ID: xjtuacm1
 PROG: maze1

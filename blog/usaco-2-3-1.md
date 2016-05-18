@@ -12,7 +12,7 @@ DP + Trie
 
 然后就是用Trie优化一下判断seq[i...i+len]是否在Primitive集合的过程。
 
-```c++
+```cpp
 /*
 ID: xjtuacm1
 PROG: prefix

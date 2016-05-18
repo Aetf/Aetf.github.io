@@ -30,7 +30,10 @@ material design navigation bar
 the padding of h3 in blogs
 
 choose better markdown theme
-    better code block: with folding and scroll bar
+    better table
+    [DONE] better code block: with folding and scroll bar
+        Fix line number
+        Fine tune color (the left blue side)
 
 add toc as right sidebar on article page (see http://materializecss.com/buttons.html for example)
 

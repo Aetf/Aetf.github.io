@@ -10,7 +10,7 @@ Gittime: off
 
 主要是changed变量的使用。
 
-```c++
+```cpp
 /*
 ID: xjtuacm1
 PROG: concom

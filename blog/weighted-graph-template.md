@@ -12,7 +12,7 @@ Gittime: off
 
 直接上代码了
 
-```c++
+```cpp
 struct ForwardStarWGraph;
 struct Node;
 
@@ -154,7 +154,7 @@ struct ForwardStarWGraph
 
 附带一个测试小程序
 
-```c++
+```cpp
 int n, m;
 ForwardStarWGraph g;
 

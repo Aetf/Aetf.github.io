@@ -7,7 +7,7 @@ Gittime: off
 
 标准的最小生成树，用了Kruskal算法，写了一个可以以后用的并查集类。
 
-```c++
+```cpp
 /*
 ID: xjtuacm1
 PROG: agrinet

@@ -14,7 +14,7 @@ floyd + dfs染色。
 
 这其中的最大值。
 
-```c++
+```cpp
 /*
 ID: xjtuacm1
 PROG: cowtour
