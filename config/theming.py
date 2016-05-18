@@ -19,17 +19,18 @@ BLOG_SAVE_AS = 'blog/index.html'
 
 
 AVATAR_IMG = 'assets/img/avatar.jpg'
+# the header background for each page
 COVER_IMG = "assets/img/cover.png"
 
 # ==================================
 # Social Links
 # ==================================
 SOCIAL = {
-        'Github': 'http://github.com/Aetf',
-        'Email': 'aetf@unlimitedcodeworks.xyz',
-        'Mozillian': 'https://mozillians.org/en-US/u/Aetf/',
-		#'Twitter': 'http://twitter.com/xxxxxx',
-        'Google+': 'https://plus.google.com/+余佩峰/posts'
+    'Github': 'http://github.com/Aetf',
+    'Email': 'aetf@unlimitedcodeworks.xyz',
+    'Mozillian': 'https://mozillians.org/en-US/u/Aetf/',
+    #'Twitter': 'http://twitter.com/xxxxxx',
+    'Google+': 'https://plus.google.com/+余佩峰/posts'
 }
 
 
