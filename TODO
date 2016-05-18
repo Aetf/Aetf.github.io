@@ -32,8 +32,10 @@ the padding of h3 in blogs
 choose better markdown theme
     better table
     [DONE] better code block: with folding and scroll bar
-        Fix line number
+        [DONE] Fix line number
         Fine tune color (the left blue side)
+
+use clean_summary plugin
 
 add toc as right sidebar on article page (see http://materializecss.com/buttons.html for example)
 
