@@ -11,7 +11,7 @@
 # ==================================
 # NOTE: PLUGIN_PATHS is relative to main config file
 PLUGIN_PATHS = ["../plugins"]
-PLUGINS = ['md-metayaml', 'tipue_search', 'tag_cloud', 'filetime_from_git']
+PLUGINS = ['md-prism-highlight', 'md-metayaml', 'tipue_search', 'tag_cloud', 'filetime_from_git']
 
 # ==================================
 # Per Plugin Settings

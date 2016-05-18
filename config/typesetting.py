@@ -20,7 +20,8 @@ TYPOGRIFY = False
 # ==================================
 # Markdown Extensions
 # ==================================
-MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra']
+#MD_EXTENSIONS = ['codehilite(css_class=highlight, linenums=False, use_pygments=False)', 'extra']
+MD_EXTENSIONS = ['extra']
 
 # ==================================
 # Theme Awared Settings
