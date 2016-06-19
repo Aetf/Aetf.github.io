@@ -86,7 +86,7 @@ currently working towards a Master's degree in Computer Science. I’ve dabbled 
 compiler and system architecture, opensource projects and japanese animes
 (Yes, animes (ﾉ>ω<)ﾉ).
 </p>
-<img src="images/coverPicture.jpg" alt="Alt text! And a picture of me! I know it's missing. I'm working on it" style="width:100%">
+<img src="assets/img/me.jpg" alt="Alt text! And a picture of me! I know it's missing. I'm working on it" style="width:100%">
 <p></p>
 <p>
 I love reading stories. Be it animes, comics or games, it is the stories in them that
