@@ -21,7 +21,7 @@ TYPOGRIFY = False
 # Markdown Extensions
 # ==================================
 #MD_EXTENSIONS = ['codehilite(css_class=highlight, linenums=False, use_pygments=False)', 'extra']
-MD_EXTENSIONS = ['extra']
+MD_EXTENSIONS = ['extra', 'admonition', 'toc(anchorlink=True, permalink=True, baselevel=2)']
 
 # ==================================
 # Theme Awared Settings
