@@ -13,7 +13,7 @@ After several months working, LLDB plugin is now usable for basic debugging use 
 
 Using LLDB as the debugger backend is as easy as using the good old GDB debugger. Simply selecting `LLDB` in the combox at the top-right corner when editing the debug launch configuration should get things work in most normal cases.
 
-![LLDB Config Page]({filename}/assets/img/gsoc-kdevelop-lldb-status-lldbconfigpage.png)
+[![LLDB Config Page]({filename}/assets/img/gsoc-kdevelop-lldb-status-lldbconfigpage.png)]({filename}/assets/img/gsoc-kdevelop-lldb-status-lldbconfigpage.png)
 
 Additionally, you can set `Debugger Executable` pointing to a specific version of `LLDB`. Note that this path should point to the `lldb-mi` executable, which is usually in the same folder as the normal `lldb` executable. Should you need any special configuration, `Arguments` and `Environment` let you fine tune the running environmnet of `LLDB`.
 
@@ -23,11 +23,11 @@ The remote debugging part has been reworked and is largely simplified compared t
 
 ### Debugging
 
-After started the debug session, you will be taken to the familiar KDevelop debug mode, with similar tool views available backed by `LLDB`.
+After started the debug session, you will be taken to the familiar KDevelop debug mode, with similar tool views available, backed by `LLDB`.
 
 Variables and Framestack tool views should work as expected. In case you need to execute some complex command directly in `LLDB`, there's the reworked Debugger Console.
 
-![Debug Session using LLDB]({filename}/assets/img/gsoc-kdevelop-lldb-status-debugging.png)
+[![Debug Session using LLDB]({filename}/assets/img/gsoc-kdevelop-lldb-status-debugging.png)]({filename}/assets/img/gsoc-kdevelop-lldb-status-debugging.png)
 
 !!! note "Note"
     There's a 'repeat' mode in the Debugger Console. If you check the small button left to the command edit, you can press enter directly to repeat the last command.
