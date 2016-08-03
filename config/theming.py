@@ -32,6 +32,8 @@ SOCIAL = {
     #'Twitter': 'http://twitter.com/xxxxxx',
     'Google+': 'https://plus.google.com/+余佩峰/posts'
 }
+GOOGLE_PLUS_PROFILE_URL = 'https://plus.google.com/+余佩峰/posts'
+TWITTER_USERNAME = 'AetfY'
 
 
 # ==================================
