@@ -20,8 +20,10 @@ TYPOGRIFY = False
 # ==================================
 # Markdown Extensions
 # ==================================
+from markdown.extensions.toc import TocExtension
 #MD_EXTENSIONS = ['codehilite(css_class=highlight, linenums=False, use_pygments=False)', 'extra']
-MD_EXTENSIONS = ['extra', 'admonition', 'toc(anchorlink=True, permalink=True, baselevel=2)']
+MD_EXTENSIONS = ['extra', 'admonition',
+                 TocExtension(permalink='polymer', baselevel=2)]
 
 # ==================================
 # Theme Awared Settings

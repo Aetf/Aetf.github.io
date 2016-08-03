@@ -11,7 +11,8 @@
 # ==================================
 # NOTE: PLUGIN_PATHS is relative to main config file
 PLUGIN_PATHS = ["../plugins"]
-PLUGINS = ['md-prism-highlight', 'md-metayaml', 'tipue_search', 'tag_cloud', 'filetime_from_git']
+PLUGINS = ['md-prism-highlight', 'md-metayaml', 'tipue_search', 'tag_cloud',
+           'filetime_from_git', 'assets']
 
 # ==================================
 # Per Plugin Settings
@@ -31,6 +32,8 @@ TAG_CLOUD_SORTING = 'random'
 
 # filetime_from_git
 GIT_FILETIME_FOLLOW = True
+
+# assets (Assets Management)
 
 # ==================================
 # Jinja Filters
