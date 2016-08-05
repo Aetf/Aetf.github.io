@@ -35,17 +35,17 @@ Variables and Framestack tool views should work as expected. In case you need to
 | Feature | Working | Note |
 |:-------:|:------:|:----:|
 | Execution control | Yes | - |
-| Break points | Partial | with caveats, see [Known Issues](#known-issues) |
+| Break points | Partial | With caveats, see [Known Issues](#known-issues) |
 | Frame stack list | Yes | - |
 | Symbol info when hover | Yes | - |
 | Variables & Expressions | Yes | - |
-| Multi-threaded debugee | Yes | with `LLDB` latest trunk version, (svn265858, at the time of writting) |
-| Debugger console | Yes | see [Known Issues](#known-issues) |
-| Remote debugging | Yes | only tested on localhost, see [Known Issues](#known-issues) |
-| Disassembly/Register view | No | Necessary command not implemented in `lldb-mi` |
+| Multi-threaded debugee | Yes | With `LLDB` latest trunk version, (svn265858, at the time of writting) |
+| Debugger console | Yes | See [Known Issues](#known-issues) |
+| Remote debugging | Yes | Only tested on localhost, see [Known Issues](#known-issues) |
+| Disassembly/Register view | No | Missing necessary command in `lldb-mi`: [Bug 28718][], [Bug 28859][] |
 | Memory view | No | - |
 | Watch points | No | - |
-| Attach to process | No | Implemented, not accessible from UI yet |
+| Attach to process | No | Due to [Bug 28858][] |
 | Examine core file | No | Implemented, not accessible from UI, not tested yet |
 | Drkonqi support | No | Implemented, not tested yet|
 
@@ -58,9 +58,9 @@ Variables and Framestack tool views should work as expected. In case you need to
         - Remote work path can't contain space
         - Can't actually start inferior
 * Breakpoints
-    + Pending breakpoints doesn't work, as well as anything relies on it, i.e. break on start.
+    + Pending breakpoints doesn't work, as well as anything relies on it, i.e. break on start ([Bug 28702][], [Bug 28703][]).
         - Can still manually set pending breakpoints
-    + Breakpoint hit count is not updated timely (limitation in lldb-mi)
+    + Breakpoint hit count is not updated timely ([Bug 28860][])
     + No watchpoint support
         - Can still manually add watch point
 
@@ -69,18 +69,26 @@ Actually most non-working issues are due to some kind of upstream bugs in `lldb-
 
 Some of these bugs already have patch available, so be sure to check out their bugzilla page.
 
-- [Bug 28026][] - LLDB-MI doesn't properly output CLI command response using console-stream-output stream
-- [Bug 28702][] - LLDB-MI: pending break point set with command break-insert -f doesn't get resolved
-- [Bug 28698][] - [lldb-mi] -break-insert with -f (pending flag) requires additional parameter
-- [Bug 28703][] - LLDB-MI: break-insert command flag -d (disabled) has no effect when combined with -f (pending)
 - [Bug 25000][] - lldb-mi does not receive broadcasted notification from Core/Process about process stopped if StopAtEntry was requested ("process launch -s" OR "-exec-run --start")
-- [Bug 28718][] - LLDB-MI: disassembly-flavor not supported by gdb-set and gdb-show
+- [Bug 28026][] - LLDB-MI doesn't properly output CLI command response using console-stream-output stream
 - [Bug 28621][] - lldb-mi can't get variables of a frame (-stack-list-* MI-commands) if the thread didn't cause the stop event
+- [Bug 28698][] - [lldb-mi] -break-insert with -f (pending flag) requires additional parameter
+- [Bug 28702][] - LLDB-MI: pending break point set with command break-insert -f doesn't get resolved
+- [Bug 28703][] - LLDB-MI: break-insert command flag -d (disabled) has no effect when combined with -f (pending)
+- [Bug 28718][] - LLDB-MI: disassembly-flavor not supported by gdb-set and gdb-show
+- [Bug 28857][] - LLDB-MI: break-enable doesn't enable specified breakpoints
+- [Bug 28858][] - LLDB-MI: no notification about process stopped if attaching to a process
+- [Bug 28859][] - LLDB-MI: data-disassemble command doesn't accept "$pc" as start and end address parameter
+- [Bug 28860][] - LLDB-MI: no breakpoint-modified notification when a breakpoint is hit
 
-[Bug 28026]: https://llvm.org/bugs/show_bug.cgi?id=28026 "LLDB-MI doesn't properly output CLI command response using console-stream-output stream"
-[Bug 28702]: https://llvm.org/bugs/show_bug.cgi?id=28702 "LLDB-MI: pending break point set with command break-insert -f doesn't get resolved"
-[Bug 28698]: https://llvm.org/bugs/show_bug.cgi?id=28698 "[lldb-mi] -break-insert with -f (pending flag) requires additional parameter"
-[Bug 28703]: https://llvm.org/bugs/show_bug.cgi?id=28703 "LLDB-MI: break-insert command flag -d (disabled) has no effect when combined with -f (pending)"
 [Bug 25000]: https://llvm.org/bugs/show_bug.cgi?id=25000 "lldb-mi does not receive broadcasted notification from Core/Process about process stopped if StopAtEntry was requested ("process launch -s" OR "-exec-run --start")"
-[Bug 28718]: https://llvm.org/bugs/show_bug.cgi?id=28718 "LLDB-MI: disassembly-flavor not supported by gdb-set and gdb-show"
+[Bug 28026]: https://llvm.org/bugs/show_bug.cgi?id=28026 "LLDB-MI doesn't properly output CLI command response using console-stream-output stream"
 [Bug 28621]: https://llvm.org/bugs/show_bug.cgi?id=28621 "lldb-mi can't get variables of a frame (-stack-list-* MI-commands) if the thread didn't cause the stop event"
+[Bug 28698]: https://llvm.org/bugs/show_bug.cgi?id=28698 "[lldb-mi] -break-insert with -f (pending flag) requires additional parameter"
+[Bug 28702]: https://llvm.org/bugs/show_bug.cgi?id=28702 "LLDB-MI: pending break point set with command break-insert -f doesn't get resolved"
+[Bug 28703]: https://llvm.org/bugs/show_bug.cgi?id=28703 "LLDB-MI: break-insert command flag -d (disabled) has no effect when combined with -f (pending)"
+[Bug 28718]: https://llvm.org/bugs/show_bug.cgi?id=28718 "LLDB-MI: disassembly-flavor not supported by gdb-set and gdb-show"
+[Bug 28857]: https://llvm.org/bugs/show_bug.cgi?id=28857 "LLDB-MI: break-enable doesn't enable specified breakpoints"
+[Bug 28858]: https://llvm.org/bugs/show_bug.cgi?id=28858 "LLDB-MI: no notification about process stopped if attaching to a process"
+[Bug 28859]: https://llvm.org/bugs/show_bug.cgi?id=28859 "LLDB-MI: data-disassemble command doesn't accept "$pc" as start and end address parameter"
+[Bug 28860]: https://llvm.org/bugs/show_bug.cgi?id=28860 "LLDB-MI: no breakpoint-modified notification when a breakpoint is hit"
