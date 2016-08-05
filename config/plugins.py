@@ -23,7 +23,7 @@ PLUGINS = ['md-prism-highlight', 'md-metayaml', 'tipue_search', 'tag_cloud',
 
 # tag_cloud
 ## Count of different font sizes in the tag cloud.
-TAG_CLOUD_STEPS = 100
+TAG_CLOUD_STEPS = 20
 ## Maximum number of tags in the cloud.
 TAG_CLOUD_MAX_ITEMS = 100
 ## The tag cloud ordering scheme.
