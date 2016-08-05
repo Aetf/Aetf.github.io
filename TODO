@@ -27,14 +27,14 @@ material design navigation bar
 
 [DONE] add Feed button
 
-the padding of h3 in blogs
+[DONE] the padding of h3 in blogs
 
 projects page
 
 cv page
 
 choose better markdown theme
-    better table
+    [DONE] better table
     [DONE] better code block: with folding and scroll bar
         [DONE] Fix line number
         Fine tune color (the left blue side)
@@ -42,6 +42,7 @@ choose better markdown theme
 use clean_summary plugin
 
 add toc as right sidebar on article page (see http://materializecss.com/buttons.html for example)
+    use http://materializecss.com/scrollfire.html
 
 reconsider pure grid size for md and small screens
 
