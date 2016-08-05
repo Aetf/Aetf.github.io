@@ -26,9 +26,8 @@ Variables and Framestack tool views should work as expected. In case you need to
 
 [![Debug Session using LLDB]({filename}/assets/img/gsoc-kdevelop-lldb-status-debugging.png)]({filename}/assets/img/gsoc-kdevelop-lldb-status-debugging.png)
 
-!!! note "Tips"
-    There's a 'repeat' mode in the Debugger Console. If you check the small button left to the command edit, you can press enter directly to repeat the last command.
-
+!!! info "Tips"
+    There's a "repeat" mode in the Debugger Console. If you check the small button left to the command edit, you can press enter directly to repeat the last command.
 
 ## Feature Implementation Status
 

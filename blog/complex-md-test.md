@@ -18,6 +18,7 @@ Gittime: off
     +   [Lists](#list)
     +   [Code Blocks](#precode)
     +   [Horizontal Rules](#hr)
+    +   [Callouts](#callouts)
 *   [Span Elements](#span)
     +   [Links](#link)
     +   [Emphasis](#em)
@@ -532,6 +533,40 @@ following lines will produce a horizontal rule:
     - - -
 
     ---------------------------------------
+
+<h3 id="callouts">Callouts</h3>
+
+You can add callouts to article like this:
+
+    !!! default "Default Callout"
+        This is a default callout.
+
+It will produce
+
+    <div class="admonition default">
+        <p class="admonition-title">Default Callout</p>
+        <p>This is a default callout.</p>
+    </div>
+
+All available types:
+
+!!! default "Default Callout"
+    This is a default callout.
+
+!!! primary "Tips"
+    This is a primary callout.
+
+!!! success "Success"
+    This is a success callout.
+
+!!! info "Info"
+    This is a info callout.
+
+!!! warning "Warning"
+    This is a warning callout.
+    
+!!! danger "Danger"
+    This is a danger callout.
 
 
 * * *

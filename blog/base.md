@@ -8,9 +8,22 @@ Summary: Short version for index and feeds
 
 This is the content of my super blog post.
 
-!!! any-type "optional explicit title within double quotes"
-    An admonition. Any number of other indented markdown elements.
+!!! default "Default Callout"
+    This is a default callout.
 
-    This is the second paragraph.
+!!! primary "Tips"
+    This is a primary callout.
+
+!!! success "Success"
+    This is a success callout.
+
+!!! info "Info"
+    This is a info callout.
+
+!!! warning "Warning"
+    This is a warning callout.
+    
+!!! danger "Danger"
+    This is a danger callout.
 
 Something else
