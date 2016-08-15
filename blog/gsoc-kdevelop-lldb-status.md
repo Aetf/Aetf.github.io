@@ -4,6 +4,10 @@ Tags: [GSoC2016, c++, LLDB, KDE, KDevelop, OpenSource]
 Slug: gsoc-kdevelop-lldb-status
 ---
 
+!!! info "Updated on 2016.8.14"
+    Feature matrix and known issues
+    
+
 After several months' working, LLDB plugin is now usable for basic debugging use cases. There are less than two weeks left, and it's time to do a overall status update for the LLDB plugin.
 
 ### Config Page
@@ -37,7 +41,8 @@ Variables and Framestack tool views should work as expected. In case you need to
 | Break points | Partial | With caveats, see [Known Issues](#known-issues) |
 | Frame stack list | Yes | - |
 | Symbol info when hover | Yes | - |
-| Variables & Expressions | Yes | - |
+| Variables & Expressions | Yes | see [Known Issues](#known-issues) |
+| Pretty Printer & Unicode | Yes | - |
 | Multi-threaded debugee | Yes | With `LLDB` latest trunk version, (svn265858, at the time of writting) |
 | Debugger console | Yes | See [Known Issues](#known-issues) |
 | Remote debugging | Yes | Only tested on localhost, see [Known Issues](#known-issues) |
@@ -56,8 +61,10 @@ Variables and Framestack tool views should work as expected. In case you need to
     + When using `gdbserver` as remote server
         - Remote work path can't contain space
         - Can't actually start inferior
-* Breakpoints
-    + Pending breakpoints doesn't work, as well as anything relies on it, i.e. break on start ([Bug 28702][], [Bug 28703][]).
+- Variables view
+    + Variables and expression won't get updated when their values change, possibly due to `lldb-mi` doesn't report them in the `changelist` result.
+- Breakpoints
+    + Pending breakpoints doesn't work ([Bug 28702][], [Bug 28703][]), as well as anything relies on it, i.e. ~break on start~ (break on start is fixed to work even without pending breakpoint support) .
         - Can still manually set pending breakpoints
     + Breakpoint hit count is not updated timely ([Bug 28860][])
     + No watchpoint support
