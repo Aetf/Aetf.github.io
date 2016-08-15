@@ -49,11 +49,11 @@ help:
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
 
-$(VENVDIR)/pyvenv.cfg: $(BUILDTOOLS)/requirements.pip
-	pyvenv $(VENVDIR)
+$(VENVDIR)/pip-selfcheck.json: $(BUILDTOOLS)/requirements.pip
+	virtualenv $(VENVDIR)
 	$(PIP) install -r $<
 
-prepare: $(VENVDIR)/pyvenv.cfg
+prepare: $(VENVDIR)/pip-selfcheck.json
 
 html: prepare
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
