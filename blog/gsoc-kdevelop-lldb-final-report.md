@@ -39,6 +39,8 @@ Right now, only the patch for [Bug 28026][] is mandatory for stable reason, but 
 While the LLDB plugin has been merged into the master branch in [KDevelop repository](https://quickgit.kde.org/?p=kdevelop.git), it is not included in any release yet, so you need to build KDevelop from source. You can find step-by-step guides on [the community wiki](https://community.kde.org/KDevelop/HowToCompile_v5) and [Kevin's blog](http://kfunk.org/2016/02/16/building-kdevelop-5-from-source-on-ubuntu-15-10/). Also, if you don't want to use `kdesrc-build`, be sure to refer to [my post]({filename}/build-kdevelop-against-custom-kdevplatform.md) for how to avoid messing up with system installed KDevelop.
 
 ## Features
+In this section I'll give a detailed introduction for every features, as documentation.
+
 ### Config Page
 As already covered in my [previous post]({filename}/gsoc-kdevelop-lldb-status.md), the LLDB plulgin provides the same configuration interface as the good old GDB one. When editing a Debug configuration, the combox at the top-right corner in the Edit Launch Configuration dialog lets you select either GDB or LLDB as backend.
 
@@ -71,16 +73,16 @@ While the defaults should work in most cases, the LLDB backend is configurable i
 
 ### Breakpoints
 
-### framestack
+### Framestack
 
-### variables
+### Variables
 - unicode handling
 
-### debugger console
+### Debugger Console
 
-### remote debugging
+### Remote Debugging
 
-Known limitations
+### Known limitations
 
 ## The Design
 - communication between KDevelop and `LLDB`
