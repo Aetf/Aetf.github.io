@@ -53,7 +53,7 @@ Variables and Framestack tool views should work as expected. In case you need to
 | Examine core file | No | Implemented, not accessible from UI, not tested yet |
 | Drkonqi support | No | Implemented, not tested yet|
 
-### Known issues
+### Known Issues
 - Debugger console
     + Debugger CLI stdout isn't shown, due to [Bug 28026] []
 - Remote debugging
