@@ -39,13 +39,46 @@ Right now, only the patch for [Bug 28026][] is mandatory for stable reason, but 
 While the LLDB plugin has been merged into the master branch in [KDevelop repository](https://quickgit.kde.org/?p=kdevelop.git), it is not included in any release yet, so you need to build KDevelop from source. You can find step-by-step guides on [the community wiki](https://community.kde.org/KDevelop/HowToCompile_v5) and [Kevin's blog](http://kfunk.org/2016/02/16/building-kdevelop-5-from-source-on-ubuntu-15-10/). Also, if you don't want to use `kdesrc-build`, be sure to refer to [my post]({filename}/build-kdevelop-against-custom-kdevplatform.md) for how to avoid messing up with system installed KDevelop.
 
 ## Features
-- the config page
-- breakpoints
-- framestack
-- variables
-    + unicode handling
-- debugger console
-- remote debugging
+### Config Page
+As already covered in my [previous post]({filename}/gsoc-kdevelop-lldb-status.md), the LLDB plulgin provides the same configuration interface as the good old GDB one. When editing a Debug configuration, the combox at the top-right corner in the Edit Launch Configuration dialog lets you select either GDB or LLDB as backend.
+
+[![LLDB Config Page]({filename}/assets/img/gsoc-kdevelop-lldb-status-lldbconfigpage.png)]({filename}/assets/img/gsoc-kdevelop-lldb-status-lldbconfigpage.png)
+
+While the defaults should work in most cases, the LLDB backend is configurable in many aspects. Options are grouped into three categories.
+
+- __Debugger__: settings about where to find the debugger executable and how to launch it.
+- __Options__: settings that control various behaviors during a debugging session.
+- __Remote Debugging__: settings specific to remote debugging.
+
+| __Setting name__ | __Default value__ | __What does it do?__ |
+|:-----------------|:------------------|:---------------------|
+| `Debugger executable` | `lldb-mi` in PATH | The LLDB MI Driver executable[^1] |
+| `Arguments` | Empty | Command line arguments passed to the LLDB MI Driver when launching |
+| `Environment` | Default Profile | Environment variables for the LLDB MI Driver (__not__ for the inferior) |
+| `Inherit system environment` | Yes | Whether inherit system environment variables when launching the LLDB MI Driver |
+| `Config script` | Empty | This script is sourced by LLDB right before launching the inferior[^2]|
+| `Break on start` | No | Whether stop at the entry point of the program when launching the inferior |
+| `Start debugger with` | `Application Output` | Which tool view should be raised up when staruing the debugging session. Available options are `Application Output`, `Framestack`, `LLDB Console`. |
+| `Remote Debugging` | No | Do remote debugging or not |
+| `Remote server` | Empty | The address of the remote debugging server, in the form `host:port`[^3] |
+| `Remote work path` | Empty | A writable directory on the remote machine. Compiled inferior would be put into this directory for executing on the remote machine |
+
+[^1]: The executable for the LLDB MI Driver is `lldb-mi`, which usually can be found in the same directory as the main `lldb` executable. 
+[^2]: This happens after all internal commands issued by KDevelop, so you have chance to change every settings available in LLDB. But be careful because KDevelop relies on several settings to work properly.
+[^3]: While LLDB uses GDB Remote Protocol, it's only compatible with LLDB's own implementation, which can be launched by the command line `lldb-server gdbserver`. See [Known Issues]({filename}/gsoc-kdevelop-lldb-status.md#known-issues) for more information.
+
+///Footnotes Go Here///
+
+### Breakpoints
+
+### framestack
+
+### variables
+- unicode handling
+
+### debugger console
+
+### remote debugging
 
 Known limitations
 
