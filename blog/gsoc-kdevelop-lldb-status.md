@@ -4,6 +4,9 @@ Tags: [GSoC2016, c++, LLDB, KDE, KDevelop, OpenSource]
 Slug: gsoc-kdevelop-lldb-status
 ---
 
+!!! info "Updated on 2016.8.22"
+    Update known issues
+    
 !!! info "Updated on 2016.8.14"
     Feature matrix and known issues
     
@@ -62,7 +65,8 @@ Variables and Framestack tool views should work as expected. In case you need to
         - Remote work path can't contain space
         - Can't actually start inferior
 - Variables view
-    + Variables and expression won't get updated when their values change, possibly due to `lldb-mi` doesn't report them in the `changelist` result.
+    + ~~Variables and expression won't get updated when their values change, possibly due to `lldb-mi` doesn't report them in the `changelist` result.~~
+    + Variables may not be updated when jumping between frames and threads, due to [Bug 28621][]
 - Breakpoints
     + Pending breakpoints doesn't work ([Bug 28702][], [Bug 28703][]), as well as anything relies on it, i.e. ~break on start~ (break on start is fixed to work even without pending breakpoint support) .
         - Can still manually set pending breakpoints
