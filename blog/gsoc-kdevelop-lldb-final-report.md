@@ -4,9 +4,6 @@ Tags: [GSoC2016, c++, LLDB, KDE, KDevelop, OpenSource]
 Slug: gsoc-kdevelop-lldb-final-report
 ---
 
-!!! warning "Under Construction"
-    Still working on this.
-
 ## Introduction
 The aim of this post is to provide an insight into various aspects of the LLDB plugin, so that it is better understood, and can be used by more people. Should anyone want to improve it or add more features, he/she will also find useful technical details here. 
 
@@ -39,7 +36,7 @@ Right now, only the patch for [Bug 28026][] is mandatory for stable reason, but 
 While the LLDB plugin has been merged into the master branch in [KDevelop repository](https://quickgit.kde.org/?p=kdevelop.git), it is not included in any release yet, so you need to build KDevelop from source. You can find step-by-step guides on [the community wiki](https://community.kde.org/KDevelop/HowToCompile_v5) and [Kevin's blog](http://kfunk.org/2016/02/16/building-kdevelop-5-from-source-on-ubuntu-15-10/). Also, if you don't want to use `kdesrc-build`, be sure to refer to [my post]({filename}/build-kdevelop-against-custom-kdevplatform.md) for how to avoid messing up with system installed KDevelop.
 
 ## Features
-In this section I'll give a detailed introduction for every features, as documentation.
+This section gives a detailed introduction for important features.
 
 ### Config Page
 As already covered in my [previous post]({filename}/gsoc-kdevelop-lldb-status.md), the LLDB plulgin provides the same configuration interface as the good old GDB one. When editing a Debug configuration, the combox at the top-right corner in the Edit Launch Configuration dialog lets you select either GDB or LLDB as backend.
@@ -72,24 +69,42 @@ While the defaults should work in most cases, the LLDB backend is configurable i
 ///Footnotes Go Here///
 
 ### Breakpoints
+Breakpoints is a must for any debugging tool to be useful. And the LLDB-powered debugging backend also provides good breakpoint support. Apart from setting breakpoints by clicking on the left side of the source file, the breakpoints tool view shows all breakpoints in the project as usual.
+
+[![Breakpoints Tool view]({filename}/assets/img/gsoc-kdevelop-lldb-breakpoints.png)]({filename}/assets/img/gsoc-kdevelop-lldb-breakpoints.png)
 
 ### Framestack
+Easily getting lost when debugging multi-threaded program? Framestack tool view comes to rescue. Navigating among threads and frames is as easy as clicking the corresponding item. A little difference from GDB is, low level functions like `_start` and `__libc_start_main` are also shown in the list.
+
+[![Framestack tool view]({filename}/assets/img/gsoc-kdevelop-lldb-framestack.png)]({filename}/assets/img/gsoc-kdevelop-lldb-framestack.png)
 
 ### Variables
-- unicode handling
+The variables tool view shows local variables in the current frame, as well as values of manually set watches. Thanks to the newly written data formatter (equivalent to pretty printers in GDB), the LLDB backend understands common `STL` and `Qt` types, as well as a few `KDE` types. This means, `std::string` and `QString` are shown as string. Array-like types (various list/vector) and dictionary-like types (various map/set) are also shown in a human readable format.
+
+!!! info "Unicode values and byte array"
+    Unicode values are safely escaped and unescaped when transfered between KDevelop and the LLDB MI Driver, this means they can be correctly displayed in the UI, rather than showing garbage symbols as the case for pretty printers in GDB.
+
+[![Variables tool view]({filename}/assets/img/gsoc-kdevelop-lldb-variables.png)]({filename}/assets/img/gsoc-kdevelop-lldb-variables.png)
+
+By hovering mouse on a variable name in the source file, it's value is revealed in a popup, correctly formatted. Clicking `Watch this` adds this variable as a manually set watch. Unfortunately, `Stop on change` doesn't work yet, due to the lack of necessary commands in the LLDB MI Driver.
+
+[![Hover over a symbol]({filename}/assets/img/gsoc-kdevelop-lldb-hover.png)]({filename}/assets/img/gsoc-kdevelop-lldb-hover.png)
 
 ### Debugger Console
+The debugger console is totally reworked. The new 'repeat' mode can save you a few types if you want to resend the last command.
+
+[![Debugger console]({filename}/assets/img/gsoc-kdevelop-lldb-debuggerconsole.png)]({filename}/assets/img/gsoc-kdevelop-lldb-debuggerconsole.png)
 
 ### Remote Debugging
+Remote debugging has also been redesigned and should be easier to use. The configuration is largely simplified. After specifying the address to the remote debugging server and a writable working directory, KDevelop will take care of uploading and starting the inferior.
 
 ### Known limitations
-
-## The Design
-- communication between KDevelop and `LLDB`
-- common vs gdb vs lldb
+However, there are [a few limitations]({filename}/gsoc-kdevelop-lldb-status.md#known-issues) in this version. That post also has a comprehensive list of [related bug reports]({filename}/gsoc-kdevelop-lldb-status.md#upstream-bugs) in LLDB.
 
 ## Roadmap
-- finish data formatter unit tests
-- global config for attach to process and examine core file
-- get bugs in lldb-mi fixed
-- ...
+Other than finishing up missing functionalities in the LLDB plugin, the TODO list is as follow: 
+
+- Get bugs in lldb-mi fixed
+- Global debug config for attach to process and examine core file
+
+For a comprehensive technical TODO list, please refer to `debuggers/lldb/TODO.txt` in the [repository](https://quickgit.kde.org/?p=kdevelop.git&a=blob&h=3197dca2d2a91d31aa2989655994651b3a8b0fcc&hb=28f88b5d65b9674fd2cdba73c975be690e71d991&f=debuggers%2Flldb%2FTODO.txt)
