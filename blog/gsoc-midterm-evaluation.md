@@ -11,7 +11,7 @@ are planty of time for GSoC, but now half of it has already passed. With my univ
 
 Lots of code, that's what GSoC means, at least in my opinion. That's exactly something I love. From time to time, I just feel like writing some code, for a somewhat big project, for something useful.
 
-So that I can dig into the large code base, figuring out the relationships among classes, and then learn about the differences between the current design and the one I would architect, were I making the desicion. This is definitely something I'm eager to experience.
+So that I can dig into the large code base, figuring out the relationships among classes, and then learn about the differences between the current design and the one I would architect, were I making the decision. This is definitely something I'm eager to experience.
 
 In addition, the version history itself would tell good stories. Tracking down one particular file and seeing it evolves over the years, you'll be surprised to find out that the code isn't static anymore and there're others' efforts behind the scene continuously improving it, especially when reading through commit logs.
 
