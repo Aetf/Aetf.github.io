@@ -3,6 +3,8 @@ Title: "GSoC 2016: Current Status of LLDB Plugin for KDevelop"
 Tags: [GSoC2016, c++, LLDB, KDE, KDevelop, OpenSource]
 Slug: gsoc-kdevelop-lldb-status
 ---
+!!! info "Updated on 2016.9.2"
+    Update known issues and upstream bugs
 
 !!! info "Updated on 2016.8.22"
     Update known issues
@@ -73,6 +75,7 @@ Variables and Framestack tool views should work as expected. In case you need to
     + Breakpoint hit count is not updated timely ([Bug 28860][])
     + No watchpoint support
         - Can still manually add watch point
+- Changing working directory has no effect ([Bug 30265][])
 
 ### Upstream Bugs
 Actually most non-working issues are due to some kind of upstream bugs in `lldb-mi`. There's a `debugers/lldb/TODO.txt` in the repo which contains more detailed description of current limitations and link to related LLDB bug reports. But here's a quick list of opening bugs.
@@ -80,16 +83,17 @@ Actually most non-working issues are due to some kind of upstream bugs in `lldb-
 Some of these bugs already have patch available, so be sure to check out their bugzilla page.
 
 - [Bug 25000][] - lldb-mi does not receive broadcasted notification from Core/Process about process stopped if StopAtEntry was requested ("process launch -s" OR "-exec-run --start")
-- [Bug 28026][] - LLDB-MI doesn't properly output CLI command response using console-stream-output stream
+- (Patch available) [Bug 28026][] - LLDB-MI doesn't properly output CLI command response using console-stream-output stream
 - [Bug 28621][] - lldb-mi can't get variables of a frame (-stack-list-* MI-commands) if the thread didn't cause the stop event
 - [Bug 28698][] - [lldb-mi] -break-insert with -f (pending flag) requires additional parameter
 - [Bug 28702][] - LLDB-MI: pending break point set with command break-insert -f doesn't get resolved
 - [Bug 28703][] - LLDB-MI: break-insert command flag -d (disabled) has no effect when combined with -f (pending)
-- [Bug 28718][] - LLDB-MI: disassembly-flavor not supported by gdb-set and gdb-show
+- (Patch available) [Bug 28718][] - LLDB-MI: disassembly-flavor not supported by gdb-set and gdb-show
 - [Bug 28857][] - LLDB-MI: break-enable doesn't enable specified breakpoints
 - [Bug 28858][] - LLDB-MI: no notification about process stopped if attaching to a process
 - [Bug 28859][] - LLDB-MI: data-disassemble command doesn't accept "$pc" as start and end address parameter
 - [Bug 28860][] - LLDB-MI: no breakpoint-modified notification when a breakpoint is hit
+- (Patch available) [Bug 30265][] -  LLDB-MI: environment-cd doesn't change working directory for inferior
 
 [Bug 25000]: https://llvm.org/bugs/show_bug.cgi?id=25000 "lldb-mi does not receive broadcasted notification from Core/Process about process stopped if StopAtEntry was requested ("process launch -s" OR "-exec-run --start")"
 [Bug 28026]: https://llvm.org/bugs/show_bug.cgi?id=28026 "LLDB-MI doesn't properly output CLI command response using console-stream-output stream"
@@ -102,3 +106,4 @@ Some of these bugs already have patch available, so be sure to check out their b
 [Bug 28858]: https://llvm.org/bugs/show_bug.cgi?id=28858 "LLDB-MI: no notification about process stopped if attaching to a process"
 [Bug 28859]: https://llvm.org/bugs/show_bug.cgi?id=28859 "LLDB-MI: data-disassemble command doesn't accept "$pc" as start and end address parameter"
 [Bug 28860]: https://llvm.org/bugs/show_bug.cgi?id=28860 "LLDB-MI: no breakpoint-modified notification when a breakpoint is hit"
+[Bug 30265]: https://llvm.org/bugs/show_bug.cgi?id=30265 "LLDB-MI: environment-cd doesn't change working directory for inferior"
