@@ -2,9 +2,9 @@ Use Git commit to determine page date
 ======================================
 If the blog content is managed by git repo, this plugin will set articles'
 and pages' ``metadata['date']`` according to git commit. This plugin depends
-on python package ``gitpython``, install::
+on python package ``gitpython`` and ``future``, install::
 
-    pip install gitpython
+    pip install gitpython future
 
 The date is determined via the following logic:
 
