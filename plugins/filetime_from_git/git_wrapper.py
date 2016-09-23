@@ -2,7 +2,10 @@
 """
 Wrap python git interface for compatibility with older/newer version
 """
-from future.moves.itertools import zip_longest
+try:
+    from itertools import zip_longest
+except ImportError:
+    from six.moves import zip_longest
 import logging
 import os
 from time import mktime
