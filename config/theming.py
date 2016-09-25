@@ -65,7 +65,7 @@ SITE_LICENSE = """
 	Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
 	</a>.
 	<br />
-	The overall theme is modified and thus largely based on
+	The overall theme is modified from and thus largely based on
 	<a href="https://github.com/kdheepak89/pelican-smoothie">smoothie</a>
 	by <a href="http://kdheepak.com/">Dheepak Krishnamurthy</a>.
 </div>
