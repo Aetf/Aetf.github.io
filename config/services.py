@@ -18,4 +18,4 @@ GOOGLE_ANALYTICS = "UA-77865381-1"
 # ==================================
 # Mixpanel Analytics
 # ==================================
-MIXPANEL_ANALYTICS = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+MIXPANEL_ANALYTICS = ""
