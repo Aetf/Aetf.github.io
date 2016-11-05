@@ -29,8 +29,9 @@ SOCIAL = {
     'Github': 'http://github.com/Aetf',
     'Email': 'aetf@unlimitedcodeworks.xyz',
     'Mozillian': 'https://mozillians.org/en-US/u/Aetf/',
-    #'Twitter': 'http://twitter.com/xxxxxx',
-    'Google+': 'https://plus.google.com/+余佩峰/posts'
+    'Twitter': 'https://twitter.com/AetfY',
+    'Google+': 'https://plus.google.com/+余佩峰/posts',
+    'LinkedIn': 'https://www.linkedin.com/in/peifengyu'
 }
 GOOGLE_PLUS_PROFILE_URL = 'https://plus.google.com/+余佩峰/posts'
 TWITTER_USERNAME = 'AetfY'
