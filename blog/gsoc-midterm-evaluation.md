@@ -19,7 +19,7 @@ That's the amazing feeling GSoC gives me, plus the additional benefit to contrib
 
 ## Community, and more communication
 
-While I did submit a few patches to open source projects previously, I never deeply involved in any related communities, just floated around and feeling afread of talking to others. With GSoC, one is forced to interact with the community and get more involved. The best part of this is that I don't fear talking to the public anymore, and only then did I meet many nice people.
+While I did submit a few patches to open source projects previously, I never deeply involved in any related communities, just floated around and feeling afraid of talking to others. With GSoC, one is forced to interact with the community and get more involved. The best part of this is that I don't fear talking to the public anymore, and only then did I meet many nice people.
 
 My mentor Aleix has been so patient and kindly reviewed my sometimes large RR. When my commit broke the master branch, René and Kevin helped me debug and fix the issue. Big thanks to all of you!
 
