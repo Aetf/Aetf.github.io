@@ -5,7 +5,7 @@ Date: Sat Apr 23 02:07:21 EDT 2016
 Slug: gsoc-kdevelop-lldb-support
 ---
 
-I've always wanted to participate the [Google Code of Summer](http://summerofcode.withgoogle.com/). It's cool and an super legitimate experience to put on CV, isn't it? Anyway, what's more exciting is that my first time proposal was accepted! 
+I've always wanted to participate in the [Google Code of Summer](http://summerofcode.withgoogle.com/). It's cool and an super legitimate experience to put on CV, isn't it? Anyway, what's more exciting is that my first time proposal was accepted! 
 
 So I think it might be a good chance to also post this on the blog, which may probably keeps me writing more things and make the blog more... I mean, make it less like unmaintained XD
 
