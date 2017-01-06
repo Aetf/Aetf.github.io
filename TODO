@@ -33,6 +33,8 @@ projects page
 
 cv page
 
+related links page
+
 choose better markdown theme
     [DONE] better table
     [DONE] better code block: with folding and scroll bar
@@ -46,10 +48,10 @@ add toc as right sidebar on article page (see http://materializecss.com/buttons.
 
 reconsider pure grid size for md and small screens
 
-fix search bar
-    auto hide
-    auto focus
-add load indicator in search page
+[DONE] fix search bar
+    [DONE] auto hide
+    [DONE] auto focus
+[DONE] add load indicator in search page
 
 try matrilized card for articles
 rotate animation for FAB

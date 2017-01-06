@@ -1,5 +1,6 @@
 BUILDTOOLS=$(CURDIR)/tools
-VENVDIR=$(BUILDTOOLS)/venv
+BUILDDIR=$(CURDIR)/build
+VENVDIR=$(BUILDDIR)/venv
 
 PIP?=$(VENVDIR)/bin/pip
 PY?=$(VENVDIR)/bin/python
@@ -9,9 +10,10 @@ PELICANOPTS= -d --ignore-cache
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/blog
-OUTPUTDIR=$(BASEDIR)/build/output
 CONFFILE=$(BASEDIR)/config/main.py
 PUBLISHCONF=$(BASEDIR)/config/publish.py
+
+OUTPUTDIR=$(BUILDDIR)/output
 
 GITHUB_PAGES_BRANCH=master
 
