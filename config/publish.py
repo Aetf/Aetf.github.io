@@ -17,6 +17,8 @@ from main import *
 # ==================================
 SITEURL = 'https://unlimitedcodeworks.xyz'
 
+SITE_INDEX_META = '<meta name="ocs-site-verification" content="9589b7319f5e5a86375fe6d729cb8c11" />'
+
 # ==================================
 # Feeds Override
 # ==================================
