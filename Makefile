@@ -17,8 +17,8 @@ OUTPUTDIR=$(BUILDDIR)/output
 
 GITHUB_PAGES_BRANCH=master
 
-SSH_HOST=vps-trans
-SSH_TARGET_DIR=/home/aetf/WebRoot/blog
+SSH_HOST=archvps
+SSH_TARGET_DIR=/srv/http/blog
 
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
