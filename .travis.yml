@@ -5,6 +5,7 @@ addons:
     apt:
         packages:
             - language-pack-zh-hans
+cache: pip
 language: python
 python:
     - 3.6
@@ -28,7 +29,8 @@ before_deploy:
     - eval "$(ssh-agent -s)"
     - chmod 600 /tmp/deploy_rsa
     - ssh-add /tmp/deploy_rsa
-    - echo -e 'Host archvps\n\tUser aetf\n\tHostName: archvps.unlimitedcodeworks.xyz\n\tPort 59901' >> ~/.ssh/config
+    - mkdir -p $HOME/.ssh
+    - echo -e 'Host archvps\n\tUser aetf\n\tHostName: archvps.unlimitedcodeworks.xyz\n\tPort 59901' >> $HOME/.ssh/config
 deploy:
     provider: script
     skip_cleanup: true
