@@ -20,10 +20,10 @@ DEFAULT_LANG = 'en'
 
 TIMEZONE = 'America/Detroit'
 
-LOCALE = ['en_US', 'zh_CN']
+LOCALE = ['en_US.utf8', 'zh_CN.utf8']
 DATE_FORMATS = {
-    'en': ('en_US','%a, %b %d, %Y'),
-    'zh': ('zh_CN','%Y-%m-%d (%a)'),
+    'zh': ('zh_CN.utf8', '%Y-%m-%d (%a)'),
+    'en': ('en_US.utf8', '%a, %b %d, %Y'),
 }
 DEFAULT_DATE_FORMAT = '%a, %d %b %Y'
 
@@ -86,8 +86,8 @@ AUTHORS_URL = ''
 AUTHORS_SAVE_AS = ''
 
 # Static files
-#STATIC_URL = '{path}'
-#STATIC_SAVE_AS = '{path}'
+# STATIC_URL = '{path}'
+# STATIC_SAVE_AS = '{path}'
 
 # Special handles for files that should appear at root level
 EXTRA_PATH_METADATA = {
