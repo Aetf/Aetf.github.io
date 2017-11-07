@@ -11,9 +11,7 @@ python:
 install:
     - pip install -r tools/requirements.txt
 env:
-    - PIP=pip
-    - PY=python
-    - PELICAN=pelican
+    - PIP=pip PY=python PELICAN=pelican
 script:
     - mkdir -p tools/venv
     - touch tools/venv/pip-selfcheck.json
