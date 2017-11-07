@@ -1,7 +1,6 @@
 sudo: false
 dist: trusty
 addons:
-    ssh_known_hosts: archvps.unlimitedcodeworks.xyz
     apt:
         packages:
             - language-pack-zh-hans
@@ -31,6 +30,7 @@ before_deploy:
     - ssh-add /tmp/deploy_rsa
     - mkdir -p $HOME/.ssh
     - echo -e 'Host archvps\n\tUser aetf\n\tHostName archvps.unlimitedcodeworks.xyz\n\tPort 59901' >> $HOME/.ssh/config
+    - ssh-keyscan -t $TRAVIS_SSH_KEY_TYPES -H -p 59901 archvps.unlimitedcodeworks.xyz 2>&1 | tee -a $HOME/.ssh/known_hosts
 deploy:
     provider: script
     skip_cleanup: true
