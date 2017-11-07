@@ -6,7 +6,7 @@
 	url = https://github.com/joachimneu/pelican-md-metayaml.git
 [submodule "plugins/tag_cloud"]
 	path = plugins/tag_cloud
-	url = https://github.com/StevenMaude/pelican-tag-cloud.git
+	url = https://github.com/Aetf/pelican-tag-cloud.git
 [submodule "plugins/md-prism-highlight"]
 	path = plugins/md-prism-highlight
 	url = https://github.com/Aetf/md-prism-highlight.git
