@@ -1,6 +1,6 @@
 [submodule "themes/smoothie"]
 	path = themes/smoothie
-	url = git@github.com:Aetf/pelican-smoothie.git
+	url = https://github.com/Aetf/pelican-smoothie.git
 [submodule "plugins/md-metayaml"]
 	path = plugins/md-metayaml
 	url = https://github.com/joachimneu/pelican-md-metayaml.git
