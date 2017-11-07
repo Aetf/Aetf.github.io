@@ -51,7 +51,7 @@ help:
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
 
-$(VENVDIR)/pip-selfcheck.json: $(BUILDTOOLS)/requirements.pip
+$(VENVDIR)/pip-selfcheck.json: $(BUILDTOOLS)/requirements.txt
 	virtualenv $(VENVDIR)
 	$(PIP) install -r $<
 
