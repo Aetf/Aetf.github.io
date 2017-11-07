@@ -20,7 +20,6 @@ install:
 env:
     - PIP=pip PY=python PELICAN=pelican
 script:
-    - locale -a
     - mkdir -p build/venv
     - touch build/venv/pip-selfcheck.json
     - make publish
