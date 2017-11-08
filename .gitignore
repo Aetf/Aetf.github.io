@@ -1,13 +1,19 @@
 # Generated files
 build/
+public/
 
 # Editor files
 *.sublime-workspace
 *.swp
+*.vscode
 
 # Python virtual environment
 tools/venv
 
+# Node environment
+node_modules
+
 # Develop runtime generated files
 *.pid
 __pycache__
+db.json

@@ -1,12 +1,3 @@
-[submodule "themes/smoothie"]
-	path = themes/smoothie
-	url = https://github.com/Aetf/pelican-smoothie.git
-[submodule "plugins/md-metayaml"]
-	path = plugins/md-metayaml
-	url = https://github.com/joachimneu/pelican-md-metayaml.git
-[submodule "plugins/tag_cloud"]
-	path = plugins/tag_cloud
-	url = https://github.com/Aetf/pelican-tag-cloud.git
-[submodule "plugins/md-prism-highlight"]
-	path = plugins/md-prism-highlight
-	url = https://github.com/Aetf/md-prism-highlight.git
+[submodule "themes/next"]
+	path = themes/next
+	url = https://github.com/Aetf/hexo-theme-next.git

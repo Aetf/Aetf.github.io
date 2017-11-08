@@ -13,4 +13,4 @@ add_push() {
     popd >/dev/null
 }
 
-add_push themes/smoothie
+add_push themes/next
