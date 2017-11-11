@@ -19,6 +19,7 @@ compiler and system architecture, opensource projects and japanese animes
 {% imsize %}
 src: /assets/img/me.jpg
 alt: A picture of me! I know it's missing. I'm working on it
+profile: body
 {% endimsize %}
 
 I love reading stories. Be it animes, comics or games, it is the stories in them that
