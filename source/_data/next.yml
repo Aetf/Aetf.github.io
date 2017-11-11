@@ -421,7 +421,7 @@ pace: true
 pace_theme: pace-theme-minimal
 
 # canvas_sphere
-canvas_sphere: true
+canvas_sphere: false
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.

@@ -26,9 +26,9 @@ public_dir: build/output
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
-code_dir: downloads/code
 i18n_dir: 
 skip_render:
+    - assets/theme/*
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -40,11 +40,6 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-highlight:
-    enable: true
-    line_number: true
-    auto_detect: false
-    tab_replace:
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -68,16 +63,34 @@ date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 
 # Markdown rendering
-marked:
-    gfm: false
-    pedantic: false
-    sanitize: false
-    tables: true
-    breaks: false
-    smartLists: true
-    smartypants: true
-    modifyAnchors: 1
-    autolink: true
+## Markdown-it config
+## dependency: hexo-renderer-markdown-it
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
+markdown:
+    render:
+        html: true
+        xhtmlOut: true
+        breaks: false
+        linkify: true
+        typographer: true
+        quotes: '“”‘’'
+    plugins:
+        - markdown-it-abbr
+        - markdown-it-footnote
+        - markdown-it-ins
+        - markdown-it-sub
+        - markdown-it-sup
+    anchors:
+        level: 2
+        collisionSuffix: 'v'
+        permalink: true
+        permalinkClass: header-anchor
+        permalinkSymbol: ¶
+
+# Math
+## dependency: hexo-math
+math:
+    engine: 'katex'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -121,6 +134,39 @@ image_sizes:
     defaultProfile: thumbnail
     link: true
     useAltForTitle: false
+
+# Code highlighting
+## disable builtin one
+highlight:
+    enable: false
+## dependency: hexo-prism-plus
+code_dir: assets/code
+prism_plus:
+    enable: true
+    # Custom Prism path
+    vendors:
+        base_url: /assets/theme/
+        prism:
+            - prism.js
+        prism_css:
+            - prism.css
+    # Default language if not specified inline in code blocks
+    default_lang: clike
+    # Default preset if no preset is specified inline
+    default_preset:
+        lineno: true
+        classes:
+        styles:
+            max-height: 30em
+    # All available presets
+    presets:
+        shell:
+            lineno: false
+            classes: [ command-line ]
+            user: aetf
+            host: localhost
+            styles:
+                max-height: 30em
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

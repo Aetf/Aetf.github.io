@@ -175,5 +175,6 @@ int main()
 
 速度还是挺快的：
 
-![Result]({filename}/assets/img/njupt-1362.png)
+![Result](/assets/img/njupt-1362.png)
+
 不过Candesoft-BLOG里说的分层图最短路的没有仔细看。

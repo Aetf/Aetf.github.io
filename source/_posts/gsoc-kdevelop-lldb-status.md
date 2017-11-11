@@ -1,20 +1,26 @@
 ---
 title: "GSoC 2016: Current Status of LLDB Plugin for KDevelop"
 tags: [GSoC2016, c++, LLDB, KDE, KDevelop, OpenSource]
+date: 2016-08-03T08:04:49-04:00
+updated: 2017-01-06T19:47:58-05:00
 ---
 
-!!! info "Updated on 2017.1.6"
-    Some of the bugs are fixed, see [here](https://reviews.llvm.org/D24711)
+{% note info %}
+2017.1.6:
+Some of the bugs are fixed, see [here](https://reviews.llvm.org/D24711)
+{% endnote %}
 
-!!! info "Updated on 2016.9.2"
-    Update known issues and upstream bugs
+{% note info %}
+2016.9.2: Update known issues and upstream bugs
+{% endnote %}
 
-!!! info "Updated on 2016.8.22"
-    Update known issues
-    
-!!! info "Updated on 2016.8.14"
-    Feature matrix and known issues
-    
+{% note info %}
+2016.8.22: Update known issues
+{% endnote %}
+
+{% note info %}
+2016.8.14: Update feature matrix and known issues
+{% endnote %}
 
 After several months' working, LLDB plugin is now usable for basic debugging use cases. There are less than two weeks left, and it's time to do a overall status update for the LLDB plugin.
 
@@ -22,7 +28,12 @@ After several months' working, LLDB plugin is now usable for basic debugging use
 
 Using LLDB as the debugger backend is as easy as using the good old GDB debugger. Simply selecting `LLDB` in the combox at the top-right corner when editing the debug launch configuration should get things work in most normal cases.
 
-[![LLDB Config Page]({filename}/assets/img/gsoc-kdevelop-lldb-status-lldbconfigpage.png)]({filename}/assets/img/gsoc-kdevelop-lldb-status-lldbconfigpage.png)
+{% imsize %}
+src: /assets/img/gsoc-kdevelop-lldb-status-lldbconfigpage.png
+alt: LLDB Config Page
+title: LLDB Config Page
+profile: body
+{% endimsize %}
 
 Additionally, you can set `Debugger Executable` pointing to a specific version of `LLDB`. Note that this path should point to the `lldb-mi` executable, which is usually in the same folder as the normal `lldb` executable. Should you need any special configuration, `Arguments` and `Environment` let you fine tune the running environmnet of `LLDB`.
 
@@ -36,7 +47,12 @@ After started the debug session, you will be taken to the familiar KDevelop debu
 
 Variables and Framestack tool views should work as expected. In case you need to execute some complex command directly in `LLDB`, there's the reworked Debugger Console.
 
-[![Debug Session using LLDB]({filename}/assets/img/gsoc-kdevelop-lldb-status-debugging.png)]({filename}/assets/img/gsoc-kdevelop-lldb-status-debugging.png)
+{% imsize %}
+src: /assets/img/gsoc-kdevelop-lldb-status-debugging.png
+alt: Debug Session using LLDB
+title: Debug Session using LLDB
+profile: body
+{% endimsize %}
 
 !!! info "Tips"
     There's a "repeat" mode in the Debugger Console. If you check the small button left to the command edit, you can press enter directly to repeat the last command.
@@ -63,7 +79,7 @@ Variables and Framestack tool views should work as expected. In case you need to
 
 ### Known Issues
 - Debugger console
-    + Debugger CLI stdout isn't shown, due to [Bug 28026] []
+    + Debugger CLI stdout isn't shown, due to [Bug 28026][]
 - Remote debugging
     + When using `lldb-server gdbserver` as remote server, server exits once debug session ended.
     + When using `gdbserver` as remote server
@@ -98,7 +114,7 @@ Some of these bugs already have patch available, so be sure to check out their b
 - [Bug 28860][] - LLDB-MI: no breakpoint-modified notification when a breakpoint is hit
 - <del>[Bug 30265][] -  LLDB-MI: environment-cd doesn't change working directory for inferior</del>
 
-[Bug 25000]: https://llvm.org/bugs/show_bug.cgi?id=25000 "lldb-mi does not receive broadcasted notification from Core/Process about process stopped if StopAtEntry was requested ("process launch -s" OR "-exec-run --start")"
+[Bug 25000]: https://llvm.org/bugs/show_bug.cgi?id=25000 'lldb-mi does not receive broadcasted notification from Core/Process about process stopped if StopAtEntry was requested ("process launch -s" OR "-exec-run --start")'
 [Bug 28026]: https://llvm.org/bugs/show_bug.cgi?id=28026 "LLDB-MI doesn't properly output CLI command response using console-stream-output stream"
 [Bug 28621]: https://llvm.org/bugs/show_bug.cgi?id=28621 "lldb-mi can't get variables of a frame (-stack-list-* MI-commands) if the thread didn't cause the stop event"
 [Bug 28698]: https://llvm.org/bugs/show_bug.cgi?id=28698 "[lldb-mi] -break-insert with -f (pending flag) requires additional parameter"
@@ -107,6 +123,6 @@ Some of these bugs already have patch available, so be sure to check out their b
 [Bug 28718]: https://llvm.org/bugs/show_bug.cgi?id=28718 "LLDB-MI: disassembly-flavor not supported by gdb-set and gdb-show"
 [Bug 28857]: https://llvm.org/bugs/show_bug.cgi?id=28857 "LLDB-MI: break-enable doesn't enable specified breakpoints"
 [Bug 28858]: https://llvm.org/bugs/show_bug.cgi?id=28858 "LLDB-MI: no notification about process stopped if attaching to a process"
-[Bug 28859]: https://llvm.org/bugs/show_bug.cgi?id=28859 "LLDB-MI: data-disassemble command doesn't accept "$pc" as start and end address parameter"
+[Bug 28859]: https://llvm.org/bugs/show_bug.cgi?id=28859 (LLDB-MI: data-disassemble command doesn't accept "$pc" as start and end address parameter)
 [Bug 28860]: https://llvm.org/bugs/show_bug.cgi?id=28860 "LLDB-MI: no breakpoint-modified notification when a breakpoint is hit"
 [Bug 30265]: https://llvm.org/bugs/show_bug.cgi?id=30265 "LLDB-MI: environment-cd doesn't change working directory for inferior"

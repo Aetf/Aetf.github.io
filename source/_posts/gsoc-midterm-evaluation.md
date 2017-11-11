@@ -1,6 +1,8 @@
 ---
 title: "GSoC 2016: Mid-term Evaluation"
 tags: [GSoC2016, KDE, OpenSource]
+date: 2016-06-29T12:27:42-04:00
+updated: 2016-12-14T23:22:09-05:00
 ---
 
 Time ticks away really fast if you keep yourself busy. I always thought there

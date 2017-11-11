@@ -2,6 +2,7 @@
 title: "GSoC 2016: LLDB Support for KDevelop"
 tags: [GSoC2016, c++, LLDB, KDE, KDevelop, OpenSource]
 date: Sat Apr 23 02:07:21 EDT 2016
+updated: 2016-12-15T01:51:47-05:00
 ---
 
 I've always wanted to participate in the [Google Code of Summer](http://summerofcode.withgoogle.com/). It's cool and an super legitimate experience to put on CV, isn't it? Anyway, what's more exciting is that my first time proposal was accepted! 

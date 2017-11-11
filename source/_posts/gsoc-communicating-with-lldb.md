@@ -2,13 +2,14 @@
 title: "GSoC 2016: Communicating with LLDB"
 tags: [GSoC2016, c++, LLDB, KDE, KDevelop, OpenSource]
 date: Tue May 17 12:17:38 EDT 2016
+updated: 2016-08-03T08:04:49-04:00
 ---
 
 It has been a few weeks since the announcement of accepted projects. And I've been working on finding the most suitable solution to communicate with LLDB in KDevelop. In this article, I'd first give various choices to talk to LLDB, then evaluate these methods based on the current KDevelop debugger support and finally conclude with my final decision about which way to go.
 
 ### Available communication methods
 
-As mentioned in my [proposal]({filename}/gsoc-kdevelop-lldb-support.md), there are mainly three ways to talk to LLDB in a debug session.
+As mentioned in my {% post_link gsoc-kdevelop-lldb-support proposal %}, there are mainly three ways to talk to LLDB in a debug session.
 
 - Use [GDB Machine Interface](https://sourceware.org/gdb/onlinedocs/gdb/GDB_002fMI.html#GDB_002fMI)
 	* LLDB-MI implementation which exists in LLDB source tree
