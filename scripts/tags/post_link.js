@@ -20,9 +20,6 @@ function postLinkTag(args) {
         frag = '#' + frag;
     }
 
-  console.log('slug is ' + slug);
-  console.log('frag is ' + frag);
-
     var post = Post.findOne({ slug: slug });
     if (!post) return;
 
