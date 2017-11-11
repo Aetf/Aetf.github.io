@@ -4,25 +4,18 @@ addons:
     apt:
         packages:
             - language-pack-zh-hans
-cache: pip
-language: python
-python:
-    - 3.6
+language: node_js
+node_js:
+    - 8
+cache:
+    directories:
+        - "node_modules"
 before_install:
-    - curl -JOL 'https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh'
-    - bash install.sh
-    - source $HOME/.nvm/nvm.sh
-    - nvm install node
-    - nvm use node
-    - npm install -g less
+    - npm install -g hexo
 install:
-    - pip install -r tools/requirements.txt
-env:
-    - PIP=pip PY=python PELICAN=pelican
+    - npm install
 script:
-    - mkdir -p build/venv
-    - touch build/venv/pip-selfcheck.json
-    - make publish
+    - hexo generate
 before_deploy:
     - openssl aes-256-cbc -K $encrypted_730350046d35_key -iv $encrypted_730350046d35_iv -in tools/deploy_rsa.enc -out /tmp/deploy_rsa -d
     - eval "$(ssh-agent -s)"
@@ -34,6 +27,6 @@ before_deploy:
 deploy:
     provider: script
     skip_cleanup: true
-    script: make upload
+    script: hexo deploy
     on:
         branch: pelican-source
