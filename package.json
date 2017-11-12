@@ -17,9 +17,10 @@
     "hexo-inject": "^1.0.0",
     "hexo-prism-plus": "^1.0.0",
     "hexo-renderer-ejs": "^0.3.0",
-    "hexo-renderer-markdown-it": "^3.4.1",
+    "hexo-renderer-markdown-it": "git+https://github.com/hexojs/hexo-renderer-markdown-it.git#7d09d25958d3c618b4f049f1995962038d2b829d",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
+    "markdown-it-anchor": "^4.0.0",
     "markdown-it-katex": "^2.0.3"
   }
 }

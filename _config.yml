@@ -81,12 +81,12 @@ markdown:
         - markdown-it-sub
         - markdown-it-sup
         - markdown-it-katex
-    anchors:
-        level: 2
-        collisionSuffix: 'v'
-        permalink: true
-        permalinkClass: header-anchor
-        permalinkSymbol: ¶
+        - name: markdown-it-anchor
+          options:
+              level: 2
+              permalink: true
+              permalinkClass: header-anchor
+              permalinkSymbol: <i class="fa fa-anchor" aria-hidden="true"></i>
 
 # Math
 ## dependency: hexo-math
