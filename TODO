@@ -9,7 +9,9 @@ choose better markdown theme
 
 [DONE] fix post date
 
-fix navi menu order
+[DONE] navi menu order
+
+disable full text on article page
 
 momentum scroll to top
 
@@ -20,16 +22,15 @@ style tune
     hans
 
 hexo plugins
-    hexo-math
     hexo-auto-excerpt hexo-excerpt hexo-excerpt-block hexo-front-matter-excerpt
     hexo-filter-auto-spacing
     hexo-filter-date-from-git
     hexo-github
     hexo-github-card
 
-travis ci
+[DONE] travis ci
 
-check 404 page
+better 404 page
 
 projects page
 
