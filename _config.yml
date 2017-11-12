@@ -4,7 +4,7 @@
 
 # Site
 title: Unlimited Code Works
-subtitle:
+subtitle: A pessimist because of intelligence, but an optimist because of will.
 description:
 author: Peifeng Yu
 timezone: America/Detroit
@@ -80,6 +80,7 @@ markdown:
         - markdown-it-ins
         - markdown-it-sub
         - markdown-it-sup
+        - markdown-it-katex
     anchors:
         level: 2
         collisionSuffix: 'v'
