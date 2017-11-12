@@ -11,7 +11,7 @@ choose better markdown theme
 
 [DONE] navi menu order
 
-disable full text on article page
+[DONE] disable full text on article page
 
 momentum scroll to top
 
@@ -22,7 +22,6 @@ style tune
     hans
 
 hexo plugins
-    hexo-auto-excerpt hexo-excerpt hexo-excerpt-block hexo-front-matter-excerpt
     hexo-filter-auto-spacing
     hexo-filter-date-from-git
     hexo-github
