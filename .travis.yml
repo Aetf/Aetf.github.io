@@ -29,4 +29,4 @@ deploy:
     skip_cleanup: true
     script: hexo deploy
     on:
-        branch: pelican-source
+        branch: hexo
