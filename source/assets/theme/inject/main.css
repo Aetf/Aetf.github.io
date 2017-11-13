@@ -16,6 +16,12 @@
     font-size: 2em;
 }
 
+/* Reduce space between site title and content */
 .container .header-inner {
     padding-bottom: 10px;
+}
+
+/* Remove border around img */
+.container .post-block .fancybox img {
+    border: none;
 }
