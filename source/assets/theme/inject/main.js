@@ -6,8 +6,12 @@ $(document).on('bootstrap:before', function () {
     };
 });
 
-// Scroll to post-title if exists
+// Scroll to post-title if only on post page
+/*
 $(document).on('bootstrap:after', function () {
+});
+*/
+Pace.on('hide', function () {
     var $title = $('.container:not(.page-home) .post-block:not(.page) .post-title');
     if ($title.length > 0) {
         $title.velocity('scroll', { duration: 500 });
