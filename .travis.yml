@@ -10,6 +10,8 @@ node_js:
 cache:
     directories:
         - "node_modules"
+env:
+    TZ: America/Detroit
 before_install:
     - npm install -g hexo-cli
 install:
