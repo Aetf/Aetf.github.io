@@ -1,6 +1,12 @@
+/* Smaller anchor icon for permalinks */
 .container .posts-expand .post-body .header-anchor {
     float: none;
 }
 .container .header-anchor i.fa {
     font-size: 0.8em;
+}
+
+/* Larger icon in header navi bar */
+.site-nav .menu .menu-item-icon.fa {
+    font-size: 1.6em;
 }

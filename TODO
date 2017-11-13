@@ -14,13 +14,21 @@ choose better markdown theme
 
 [DONE] disable full text on article page
 
-momentum scroll to top
+[DONE] momentum scroll to top
+
+[DONE] scroll to title when in post
 
 style tune
-    title
-    larger navi icon
+    site title
+    [DONE] larger navi icon
+    contacts in sidebar
+    markdown render
+        title fonts
+        fancybox
+            styling
+            transition when click
+    hans & fonts
     whiter bg
-    hans
 
 hexo plugins
     hexo-filter-auto-spacing
