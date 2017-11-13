@@ -171,7 +171,11 @@ prism_plus:
 
 # Auto excerpt
 ## dependency: hexo-excerpt
-excerpt_depth: 5
+excerpt:
+    depth: 5
+    excerpt_excludes:
+        - .header-anchor
+        - .note.info
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
