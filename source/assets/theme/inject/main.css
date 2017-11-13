@@ -10,3 +10,12 @@
 .site-nav .menu .menu-item-icon.fa {
     font-size: 1.6em;
 }
+
+/* Only apply to post titles */
+.container:not(.page-home) .post-block:not(.page) .post-title {
+    font-size: 2em;
+}
+
+.container .header-inner {
+    padding-bottom: 10px;
+}
