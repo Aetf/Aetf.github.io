@@ -153,8 +153,8 @@ creative_commons: by-nc-sa
 
 sidebar:
     # Sidebar Position, available value: left | right (only for Pisces | Gemini).
-    position: left
-    #position: right
+    #position: left
+    position: right
 
     # Sidebar Display, available value (only for Muse | Mist):
     #  - post    expand on posts automatically. Default.
@@ -242,7 +242,7 @@ post_copyright:
 mobile_layout_economy: false
 
 # Android Chrome header panel color ($black-deep).
-android_chrome_color: "#222"
+android_chrome_color: "#87daff"
 
 # Custom Logo.
 # !!Only available for Default Scheme currently.
@@ -252,13 +252,6 @@ android_chrome_color: "#222"
 custom_logo:
     enabled: false
     image:
-
-# Code Highlight theme
-# Available value:
-#    normal | night | night eighties | night blue | night bright
-# https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
-
 
 # ---------------------------------------------------------------
 # Font Settings
@@ -319,12 +312,6 @@ font:
 # ---------------------------------------------------------------
 # Third Party Services Settings
 # ---------------------------------------------------------------
-
-# MathJax Support
-mathjax:
-    enable: false
-    per_page: true
-    cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # Han Support docs: https://hanzi.pro/
 han: false
@@ -395,7 +382,7 @@ tabs:
 # Use velocity to animate everything.
 motion:
     enable: true
-    async: false
+    async: true
     transition:
         # Transition variants:
         # fadeIn | fadeOut | flipXIn | flipXOut | flipYIn | flipYOut | flipBounceXIn | flipBounceXOut | flipBounceYIn | flipBounceYOut
@@ -420,7 +407,9 @@ pace: true
 pace_theme: pace-theme-minimal
 
 # canvas_sphere
-canvas_sphere: false
+canvas_sphere: true
+# only show on landing page
+index_bg_only: true
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
@@ -466,11 +455,6 @@ vendors:
     # See: http://fontawesome.io/
     fontawesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css
 
-    # Internal version: 1
-    # https://www.algolia.com
-    algolia_instant_js:
-    algolia_instant_css:
-
     # Internal version: 1.0.2
     # See: https://github.com/HubSpot/pace
     # Or use direct links below:
@@ -479,28 +463,8 @@ vendors:
     pace: https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js
     pace_css: https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css
 
-    # Internal version: 1.0.0
-    # https://github.com/hustcc/canvas-nest.js
-    canvas_nest:
-
     # three
-    three:
-
-    # three_waves
-    # https://github.com/jjandxa/three_waves
-    three_waves:
-
-    # three_waves
-    # https://github.com/jjandxa/canvas_lines
-    canvas_lines:
-
-    # three_waves
-    # https://github.com/jjandxa/canvas_sphere
-    canvas_sphere: 
-
-    # Internal version: 1.0.0
-    # https://github.com/zproo/canvas-ribbon
-    canvas_ribbon:
+    three: https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js
 
     # Internal version: 3.3.0
     # https://github.com/ethantw/Han
