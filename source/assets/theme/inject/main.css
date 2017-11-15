@@ -25,3 +25,52 @@
 .container .post-block .fancybox img {
     border: none;
 }
+
+/* Fancier site title */
+.brand {
+    border-radius: 20px 1px 20px 1px;
+    padding: 0px 20px;
+
+    /* For some reason, I must manually specify the height,
+       otherwise the element gets too tall */
+    height: 36px;
+}
+
+.brand .logo-line-before i::before {
+    content: "all_inclusive";
+    display: inline;
+    margin-right: 10px;
+
+    font-family: 'Material Icons';
+    /* Preferred icon size */
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+
+    /* Line height same as main site title */
+    line-height: 36px;
+
+    display: inline-block;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/* Make color of sidebar toggle to be white all the time */
+.page-post-detail .sidebar-toggle-line-wrap .sidebar-toggle-line {
+    background: #fff;
+}

@@ -81,7 +81,7 @@ menu:
     - { name: home, path: /, icon: home }
     - { name: about, path: /about/, icon: user }
     - { name: projects, path: /projects/, icon: code }
-    - { name: articles, path: /blog/, icon: pencil }
+    - { name: articles, path: /blog/, icon: book }
     #- { name: tags, path: /tags/, icon: tags }
     #- { name: archives, path: /archives/, icon: archive }
 
@@ -161,7 +161,7 @@ sidebar:
     #  - always  expand for all pages automatically
     #  - hide    expand only when click on the sidebar toggle icon.
     #  - remove  Totally remove sidebar including sidebar toggle.
-    display: hide
+    display: post
     #display: always
     #display: hide
     #display: remove
@@ -322,12 +322,12 @@ font:
 
 # MathJax Support
 mathjax:
-    enable: true
+    enable: false
     per_page: true
     cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # Han Support docs: https://hanzi.pro/
-han: true
+han: false
 
 # Disqus
 disqus:

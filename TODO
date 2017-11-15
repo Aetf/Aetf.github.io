@@ -19,22 +19,21 @@ choose better markdown theme
 [DONE] scroll to title when in post
 
 style tune
-    site title
+    [DONE] site title
     [DONE] larger navi icon
     contacts in sidebar
-    markdown render
+    [DONE] markdown render
         [DONE] title fonts
-        fancybox
-            styling
-            transition when click
+        [DONE] fancybox
+            [DONE] styling
+            [DONE] transition when click
     hans & fonts
-    whiter bg
 
 hexo plugins
     hexo-filter-auto-spacing
     hexo-filter-date-from-git
-    hexo-github
-    hexo-github-card
+    [DONE] hexo-github
+    [DONE] hexo-github-card
 
 [DONE] travis ci
 
@@ -46,4 +45,5 @@ research page
 
 cv page
 
-related links page
+related links page in side bar: see http://www.ixirong.com/
+
