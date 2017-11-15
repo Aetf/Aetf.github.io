@@ -81,6 +81,7 @@ menu:
     - { name: home, path: /, icon: home }
     - { name: about, path: /about/, icon: user }
     - { name: projects, path: /projects/, icon: code }
+    - { name: research, path: /research/, icon: rocket }
     - { name: articles, path: /blog/, icon: book }
     #- { name: tags, path: /tags/, icon: tags }
     #- { name: archives, path: /archives/, icon: archive }
