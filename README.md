@@ -5,6 +5,9 @@ Souce code for my [blog](http://unlimitedcodeworks.xyz)
 
 - Powered by [Hexo](https://hexo.io/)
 - Theme: [NexT](https://github.com/Aetf/hexo-theme-next)
+- Icons:
+    * Font Awesome
+    * Material Icons
 
 #### Keywords in commit messages
 - Update: post update

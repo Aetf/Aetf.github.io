@@ -21,6 +21,8 @@
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
     "markdown-it-anchor": "^4.0.0",
-    "markdown-it-katex": "^2.0.3"
+    "markdown-it-katex": "^2.0.3",
+    "promise": "^8.0.1",
+    "xkcd-api": "^1.0.1"
   }
 }

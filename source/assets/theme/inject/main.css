@@ -22,7 +22,7 @@
 }
 
 /* Remove border around img */
-.container .post-block .fancybox img {
+.container .post-block img {
     border: none;
 }
 
@@ -73,4 +73,11 @@
 /* Make color of sidebar toggle to be white all the time */
 .page-post-detail .sidebar-toggle-line-wrap .sidebar-toggle-line {
     background: #fff;
+}
+
+/* A special inline version of the all-inclusive icon */
+.material-icons.inline.all-inclusive {
+    position: relative;
+    top: 4px;
+    font-size: 20px;
 }

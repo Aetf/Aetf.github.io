@@ -34,14 +34,26 @@ hexo plugins
     hexo-filter-date-from-git
     [DONE] hexo-github
     [DONE] hexo-github-card
+    hexo-image-sizes
+        fix crashing
 
 [DONE] travis ci
+
+[DONE] index page
 
 better 404 page
 
 projects page
 
 research page
+    [DONE] icon
+        octicon-beaker
+        octicon-rocket
+        octicon-telescope
+        octicon-light-bulb
+        fa-graduation-cap
+        fa-rocket
+        fa-lightbulb-o
 
 cv page
 
