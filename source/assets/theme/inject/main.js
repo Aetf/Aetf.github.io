@@ -16,14 +16,36 @@ $(document).on('bootstrap:before', function () {
     $.fancybox.defaults['buttons'] = ['close'];
 });
 
-// Scroll to post-title if only on post page
 /*
 $(document).on('bootstrap:after', function () {
 });
 */
-Pace.on('hide', function () {
+
+// Scroll to post-title if only on post page
+// take note of initial position
+var initialOffset = window.pageYOffset;
+function scrollToTitle(cb) {
+    if (window.pageYOffset !== initialOffset) {
+        // the user has scrolled manually before page finish loading.
+        // Don't scroll in this case.
+        return;
+    }
     var $title = $('.container:not(.page-home) .post-block:not(.page) .post-title');
     if ($title.length > 0) {
-        $title.velocity('scroll', { duration: 500 });
+        $title.velocity('scroll', {
+            duration: 500,
+            complete: function () {
+                cb();
+            }
+        });
     }
-});
+}
+
+$(document).on('motion:before', function () {
+    NexT.motion.integrator.add(function (integrator) {
+        if (CONFIG.motion.async) {
+            integrator.next();
+        }
+        scrollToTitle(function() { integrator.next() });
+    });
+})
