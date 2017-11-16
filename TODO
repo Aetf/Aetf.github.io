@@ -1,10 +1,10 @@
-choose better markdown theme
-    better code block: with folding and scroll bar
+[DONE] choose better markdown theme
+    [DONE] better code block: with folding and scroll bar
         [DONE] port md-prism-highlight to hexo
         [DONE] add needed prism plugins and themes
         [DONE] Fine tune color (the left blue side)
         [DONE] publish new version
-        setup travis ci
+        [DONE] setup travis ci
     [DONE] permlink mark should align left
     [DONE] permlink mark size
 
@@ -41,7 +41,7 @@ hexo plugins
 
 [DONE] index page
 
-better 404 page
+about page
 
 projects page
 
@@ -59,3 +59,4 @@ cv page
 
 related links page in side bar: see http://www.ixirong.com/
 
+better 404 page

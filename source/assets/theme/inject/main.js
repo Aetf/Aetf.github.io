@@ -14,6 +14,12 @@ $(document).on('bootstrap:before', function () {
     $.fancybox.defaults.animationEffect = 'fade';
     $.fancybox.defaults.transitionEffect = 'fade';
     $.fancybox.defaults['buttons'] = ['close'];
+
+    // install handler to all open sidebar links
+    $('.open-sidebar').click(function (event) {
+        event.preventDefault();
+        NexT.utils.displaySidebar();
+    });
 });
 
 /*
