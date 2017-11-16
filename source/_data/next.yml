@@ -112,25 +112,25 @@ scheme: Muse
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-    GitHub: https://github.com/Aetf || github
     E-Mail: mailto:aetf@unlimitedcodeworks.xyz || envelope
+    GitHub: https://github.com/Aetf || github
     LinkedIn: https://www.linkedin.com/in/peifengyu || linkedin
-    Google: https://plus.google.com/yourname || google
-    Twitter: https://twitter.com/yourname || twitter
     StackOverflow: https://stackoverflow.com/users/2441376/aetf || stack-overflow
     Mozillian: https://mozillians.org/en-US/u/Aetf || firefox
 
 social_icons:
     enable: true
-    icons_only: false
-    transition: false
+    icons_only: true
 
 # Blog rolls
-#links_title: Links
-#links_layout: block
+links_title: Friends' Links
+links_layout: block
 #links_layout: inline
-#links:
-    #Title: http://example.com/
+links:
+    SilentMing's Gensokyo: http://silentming.net/
+    SNKNStudio: http://www.snknstudio.com/
+    Chen Gao: https://gaochen315.github.io/
+    Yuliang Zou: http://yuliang.vision/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
@@ -347,7 +347,7 @@ local_search:
 # External URL with BASE64 encrypt & decrypt.
 # Usage: {% exturl text url "title" %}
 # Alias: {% extlink text url "title" %}
-exturl: false
+exturl: true
 
 # Note tag (bs-callout).
 note:
