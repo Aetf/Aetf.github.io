@@ -34,9 +34,10 @@ function scrollToTitle(cb) {
     if (window.pageYOffset !== initialOffset) {
         // the user has scrolled manually before page finish loading.
         // Don't scroll in this case.
+        cb();
         return;
     }
-    var $title = $('.container:not(.page-home) .post-block:not(.page) .post-title');
+    var $title = $('.container:not(.page-home) #posts.posts-expand .post-block:not(.page) .post-title');
     if ($title.length > 0) {
         $title.velocity('scroll', {
             duration: 500,
@@ -44,6 +45,8 @@ function scrollToTitle(cb) {
                 cb();
             }
         });
+    } else {
+        cb();
     }
 }
 
