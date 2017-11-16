@@ -12,7 +12,7 @@
 }
 
 /* Only apply to post titles */
-.container:not(.page-home) .post-block:not(.page) .post-title {
+.container:not(.page-home) #posts.posts-expand .post-block:not(.page) .post-title {
     font-size: 2em;
 }
 
