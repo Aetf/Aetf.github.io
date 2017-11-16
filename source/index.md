@@ -1,6 +1,8 @@
 ---
 layout: page
 comments: false
+notitle: true
+notoc: true
 ---
 
 - Congratuations!

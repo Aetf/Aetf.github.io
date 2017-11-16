@@ -1,6 +1,8 @@
 ---
 comments: false
 date: 2017-11-08 01:14:34
+notitle: true
+notoc: true
 ---
 
 Some words about myself now. My name is Peifeng Yu (Aetf is my nickname) and I'm
