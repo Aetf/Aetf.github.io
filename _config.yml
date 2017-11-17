@@ -188,7 +188,7 @@ deploy:
     type: rsync
     host: archvps.unlimitedcodeworks.xyz
     user: aetf
-    root: /srv/http/blog-rewrite
+    root: /srv/http/blog
     port: 59901
     delete: true
     verbose: true
