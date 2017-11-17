@@ -22,10 +22,11 @@ $(document).on('bootstrap:before', function () {
     });
 
     // auto close sidebar when click elsewhere
+    const sidebarArea = '.sidebar,.sidebar-toggle,.open-sidebar';
     $(document).on('sidebar.isShowing', function () {
         $('.container').on('click.hidesidebar', function (e) {
-            if ($(e.target).is('.sidebar,.sidebar-toggle')
-                || $(e.target).parents(".sidebar,.sidebar-toggle").length) {
+            if ($(e.target).is(sidebarArea)
+                || $(e.target).parents(sidebarArea).length) {
                 return;
             }
             NexT.utils.displaySidebar();
@@ -39,13 +40,13 @@ $(document).on('bootstrap:before', function () {
     // a popup explains email
     var $emailLink = $('#sidebar .links-of-author-item a[title="E-Mail"]');
     if ($emailLink.length > 0) {
-        const contentText = `My email address is my nickname at this website.
-                             Another address for academic use is included in my
-                             <a href="/assets/dl/cv.pdf" target="_blank">CV</a>.
-                             <br />
-                             <span class="small">If you can't figure it out from the hints, well,
-                             you might find emailing more of a challenge than
-                             figuring out my address. ;)</span>`;
+        const contentText = ['My email address is my nickname at this website.',
+                             'Another address for academic use is included in my',
+                             '<a href="/assets/dl/cv.pdf" target="_blank">CV</a>.',
+                             '<br />',
+                             '<span class="small">If you can\'t figure it out from the hints, well,',
+                             'you might find emailing more of a challenge than',
+                             'figuring out my address. ;)</span>'].join('');
         // Initialize jBox
         $emailLink.addClass('email_tooltip_open');
         new jBox('Tooltip', {
@@ -119,6 +120,6 @@ $(document).on('motion:before', function () {
         if (CONFIG.motion.async) {
             integrator.next();
         }
-        scrollToTitle(function() { integrator.next() });
+        scrollToTitle(function () { integrator.next() });
     });
-})
+});
