@@ -17,7 +17,10 @@ const INJECTED_FILES = [
     {
         path: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css',
         shouldInject: shouldInjectKaTex
-    }
+    },
+    'https://cdnjs.cloudflare.com/ajax/libs/jBox/0.4.9/jBox.min.css',
+    'https://cdnjs.cloudflare.com/ajax/libs/jBox/0.4.9/themes/TooltipDark.min.css',
+    'https://cdnjs.cloudflare.com/ajax/libs/jBox/0.4.9/jBox.min.js'
 ];
 
 /**
@@ -45,7 +48,9 @@ Injector.prototype._inject = function (inject) {
         if (_.isString(el)) {
             injectBasedOnExt(inject, el);
         } else {
-            injectBasedOnExt(inject, el.path, { shouldInject: el.shouldInject });
+            _.castArray(el.path).forEach(path => {
+                injectBasedOnExt(inject, path, { shouldInject: el.shouldInject });
+            }, this);
         }
     }, this);
 

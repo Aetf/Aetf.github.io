@@ -20,6 +20,55 @@ $(document).on('bootstrap:before', function () {
         event.preventDefault();
         NexT.utils.displaySidebar();
     });
+
+    // a popup explains email
+    var $emailLink = $('#sidebar .links-of-author-item a[title="E-Mail"]');
+    if ($emailLink.length > 0) {
+        const contentText = `My email address is my nickname at this website.
+                             Another address for academic use is included in my
+                             <a href="/assets/dl/cv.pdf" target="_blank">CV</a>.
+                             <br />
+                             <span class="small">If you can't figure it out from the hints, well,
+                             you might find emailing more of a challenge than
+                             figuring out my address. ;)</span>`;
+        // Initialize jBox
+        $emailLink.addClass('email_tooltip_open');
+        new jBox('Tooltip', {
+            id: 'email_tooltip',
+            attach: '.email_tooltip_open',
+            preventDefault: true,
+            trigger: 'click',
+            content: contentText,
+            getContent: null,
+            maxWidth: '20em',
+            position: {
+                x: 'left',
+                y: 'center'
+            },
+            onPosition: function () {
+                // get current positioned value
+                var pos = {};
+                ['x', 'y'].forEach(axis => {
+                    var prop = this.options.attributes[axis];
+                    pos[prop] = parseInt(this.wrapper.css(prop), 10) || 0;
+                }, this);
+                // dynamically calculate offset
+                var offset = $emailLink.position().left;
+                pos[this.options.attributes.x] -= offset;
+                // set back new value
+                this.wrapper.css(pos);
+            },
+            outside: 'x',
+            adjustPosition: true,
+            adjustTracker: true,
+            pointer: true,
+            animation: 'move',
+            theme: 'TooltipDark',
+            closeOnEsc: true,
+            closeOnClick: 'body',
+            closeOnMouseleave: false
+        });
+    }
 });
 
 /*

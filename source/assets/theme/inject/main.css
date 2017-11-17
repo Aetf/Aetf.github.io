@@ -81,3 +81,24 @@
     top: 4px;
     font-size: 20px;
 }
+
+/* Email tooltip style */
+#email_tooltip .jBox-container {
+    background: #222;
+    color: #eee;
+}
+#email_tooltip .jBox-pointer::after {
+    background: #222;
+}
+#email_tooltip a {
+    color: #eee;
+    border-bottom: 1px solid #888;
+}
+#email_tooltip a:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+#email_tooltip span.small {
+    color: #999;
+    font-size: 14px;
+}

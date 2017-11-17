@@ -112,7 +112,7 @@ scheme: Muse
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-    E-Mail: mailto:aetf@unlimitedcodeworks.xyz || envelope
+    E-Mail: "# || envelope"
     GitHub: https://github.com/Aetf || github
     LinkedIn: https://www.linkedin.com/in/peifengyu || linkedin
     StackOverflow: https://stackoverflow.com/users/2441376/aetf || stack-overflow

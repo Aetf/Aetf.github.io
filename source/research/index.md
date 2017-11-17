@@ -10,5 +10,3 @@ __Under Construction__
 {% endnote %}
 
 My [CV](/assets/dl/cv.pdf) (last updated: Nov. 2017)
-
-My email aetf@unlimitedcodeworks.xyz  peifeng@umich.edu
