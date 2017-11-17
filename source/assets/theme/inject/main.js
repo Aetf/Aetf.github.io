@@ -15,10 +15,25 @@ $(document).on('bootstrap:before', function () {
     $.fancybox.defaults.transitionEffect = 'fade';
     $.fancybox.defaults['buttons'] = ['close'];
 
-    // install handler to all open sidebar links
+    // install handler to all open sidebar links in text
     $('.open-sidebar').click(function (event) {
         event.preventDefault();
         NexT.utils.displaySidebar();
+    });
+
+    // auto close sidebar when click elsewhere
+    $(document).on('sidebar.isShowing', function () {
+        $('.container').on('click.hidesidebar', function (e) {
+            if ($(e.target).is('.sidebar,.sidebar-toggle')
+                || $(e.target).parents(".sidebar,.sidebar-toggle").length) {
+                return;
+            }
+            NexT.utils.displaySidebar();
+            $('.container').off('click.hidesidebar');
+        });
+    });
+    $(document).on('sidebar.isHiding', function () {
+        $('.container').off('click.hidesidebar');
     });
 
     // a popup explains email
