@@ -46,7 +46,7 @@ $(document).on('bootstrap:before', function () {
                              '<br />',
                              '<span class="small">If you can\'t figure it out from the hints, well,',
                              'you might find emailing more of a challenge than',
-                             'figuring out my address. ;)</span>'].join('');
+                             'figuring out my address. ;)</span>'].join(' ');
         // Initialize jBox
         $emailLink.addClass('email_tooltip_open');
         new jBox('Tooltip', {
