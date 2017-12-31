@@ -182,6 +182,25 @@ excerpt:
         - .header-anchor
         - .note.info
 
+# URL redirection to help migration
+## dependency: hexo-alias-generator
+alias:
+    blog/1970/11/18/a-really-complex-markdown-test/index.html: blog/1970/11/18/complex-md-test/index.html
+    blog/2016/05/13/gsoc-communicating-with-lldb/index.html: blog/2016/05/17/gsoc-communicating-with-lldb/index.html
+    blog/2016/05/14/gsoc-communicating-with-lldb/index.html: blog/2016/05/17/gsoc-communicating-with-lldb/index.html
+    blog/2016/08/21/gsoc-kdevelop-lldb-final-report/index.html: blog/2016/08/20/gsoc-kdevelop-lldb-final-report/index.html
+    blog/2016/06/27/gsoc-mid-term-evaluation/index.html: blog/2016/06/29/gsoc-midterm-evaluation/index.html
+    blog/2016/06/28/gsoc-mid-term-evaluation/index.html: blog/2016/06/29/gsoc-midterm-evaluation/index.html
+    blog/2016/06/10/build-kdevelop-against-custom-kdevplatform/index.html: blog/2016/08/03/build-kdevelop-against-custom-kdevplatform/index.html
+    blog/2013/02/05/usaco-241-the-tamworth-two/index.html: blog/2013/02/05/usaco-2-4-1/index.html
+    blog/2013/02/16/usaco-314-shaping-regions/index.html: blog/2013/02/16/usaco-3-1-4/index.html
+    blog/2013/02/05/usaco-231-longest-prefix/index.html: blog/2013/02/05/usaco-2-3-1/index.html
+    blog/2013/02/15/usaco-242-overfencing/index.html: blog/2013/02/15/usaco-2-4-2/index.html
+    blog/2013/02/05/usaco-235-controlling-companies/index.html: blog/2013/02/05/usaco-2-3-5/index.html
+    blog/2013/02/07/hdu-3234-exclusive-or/index.html: blog/2013/02/07/hdu-3234/index.html
+    blog/2013/12/23/njupt-1362-qi-che-jia-you-xing-shi-wen-ti/index.html: blog/2013/12/23/njupt-1362/index.html
+
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
