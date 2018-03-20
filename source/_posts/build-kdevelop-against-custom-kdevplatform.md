@@ -4,6 +4,12 @@ tags: [c++, KDE, KDevelop, OpenSource, cmake]
 date: 2016-08-03T08:04:49-04:00
 ---
 
+{% note info %}
+2018.3.20:
+Now KDevPlatform repo is merged into the KDevelop repo, and there is no need to go through the steps mentioned in this post to get things working.
+However, the [last section](#run-newly-built-kdevelop) still applies in order to not load plugins from the system-wide KDevelop installation.
+{% endnote %}
+
 KDevelop is tightly coupled with KDevPlatform and from time to time you need to hack them both when developing. But then without caution, you'll link against the system bundled KDevPlatform libraries and spend the whole day trying to find out why the hall the code you wrote didn't have any effects.
 
 That's annoying and here's how to make sure you are linking to the right copy.
@@ -34,7 +40,7 @@ tree ~/stage/lib64/cmake/KDevPlatform
 └── KDevPlatformTargets-debug.cmake
 ```
 
-We just need a way to tell cmake where they are by appending that path to `CMAKE_PREFIX_PATH` when configure KDevelop.
+We just need a way to tell cmake where they are by appending that path to `CMAKE_PREFIX_PATH` when configuring KDevelop.
 
 ```bash preset=shell output=2-5
 mkdir build && cd build
@@ -56,5 +62,5 @@ In order to run KDevelop built this way, you have to specify various paths so th
 env QT_PLUGIN_PATH=~/stage/lib64/plugins \
                        LD_LIBRARY_PATH=~/stage/lib64 \
                        XDG_DATA_DIRS=~/stage/share:$XDG_DATA_DIRS \
-                       ~/bin/kdevelop
+                       ~/stage/bin/kdevelop
 ```
