@@ -32,3 +32,5 @@ deploy:
     script: hexo deploy
     on:
         branch: hexo
+after_deploy:
+    - curl -X POST "https://api.cloudflare.com/client/v4/zones/$cloudflare_zone_id/purge_cache" -H "X-Auth-Email: $cloudflare_user_email" -H "X-Auth-Key: $cloudflare_api_key" -H "Content-Type: application/json" --data '{"purge_everything":true}'
