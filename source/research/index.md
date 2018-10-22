@@ -9,4 +9,4 @@ notoc: true
 __Under Construction__
 {% endnote %}
 
-My [CV](/assets/dl/cv.pdf) (last updated: Nov. 2017)
+My [CV](/assets/dl/cv.pdf) (last updated: Oct. 2018)
