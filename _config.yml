@@ -74,8 +74,10 @@ time_format: HH:mm:ss
 
 # Markdown rendering
 ## Markdown-it config
-## dependency: hexo-renderer-markdown-it
+## dependency: hexo-renderer-markdown-it, markdown-it-anchor
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
+## Note: hexo-renderer-markdown-it only supports passing in plugin option in master branch later than
+## commit 7d09d25958d3c618b4f049f1995962038d2b829d
 markdown:
     render:
         html: true

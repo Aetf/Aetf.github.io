@@ -15,6 +15,7 @@ function shouldInjectKaTex (src) {
 const INJECTED_FILES = [
     'https://fonts.googleapis.com/icon?family=Material+Icons',
     {
+        // the version here should match the katex used in markdown-it-katex
         path: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css',
         shouldInject: shouldInjectKaTex
     },
