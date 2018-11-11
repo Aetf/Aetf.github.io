@@ -40,7 +40,7 @@ $(document).on('bootstrap:before', function () {
     // a popup explains email
     var $emailLink = $('#sidebar .links-of-author-item a[title="E-Mail"]');
     if ($emailLink.length > 0) {
-        const contentText = ['My email address is my nickname at this website.',
+        const contentText = ['My email address is my <a href="/about" >nickname</a> at this website.',
                              'Another address for academic use is included in my',
                              '<a href="/assets/dl/cv.pdf" target="_blank">CV</a>.',
                              '<br />',
