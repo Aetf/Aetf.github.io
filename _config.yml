@@ -108,6 +108,9 @@ math:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
+
+# Use the theme-next theme
+## theme config override in _data/next.yml
 theme: next
 
 # Feed
