@@ -1,3 +1,6 @@
 [submodule "themes/next"]
 	path = themes/next
+	url = https://github.com/Aetf/hexo-theme-next-old.git
+[submodule "themes/next-reloaded"]
+	path = themes/next-reloaded
 	url = https://github.com/Aetf/hexo-theme-next.git
