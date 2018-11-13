@@ -2,55 +2,91 @@
 # Theme Core Configuration Settings
 # ---------------------------------------------------------------
 
-# Set to true, if you want to fully override the default configuration.
-# Useful if you don't want to inherit the theme _config.yml configurations.
+# If false, merge configs from `_data/next.yml` into default configuration (rewrite).
+# If true, will fully override default configuration by options from `_data/next.yml` (override). Only for NexT settings.
+# And if true, all config from default NexT `_config.yml` must be copied into `next.yml`. Use if you know what you are doing.
+# Useful if you want to comment some options from NexT `_config.yml` by `next.yml` without editing default config.
 override: false
+
+# Allow to cache content generation. Introduced in NexT v6.0.0.
+cache:
+  enable: true
+
+# Redefine custom file paths. Introduced in NexT v6.0.2.
+# If commented, will be used default custom file paths.
+
+# For example, you want to put your custom styles file
+# outside theme directory in root `source/_data`, set
+# `styles: source/_data/styles.styl`
+#custom_file_path:
+  # Default paths: layout/_custom/*
+  #head: source/_data/head.swig
+  #header: source/_data/header.swig
+  #sidebar: source/_data/sidebar.swig
+
+  # Default path: source/css/_variables/custom.styl
+  #variables: source/_data/variables.styl
+  # Default path: source/css/_mixins/custom.styl
+  #mixins: source/_data/mixins.styl
+  # Default path: source/css/_custom/custom.styl
+  #styles: source/_data/styles.styl
+
 
 # ---------------------------------------------------------------
 # Site Information Settings
 # ---------------------------------------------------------------
 
-# To get favicons visit: https://realfavicongenerator.net
-# Put your favicons into `hexo-site/source/` or `hexo-site/themes/next/source/images/` directory.
+# To get or check favicons visit: https://realfavicongenerator.net
+# Put your favicons into `hexo-site/source/` (recommend) or `hexo-site/themes/next/source/images/` directory.
+
 # Default NexT favicons placed in `hexo-site/themes/next/source/images/` directory.
-# And if you want to place your icons in `hexo-site/source/`, you must remove `/images` prefix from pathes.
+# And if you want to place your icons in `hexo-site/source/` root directory, you must remove `/images` prefix from pathes.
+
+# For example, you put your favicons into `hexo-site/source/images` directory.
+# Then need to rename & redefine they on any other names, otherwise icons from Next will rewrite your custom icons in Hexo.
 favicon:
-    small: /favicons/favicon-16x16.png
-    medium: /favicons/favicon-32x32.png
-    apple_touch_icon: /favicons/apple-touch-icon.png
-    safari_pinned_tab: /favicons/safari_pinned_tab.svg
-    android_manifest: /favicons/manifest.json
-    ms_browserconfig: /favicons/browserconfig.xml
-
-# Set default keywords (Use a comma to separate)
-keywords:
-
-# Set rss to false to disable feed link.
-# Leave rss as empty to use site's feed link.
-# Set rss to specific value if you have burned your feed already.
-rss:
+  small: /favicons/favicon-16x16.png
+  medium: /favicons/favicon-32x32.png
+  apple_touch_icon: /favicons/apple-touch-icon.png
+  safari_pinned_tab: /favicons/safari_pinned_tab.svg
+  android_manifest: /favicons/manifest.json
+  ms_browserconfig: /favicons/browserconfig.xml
 
 footer:
-    # Specify the date when the site was setup.
-    # If not defined, current year will be used.
-    since: 2015
+  # Specify the date when the site was setup.
+  # If not defined, current year will be used.
+  since: 2015
 
-    # Icon between year and copyright info.
-    icon: user
+  # Icon between year and copyright info.
+  icon:
+    # Icon name in fontawesome, see: https://fontawesome.com/v4.7.0/icons
+    # `heart` is recommended with animation in red (#ff0000).
+    name: user
+    # If you want to animate the icon, set it to true.
+    animated: true
+    # Change the color of icon, using Hex Code.
+    color: "#808080"
 
-    # If not defined, will be used `author` from Hexo main config.
-    copyright:
-    # -------------------------------------------------------------
+  # If not defined, will be used `author` from Hexo main config.
+  copyright:
+  # -------------------------------------------------------------
+  powered:
     # Hexo link (Powered by Hexo).
-    powered: true
+    enable: true
+    # Version info of Hexo after Hexo link (vX.X.X).
+    version: true
 
-    theme:
-        # Theme & scheme info link (Theme - NexT.scheme).
-        enable: true
-        # Version info of NexT after scheme info (vX.X.X).
-        version: true
-    # -------------------------------------------------------------
-    # Any custom text can be defined here.
+  theme:
+    # Theme & scheme info link (Theme - NexT.scheme).
+    enable: true
+    # Version info of NexT after scheme info (vX.X.X).
+    version: true
+  # -------------------------------------------------------------
+  # Beian icp information for Chinese users. In China, every legal website should have a beian icp in website footer.
+  # http://www.miitbeian.gov.cn/
+  beian:
+    enable: false
+    icp:
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -113,25 +149,25 @@ scheme: Muse
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-    E-Mail: "# || envelope"
-    GitHub: https://github.com/Aetf || github
-    LinkedIn: https://www.linkedin.com/in/peifengyu || linkedin
-    StackOverflow: https://stackoverflow.com/users/2441376/aetf || stack-overflow
-    Mozillian: https://mozillians.org/en-US/u/Aetf || firefox
+  E-Mail: "# || envelope"
+  GitHub: https://github.com/Aetf || github
+  LinkedIn: https://www.linkedin.com/in/peifengyu || linkedin
+  StackOverflow: https://stackoverflow.com/users/2441376/aetf || stack-overflow
+  Mozillian: https://mozillians.org/en-US/u/Aetf || firefox
 
 social_icons:
-    enable: true
-    icons_only: true
+  enable: true
+  icons_only: true
 
 # Blog rolls
 links_title: Friends' Links
 links_layout: block
 #links_layout: inline
 links:
-    SilentMing's Gensokyo: http://silentming.net/
-    SNKNStudio: http://www.snknstudio.com/
-    Chen Gao: https://gaochen315.github.io/
-    Yuliang Zou: http://yuliang.vision/
+  SilentMing's Gensokyo: http://silentming.net/
+  SNKNStudio: http://www.snknstudio.com/
+  Chen Gao: https://gaochen315.github.io/
+  Yuliang Zou: http://yuliang.vision/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
@@ -140,13 +176,13 @@ avatar: /assets/img/avatar.jpg
 
 # Table Of Contents in the Sidebar
 toc:
-    enable: true
+  enable: true
 
-    # Automatically add list number to toc.
-    number: true
+  # Automatically add list number to toc.
+  number: true
 
-    # If true, all words will placed on next lines if header width longer then sidebar width.
-    wrap: true
+  # If true, all words will placed on next lines if header width longer then sidebar width.
+  wrap: true
 
 # Creative Commons 4.0 International License in side bar
 # https://creativecommons.org/
@@ -154,31 +190,31 @@ toc:
 creative_commons: by-nc-sa
 
 sidebar:
-    # Sidebar Position, available value: left | right (only for Pisces | Gemini).
-    #position: left
-    position: right
+  # Sidebar Position, available value: left | right (only for Pisces | Gemini).
+  #position: left
+  position: right
 
-    # Sidebar Display, available value (only for Muse | Mist):
-    #  - post    expand on posts automatically. Default.
-    #  - always  expand for all pages automatically
-    #  - hide    expand only when click on the sidebar toggle icon.
-    #  - remove  Totally remove sidebar including sidebar toggle.
-    display: post
-    #display: always
-    #display: hide
-    #display: remove
+  # Sidebar Display, available value (only for Muse | Mist):
+  #  - post    expand on posts automatically. Default.
+  #  - always  expand for all pages automatically
+  #  - hide    expand only when click on the sidebar toggle icon.
+  #  - remove  Totally remove sidebar including sidebar toggle.
+  display: post
+  #display: always
+  #display: hide
+  #display: remove
 
-    # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
-    offset: 12
+  # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
+  offset: 12
 
-    # Back to top in sidebar (only for Pisces | Gemini).
-    b2t: false
+  # Back to top in sidebar (only for Pisces | Gemini).
+  b2t: false
 
-    # Scroll percent label in b2t button.
-    scrollpercent: true
+  # Scroll percent label in b2t button.
+  scrollpercent: true
 
-    # Enable sidebar on narrow view (only for Muse | Mist).
-    onmobile: false
+  # Enable sidebar on narrow view (only for Muse | Mist).
+  onmobile: false
 
 
 # ---------------------------------------------------------------
@@ -197,33 +233,33 @@ excerpt_description: true
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-    enable: false
-    length: 150
+  enable: false
+  length: 150
 
 # Post meta display settings
 post_meta:
-    item_text: true
-    created_at: true
-    updated_at: true
-    categories: false
-    tags: true
-    # disable footer tags
-    footer_tags: false
+  item_text: true
+  created_at: true
+  updated_at: true
+  categories: false
+  tags: true
+  # disable footer tags
+  footer_tags: false
 
 # Post wordcount display settings
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
-    item_text: true
-    wordcount: false
-    min2read: false
-    totalcount: false
-    separated_meta: true
+  item_text: true
+  wordcount: false
+  min2read: false
+  totalcount: false
+  separated_meta: true
 
 # Wechat Subscriber
 #wechat_subscriber:
-    #enabled: true
-    #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-    #description: ex. subscribe to my blog by scanning my public wechat account
+  #enabled: true
+  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
+  #description: ex. subscribe to my blog by scanning my public wechat account
 
 # Reward
 #reward_comment: Donate comment here
@@ -233,9 +269,9 @@ post_wordcount:
 
 # Declare license on posts
 post_copyright:
-    enable: true
-    license: CC BY-NC-SA 4.0
-    license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  enable: true
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 
 # ---------------------------------------------------------------
@@ -254,8 +290,8 @@ android_chrome_color: "#87daff"
 #   enabled: [true/false] - Replace with specific image
 #   image: url-of-image   - Images's url
 custom_logo:
-    enabled: false
-    image:
+  enabled: false
+  image:
 
 # ---------------------------------------------------------------
 # Font Settings
@@ -270,47 +306,47 @@ custom_logo:
 # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
 # ---------------------------------------------------------------
 font:
-    enable: false
+  enable: false
 
-    # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
-    host:
+  # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
+  host:
 
-    # Font options:
-    # `external: true` will load this font family from `host` above.
-    # `family: Times New Roman`. Without any quotes.
-    # `size: xx`. Use `px` as unit.
+  # Font options:
+  # `external: true` will load this font family from `host` above.
+  # `family: Times New Roman`. Without any quotes.
+  # `size: xx`. Use `px` as unit.
 
-    # Global font settings used on <body> element.
-    global:
-        external: true
-        family: Lato
-        size:
+  # Global font settings used on <body> element.
+  global:
+    external: true
+    family: Lato
+    size:
 
-    # Font settings for Headlines (h1, h2, h3, h4, h5, h6).
-    # Fallback to `global` font settings.
-    headings:
-        external: true
-        family:
-        size:
+  # Font settings for Headlines (h1, h2, h3, h4, h5, h6).
+  # Fallback to `global` font settings.
+  headings:
+    external: true
+    family:
+    size:
 
-    # Font settings for posts.
-    # Fallback to `global` font settings.
-    posts:
-        external: true
-        family:
+  # Font settings for posts.
+  # Fallback to `global` font settings.
+  posts:
+    external: true
+    family:
 
-    # Font settings for Logo.
-    # Fallback to `global` font settings.
-    logo:
-        external: true
-        family:
-        size:
+  # Font settings for Logo.
+  # Fallback to `global` font settings.
+  logo:
+    external: true
+    family:
+    size:
 
-    # Font settings for <code> and code blocks.
-    codes:
-        external: true
-        family:
-        size:
+  # Font settings for <code> and code blocks.
+  codes:
+    external: true
+    family:
+    size:
 
 
 # ---------------------------------------------------------------
@@ -322,9 +358,9 @@ han: false
 
 # Disqus
 disqus:
-    enable: true
-    shortname: unlimitedcodeworks
-    count: true
+  enable: true
+  shortname: unlimitedcodeworks
+  count: true
 
 # KDE Store site verfication
 ocs_site_verification: 9589b7319f5e5a86375fe6d729cb8c11
@@ -335,12 +371,12 @@ google_analytics: UA-77865381-1
 # Local search
 # Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
-    enable: true
-    # if auto, trigger search by changing input
-    # if manual, trigger search by pressing enter key or search button
-    trigger: auto
-    # show top n results per article, show all results by setting to -1
-    top_n_per_article: 1
+  enable: true
+  # if auto, trigger search by changing input
+  # if manual, trigger search by pressing enter key or search button
+  trigger: auto
+  # show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
 
 
 # ---------------------------------------------------------------
@@ -354,28 +390,28 @@ exturl: true
 
 # Note tag (bs-callout).
 note:
-    # Note tag style values:
-    #  - simple    bs-callout old alert style. Default.
-    #  - modern    bs-callout new (v2-v3) alert style.
-    #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
-    #  - disabled  disable all CSS styles import of note tag.
-    style: modern
-    icons: false
-    border_radius: 3
-    # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
-    # Offset also applied to label tag variables. This option can work with disabled note tag.
-    light_bg_offset: 0
+  # Note tag style values:
+  #  - simple    bs-callout old alert style. Default.
+  #  - modern    bs-callout new (v2-v3) alert style.
+  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
+  #  - disabled  disable all CSS styles import of note tag.
+  style: modern
+  icons: false
+  border_radius: 3
+  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
+  # Offset also applied to label tag variables. This option can work with disabled note tag.
+  light_bg_offset: 0
 
 # Label tag.
 label: true
 
 # Tabs tag.
 tabs:
-    enable: true
-    transition:
-        tabs: false
-        labels: true
-    border_radius: 0
+  enable: true
+  transition:
+    tabs: false
+    labels: true
+  border_radius: 0
 
 
 #! ---------------------------------------------------------------
@@ -385,22 +421,22 @@ tabs:
 
 # Use velocity to animate everything.
 motion:
-    enable: true
-    async: true
-    transition:
-        # Transition variants:
-        # fadeIn | fadeOut | flipXIn | flipXOut | flipYIn | flipYOut | flipBounceXIn | flipBounceXOut | flipBounceYIn | flipBounceYOut
-        # swoopIn | swoopOut | whirlIn | whirlOut | shrinkIn | shrinkOut | expandIn | expandOut
-        # bounceIn | bounceOut | bounceUpIn | bounceUpOut | bounceDownIn | bounceDownOut | bounceLeftIn | bounceLeftOut | bounceRightIn | bounceRightOut
-        # slideUpIn | slideUpOut | slideDownIn | slideDownOut | slideLeftIn | slideLeftOut | slideRightIn | slideRightOut
-        # slideUpBigIn | slideUpBigOut | slideDownBigIn | slideDownBigOut | slideLeftBigIn | slideLeftBigOut | slideRightBigIn | slideRightBigOut
-        # perspectiveUpIn | perspectiveUpOut | perspectiveDownIn | perspectiveDownOut | perspectiveLeftIn | perspectiveLeftOut | perspectiveRightIn | perspectiveRightOut
-        post_block: fadeIn
-        post_header: slideDownIn
-        post_body: slideDownIn
-        coll_header: slideLeftIn
-        # Only for Pisces | Gemini.
-        sidebar: slideUpIn
+  enable: true
+  async: true
+  transition:
+    # Transition variants:
+    # fadeIn | fadeOut | flipXIn | flipXOut | flipYIn | flipYOut | flipBounceXIn | flipBounceXOut | flipBounceYIn | flipBounceYOut
+    # swoopIn | swoopOut | whirlIn | whirlOut | shrinkIn | shrinkOut | expandIn | expandOut
+    # bounceIn | bounceOut | bounceUpIn | bounceUpOut | bounceDownIn | bounceDownOut | bounceLeftIn | bounceLeftOut | bounceRightIn | bounceRightOut
+    # slideUpIn | slideUpOut | slideDownIn | slideDownOut | slideLeftIn | slideLeftOut | slideRightIn | slideRightOut
+    # slideUpBigIn | slideUpBigOut | slideDownBigIn | slideDownBigOut | slideLeftBigIn | slideLeftBigOut | slideRightBigIn | slideRightBigOut
+    # perspectiveUpIn | perspectiveUpOut | perspectiveDownIn | perspectiveDownOut | perspectiveLeftIn | perspectiveLeftOut | perspectiveRightIn | perspectiveRightOut
+    post_block: fadeIn
+    post_header: slideDownIn
+    post_body: slideDownIn
+    coll_header: slideLeftIn
+    # Only for Pisces | Gemini.
+    sidebar: slideUpIn
 
 # Fancybox
 fancybox: true
@@ -422,54 +458,54 @@ index_bg_only: true
 # Be aware that you should use the same version as internal ones to avoid potential problems.
 # Please use the https protocol of CDN files when you enable https on your site.
 vendors:
-    # Internal path prefix. Please do not edit it.
-    _internal: lib
+  # Internal path prefix. Please do not edit it.
+  _internal: lib
 
-    # Internal version: 2.1.3
-    jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js
+  # Internal version: 2.1.3
+  jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js
 
-    # Internal version: 2.1.5
-    # See: http://fancyapps.com/fancybox/
-    #fancybox: https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js
-    #fancybox_css: https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css
-    fancybox: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.1/jquery.fancybox.js
-    fancybox_css: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.1/jquery.fancybox.min.css
+  # Internal version: 2.1.5
+  # See: http://fancyapps.com/fancybox/
+  #fancybox: https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js
+  #fancybox_css: https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css
+  fancybox: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.1/jquery.fancybox.js
+  fancybox_css: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.1/jquery.fancybox.min.css
 
-    # Internal version: 1.0.6
-    # See: https://github.com/ftlabs/fastclick
-    fastclick: https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js
+  # Internal version: 1.0.6
+  # See: https://github.com/ftlabs/fastclick
+  fastclick: https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js
 
-    # Internal version: 1.9.7
-    # See: https://github.com/tuupola/jquery_lazyload
-    lazyload: https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js
+  # Internal version: 1.9.7
+  # See: https://github.com/tuupola/jquery_lazyload
+  lazyload: https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js
 
-    # Internal version: 1.2.1
-    # See: http://VelocityJS.org
-    velocity: https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js
+  # Internal version: 1.2.1
+  # See: http://VelocityJS.org
+  velocity: https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js
 
-    # Internal version: 1.2.1
-    # See: http://VelocityJS.org
-    velocity_ui: https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js
+  # Internal version: 1.2.1
+  # See: http://VelocityJS.org
+  velocity_ui: https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js
 
-    # Internal version: 0.7.9
-    # See: https://faisalman.github.io/ua-parser-js/
-    ua_parser: https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.9/ua-parser.min.js
+  # Internal version: 0.7.9
+  # See: https://faisalman.github.io/ua-parser-js/
+  ua_parser: https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.9/ua-parser.min.js
 
-    # Internal version: 4.6.2
-    # See: http://fontawesome.io/
-    fontawesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css
+  # Internal version: 4.6.2
+  # See: http://fontawesome.io/
+  fontawesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css
 
-    # Internal version: 1.0.2
-    # See: https://github.com/HubSpot/pace
-    # Or use direct links below:
-    # pace: //cdn.bootcss.com/pace/1.0.2/pace.min.js
-    # pace_css: //cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
-    pace: https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js
-    pace_css: https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css
+  # Internal version: 1.0.2
+  # See: https://github.com/HubSpot/pace
+  # Or use direct links below:
+  # pace: //cdn.bootcss.com/pace/1.0.2/pace.min.js
+  # pace_css: //cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
+  pace: https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js
+  pace_css: https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css
 
-    # three
-    three: https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js
+  # three
+  three: https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js
 
-    # Internal version: 3.3.0
-    # https://github.com/ethantw/Han
-    han:
+  # Internal version: 3.3.0
+  # https://github.com/ethantw/Han
+  han:
