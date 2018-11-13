@@ -74,17 +74,18 @@ index_with_subtitle: false
 # ---------------------------------------------------------------
 
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -> archives).
-# Usage: `- { name: Key, path: /link/, icon: Icon }`
+# Usage: `Key: /link/ || icon`
 # Key is the name of menu item. If translate for this menu will find in languages - this translate will be loaded; if not - Key name will be used. Key is case-senstive.
-# Icon the name of FontAwesome icon. If icon is not specified, question icon will be loaded.
+# Value before `||` delimeter is the target link.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-    - { name: home, path: /, icon: home }
-    - { name: about, path: /about/, icon: user }
-    - { name: projects, path: /projects/, icon: code }
-    - { name: research, path: /research/, icon: rocket }
-    - { name: articles, path: /blog/, icon: book }
-    #- { name: tags, path: /tags/, icon: tags }
-    #- { name: archives, path: /archives/, icon: archive }
+    home: / || home
+    about: /about/ || user
+    projects: /projects/ || code
+    research: /research/ || rocket
+    articles: /blog/ || book
+    #tags: /tags/ || tags
+    #archives: /archives/ || archive
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -205,7 +206,9 @@ post_meta:
     created_at: true
     updated_at: true
     categories: false
-    tags: false
+    tags: true
+    # disable footer tags
+    footer_tags: false
 
 # Post wordcount display settings
 # Dependencies: https://github.com/willin/hexo-wordcount

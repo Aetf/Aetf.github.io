@@ -1,7 +1,7 @@
 ---
 layout: page
 comments: false
-notitle: true
+hidetitle: true
 notoc: true
 ---
 

@@ -106,7 +106,7 @@ markdown:
 
 # Use the theme-next theme
 ## theme config override in _data/next.yml
-theme: next
+theme: next-reloaded
 
 # Feed
 ## dependency: hexo-generator-feed
