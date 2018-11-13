@@ -110,23 +110,28 @@ index_with_subtitle: false
 # ---------------------------------------------------------------
 
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -> archives).
-# Usage: `Key: /link/ || icon`
+# Usage: `- { name: Key, path: /link/ || icon }`
 # Key is the name of menu item. If translate for this menu will find in languages - this translate will be loaded; if not - Key name will be used. Key is case-senstive.
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-    home: / || home
-    about: /about/ || user
-    projects: /projects/ || code
-    research: /research/ || rocket
-    articles: /blog/ || book
-    #tags: /tags/ || tags
-    #archives: /archives/ || archive
+  - name: home
+    path: / || home
+  - name: about
+    path: /about/ || user
+  - name: projects
+    path: /projects/ || code
+  - name: research
+    path: /research/ || rocket
+  - name: articles
+    path: /blog/ || book
+  #- { name: tags, path: /tags/ || tags }
+  #- { name: archives, path: /archives/ || archive }
 
-# Enable/Disable menu icons.
-menu_icons:
-    enable: true
-
+# Enable/Disable menu icons / item badges.
+menu_settings:
+  icons: true
+  badges: false
 
 # ---------------------------------------------------------------
 # Scheme Settings
