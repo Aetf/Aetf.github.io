@@ -341,7 +341,7 @@ local_search:
 
 
 # ---------------------------------------------------------------
-# Tags Settings
+# Markdown tag Settings
 # ---------------------------------------------------------------
 
 # External URL with BASE64 encrypt & decrypt.

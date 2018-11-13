@@ -26,7 +26,7 @@ public_dir: build/output
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
-i18n_dir: 
+i18n_dir:
 skip_render:
     - assets/theme/**
 
@@ -99,11 +99,6 @@ markdown:
               permalink: true
               permalinkClass: header-anchor
               permalinkSymbol: <i class="fa fa-anchor" aria-hidden="true"></i>
-
-# Math
-## dependency: hexo-math
-math:
-    engine: 'katex'
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
