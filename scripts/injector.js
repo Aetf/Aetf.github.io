@@ -13,9 +13,9 @@ const INJECTED_FILES = [
 
 /**
  * Fallback as css
- * @param {*} inject 
- * @param {*} path 
- * @param {*} opts 
+ * @param {*} inject
+ * @param {*} path
+ * @param {*} opts
  */
 function injectBasedOnExt(inject, path, opts) {
     if (_.endsWith(path, '.js')) {
@@ -30,7 +30,7 @@ function Injector(hexo) {
     this.hexo = hexo;
 }
 
-Injector.prototype._inject = function (inject) {
+Injector.prototype._inject = function(inject) {
     // Inject all third party files
     INJECTED_FILES.forEach(el => {
         if (_.isString(el)) {
@@ -52,7 +52,7 @@ Injector.prototype._inject = function (inject) {
         .forEach(el => injectBasedOnExt(inject, el));
 };
 
-Injector.prototype.register = function () {
+Injector.prototype.register = function() {
     var { hexo, _inject } = this;
 
     hexo.extend.filter.register('inject_ready', _inject.bind(this));
