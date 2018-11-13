@@ -4,21 +4,8 @@ const fs = require('hexo-fs');
 const pathFn = require('path');
 const _ = require('lodash');
 
-const KATEX_INLINE_MARKER = "<span class=\"katex\">";
-const KATEX_BLOCK_MARKER = "<span class=\"katex-display\">";
-
-function shouldInjectKaTex (src) {
-    var should = src.indexOf(KATEX_INLINE_MARKER) >= 0 || src.indexOf(KATEX_BLOCK_MARKER) >= 0;
-    return should;
-}
-
 const INJECTED_FILES = [
     'https://fonts.googleapis.com/icon?family=Material+Icons',
-    {
-        // the version here should match the katex used in markdown-it-katex
-        path: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css',
-        shouldInject: shouldInjectKaTex
-    },
     'https://cdnjs.cloudflare.com/ajax/libs/jBox/0.4.9/jBox.min.css',
     'https://cdnjs.cloudflare.com/ajax/libs/jBox/0.4.9/themes/TooltipDark.min.css',
     'https://cdnjs.cloudflare.com/ajax/libs/jBox/0.4.9/jBox.min.js'
