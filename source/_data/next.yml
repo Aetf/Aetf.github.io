@@ -278,6 +278,7 @@ mobile_layout_economy: false
 
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#87daff"
+
 # ---------------------------------------------------------------
 # Third Party Services Settings
 # ---------------------------------------------------------------
@@ -358,6 +359,18 @@ tabs:
     tabs: false
     labels: true
   border_radius: 0
+
+# ---------------------------------------------------------------
+# Font Settings
+# ---------------------------------------------------------------
+font:
+  # load external fonts
+  enable: false
+
+  codes:
+    # code font size
+    ## referenced in css/_variables/base.styl
+    size: 13
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
