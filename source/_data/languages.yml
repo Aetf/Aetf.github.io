@@ -1,0 +1,10 @@
+en:
+  menu:
+    projects: Projects
+    articles: Articles
+    research: Research
+zh-CN:
+  menu:
+    projects: 代码
+    articles: 文章
+    research: 科研

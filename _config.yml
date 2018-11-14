@@ -10,7 +10,7 @@ author: Peifeng Yu
 timezone: America/Detroit
 language:
     - en
-    - zh-Hans
+    - zh-CN
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -26,7 +26,7 @@ public_dir: build/output
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
-i18n_dir: 
+i18n_dir:
 skip_render:
     - assets/theme/**
 
@@ -74,10 +74,11 @@ time_format: HH:mm:ss
 
 # Markdown rendering
 ## Markdown-it config
-## dependency: hexo-renderer-markdown-it, markdown-it-anchor
+## dependency: hexo-renderer-markdown-it, markdown-it-anchor, @aetf/markdown-it-katex
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
 ## Note: hexo-renderer-markdown-it only supports passing in plugin option in master branch later than
-## commit 7d09d25958d3c618b4f049f1995962038d2b829d
+##       commit 7d09d25958d3c618b4f049f1995962038d2b829d
+## Note: math support also requires math.enabled = true in _data/next.yml
 markdown:
     render:
         html: true
@@ -92,18 +93,13 @@ markdown:
         - markdown-it-ins
         - markdown-it-sub
         - markdown-it-sup
-        - markdown-it-katex
+        - "@aetf/markdown-it-katex"
         - name: markdown-it-anchor
           options:
               level: 2
               permalink: true
               permalinkClass: header-anchor
               permalinkSymbol: <i class="fa fa-anchor" aria-hidden="true"></i>
-
-# Math
-## dependency: hexo-math
-math:
-    engine: 'katex'
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
