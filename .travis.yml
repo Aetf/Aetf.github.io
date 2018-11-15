@@ -17,7 +17,7 @@ before_install:
 install:
     - npm install
 script:
-    - hexo generate
+    - npm run g
 before_deploy:
     - openssl aes-256-cbc -K $encrypted_730350046d35_key -iv $encrypted_730350046d35_iv -in tools/deploy_rsa.enc -out /tmp/deploy_rsa -d
     - eval "$(ssh-agent -s)"
@@ -29,7 +29,7 @@ before_deploy:
 deploy:
     provider: script
     skip_cleanup: true
-    script: hexo deploy
+    script: npm run d
     on:
         branch: hexo
 after_deploy:

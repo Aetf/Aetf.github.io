@@ -5,6 +5,11 @@
   "hexo": {
     "version": "3.8.0"
   },
+  "scripts": {
+    "g": "hexo --output build generate",
+    "s": "hexo --output build serve",
+    "d": "hexo --output build deploy"
+  },
   "dependencies": {
     "@aetf/markdown-it-katex": "^2.1.0",
     "bluebird": "^3.5.3",
