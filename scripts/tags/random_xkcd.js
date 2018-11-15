@@ -1,7 +1,7 @@
 'use strict';
 
 const util = require('util');
-const Promise = require('promise');
+const Promise = require('bluebird');
 
 const xkcd_get = util.promisify(require('xkcd-api').get);
 
