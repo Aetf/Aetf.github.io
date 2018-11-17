@@ -6,8 +6,4 @@ hidetitle: true
 notoc: true
 ---
 
-{% note danger %}
-__Under Construction__
-{% endnote %}
-
-My [CV](/assets/dl/cv.pdf) (last updated: Oct. 2018)
+{% publications %}
