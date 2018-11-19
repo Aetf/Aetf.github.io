@@ -11,12 +11,13 @@ items:
       name: Data Acquisition To Analysis
       shortname: DATA’18
       url: https://workshopdata.github.io/DATA2018/
+      acceptance: 14 / 15 (93%)
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -33,9 +34,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -52,9 +53,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -71,9 +72,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -90,9 +91,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -109,9 +110,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -128,9 +129,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -147,9 +148,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -166,9 +167,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -185,9 +186,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -204,9 +205,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -223,9 +224,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -242,9 +243,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -261,9 +262,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -280,9 +281,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -299,9 +300,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2017 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -318,9 +319,28 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
+    bibtex: xxx/bibtex.txt
+    abstract: xxx/abstract.txt
+  - title: Indoor 2017 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
+    authors:
+      - Pat Pannuto
+      - Benjamin Kempke
+      - Bradford Campbell
+      - Prabal Dutta
+    conference:
+      date: 2017-12-01
+      name: Data Acquisition To Analysis
+      shortname: DATA’18
+      url: https://workshopdata.github.io/DATA2018/
+    badges:
+      - Invited Paper
+    links:
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2016 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -337,9 +357,28 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
+    bibtex: xxx/bibtex.txt
+    abstract: xxx/abstract.txt
+  - title: Indoor 2016 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
+    authors:
+      - Pat Pannuto
+      - Benjamin Kempke
+      - Bradford Campbell
+      - Prabal Dutta
+    conference:
+      date: 2016-12-01
+      name: Data Acquisition To Analysis
+      shortname: DATA’18
+      url: https://workshopdata.github.io/DATA2018/
+    badges:
+      - Invited Paper
+    links:
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2015 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -356,9 +395,28 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
+    bibtex: xxx/bibtex.txt
+    abstract: xxx/abstract.txt
+  - title: Indoor 2015 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
+    authors:
+      - Pat Pannuto
+      - Benjamin Kempke
+      - Bradford Campbell
+      - Prabal Dutta
+    conference:
+      date: 2015-12-01
+      name: Data Acquisition To Analysis
+      shortname: DATA’18
+      url: https://workshopdata.github.io/DATA2018/
+    badges:
+      - Invited Paper
+    links:
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2012 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -375,9 +433,9 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt
   - title: Indoor 2018-10 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
@@ -394,8 +452,8 @@ items:
     badges:
       - Invited Paper
     links:
-      paper: xxx/kou14lux.pdf
-      doi: abc.doi
-      video: youtube.com/abcxyz
+      - paper || xxx/kou14lux.pdf
+      - doi || abc.doi
+      - video || youtube.com/abcxyz
     bibtex: xxx/bibtex.txt
     abstract: xxx/abstract.txt

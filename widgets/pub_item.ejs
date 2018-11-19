@@ -1,144 +1,66 @@
 <style>
-.container .main-inner {
-    width: 100% !important;
-}
-div.timeline-container {
-  display: flex;
-  overflow-y: auto;
-  max-height: 5em;
-}
-@media (min-height: 30em) {
-    max-height: 10em;
-}
-@media (min-height: 40em) {
-    max-height: 20em;
-}
-@media (min-height: 50em) {
-    max-height: 30em;
-}
-.container .post-meta {
-    margin: 0;
-}
-
-/* A shadow above */
-#timeline::before {
-    content: '';
-    position: absolute;
-    top: -40px;
-    height: 100px;
-    display: block;
-    width: 100%;
-    left: 0px;
-    /* larger than max scroll bar width to not draw over scrollbar */
-    right: 50px;
-    z-index: 300;
-    background: -moz-linear-gradient(top, white 20%, rgba(255, 255, 255, 0) 100%);
-    background: -webkit-linear-gradient(top, white 20%, rgba(255, 255, 255, 0) 100%);
-    background: linear-gradient(to bottom, white 20%, rgba(255, 255, 255, 0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
-}
-
 #timeline {
   margin: 0 auto;
   line-height: 1.5;
-  max-width: 700px;
-  margin-top: -40px;
-  padding-top: 100px;
-}
-@media (min-width: 1200px) {
-    .timeline-container #timeline {
-        max-width: 800px;
-    }
-}
-@media (min-width: 1600px) {
-    .timeline-container #timeline {
-        max-width: 900px;
-    }
-}
-/* The vertical line */
-#timeline div {
-    position: relative;
-}
-#timeline div:after {
-  content: '';
-  width: 2px;
-  position: absolute;
-  top: 1.5rem;
-  bottom: 0rem;
-  left: 60px;
-  z-index: 1;
-  background: #C5C5C5;
-}
-
-/* The sticky h3 year */
-#timeline h3 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 60px;
-  color: #888;
-  margin: 0;
-  font-size: 1em;
-  font-weight: 400;
-}
-@media (min-width: 62em) {
-  #timeline h3 {
-    font-size: 1.1em;
-  }
 }
 
 #timeline section.year {
-  position: relative;
+    position: relative;
+
+    padding: 1em 0em;
+    margin-left: 3.5em;
+    border-left: 2px solid rgba(.3, .3, .3, .3);
 }
-#timeline section.year section {
-  position: relative;
-  padding-bottom: 0px;
-  margin-bottom: 2.2em;
+
+#timeline section.year:last-child {
+    border-image: linear-gradient(to bottom, rgba(.3, .3, .3, .3) 60%, rgba(.3, .3, .3, 0)) 1 100%;
 }
-#timeline section.year section h4 {
-  position: absolute;
-  bottom: 0;
-  font-size: .9em;
-  font-weight: 400;
-  line-height: 1.2em;
-  margin: 0;
-  padding: 0 0 0 89px;
-  color: #C5C5C5;
+
+/* The circle and year */
+#timeline .year-mark {
+    position: absolute;
+    top: 1em;
+    left: -8px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 10px;
+    height: 10px;
+    background: #C5C5C5;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+#timeline .year-mark::before {
+    content: attr(data-year);
+    font-size: 1rem;
+    font-weight: bold;
+
+    margin-right: 1em;
 }
 @media (min-width: 62em) {
-  #timeline section.year section h4 {
-    font-size: 1em;
-  }
+    #timeline .year-mark::before {
+        font-size: 1.1rem;
+    }
 }
-#timeline section.year section ul {
+
+#timeline section.year ul {
   list-style-type: none;
-  padding: 0 0 0 75px;
-  margin: -1.35rem 0 1em;
+  padding: 0 0 0 2em;
+  margin: 0em;
   font-size: 1em;
 }
 @media (min-width: 62em) {
   #timeline section.year section ul {
     font-size: 1.1em;
-    padding: 0 0 0 81px;
+    padding: 0 0 0 2.2em;
   }
 }
-#timeline section.year section ul:last-child {
-  margin-bottom: 0;
-}
-#timeline section.year section ul:first-of-type:after {
-  content: '';
-  width: 10px;
-  height: 10px;
-  background: #C5C5C5;
-  border: 2px solid #FFFFFF;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-  position: absolute;
-  left: 54px;
-  top: 3px;
-  z-index: 2;
-}
+
 #timeline section.year section ul li {
   margin-left: .5rem;
   list-style: none;
@@ -153,36 +75,88 @@ div.timeline-container {
 }
 </style>
 
-<div class='timeline-container'>
-    <div id="timeline">
-        <div>
-            <% let year = ''; %>
-            <% let publications = page.site.data.publications.items; %>
-            <% publications = publications.sort((a, b) => { return a.conference.date < b.conference.date; }); %>
-            <% publications.forEach(pub => { %>
-                <% pub.year = date(pub.conference.date, 'YYYY'); %>
-                <% if (year !== pub.year) { %>
-                    <%# close previous section #%>
-                    <% if (year !== '') {%>
-                                </ul>
-                            </section>
-                        </section>
-                    <% } %>
-                    <%# open new year section #%>
-                    <% year = pub.year; %>
-                    <section class="year">
-                        <h3><%= year %></h3>
-                            <section>
-                                <ul>
-                <% } %>
+<%
+/**
+ * Join authors
+ * @param {*} arr 
+ */
+function join_authors(arr) {
+    let result = "";
+    if (arr.length === 1) {
+        result = arr[0];
+    } else if (arr.length === 2) {
+        //joins all with "and" but no commas
+        //example: "bob and sam"
+        result = arr.join(__(' and '));
+    } else if (arr.length > 2) {
+        //joins all with commas, but last one gets ", and" (oxford comma!)
+        //example: "bob, joe, and sam"
+        result = arr.slice(0, -1).join(__(', ')) + __(', and ') + arr.slice(-1);
+    }
+    return result;
+}
+hexo.extend.helper.register('join_authors', join_authors);
 
-                <li><%= pub.title %></li>
+%>
 
-            <% }); %>
-            <%# close last section #%>
+<div id="timeline">
+    <% let year = ''; %>
+    <% let publications = page.site.data.publications.items; %>
+    <% publications = publications.sort((a, b) => { return a.conference.date < b.conference.date; }); %>
+    <% publications.forEach(pub => { %>
+        <% pub.year = date(pub.conference.date, 'YYYY'); %>
+        <% if (year !== pub.year) { %>
+            <%# close previous section #%>
             <% if (year !== '') {%>
-                </section>
+                </ul>
+            </section>
             <% } %>
-        </div>
-    </div>
+            <%# open new year section #%>
+            <% year = pub.year; %>
+            <section class="year">
+                <span class="year-mark" data-year="<%= year %>"></span>
+                <ul>
+        <% } %>
+
+        <%# A single block for a paper #%>
+        <li>
+            <div>
+                <span class="pub-title"><%= pub.title %></span>
+                <span class="pub-authors">
+                    <% pub.authors.forEach((author, idx) => { %>
+                        <% if (pub.authors.length > 2 && idx > 0) {%>
+                            <%= __(",") %>
+                        <% } %>
+                        <%# space matters here #%>
+                        <% if (idx === pub.authors.length - 1 && pub.authors.length > 1) {%>
+                            <%= __("and") %>
+                        <% } %>
+                        <%# space matters here #%>
+                        <span class="pub-author pub-author-<%= author.replace(' ', '-') %>">
+                            <%= author %>
+                        </span>
+                    <% }); %>
+                </span>
+                <span>
+                    <%= pub.conference.name %> (
+                        <a title="<%= pub.conference.acceptance %>"
+                           href="<%= pub.conference.url %>"><%= pub.conference.shortname %></a>
+                    )
+                </span>
+                <div class="pub-links">
+                    <% pub.links.forEach(link => { %>
+                        <% let [link_name, link_url] = link.split(' || '); %>
+                        <a href="<%= link_url %>">[<%= link_name %>]</a>
+                    <% }); %>
+                    <a class="pub-link-bibtex">[bibtex]</a>
+                    <a class="pub-link-abstract">[abstract]</a>
+                </div>
+            </div>
+        </li>
+
+    <% }); %>
+    <%# close last section #%>
+    <% if (year !== '') {%>
+        </section>
+    <% } %>
 </div>
