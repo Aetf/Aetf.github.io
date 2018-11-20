@@ -22,10 +22,13 @@
 
 /* The circle and year */
 #timeline .year-mark-wrapper {
-    display: flex;
     /* Align .year-mark center within the height of a line */
+    display: flex;
     align-items: center;
     width: 0px;
+    /* sticky effect */
+    position: sticky;
+    top: 1em;
 }
 #timeline .year-mark-wrapper::before {
     /* Use the pseudo element to make the .year-mark-wrapper exactly the height of a line of text */
