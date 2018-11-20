@@ -47,12 +47,9 @@ function publicationsTag(args) {
         view_dir: widgets_dir
     });
 
-    return hexo.execFilter('template_locals', locals, { context: hexo })
-        .then(locals =>
-            hexo.render.render({
-                path: pathFn.join(widgets_dir, 'pub_item.ejs')
-            }, locals)
-        );
+    return hexo.render.render({
+        path: pathFn.join(widgets_dir, 'pub_item.ejs')
+    }, locals);
 }
 
 hexo.extend.tag.register('publications', publicationsTag, { ends: false, async: true });
