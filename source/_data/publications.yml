@@ -11,7 +11,7 @@ items:
       name: Data Acquisition To Analysis
       shortname: DATA’18
       url: https://workshopdata.github.io/DATA2018/
-      acceptance: 14 / 15 (93%)
+      acceptance: 'Acceptance: 14 / 15 (93%)'
     badges:
       - Invited Paper
     links:

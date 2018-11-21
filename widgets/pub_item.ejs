@@ -1,10 +1,17 @@
 <style>
-#timeline {
-    margin: 0 auto;
+/* Clear some padding and margin on the page */
+.post-header .post-meta {
+    display: none;
+}
+.posts-expand {
+    padding-top: 0px !important;
+}
+
+.pub-list {
     line-height: 1.5;
 }
 
-#timeline section.year {
+.pub-list section.year {
     position: relative;
 
     padding: 1em 0em 1em 0em;
@@ -16,27 +23,27 @@
     align-items: flex-start;
 }
 
-#timeline section.year:last-child {
+.pub-list section.year:last-child {
     border-image: linear-gradient(to bottom, rgba(.3, .3, .3, .3) 60%, rgba(.3, .3, .3, 0)) 1 100%;
 }
 
 /* The circle and year */
-#timeline .year-mark-wrapper {
+.pub-list .year-mark-wrapper {
     /* Align .year-mark center within the height of a line */
     display: flex;
     align-items: center;
     width: 0px;
     /* sticky effect */
     position: sticky;
-    top: 1em;
+    top: 5em; /* 1em + 2 * 1em padding of select + height of select */
 }
-#timeline .year-mark-wrapper::before {
+.pub-list .year-mark-wrapper::before {
     /* Use the pseudo element to make the .year-mark-wrapper exactly the height of a line of text */
     content: "A";
     width: 0px;
     visibility: hidden;
 }
-#timeline .year-mark {
+.pub-list .year-mark {
     position: relative;
     left: -8px;
 
@@ -53,7 +60,7 @@
     z-index: 2;
 }
 
-#timeline .year-mark::before {
+.pub-list .year-mark::before {
     content: attr(data-year);
     font-size: 1rem;
     font-weight: bold;
@@ -61,40 +68,108 @@
     margin-right: 1em;
 }
 @media (min-width: 62em) {
-    #timeline .year-mark::before {
+    .pub-list .year-mark::before {
         font-size: 1.1rem;
     }
 }
 
 /* The styling of the list */
-#timeline section.year ul {
+.pub-list section.year ul {
     padding: 0 0 0 2em;
     margin: 0em;
     font-size: 1em;
 }
 @media (min-width: 62em) {
-    #timeline section.year section ul {
+    .pub-list section.year section ul {
         font-size: 1.1em;
         padding-left: 2.2em;
     }
 }
 
-#timeline section.year ul li {
+.pub-list section.year ul li {
     list-style-type: none;
     padding: 1rem 0rem 1.25rem 0rem;
     border-bottom: 1px dashed #ccc;
 }
-#timeline section.year ul li:first-child {
+.pub-list section.year ul li:first-child {
     padding-top: 0rem;
 }
-#timeline section.year:last-child ul li:last-child {
+.pub-list section.year:last-child ul li:last-child {
     border-bottom: none;
 }
 
 /* The publication block */
-#timeline .pub-block p {
+.pub-list .pub-block p {
     margin: 0;
     padding: 0;
+}
+.pub-block .pub-title {
+    font-weight: bold;
+}
+.pub-block .pub-authors,
+.pub-block .pub-conference,
+.pub-block .pub-links {
+    font-size: 0.9em;
+}
+.pub-block .pub-conference {
+    font-style: italic;
+}
+
+/* timeline search panel */
+.timeline-search-panel {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    padding: 1em 0em 1em 0em;
+    margin-top: -1em;
+
+    border-bottom: dashed 1px #ccc;
+
+    position: sticky;
+    top: 0px;
+
+    background: white;
+    z-index: 10;
+}
+#timeline .timeline-search-panel h4 {
+    margin: 0em 1em 0em .5em;
+    padding: 0px;
+}
+
+/* The select box */
+.select-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.select-box .select-arrow {
+    position: relative;
+    height: 1.5em;
+    width: 0em;
+
+    left: -2em;
+
+    pointer-events: none;
+    z-index: 2;
+    transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+    opacity: 0.6;
+}
+.select-box .select-arrow svg {
+    width: 1.5em;
+    height: auto;
+    fill: #a0a0a0;
+}
+.select-box select {
+    /* No default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border: 2px solid rgba(.3, .3, .3, .3);
+    background: #fff;
+    padding-left: 1em;
+    padding-right: 2.5em;
 }
 </style>
 
@@ -104,51 +179,89 @@
     publications = publications.sort((a, b) => { return a.conference.date < b.conference.date; });
 _%>
 <div id="timeline">
-<%_ publications.forEach(pub => { _%>
-    <%_ pub.year = date(pub.conference.date, 'YYYY'); _%>
-    <%_ if (year !== pub.year) { _%>
-        <%_ if (year !== '') { _%>
-        </ul>
-    </section>
+    <div class="timeline-search-panel">
+        <h4>Filters:</h4>
+        <label class="select-box">
+            <select>
+                <optgroup label="Web">
+                    <option>PHP</option>
+                    <option>CSS</option>
+                    <option>HTML</option>
+                    <option>CSS 3</option>
+                    <option>Bootstrap</option>
+                    <option>JavaScript</option>
+                </optgroup>
+                <optgroup label="Programming">
+                <option>Java</option>
+                <option>C#</option>
+                <option>Python</option>
+                </optgroup>
+            </select>
+            <span class="select-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     version="1.1" viewBox="0 0 129 129"
+                     enable-background="new 0 0 129 129"
+                     width="512px" height="512px">
+                    <g>
+                        <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
+                    </g>
+                </svg>
+            </span>
+        </label>
+    </div>
+    <div class="pub-list">
+    <%_ publications.forEach(pub => { _%>
+        <%_ pub.year = date(pub.conference.date, 'YYYY'); _%>
+        <%_ if (year !== pub.year) { _%>
+            <%_ if (year !== '') { _%>
+            </ul>
+        </section>
+            <%_ } _%>
+            <%_ year = pub.year; _%>
+        <section class="year">
+            <div class="year-mark-wrapper">
+                <span class="year-mark" data-year="<%= year %>"></span>
+            </div>
+            <ul>
         <%_ } _%>
-        <%_ year = pub.year; _%>
-    <section class="year">
-        <div class="year-mark-wrapper">
-            <span class="year-mark" data-year="<%= year %>"></span>
-        </div>
-        <ul>
-    <%_ } _%>
-            <%# A single block for a paper #%>
-            <li>
-                <div class="pub-block">
-                    <p class="pub-title"><%= pub.title %></p>
-                    <p class="pub-authors">
-                        <%_ pub.authors.forEach((author, idx) => { _%>
-                        <%_ if (pub.authors.length > 2 && idx > 0) { -%>,<%_ } -%>
-                        <%_ if (idx === pub.authors.length - 1 && pub.authors.length > 1) { -%> and <%_ } -%>
+                <%# A single block for a paper #%>
+                <li>
+                    <div class="pub-block">
+                        <p class="pub-title">
+                            <%_ if (pub.links.length > 0) { _%>
+                                <a href="<%= pub.links[0].split(' || ')[1] %>"><%= pub.title %></a>
+                            <%_ } else { _%>
+                                <%= pub.title %>
+                            <%_ } _%>
+                        </p>
+                        <p class="pub-authors">
+                            <%_ pub.authors.forEach((author, idx) => { _%>
+                            <%_ if (pub.authors.length > 2 && idx > 0) { -%>,<%_ } -%>
+                            <%_ if (idx === pub.authors.length - 1 && pub.authors.length > 1) { -%> and <%_ } -%>
 
-                        <span class="pub-author pub-author-<%= author.replace(' ', '-') %>"><%= author %></span> <%_ }); %>
-                    </p>
-                    <p>
-                        <%= pub.conference.name %> (
-                            <a title="<%= pub.conference.acceptance %>"
-                                href="<%= pub.conference.url %>"><%= pub.conference.shortname %></a>
-                        )
-                    </p>
-                    <div class="pub-links">
-                        <% pub.links.forEach(link => { %>
-                            <% let [link_name, link_url] = link.split(' || '); %>
-                            <a href="<%= link_url %>">[<%= link_name %>]</a>
-                        <% }); %>
-                        <a class="pub-link-bibtex">[bibtex]</a>
-                        <a class="pub-link-abstract">[abstract]</a>
+                            <span class="pub-author pub-author-<%= author.replace(' ', '-') %>"><%= author %></span> <%_ }); %>
+                        </p>
+                        <p class="pub-conference">
+                            <%= pub.conference.name %> (
+                                <a title="<%= pub.conference.acceptance %>"
+                                    href="<%= pub.conference.url %>"><%= pub.conference.shortname %></a>
+                            )
+                        </p>
+                        <div class="pub-links">
+                            <% pub.links.forEach(link => { %>
+                                <% let [link_name, link_url] = link.split(' || '); %>
+                                <a href="<%= link_url %>">[<%= link_name %>]</a>
+                            <% }); %>
+                            <a class="pub-link-bibtex">[bibtex]</a>
+                            <a class="pub-link-abstract">[abstract]</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-<%_ }); _%>
-<%# close last section #%>
-<%_ if (year !== '') { _%>
-        </ul>
-    </section>
-<%_ } _%>
+                </li>
+    <%_ }); _%>
+    <%# close last section #%>
+    <%_ if (year !== '') { _%>
+            </ul>
+        </section>
+    <%_ } _%>
+    </div>
 </div>
