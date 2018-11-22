@@ -11,7 +11,9 @@ const INJECTED_FILES = [
     'https://cdnjs.cloudflare.com/ajax/libs/jBox/0.4.9/jBox.min.js',
     {
         path: [
-            'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js'
+            'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js',
+            '/assets/theme/research.css',
+            '/assets/theme/research.js'
         ],
         shouldInject: function (html) {
             return html.indexOf('<!-- Inject: Research -->') !== -1;

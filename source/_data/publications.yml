@@ -1,4 +1,4 @@
-publication_folder: assets/publications
+publication_dir: assets/publications
 types:
   conference: Conferences
   workshop: Workshops

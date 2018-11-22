@@ -102,22 +102,3 @@
     color: #999;
     font-size: 14px;
 }
-
-/* Copied tooltip */
-#copied-tooltip .jBox-container {
-    background: #222;
-    color: #eee;
-    line-height: 1;
-    display: flex;
-}
-#copied-tooltip .jBox-pointer::after {
-    background: #222;
-}
-#copied-tooltip .jBox-content {
-    display: inline;
-    padding: 5px 8px;
-    font-size: .7em;
-}
-#copied-tooltip .jBox-pointer {
-    height: 5px;
-}

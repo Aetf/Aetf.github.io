@@ -1,0 +1,4 @@
+@inproceeding{bib
+    title = "Bibtex",
+    author = "AAA"
+}
