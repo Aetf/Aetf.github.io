@@ -14,17 +14,35 @@
 .pub-list section.year {
     position: relative;
 
-    padding: 1em 0em 1em 0em;
+    padding: 1em 0em 0em 0em;
     margin-left: 3.5em;
-    border-left: 2px solid rgba(.3, .3, .3, .3);
 
     /* Place the .year-mark-wrapper and ul at the same vertical point from the top edge */
     display: flex;
     align-items: flex-start;
 }
 
-.pub-list section.year:last-child {
-    border-image: linear-gradient(to bottom, rgba(.3, .3, .3, .3) 60%, rgba(.3, .3, .3, 0)) 1 100%;
+/* The vertical line */
+.pub-list section.year ul li {
+    position: relative;
+}
+.pub-list section.year ul li::before {
+    content: ' ';
+
+    background: rgba(.3, .3, .3, .3);
+    z-index: -1;
+
+    position: absolute;
+    left: calc(-2em + -2px);
+    width: 2px;
+    top: -1px;
+    bottom: 0px;
+}
+.pub-list section.year ul li:first-child::before {
+    top: calc(-1em + -1px);
+}
+.pub-list section.year:last-child ul li:last-child::before {
+    background: linear-gradient(to bottom, rgba(.3, .3, .3, .3) 60%, rgba(.3, .3, .3, 0));
 }
 
 /* The circle and year */
@@ -115,6 +133,12 @@
     font-style: italic;
 }
 
+.pub-block .pub-abstract {
+    display: none;
+
+    padding: 1em 0em;
+}
+
 /* timeline search panel */
 .timeline-search-panel {
     display: flex;
@@ -165,37 +189,53 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    outline: none;
 
     border: 2px solid rgba(.3, .3, .3, .3);
     background: #fff;
     padding-left: 1em;
     padding-right: 2.5em;
 }
+
+/* The checkbox */
+.check-box {
+    margin: 0em 1em 0em 2em;
+    display: flex;
+    align-items: center;
+}
+
+.check-box ~ .check-box {
+    margin: 0em 1em;
+}
+
+.check-box input[type="checkbox"] {
+    margin-right: .2em;
+}
 </style>
 
 <%_
-    let year = '';
+    let types = page.site.data.publications.types;
+    let conferences = page.site.data.publications.conferences;
     let publications = page.site.data.publications.items;
-    publications = publications.sort((a, b) => { return a.conference.date < b.conference.date; });
+    publications = publications.sort((a, b) => {
+        if (conferences[a.confkey].date === conferences[b.confkey].date)
+            return 0;
+        return moment(conferences[a.confkey].date).isBefore(conferences[b.confkey].date) ? 1 : -1;
+    });
 _%>
 <div id="timeline">
     <div class="timeline-search-panel">
         <h4>Filters:</h4>
         <label class="select-box">
             <select>
-                <optgroup label="Web">
-                    <option>PHP</option>
-                    <option>CSS</option>
-                    <option>HTML</option>
-                    <option>CSS 3</option>
-                    <option>Bootstrap</option>
-                    <option>JavaScript</option>
+                <option value="all" selected>All Venues</option>
+                <%_ Object.keys(types).sort().forEach(t => { _%>
+                <optgroup label="<%= types[t] %>">
+                    <%_ Object.keys(conferences).filter(confkey => conferences[confkey].cat === t).sort().forEach(confkey => { _%>
+                    <option value="<%= conferences[confkey].venue %>"><%= conferences[confkey].venue %></option>
+                    <%_ }); _%>
                 </optgroup>
-                <optgroup label="Programming">
-                <option>Java</option>
-                <option>C#</option>
-                <option>Python</option>
-                </optgroup>
+                <%_ }); _%>
             </select>
             <span class="select-arrow">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -208,10 +248,16 @@ _%>
                 </svg>
             </span>
         </label>
+        <%_ Object.keys(types).sort().forEach(t => { _%>
+        <label class="check-box">
+            <input type="checkbox" checked="checked" value="t"> <%= types[t] %>
+        </label>
+        <%_ }); _%>
     </div>
     <div class="pub-list">
+    <%_ let year = ''; _%>
     <%_ publications.forEach(pub => { _%>
-        <%_ pub.year = date(pub.conference.date, 'YYYY'); _%>
+        <%_ pub.year = date(conferences[pub.confkey].date, 'YYYY'); _%>
         <%_ if (year !== pub.year) { _%>
             <%_ if (year !== '') { _%>
             </ul>
@@ -225,7 +271,8 @@ _%>
             <ul>
         <%_ } _%>
                 <%# A single block for a paper #%>
-                <li>
+                <li data-pub-venue="<%= conferences[pub.confkey].venue %>"
+                    data-pub-cat="<%= conferences[pub.confkey].cat %>">
                     <div class="pub-block">
                         <p class="pub-title">
                             <%_ if (pub.links.length > 0) { _%>
@@ -242,17 +289,22 @@ _%>
                             <span class="pub-author pub-author-<%= author.replace(' ', '-') %>"><%= author %></span> <%_ }); %>
                         </p>
                         <p class="pub-conference">
-                            <%= pub.conference.name %> (
-                                <a title="<%= pub.conference.acceptance %>"
-                                    href="<%= pub.conference.url %>"><%= pub.conference.shortname %></a>
+                            <%= conferences[pub.confkey].name %> (
+                                <a title="<%= conferences[pub.confkey].acceptance %>"
+                                    href="<%= conferences[pub.confkey].url %>"><%= pub.confkey %></a>
                             )
                         </p>
+                        <div class="pub-abstract">
+                            <blockquote>
+                                <%= pub.abstract %>
+                            </blockquote>
+                        </div>
                         <div class="pub-links">
                             <% pub.links.forEach(link => { %>
                                 <% let [link_name, link_url] = link.split(' || '); %>
                                 <a href="<%= link_url %>">[<%= link_name %>]</a>
                             <% }); %>
-                            <a class="pub-link-bibtex">[bibtex]</a>
+                            <a class="pub-link-bibtex" data-clipboard-text="<%= pub.bibtex %>">[bibtex]</a>
                             <a class="pub-link-abstract">[abstract]</a>
                         </div>
                     </div>
@@ -265,3 +317,5 @@ _%>
     <%_ } _%>
     </div>
 </div>
+
+<!-- Inject: Research -->

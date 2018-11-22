@@ -8,7 +8,15 @@ const INJECTED_FILES = [
     'https://fonts.googleapis.com/icon?family=Material+Icons',
     'https://cdnjs.cloudflare.com/ajax/libs/jBox/0.4.9/jBox.min.css',
     'https://cdnjs.cloudflare.com/ajax/libs/jBox/0.4.9/themes/TooltipDark.min.css',
-    'https://cdnjs.cloudflare.com/ajax/libs/jBox/0.4.9/jBox.min.js'
+    'https://cdnjs.cloudflare.com/ajax/libs/jBox/0.4.9/jBox.min.js',
+    {
+        path: [
+            'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js'
+        ],
+        shouldInject: function (html) {
+            return html.indexOf('<!-- Inject: Research -->') !== -1;
+        }
+    }
 ];
 
 /**

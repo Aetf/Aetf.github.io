@@ -1,4 +1,46 @@
 publication_folder: assets/publications
+types:
+  conference: Conferences
+  workshop: Workshops
+  journal: Journals
+  demo: Demos
+  poster: Posters
+conferences:
+  DATA'17:
+    venue: DATA
+    name: Data Acquisition To Analysis
+    date: 2017-08-01
+    url: https://workshopdata.github.io/DATA2018/
+    acceptance: 'Acceptance: 14 / 15 (93%)'
+    cat: conference
+  DATA'18:
+    venue: DATA
+    name: Data Acquisition To Analysis
+    date: 2018-12-01
+    url: https://workshopdata.github.io/DATA2018/
+    acceptance: 'Acceptance: 14 / 15 (93%)'
+    cat: conference
+  EuroSys'16:
+    venue: EuroSys
+    name: Europen System
+    date: 2016-12-01
+    url: https://workshopdata.github.io/DATA2018/
+    acceptance: 'Acceptance: 14 / 15 (93%)'
+    cat: workshop
+  EuroSys'15:
+    venue: EuroSys
+    name: Europen System
+    date: 2015-12-01
+    url: https://workshopdata.github.io/DATA2018/
+    acceptance: 'Acceptance: 14 / 15 (93%)'
+    cat: workshop
+  EuroSys'12:
+    venue: EuroSys
+    name: Europen System
+    date: 2012-12-01
+    url: https://workshopdata.github.io/DATA2018/
+    acceptance: 'Acceptance: 14 / 15 (93%)'
+    cat: workshop
 items:
   - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
     authors:
@@ -6,12 +48,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
-      acceptance: 'Acceptance: 14 / 15 (93%)'
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -26,11 +63,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -45,11 +78,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -64,11 +93,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -83,11 +108,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -102,11 +123,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -121,11 +138,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -140,11 +153,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -159,11 +168,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -178,11 +183,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -197,11 +198,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -216,11 +213,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -235,11 +228,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -254,11 +243,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -273,30 +258,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
-    badges:
-      - Invited Paper
-    links:
-      - paper || xxx/kou14lux.pdf
-      - doi || abc.doi
-      - video || youtube.com/abcxyz
-    bibtex: xxx/bibtex.txt
-    abstract: xxx/abstract.txt
-  - title: Indoor 2018 Ultra Wideband Ranging Samples from the DecaWave DW1000 Including Frequency and Polarization Diversity
-    authors:
-      - Pat Pannuto
-      - Benjamin Kempke
-      - Bradford Campbell
-      - Prabal Dutta
-    conference:
-      date: 2018-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
@@ -311,11 +273,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2017-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'17
     badges:
       - Invited Paper
     links:
@@ -330,11 +288,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2017-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'17
     badges:
       - Invited Paper
     links:
@@ -349,11 +303,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2016-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: EuroSys'16
     badges:
       - Invited Paper
     links:
@@ -368,11 +318,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2016-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: EuroSys'16
     badges:
       - Invited Paper
     links:
@@ -387,11 +333,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2015-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: EuroSys'15
     badges:
       - Invited Paper
     links:
@@ -406,11 +348,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2015-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: EuroSys'15
     badges:
       - Invited Paper
     links:
@@ -425,11 +363,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2012-12-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: EuroSys'12
     badges:
       - Invited Paper
     links:
@@ -444,11 +378,7 @@ items:
       - Benjamin Kempke
       - Bradford Campbell
       - Prabal Dutta
-    conference:
-      date: 2018-10-01
-      name: Data Acquisition To Analysis
-      shortname: DATA’18
-      url: https://workshopdata.github.io/DATA2018/
+    confkey: DATA'18
     badges:
       - Invited Paper
     links:
