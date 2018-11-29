@@ -11,7 +11,7 @@ cache:
     directories:
         - "node_modules"
 env:
-    TZ: America/Detroit
+    - TZ=America/Detroit
 install:
     - npm install -g hexo-cli
     - npm install
