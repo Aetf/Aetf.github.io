@@ -1,0 +1,7 @@
+@inproceeding{yu19salus
+    author = {Yu, Peifeng and Wang, Yuchen and Chowdhury, Mosharaf},
+    booktitle = {16th USENIX Symposium on Networked Systems Design and Implementation},
+    title = {Salus: Fine-Grained {GPU} Sharing Primitives for Deep Learning Applications},
+    year = {2019},
+    series = {NSDI'19},
+}

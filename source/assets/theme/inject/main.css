@@ -1,3 +1,8 @@
+/* Fix margin bottom of blockquotes with footer */
+blockquote footer:last-child {
+    margin-bottom: 20px;
+}
+
 /* Smaller anchor icon for permalinks */
 .container .posts-expand .post-body .header-anchor {
     float: none;

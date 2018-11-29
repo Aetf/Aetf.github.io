@@ -20,6 +20,7 @@ gittime: off
     +   [Horizontal Rules](#hr)
     +   [Callouts](#callouts)
 *   [Span Elements](#span)
+    +   [Labels](#labels)
     +   [Links](#link)
     +   [Emphasis](#em)
     +   [Code](#code)
@@ -300,6 +301,32 @@ Any decent text editor should make email-style quoting easy. For
 example, with BBEdit, you can make a selection and choose Increase
 Quote Level from the Text menu.
 
+If you want more control over footer of the quote, use a block tag:
+
+<!-- The following code block has to be formatted like this due to automatic escaping of tags -->
+
+    {% blockquote David Levithan, Wide Awake %}
+Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.
+{% endblockquote %}
+
+{% blockquote David Levithan, Wide Awake google.com Google %}
+Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.
+{% endblockquote %}
+
+Another center style blockquote:
+
+<!-- The following code block has to be formatted like this due to automatic escaping of tags -->
+
+    {% centerquote %}
+Some quote
+{% endcenterquote %}
+
+will produce
+
+{% centerquote %}
+Some quote
+{% endcenterquote %}
+
 
 <h3 id="list">Lists</h3>
 
@@ -524,8 +551,6 @@ Regular Markdown syntax is not processed within code blocks. E.g.,
 asterisks are just literal asterisks within a code block. This means
 it's also easy to use Markdown to write about Markdown's own syntax.
 
-
-
 <h3 id="hr">Horizontal Rules</h3>
 
 You can produce a horizontal rule tag (`<hr />`) by placing three or
@@ -574,6 +599,22 @@ This is a danger callout.
 * * *
 
 <h2 id="span">Span Elements</h2>
+
+<h3 id="labels">Labels</h3>
+
+    {% label default@A default %}
+    {% label primary@The primary %}
+    {% label info@An info %}
+    {% label success@A success %}
+    {% label warning@A warning %}
+    {% label danger@A danger %}
+
+{% label default@A default %}
+{% label primary@The primary %}
+{% label info@An info %}
+{% label success@A success %}
+{% label warning@A warning %}
+{% label danger@A danger %}
 
 <h3 id="link">Links</h3>
 

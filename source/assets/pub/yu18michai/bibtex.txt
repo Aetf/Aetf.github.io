@@ -1,0 +1,6 @@
+@misc{yu18michai,
+    title={{Salus: Fine-Grained GPU Sharing Primitives for Deep Learning Applications}},
+    author={Yu, Peifeng and Chowdhury, Mosharaf},
+    year = {2018},
+    howpublished = {{Poster presented at: Michigan AI}},
+}

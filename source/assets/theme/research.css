@@ -95,6 +95,7 @@
     padding: 0 0 0 2em;
     margin: 0em;
     font-size: 1em;
+    width: 100%;
 }
 @media (min-width: 62em) {
     .pub-list section.year section ul {
@@ -116,12 +117,13 @@
 }
 
 /* The publication block */
-.pub-list .pub-block p {
-    margin: 0;
-    padding: 0;
-}
 .pub-block .pub-title {
     font-weight: bold;
+}
+.pub-block .pub-badge {
+    color: red;
+    font-weight: bold;
+    font-size: 0.9em;
 }
 .pub-block .pub-authors,
 .pub-block .pub-conference,
@@ -136,6 +138,9 @@
     display: none;
 
     padding: 1em 0em;
+}
+.pub-block .pub-abstract p:last-child {
+    margin-bottom: 0px;
 }
 
 /* timeline search panel */
@@ -223,11 +228,11 @@
 }
 #copied-tooltip .jBox-content {
     display: inline;
-    padding: 5px 8px;
-    font-size: .7em;
+    padding: 7px 7px;
+    font-size: .8em;
 }
 #copied-tooltip .jBox-pointer {
-    height: 5px;
+    height: 7px;
 }
 
 /* Filter */

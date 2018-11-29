@@ -1,12 +1,11 @@
 <%_
-    let types = page.site.data.publications.types;
-    let conferences = page.site.data.publications.conferences;
-    let publications = page.site.data.publications.items;
+    let types = pubconfig.types;
+    let conferences = pubconfig.conferences;
     publications = publications.sort((a, b) => {
         if (conferences[a.confkey].date === conferences[b.confkey].date)
             return 0;
-        return moment(conferences[a.confkey].date).isBefore(conferences[b.confkey].date) ? 1 : -1;
-    });
+        return conferences[a.confkey].date.isBefore(conferences[b.confkey].date) ? 1 : -1;
+    }).filter(item => conferences[item.confkey].date.isBefore(moment()));
 _%>
 <div id="timeline">
     <div class="timeline-search-panel">
@@ -69,35 +68,44 @@ _%>
                 <li data-pub-venue="<%= conferences[pub.confkey].venue %>"
                     data-pub-cat="<%= conferences[pub.confkey].cat %>">
                     <div class="pub-block">
-                        <p class="pub-title">
+                        <div class="pub-title">
                             <%_ if (pub.links.length > 0) { _%>
-                                <a href="<%= pub.links[0].split(' || ')[1] %>"><%= pub.title %></a>
+                                <a href="<%= pub.links[0].href %>"><%= pub.title %></a>
                             <%_ } else { _%>
                                 <%= pub.title %>
                             <%_ } _%>
-                        </p>
-                        <p class="pub-authors">
+                            <%_ if (conferences[pub.confkey].date.isAfter(moment().subtract(6, 'months'))) {_%>
+                                <span class="label primary">New</span>
+                            <%_ } _%>
+                        </div>
+                        <%_ if (pub.badges.length > 0) { _%>
+                        <div class="pub-badges">
+                            <%_ pub.badges.forEach(badge => { _%>
+                                <span class="label default pub-badge"><%= badge %></span>
+                            <%_ }); _%>
+                        </div>
+                        <%_ } _%>
+                        <div class="pub-authors">
                             <%_ pub.authors.forEach((author, idx) => { _%>
                             <%_ if (pub.authors.length > 2 && idx > 0) { -%>,<%_ } -%>
                             <%_ if (idx === pub.authors.length - 1 && pub.authors.length > 1) { -%> and <%_ } -%>
 
                             <span class="pub-author pub-author-<%= author.replace(' ', '-') %>"><%= author %></span> <%_ }); %>
-                        </p>
-                        <p class="pub-conference">
+                        </div>
+                        <div class="pub-conference">
                             <%= conferences[pub.confkey].name %> (
                                 <a title="<%= conferences[pub.confkey].acceptance %>"
                                     href="<%= conferences[pub.confkey].url %>"><%= pub.confkey %></a>
                             )
-                        </p>
+                        </div>
                         <div class="pub-abstract">
                             <blockquote>
-                                <%= pub.abstract %>
+                                <%- pub.abstract %>
                             </blockquote>
                         </div>
                         <div class="pub-links">
                             <% pub.links.forEach(link => { %>
-                                <% let [link_name, link_url] = link.split(' || '); %>
-                                <a href="<%= link_url %>">[<%= link_name %>]</a>
+                                <a href="<%= link.href %>">[<%= link.name %>]</a>
                             <% }); %>
                             <a class="pub-link-bibtex" data-clipboard-text="<%= pub.bibtex %>">[bibtex]</a>
                             <a class="pub-link-abstract">[abstract]</a>
