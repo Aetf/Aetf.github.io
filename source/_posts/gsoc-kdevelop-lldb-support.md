@@ -41,15 +41,15 @@ The whole work can be broken down to three major parts.
 - __LLDB Specific Classes__: Implementation of LLDB specific controllers and manager classes. This includes `DebugSession` and friends, `*Controller` classes and config page factories. This part is higher level than the first one, but still remains LLDB specific, thus must be implemented separately from GDB variants.
 - __UI and Other__: Hook the UI with the LLDB backend built from the above two parts. This part has the potential to share a large amount of code with GDB. However, currently all UI widgets are bounded to GDB backend. Thus refactors on these classes are needed to split common code out.
 
-#### Relation with current GDB Plugin
+### Relation with current GDB Plugin
 Right now the debugger code in kdevplatform only provides very basic facilities to build a debug plugin. Most heavey works are still done in `GDBDebugger::CppDebuggerPlugin`. An investigation into the code shows that there are planty part of code that is debugger backend agnostic, and could be reused by LLDB plugin.
 
 The ideal/desired design would be extract all debugger backend agnostic into kdevplatform and let GDB and LLDB plugin built on top of that. But we risk breaking the existing GDB plugin which already does a good job. Therefore, I plan to first focus on implementation of LLDB plugin with a copy of all needed classes in kdevplatform, and only after the LLDB plugin reaches a rather mature state, shall we begin port GDB to use the new infrastructure.
 
-#### Communication with LLDB
+### Communication with LLDB
 This can be done by expose a interface class with all available lldb commands and internally delegate the command execution to one of the LLDB interface mentioned below. Other parts of the LLDB debugger plugin will rely solely on the interface class to post lldb commands/jobs. This design is similar to what is used in `GDBDebugger::CppDebuggerPlugin`. This is the foundation of all other parts of the plugin, so I plan to make this part solid by my best effect before moving on to the next part.
 
-###### Possible LLDB Interface to Use
+#### Possible LLDB Interface to Use
 LLDB released LLDB-MI on 2014, and there is another project LLDBMI2 that does the same thing. Along with those, there is the good old C++ API. Further investigation and evaluation is needed to finally determine on which one to use. Here just list a brief description of each choise.
 
 - [LLDB-MI](http://www.codeplay.com/portal/lldb-mi-driver---part-1-introduction)
@@ -66,7 +66,7 @@ LLDB released LLDB-MI on 2014, and there is another project LLDBMI2 that does th
     * Must find a way to protect ourselves from debugger crashes
     * Write from scratch, can't reuse MI code for GDB
 
-#### Implement LLDB Specific Classes
+### Implement LLDB Specific Classes
 These classes is higher level than the above, and is the major classes that teach KDevelop how to use LLDB to debug.
 
 `IDebugSession` represents a specific debug session with a debugger of some type. Currently GDBDebugger provides an implementation `DebugSession`, but it contains GDB specific code. The same applies to other classes such as `BreakpointController` and `FrameStackModel`.
@@ -83,7 +83,7 @@ Here is a brief list of related classes
 - Launcher and jobs
     + DebugJob
 
-#### Move non GDB Specific Classes to KDevPlatform
+### Move non GDB Specific Classes to KDevPlatform
 As said above, the GDBDebugger plugin contains many non GDB specific code. Rather than rewrite the same thing for LLDB debugger plugin, I plan to reuse these code as much as possible. This includes UI widgets for different tool views, context menu items and dialogs. Drkonqi and the glue code between user action and `IDebugSession` methods are other parts that can be potentially reused.
 
 - UI
@@ -100,15 +100,15 @@ As said above, the GDBDebugger plugin contains many non GDB specific code. Rathe
 - Drkonqi
 - DebugSession management
 
-#### PretteyPrinters
+### PretteyPrinters
 These scripts are used to make C++/STL and Qt objects easier for the user to read. Currently I'm not sure if they are still needed for LLDB. If so, this might need to be ported to LLDB data formatters.
 
-#### Tests
+### Tests
 The importance of tests can never be over emphasized. I'm going to start with the same unit tests as GDB when applicable and add other tests when find problems during the implementation.
 
 ## Timeline
 
-#### Milestones
+### Milestones
 - __April 22__ (2 weeks): If accepted, I will start by contributing little bug fixes to KDevelop to get familiar with the code base. Besides that, the most work for this period will be investigating and playing with different ways to talk with lldb. It is important to have this period before actually starting coding, as the decision of which LLDB interface to use would affect the overall stability and quality of the plugin, and it deserves some careful thought.
 - __May 6__ (3.5 weeks): Around this time, I should have done some demos on talking to LLDB. Use this experience gained from previous weeks, I will start actually build the communication infrastructure with LLDB. This could be a totally rewrite from stratch or an extension of the previous demo depends on what method I choose.
 - __May 31__ (3 weeks): We should have a final communication infrastructure with LLDB (part 1) now. And based on that, I can start implement most of the important controllers and managers for the plugin, including `IPlugin`, `IDebugSession` and friends.
@@ -116,7 +116,7 @@ The importance of tests can never be over emphasized. I'm going to start with th
 - __July 19__ (4 weeks): The whole plugin should work for simple use cases by then. And the last 4 weeks are used to revise and finialize the code to fix any remaining bugs as well as move non GDB specific classes into kdevplatform.git. This period also serves as a buffer as we are always optimistic in estimating works and it always turns out to take longer!
 - __Augest 15__: Fine tune and bug fixes done, project finish.
 
-#### Availability
+### Availability
 I will stay at the university for research during the summer break, which basically is another project to do. However, the time schedule for the research is flexible, and two project at the same time is the regular workload for a normal semaster. So I believe I can manage my time accrodingly and there shouldn't be a problem.
 
 ## About me
