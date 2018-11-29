@@ -1,0 +1,32 @@
+publication_dir: assets/pub
+types:
+  conference: Conferences
+  workshop: Workshops
+  journal: Journals
+  demo: Demos
+  poster: Posters
+conferences:
+  NSDI'19:
+    venue: NSDI
+    name: The 16th USENIX Symposium on Networked Systems Design and Implementation
+    date: 2019-02-26
+    url: https://www.usenix.org/conference/nsdi19
+    cat: conference
+  HotOS'17:
+    venue: HotOS
+    name: The 16th Workshop on Hot Topics in Operating Systems
+    date: 2017-05-07
+    url: https://www.sigops.org/s/conferences/hotos/2017/
+    cat: workshop
+  SysML'18:
+    venue: SysML
+    name: SysML Conference 2018
+    date: 2018-02-15
+    url: https://www.sysml.cc/2018/index.html
+    cat: poster
+  MichiganAI'18:
+    venue: MichiganAI
+    name: AI for Seciety - A Michigan AI Symposium
+    date: 2018-11-10
+    url: https://www.eecs.umich.edu/cse/events/2018-ai-symposium/
+    cat: poster

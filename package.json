@@ -6,13 +6,13 @@
     "version": "3.8.0"
   },
   "scripts": {
+    "restart": "npm run clean && npm run start",
     "clean": "rm -rf build",
     "build": "hexo --output build generate",
     "start": "hexo --output build server",
     "deploy": "hexo --output build deploy",
 
     "prestart": "npm run build",
-    "predeploy": "npm run build",
     "prebuild": "mkdir -p build"
   },
   "dependencies": {

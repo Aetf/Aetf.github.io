@@ -1,0 +1,15 @@
+GPU computing is becoming increasingly more popular with the proliferation of deep learning (DL) applications.
+However, unlike traditional resources such as CPU or the network, modern GPUs do not natively support
+fine-grained sharing primitives. Consequently, implementing common policies such as time sharing and
+preemption are expensive. Worse, when a DL application cannot completely use a GPU's resources, the GPU cannot
+be efficiently shared between multiple applications, leading to GPU underutilization.
+
+We present Salus to enable two GPU sharing primitives: fast job switching and memory sharing, in order to
+achieve fine-grained GPU sharing among multiple DL applications. Salus implements an efficient, consolidated
+execution service that exposes the GPU to different DL applications, and enforces fine-grained sharing by
+performing iteration scheduling and addressing associated memory management issues. We show that these
+primitives can then be used to implement flexible sharing policies such as fairness, prioritization, and
+packing for various use cases. Our integration of Salus with TensorFlow and evaluation on popular DL jobs show
+that Salus can improve the average completion time of DL training jobs by 3.19×, GPU utilization for
+hyper-parameter tuning by 2.38×, and GPU utilization of DL inference applications by 42× over not sharing the
+GPU and 7× over NVIDIA MPS with small overhead.
