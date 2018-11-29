@@ -18,8 +18,7 @@ As mentioned in my {% post_link gsoc-kdevelop-lldb-support proposal %}, there ar
 
 Yes, I meant the *GDB* Machine Interface, and here's a little background.
 
-> MI is a line-based machine-oriented text interface to a debugger. The Gnu GDB debugger offers a reference implementation of MI emission. The MI interface is quickly becoming a de facto standard for integrating debuggers into a variety of environments.  *(From [Debugger Machine Interface Wiki](https://wiki.linuxfoundation.org/en/Debugger_Machine_Interface_(DMI)))*
-
+> MI is a line-based machine-oriented text interface to a debugger. The Gnu GDB debugger offers a reference implementation of MI emission. The MI interface is quickly becoming a de facto standard for integrating debuggers into a variety of environments.  *(From Debugger Machine Interface Wiki)*
 
 Being said that, the design decision about how we talk to LLDB is critical that affects the stability, maintainability and extensibility of the KDevelop debugger support. Thus it deserves careful assessment about the advantages and disadvantages.
 

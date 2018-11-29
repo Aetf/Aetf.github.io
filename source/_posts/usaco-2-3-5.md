@@ -5,7 +5,7 @@ date: 2013-02-05 16:36
 ---
 恩，暴力解决。
 
-参考了 http://haipeng31.blog.163.com/blog/static/105623344201011984618863/
+参考了 `http://haipeng31.blog.163.com/blog/static/105623344201011984618863/`，不过很可惜原始文章已经不在了。
 
 主要是changed变量的使用。
 

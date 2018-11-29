@@ -17,7 +17,7 @@
 
     "static-server": "hexo --output build server -s --silent &",
     "pretest": "npm run static-server && wait-on http://localhost:4000",
-    "test": "blc -ro http://localhost:4000; pkill -f hexo",
+    "test": "blc -ro --filter-level 2 --exclude 豆知识 http://localhost:4000; pkill hexo",
 
     "deploy": "hexo --output build deploy"
   },
@@ -41,6 +41,7 @@
     "hexo-renderer-markdown-it": "git+https://github.com/hexojs/hexo-renderer-markdown-it.git#89a5abe048f5a43b42328ad012fb445ded6e665b",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.1",
+    "hexo-util": "^0.6.3",
     "lodash": "^4.17.11",
     "markdown-it-anchor": "^5.0.2",
     "xkcd-api": "^1.0.1"
