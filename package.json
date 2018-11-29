@@ -8,12 +8,18 @@
   "scripts": {
     "restart": "npm run clean && npm run start",
     "clean": "rm -rf build",
+
+    "prebuild": "mkdir -p build",
     "build": "hexo --output build generate",
-    "start": "hexo --output build server",
-    "deploy": "hexo --output build deploy",
 
     "prestart": "npm run build",
-    "prebuild": "mkdir -p build"
+    "start": "hexo --output build server",
+
+    "static-server": "hexo --output build server -s --silent &",
+    "pretest": "npm run static-server && wait-on http://localhost:4000",
+    "test": "blc -ro http://localhost:4000; pkill -f hexo",
+
+    "deploy": "hexo --output build deploy"
   },
   "dependencies": {
     "@aetf/markdown-it-katex": "^2.1.0",
@@ -38,5 +44,9 @@
     "lodash": "^4.17.11",
     "markdown-it-anchor": "^5.0.2",
     "xkcd-api": "^1.0.1"
+  },
+  "devDependencies": {
+    "broken-link-checker": "^0.7.8",
+    "wait-on": "^3.2.0"
   }
 }

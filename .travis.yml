@@ -6,18 +6,18 @@ addons:
             - language-pack-zh-hans
 language: node_js
 node_js:
-    - 8
+    - '10'
 cache:
     directories:
         - "node_modules"
 env:
     TZ: America/Detroit
-before_install:
-    - npm install -g hexo-cli
 install:
+    - npm install -g hexo-cli
     - npm install
 script:
     - npm run build
+    - npm test
 before_deploy:
     - openssl aes-256-cbc -K $encrypted_730350046d35_key -iv $encrypted_730350046d35_iv -in tools/deploy_rsa.enc -out /tmp/deploy_rsa -d
     - eval "$(ssh-agent -s)"
