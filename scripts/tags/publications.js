@@ -86,7 +86,7 @@ function normalizeSourceData(data, content) {
 
             if (!/^[a-z][a-z0-9+.-]*:/.test(href)) {
                 // append base
-                href = data.publication_dir + '/' + href;
+                href = '/' + data.publication_dir + '/' + href;
             }
 
             return { name, href };

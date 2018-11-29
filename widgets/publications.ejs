@@ -70,7 +70,7 @@ _%>
                     <div class="pub-block">
                         <div class="pub-title">
                             <%_ if (pub.links.length > 0) { _%>
-                                <a href="<%= pub.links[0].href %>"><%= pub.title %></a>
+                                <a target="_blank" href="<%= pub.links[0].href %>"><%= pub.title %></a>
                             <%_ } else { _%>
                                 <%= pub.title %>
                             <%_ } _%>
@@ -94,8 +94,8 @@ _%>
                         </div>
                         <div class="pub-conference">
                             <%= conferences[pub.confkey].name %> (
-                                <a title="<%= conferences[pub.confkey].acceptance %>"
-                                    href="<%= conferences[pub.confkey].url %>"><%= pub.confkey %></a>
+                                <a target="_blank" title="<%= conferences[pub.confkey].acceptance %>"
+                                   href="<%= conferences[pub.confkey].url %>"><%= pub.confkey %></a>
                             )
                         </div>
                         <div class="pub-abstract">
@@ -105,7 +105,7 @@ _%>
                         </div>
                         <div class="pub-links">
                             <% pub.links.forEach(link => { %>
-                                <a href="<%= link.href %>">[<%= link.name %>]</a>
+                                <a target="_blank" href="<%= link.href %>">[<%= link.name %>]</a>
                             <% }); %>
                             <a class="pub-link-bibtex" data-clipboard-text="<%= pub.bibtex %>">[bibtex]</a>
                             <a class="pub-link-abstract">[abstract]</a>
