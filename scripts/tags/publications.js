@@ -137,7 +137,7 @@ function publicationsTag(args, content) {
         });
 
         return hexo.render.render({
-            path: pathFn.join(widgets_dir, 'pub_item.ejs')
+            path: pathFn.join(widgets_dir, 'publications.ejs')
         }, locals);
     })
 }

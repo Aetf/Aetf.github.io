@@ -239,3 +239,8 @@
 .filter-hide {
     display: none !important;
 }
+
+/* Highlight myself */
+.pub-author-Peifeng-Yu {
+    font-weight: bold;
+}

@@ -90,7 +90,7 @@ _%>
                             <%_ if (pub.authors.length > 2 && idx > 0) { -%>,<%_ } -%>
                             <%_ if (idx === pub.authors.length - 1 && pub.authors.length > 1) { -%> and <%_ } -%>
 
-                            <span class="pub-author pub-author-<%= author.replace(' ', '-') %>"><%= author %></span> <%_ }); %>
+                            <span class="pub-author pub-author-<%= author.replace(' ', '-') %>"><%= author.replace(' ', '\u00a0') %></span> <%_ }); %>
                         </div>
                         <div class="pub-conference">
                             <%= conferences[pub.confkey].name %> (
