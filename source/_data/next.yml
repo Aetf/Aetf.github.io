@@ -48,7 +48,7 @@ favicon:
   small: /favicons/favicon-16x16.png
   medium: /favicons/favicon-32x32.png
   apple_touch_icon: /favicons/apple-touch-icon.png
-  safari_pinned_tab: /favicons/safari_pinned_tab.svg
+  safari_pinned_tab: /favicons/safari-pinned-tab.svg
   android_manifest: /favicons/manifest.json
   ms_browserconfig: /favicons/browserconfig.xml
 
