@@ -669,9 +669,6 @@ The following three link definitions are equivalent:
 	[foo]: http://example.com/  'Optional Title Here'
 	[foo]: http://example.com/  (Optional Title Here)
 
-**Note:** There is a known bug in Markdown.pl 1.0.1 which prevents
-single quotes from being used to delimit link titles.
-
 The link URL may, optionally, be surrounded by angle brackets:
 
     [id]: <http://example.com/>  "Optional Title Here"
