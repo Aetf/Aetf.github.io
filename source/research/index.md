@@ -9,7 +9,7 @@ notoc: true
 Most of my research happens in _improving computer system infastructure for deep learning applications_. More
 specifically, I'm currently working on making GPU more flexible in terms of sharing to facilitate better
 scheduling and improve resource utilization.
-For a complete list of my past experience, please refer to my [CV](/assets/dl/cv.pdf) (last updated: Nov. 2018).
+For a complete list of my past experience, please refer to my [CV](/assets/dl/cv.pdf) (last updated: Sep. 2019).
 
 The following is a list containing all my publications, plus posters.
 
