@@ -5,7 +5,7 @@ date: Sat Apr 23 02:07:21 EDT 2016
 updated: 2016-12-15T01:51:47-05:00
 ---
 
-I've always wanted to participate in the [Google Code of Summer](http://summerofcode.withgoogle.com/). It's cool and an super legitimate experience to put on CV, isn't it? Anyway, what's more exciting is that my first time proposal was accepted! 
+I've always wanted to participate in the [Google Code of Summer](http://summerofcode.withgoogle.com/). It's cool and an super legitimate experience to put on CV, isn't it? Anyway, what's more exciting is that my first time proposal was accepted!
 
 So I think it might be a good chance to also post this on the blog, which may probably keeps me writing more things and make the blog more... I mean, make it less like unmaintained XD
 
@@ -52,7 +52,7 @@ This can be done by expose a interface class with all available lldb commands an
 #### Possible LLDB Interface to Use
 LLDB released LLDB-MI on 2014, and there is another project LLDBMI2 that does the same thing. Along with those, there is the good old C++ API. Further investigation and evaluation is needed to finally determine on which one to use. Here just list a brief description of each choise.
 
-- [LLDB-MI](http://www.codeplay.com/portal/lldb-mi-driver---part-1-introduction)
+- [LLDB-MI](https://www.codeplay.com/portal/lldb-mi-driver---part-1-introduction)
     * Included in the LLDB source code, which means better support
     * A good separation of input/factory/output
     * Seems only support remote debugging
@@ -61,7 +61,7 @@ LLDB released LLDB-MI on 2014, and there is another project LLDBMI2 that does th
     * Seems to be a simple MI interface to LLDB, which is more lightweight than LLDB-MI
     * Not official but actively maintained
     * Only support local debugging and only support Mac OS X
-- [C++ API](http://lldb.llvm.org/cpp_reference/html/index.html)
+- [C++ API](https://lldb.llvm.org/cpp_reference/index.html)
     * Directly link to LLDB, which should be fast and the API is mature
     * Must find a way to protect ourselves from debugger crashes
     * Write from scratch, can't reuse MI code for GDB

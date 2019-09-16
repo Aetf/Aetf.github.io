@@ -6,7 +6,7 @@ updated: 2016-08-27T16:27:01-04:00
 ---
 
 ## Introduction
-The aim of this post is to provide an insight into various aspects of the LLDB plugin, so that it is better understood, and can be used by more people. Should anyone want to improve it or add more features, he/she will also find useful technical details here. 
+The aim of this post is to provide an insight into various aspects of the LLDB plugin, so that it is better understood, and can be used by more people. Should anyone want to improve it or add more features, he/she will also find useful technical details here.
 
 In general, the LLDB plugin teaches KDevelop to talk to the standalone LLDB MI Driver (`lldb-mi`), so that it's possible to use LLDB as an alternative debugger backend for KDevelop.
 
@@ -21,7 +21,7 @@ The rest of the post is orgainzed as follow
 ### Custom Build of LLDB
 First thing first, you need a working LLDB before you can use it inside KDevelop. For the LLDB MI Driver (`lldb-mi`), while it's a standalone executable, its code is inside the LLDB repository and thus should come with a normal `LLDB` installation.
 
-However, as the current release of LLDB MI Driver contains several bugs, you have to build LLDB from source, with patches applied. Please refer to [Building LLDB](http://lldb.llvm.org/build.html) for more detailed information on how to compile.
+However, as the current release of LLDB MI Driver contains several bugs, you have to build LLDB from source, with patches applied. Please refer to [Building LLDB](https://lldb.llvm.org/resources/build.html) for more detailed information on how to compile.
 
 To apply patches, after checking out the source code, run
 ```bash preset=shell
@@ -69,7 +69,7 @@ While the defaults should work in most cases, the LLDB backend is configurable i
 | `Remote server` | Empty | The address of the remote debugging server, in the form `host:port`[^3] |
 | `Remote work path` | Empty | A writable directory on the remote machine. Compiled inferior would be put into this directory for executing on the remote machine |
 
-[^1]: The executable for the LLDB MI Driver is `lldb-mi`, which usually can be found in the same directory as the main `lldb` executable. 
+[^1]: The executable for the LLDB MI Driver is `lldb-mi`, which usually can be found in the same directory as the main `lldb` executable.
 [^2]: This happens after all internal commands issued by KDevelop, so you have chance to change every settings available in LLDB. But be careful because KDevelop relies on several settings to work properly.
 [^3]: While LLDB uses GDB Remote Protocol, it's only compatible with LLDB's own implementation, which can be launched by the command line `lldb-server gdbserver`. See {% post_link gsoc-kdevelop-lldb-status#known-issues Known Issues %} for more information.
 
@@ -142,7 +142,7 @@ However, there are {% post_link gsoc-kdevelop-lldb-status#known-issues a few lim
 That post also has a comprehensive list of {% post_link gsoc-kdevelop-lldb-status#upstream-bugs related bug reports %} in LLDB.
 
 ## Roadmap
-Other than finishing up missing functionalities in the LLDB plugin, the TODO list is as follow: 
+Other than finishing up missing functionalities in the LLDB plugin, the TODO list is as follow:
 
 - Get bugs in lldb-mi fixed
 - Global debug config for attach to process and examine core file
