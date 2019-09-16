@@ -16,15 +16,6 @@ The following is a list containing all my publications, plus posters.
 ---
 
 {% publications %}
-- title: "Salus: Fine-Grained GPU Sharing Primitives for Deep Learning Applications"
-  authors:
-    - Peifeng Yu
-    - Yuchen Wang
-    - Mosharaf Chowdhury
-  confkey: NSDI'19
-  citekey: yu19salus
-  links:
-    - paper || yu19salus/yu19salus.pdf
 - title: "No! Not Another Deep Learning Framework"
   authors:
     - Linh Nguyen
