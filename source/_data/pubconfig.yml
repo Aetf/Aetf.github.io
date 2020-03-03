@@ -30,3 +30,9 @@ conferences:
     date: 2018-11-10
     url: https://www.eecs.umich.edu/cse/events/2018-ai-symposium/
     cat: poster
+  MLSys'20:
+    venue: MLSys
+    name: The 3rd Conference on Machine Learning and Systems
+    date: 2020-03-02
+    url: https://mlsys.org
+    cat: conference

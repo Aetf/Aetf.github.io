@@ -126,6 +126,20 @@ search:
     format: raw
     limit: 10000
 
+# have multiple sizes for images
+## dependency: hexo-filter-responsive-images
+responsive_images:
+    pattern: '**/*.+(gif|png|jpg|jpeg)'
+    sizes:
+        body:
+            width: 700
+        thumbnail:
+            width: 300
+        huge:
+            width: 1000
+            withoutEnlargement: false
+
+
 # Have multiple sizes for images
 ## dependency: hexo-image-sizes
 image_sizes:

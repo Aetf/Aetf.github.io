@@ -1,0 +1,6 @@
+@inproceedings{hotos17,
+    title = {{Salus}: Find-grained {GPU} Sharing primitives for Deep Learning Applications},
+    author = {Yu, Peifeng and Chowdhury, Mosharaf},
+    booktitle = {Proceedings of the 3rd Conference on Machine Learning and Systems},
+    year = {2020},
+}

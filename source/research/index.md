@@ -42,4 +42,18 @@ The following is a list containing all my publications, plus posters.
   citekey: yu18michai
   links:
     - poster || yu18michai/yu18michai-poster.pdf
+- title: "Salus: Fine-Grained GPU Sharing Primitives for Deep Learning Applications"
+  authors:
+    - Peifeng Yu
+    - Mosharaf Chowdhury
+  confkey: MLSys'20
+  citekey: yu20mlsys
+  links:
+    - poster || yu20mlsys/yu20mlsys-poster.pdf
+    - paper || yu20mlsys/yu20mlsys.pdf
+    - talk || yu20mlsys/yu20mlsys-talk.pptm
+  badges:
+    - Artifacts Available
+    - Artifacts Evaluated Functional
+    - Results Replicated
 {% endpublications %}

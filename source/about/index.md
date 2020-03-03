@@ -12,11 +12,7 @@ working with Professor [Mosharaf Chowchdury](http://mosharaf.com).
 While doing research in system and networking, I mostly dabble in GPU and 
 infrastructure for deep learning systems.
 
-{% imsize %}
-src: /assets/img/me.jpg
-alt: A picture of me! I know it's missing. I'm working on it
-profile: body
-{% endimsize %}
+![A picture of me! I know it's missing. I'm working on it](/assets/img/body_me.jpg)
 
 Aside from academia, I spend most of my time in opensource projects and ACG.
 I love reading stories. Be it animes, comics or games, it is the stories in them that
