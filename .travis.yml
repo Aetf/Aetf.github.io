@@ -29,8 +29,8 @@ before_deploy:
     - chmod 600 /tmp/deploy_rsa
     - ssh-add /tmp/deploy_rsa
     - mkdir -p $HOME/.ssh
-    - echo -e 'Host archvps\n\tUser aetf\n\tHostName archvps.unlimitedcodeworks.xyz\n\tPort 59901' >> $HOME/.ssh/config
-    - ssh-keyscan -H -p 59901 archvps.unlimitedcodeworks.xyz 2>&1 | tee -a $HOME/.ssh/known_hosts
+    - echo -e 'Host archvps\n\tUser aetf\n\tHostName archvps.hosts.unlimited-code.works\n\tPort 59901' >> $HOME/.ssh/config
+    - ssh-keyscan -H -p 59901 archvps.unlimited-code.works 2>&1 | tee -a $HOME/.ssh/known_hosts
 deploy:
     provider: script
     skip_cleanup: true
