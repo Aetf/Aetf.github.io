@@ -21,7 +21,7 @@ function randomXkcd() {
         });
         var json = JSON.stringify(comics);
 
-        return `<a ref="external" target="_blank"><img class="no-fancybox" /></a>
+        return `<a ref="external" target="_blank"><img class="no-fancybox" data-proofer-ignore/></a>
         <script type="text/javascript">
             var xkcd_infos = ${json};
             var thecomic = xkcd_infos[Math.floor(Math.random() * xkcd_infos.length)];

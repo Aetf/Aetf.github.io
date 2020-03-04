@@ -12,9 +12,7 @@
     "build": "hexo --output build generate",
     "prestart": "npm run build",
     "start": "hexo --output build server",
-    "static-server": "hexo --output build server -s --silent &",
-    "pretest": "npm run static-server && wait-on http://localhost:4000",
-    "test": "blc -ro --filter-level 2 --exclude 豆知识 http://localhost:4000; ret=$?; pkill hexo; ( exit $ret )",
+    "test": "tools/hp.rb",
     "deploy": "hexo --output build deploy"
   },
   "dependencies": {
@@ -42,8 +40,5 @@
     "markdown-it-anchor": "^5.0.2",
     "xkcd-api": "^1.0.1"
   },
-  "devDependencies": {
-    "broken-link-checker": "^0.7.8",
-    "wait-on": "^3.2.0"
-  }
+  "devDependencies": {}
 }

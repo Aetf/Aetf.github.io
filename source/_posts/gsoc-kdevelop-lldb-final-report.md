@@ -14,7 +14,7 @@ The rest of the post is orgainzed as follow
 
 - [Setting Up](#setting-up) provides necessary information on how to get everything work from source code
 - [Features](#features) gives a detailed description of available features implemented in the LLDB plugin
-- [The Design](#the-design) and [Roadmap](#roadmap) provide technical information on the implementation for those who are interested.
+- [Roadmap](#roadmap) lists some future works.
 
 ## Setting Up
 

@@ -6,7 +6,7 @@ date: 2013-12-23 15:23
 
 嗯。。还是算法复习用到了的，竟然还有OJ上有这道题，所以过了一下
 
-参考是[Candesoft-BLOG](http://www.candesoft.com/blog/?p=181)
+参考是[Candesoft-BLOG](https://web.archive.org/web/20170922124931/http://www.candesoft.com/blog/?p=181)
 
 大体思路就是首先分点，记录同一位置不同剩余油量的花费。
 

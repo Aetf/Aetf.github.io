@@ -22,7 +22,7 @@ conferences:
     venue: SysML
     name: SysML Conference 2018
     date: 2018-02-15
-    url: https://www.sysml.cc/2018/index.html
+    url: https://mlsys.org/Conferences/2018/
     cat: poster
   MichiganAI'18:
     venue: MichiganAI
@@ -34,5 +34,5 @@ conferences:
     venue: MLSys
     name: The 3rd Conference on Machine Learning and Systems
     date: 2020-03-02
-    url: https://mlsys.org
+    url: https://mlsys.org/Conferences/2020
     cat: conference

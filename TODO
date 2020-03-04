@@ -1,5 +1,8 @@
 Upgrade to NeXT 6.X
 
+make hexo-excerpt be able to rewrite page internal links in excerpt so that those links in excerpt works
+even in index page
+
 [DONE] choose better markdown theme
     [DONE] better code block: with folding and scroll bar
         [DONE] port md-prism-highlight to hexo
