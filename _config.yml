@@ -220,9 +220,12 @@ alias:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
     type: rsync
-    host: archvps.unlimitedcodeworks.xyz
+    host: archvps.hosts.unlimited-code.works
     user: aetf
     root: /srv/http/blog
     port: 59901
     delete: true
     verbose: true
+    args:
+        # additional -z to use -zz due to newer version of zlib
+        - "-z"
