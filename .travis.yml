@@ -11,7 +11,7 @@ cache: npm
 env:
     - TZ=America/Detroit
 before_install:
-    - gem install html-proofer
+    - env NOKOGIRI_USE_SYSTEM_LIBRARIES=true gem install html-proofer
     - npm install -g hexo-cli
 # default install will use npm ci
 script:
