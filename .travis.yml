@@ -1,17 +1,23 @@
-sudo: false
 dist: bionic
 addons:
     apt:
         packages:
             - language-pack-zh-hans
+            - libcurl4-openssl-dev # required to avoid SSL errors
 language: node_js
 node_js:
     - '12'
-cache: npm
+cache:
+    npm: true
+    directories:
+        #https://github.com/gjtorikian/html-proofer/issues/381
+        - tmp/.htmlproofer
+
 env:
     - TZ=America/Detroit
 before_install:
     - env NOKOGIRI_USE_SYSTEM_LIBRARIES=true gem install html-proofer
+    - gem pristine --all
     - npm install -g hexo-cli
 # default install will use npm ci
 script:
