@@ -15,4 +15,4 @@ options = {
   file_ignore: [Regexp.new('/blog/page/'), Regexp.new('/blog/index\\.html')],
   parallel: { in_processes: 3 }
 }
-HTMLProofer.check_directory("/repo/build/output", options).run
+HTMLProofer.check_directory("build/output", options).run
