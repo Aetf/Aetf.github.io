@@ -36,7 +36,7 @@
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.1",
     "hexo-util": "^0.6.3",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "markdown-it-anchor": "^5.0.2",
     "xkcd-api": "^1.0.1"
   },
