@@ -301,7 +301,7 @@ math:
   katex:
     # Use 0.7.1 as default, jsdelivr as default CDN, works everywhere even in China
     # CDNJS, provided by cloudflare, maybe the best CDN, but not works in China
-    cdn: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css
+    cdn: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css
 
 # Disqus
 disqus:

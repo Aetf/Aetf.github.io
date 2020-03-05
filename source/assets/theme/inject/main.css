@@ -3,11 +3,27 @@ blockquote footer:last-child {
     margin-bottom: 20px;
 }
 
-/* Smaller anchor icon for permalinks */
+/* Hack to use fontawesome icon in header-anchors,
+   because there is no control of the structure, only the text.
+   So we inject the icon to the ::before psedo element using
+   the trick here:
+   https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements
+ */
+.header-anchor::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "FontAwesome";
+    font-weight: normal;
+    content: "\f13d";
+}
 .container .posts-expand .post-body .header-anchor {
     float: none;
 }
-.container .header-anchor i.fa {
+/* Smaller anchor icon for permalinks */
+.container .header-anchor::before {
     font-size: 0.8em;
 }
 

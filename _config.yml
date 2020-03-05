@@ -74,11 +74,12 @@ time_format: HH:mm:ss
 
 # Markdown rendering
 ## Markdown-it config
-## dependency: hexo-renderer-markdown-it, markdown-it-anchor, @aetf/markdown-it-katex
+## dependency: hexo-renderer-markdown-it, @aetf/markdown-it-katex
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
 ## Note: hexo-renderer-markdown-it only supports passing in plugin option in master branch later than
 ##       commit 7d09d25958d3c618b4f049f1995962038d2b829d
-## Note: math support also requires math.enabled = true in _data/next.yml
+## Note: math support also requires math.enabled = true in _data/next.yml, remember to match the version
+##       of loaded css file
 markdown:
     render:
         html: true
@@ -93,13 +94,18 @@ markdown:
         - markdown-it-ins
         - markdown-it-sub
         - markdown-it-sup
-        - "@aetf/markdown-it-katex"
-        - name: markdown-it-anchor
+        - name: "@aetf/markdown-it-katex"
           options:
-              level: 2
-              permalink: true
-              permalinkClass: header-anchor
-              permalinkSymbol: <i class="fa fa-anchor" aria-hidden="true"></i>
+              trust: true
+    anchors:
+        level: 2
+        permalink: true
+        permalinkClass: header-anchor
+        permalinkSide: 'right'
+        permalinkSymbol: ""
+        # 0: unchanged, 1: lower case, 2: upper case
+        case: 0
+        separator: '-'
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
