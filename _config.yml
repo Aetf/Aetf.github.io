@@ -104,7 +104,7 @@ markdown:
         permalinkSide: 'right'
         permalinkSymbol: ""
         # 0: unchanged, 1: lower case, 2: upper case
-        case: 0
+        case: 1
         separator: '-'
 
 # Extensions
@@ -145,22 +145,6 @@ responsive_images:
             width: 1000
             withoutEnlargement: false
 
-
-# Have multiple sizes for images
-## dependency: hexo-image-sizes
-image_sizes:
-    pattern: !!js/regexp /\.(gif|jpg|jpeg|png)$/i
-    profiles:
-        body:
-            width: 700
-        thumbnail:
-            width: 300
-        huge:
-            width: 1000
-            allowEnlargement: true
-    defaultProfile: thumbnail
-    link: true
-    useAltForTitle: false
 
 # Code highlighting
 ## disable builtin one
