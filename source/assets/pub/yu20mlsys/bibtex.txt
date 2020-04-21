@@ -1,4 +1,4 @@
-@inproceedings{hotos17,
+@inproceedings{yu20mlsys,
     title = {{Salus}: Find-grained {GPU} Sharing primitives for Deep Learning Applications},
     author = {Yu, Peifeng and Chowdhury, Mosharaf},
     booktitle = {Proceedings of the 3rd Conference on Machine Learning and Systems},
