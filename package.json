@@ -36,7 +36,7 @@
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
     "hexo-util": "^1.8.1",
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.19",
     "xkcd-api": "^1.2.0"
   },
   "devDependencies": {}
