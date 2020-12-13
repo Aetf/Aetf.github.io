@@ -35,7 +35,7 @@ for a complete list.
 [Bug 28026]: https://llvm.org/bugs/show_bug.cgi?id=28026 "LLDB-MI doesn't properly output CLI command response using console-stream-output stream"
 
 ### Build KDevelop From Source
-While the LLDB plugin has been merged into the master branch in [KDevelop repository](https://cgit.kde.org/kdevelop.git), it is not included in any release yet, so you need to build KDevelop from source. You can find step-by-step guides on [the community wiki](https://community.kde.org/KDevelop/HowToCompile_v5) and [Kevin's blog](http://kfunk.org/2016/02/16/building-kdevelop-5-from-source-on-ubuntu-15-10/). Also, if you don't want to use `kdesrc-build`, be sure to refer to {% post_link build-kdevelop-against-custom-kdevplatform my post%} for how to avoid messing up with system installed KDevelop.
+While the LLDB plugin has been merged into the master branch in [KDevelop repository](https://invent.kde.org/kdevelop/kdevelop), it is not included in any release yet, so you need to build KDevelop from source. You can find step-by-step guides on [the community wiki](https://community.kde.org/KDevelop/HowToCompile_v5) and [Kevin's blog](http://kfunk.org/2016/02/16/building-kdevelop-5-from-source-on-ubuntu-15-10/). Also, if you don't want to use `kdesrc-build`, be sure to refer to {% post_link build-kdevelop-against-custom-kdevplatform my post%} for how to avoid messing up with system installed KDevelop.
 
 ## Features
 This section gives a detailed introduction for important features.
@@ -96,7 +96,7 @@ By hovering mouse on a variable name in the source file, it's value is revealed 
 #### Using data formatter scripts outside KDevelop
 The data formatter scripts bundled are not specific to KDevelop, and can actually be used directly in plain LLDB CLI. Just import the corresponding script `command script import /path/to/formatter/qt.py`, and you'll get the same pretty formatted variables in plain command line.
 
-The scripts usually can be found in `/usr/share/kdevlldb/formatters` after the installation of KDevelop, or you can get the latest git version in the [repository](https://cgit.kde.org/kdevelop.git), they are in `debuggers/lldb/formatters`.
+The scripts usually can be found in `/usr/share/kdevlldb/formatters` after the installation of KDevelop, or you can get the latest git version in the [repository](https://invent.kde.org/kdevelop/kdevelop), they are in `plugins/lldb/formatters`.
 {% endnote %}
 
 ### Debugger Console
@@ -117,4 +117,4 @@ Other than finishing up missing functionalities in the LLDB plugin, the TODO lis
 - Get bugs in lldb-mi fixed
 - Global debug config for attach to process and examine core file
 
-For a comprehensive technical TODO list, please refer to `plugins/lldb/TODO.txt` in the [repository](https://cgit.kde.org/kdevelop.git/tree/plugins/lldb/TODO.txt)
+For a comprehensive technical TODO list, please refer to `plugins/lldb/TODO.txt` in the [repository](https://invent.kde.org/kdevelop/kdevelop/-/blob/master/plugins/lldb/TODO.txt)

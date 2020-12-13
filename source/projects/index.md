@@ -71,25 +71,3 @@ __Under Construction__
 [TorrentMigrator]: https://github.com/Aetf/TorrentMigrator
 [2048ASM]: https://github.com/Aetf/2048ASM
 
-
-
----
-
-Test test test under construction
-
-{% exturl text https://google.com title %}
-
-
-{% tabs unique tabs, -1 %}
-<!-- tab Tab caption 1@book -->
-Any content 1 (support inline tags too).
-<!-- endtab -->
-
-<!-- tab Tab caption 2@github -->
-Any content 2 (support inline tags too).
-<!-- endtab -->
-
-<!-- tab Tab caption 3@firefox -->
-Any content 3 (support inline tags too).
-<!-- endtab -->
-{% endtabs %}
