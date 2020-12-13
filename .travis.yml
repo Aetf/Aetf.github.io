@@ -30,7 +30,7 @@ before_deploy:
     - ssh-add /tmp/deploy_rsa
     - mkdir -p $HOME/.ssh
     - echo -e 'Host archvps\n\tUser aetf\n\tHostName archvps.hosts.unlimited-code.works\n\tPort 59901' >> $HOME/.ssh/config
-    - ssh-keyscan -H -p 59901 archvps.hosts.unlimited-code.works 2>&1 | tee -a $HOME/.ssh/known_hosts
+    - echo '[archvps.hosts.unlimited-code.works]:59901,[45.77.144.92]:59901 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGk6MwfaK1pLi0g4J45HKJMDUIj2pQjZUZ01/RFa1NFMQKgeHTBwvE9XQzi39oHdpkwMcRJXZP2oeHhYkiAfXhs=' >> $HOME/.ssh/known_hosts
 deploy:
     provider: script
     skip_cleanup: true
