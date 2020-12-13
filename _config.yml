@@ -219,3 +219,4 @@ deploy:
     args:
         # additional -z to use -zz due to newer version of zlib
         - "-z"
+        - "-vvv"
