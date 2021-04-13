@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Aetf/Aetf.github.io.svg?branch=hexo)](https://travis-ci.org/Aetf/Aetf.github.io)
+[![Build Status](https://github.com/Aetf/Aetf.github.io/actions/workflows/ci-workflow.yml/badge.svg)](https://github.com/Aetf/Aetf.github.io/actions)
 
 # Unlimited Code Works
 Souce code for my [blog](http://unlimitedcodeworks.xyz)
