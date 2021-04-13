@@ -54,9 +54,9 @@ jobs:
           ${{ runner.os }}-node-
     - run: npm ci
     - name: Download hexo database
-        uses: actions/download-artifact@v2
-        with:
-          name: hexo-db
+      uses: actions/download-artifact@v2
+      with:
+        name: hexo-db
 
     - name: Check links with linkcheck
       run: |
@@ -86,9 +86,9 @@ jobs:
           ${{ runner.os }}-node-
     - run: npm ci
     - name: Download hexo database
-        uses: actions/download-artifact@v2
-        with:
-          name: hexo-db
+      uses: actions/download-artifact@v2
+      with:
+        name: hexo-db
 
     - name: Setup SSH
       env:
