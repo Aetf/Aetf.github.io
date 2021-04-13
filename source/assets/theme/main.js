@@ -49,5 +49,6 @@
     });
 
     // make sure Prism doesn't auto load
-    Prism = { manual: true };
+    Prism = Prism || { };
+    Prism.manual = true;
 })();
