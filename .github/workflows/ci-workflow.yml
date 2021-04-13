@@ -67,9 +67,9 @@ jobs:
     - name: Check links with linkcheck
       run: |
         npm run serve &
-        timeout 15 bash -c 'until echo > /dev/tcp/localhost/4000; do sleep 0.5; done'
         curl -JOL 'https://github.com/filiph/linkcheck/releases/latest/download/linkcheck-linux-x64.exe'
         chmod +x ./linkcheck-linux-x64.exe
+        timeout 15 bash -c 'until echo > /dev/tcp/localhost/4000; do sleep 0.5; done'
         ./linkcheck-linux-x64.exe -e --no-check-anchors --skip-file tools/link-check-skip.txt :4000
 
   deploy:
@@ -117,8 +117,8 @@ jobs:
         # unlimited-code.works
         CLOUDFLARE_ZONE_ID: 5871e95620ff2784c4e902f8398e51bd
       run: |
-        curl -X POST "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache"
-          -H "X-Auth-Email: $CLOUDFLARE_USER_EMAIL"
-          -H "X-Auth-Key: $CLOUDFLARE_API_KEY"
-          -H "Content-Type: application/json"
+        curl -X POST "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache" \
+          -H "X-Auth-Email: $CLOUDFLARE_USER_EMAIL" \
+          -H "X-Auth-Key: $CLOUDFLARE_API_KEY" \
+          -H "Content-Type: application/json" \
           --data '{"purge_everything":true}'

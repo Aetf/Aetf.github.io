@@ -231,6 +231,3 @@ deploy:
     port: 59901
     delete: true
     verbose: true
-    args:
-        # additional -z to use -zz due to newer version of zlib
-        - "-zvvv"
