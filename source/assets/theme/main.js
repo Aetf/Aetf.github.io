@@ -46,5 +46,8 @@
     // reattach any handler after pjax load
     document.addEventListener('pjax:success', () => {
         openSidebarLink();
-    })
+    });
+
+    // make sure Prism doesn't auto load
+    Prism = { manual: true };
 })();
