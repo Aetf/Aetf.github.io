@@ -10,8 +10,9 @@
     "clean": "hexo clean --silent",
     "prebuild": "npm run stable-upd-time",
     "build": "hexo generate",
+    "serve": "hexo server",
     "prestart": "npm run clean && npm run stable-upd-time",
-    "start": "hexo server --watch",
+    "start": "npm run serve -- --watch",
     "deploy": "hexo deploy",
     "test": "ava"
   },
