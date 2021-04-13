@@ -1,0 +1,133 @@
+@inproceedings{no:hotos17,
+	title = {No! {Not} {Another} {Deep} {Learning} {Framework}},
+	author = {Nguyen, Linh and Yu, Peifeng and Chowdhury, Mosharaf},
+	booktitle = {Proceedings of the 16th {Workshop} on {Hot} {Topics} in {Operating} {Systems}},
+	year = {2017},
+	pages = {88--93},
+
+    publist_confkey = {HotOS'17},
+    publist_link = {paper || no-hotos17.pdf},
+    publist_link = {talk || no-hotos17.key},
+    publist_abstract = {
+        In recent years, deep learning has pervaded many areas of computing due to the confluence of an explosive
+        growth of large-scale computing capabilities, availability of datasets, and advances in learning techniques.
+        While this rapid growth has resulted in diverse deep learning frameworks, it has also led to inefficiencies
+        for both the users and developers of these frameworks. Specifically, adopting useful techniques across
+        frameworks – both to perform learning tasks and to optimize performance – involves significant repetitions and
+        reinventions.
+
+        In this paper, we observe that despite their diverse origins, many of these frameworks share architectural
+        similarities. We argue that by introducing a common representation of learning tasks and a hardware
+        abstraction model to capture compute heterogeneity, we might be able to relieve machine learning researchers
+        from dealing with low-level systems issues and systems researchers from being tied to any specific framework.
+        We expect this decoupling to accelerate progress in both domains.
+    },
+}
+
+@misc{salus:sysml18,
+    title={{Salus: Fine-Grained GPU Sharing Among CNN Applications}},
+    author={Yu, Peifeng and Chowdhury, Mosharaf},
+    year = {2018},
+    howpublished = {{Poster presented at: SysML \url{https://www.sysml.cc/doc/83.pdf}}},
+
+    publist_confkey = {SysML'18},
+    publist_link = {poster || salus-sysml18-poster.pdf},
+    publist_link = {paper || salus-sysml18.pdf},
+    publist_abstract = {
+        In this paper, we present Salus, a framework-independent runtime to enable fine-grained sharing of a single
+        GPU among multiple memory-intensive CNN applications. Salus implements an efficient, consolidated execution
+        service that exposes the GPU to different CNN applications and enforces fine-grained sharing by performing
+        low-level memory management, managing GPU task scheduling, and addressing associated issues such as deadlock
+        prevention and GPU-to-host memory paging. Not only can Salus enable multiple CNN jobs to share a single GPU,
+        it can enforce sharing policies to provide fairness and prioritization as well. Our integration of Salus with
+        TensorFlow shows that it can improve GPU utilization by up to 20x.
+    },
+}
+
+@misc{salus:michai18,
+    title={{Salus: Fine-Grained GPU Sharing Primitives for Deep Learning Applications}},
+    author={Yu, Peifeng and Chowdhury, Mosharaf},
+    year = {2018},
+    howpublished = {{Poster presented at: Michigan AI}},
+
+    publist_confkey = {MichiganAI'18},
+    publist_link = {poster || salus-michai18-poster.pdf},
+    publist_abstract = {
+        GPU computing is becoming increasingly more popular with the proliferation of deep learning (DL) applications.
+        However, unlike traditional resources such as CPU or the network, modern GPUs do not natively support
+        fine-grained sharing primitives. Consequently, implementing common policies such as time sharing and
+        preemption are expensive. Worse, when a DL application cannot completely use a GPU's resources, the GPU cannot
+        be efficiently shared between multiple applications, leading to GPU underutilization.
+
+        We present Salus to enable two GPU sharing primitives: fast job switching and memory sharing, in order to
+        achieve fine-grained GPU sharing among multiple DL applications. Salus implements an efficient, consolidated
+        execution service that exposes the GPU to different DL applications, and enforces fine-grained sharing by
+        performing iteration scheduling and addressing associated memory management issues. We show that these
+        primitives can then be used to implement flexible sharing policies such as fairness, prioritization, and
+        packing for various use cases. Our integration of Salus with TensorFlow and evaluation on popular DL jobs show
+        that Salus can improve the average completion time of DL training jobs by 3.19×, GPU utilization for
+        hyper-parameter tuning by 2.38×, and GPU utilization of DL inference applications by 42× over not sharing the
+        GPU and 7× over NVIDIA MPS with small overhead.
+    },
+}
+
+@InProceedings{salus:mlsys20,
+    author    = {Peifeng Yu and Mosharaf Chowdhury},
+    booktitle = {MLSys},
+    title     = {Salus: Fine-Grained {GPU} Sharing Primitives for Deep Learning Applications},
+    year      = {2020},
+
+    publist_confkey = {MLSys'20},
+    publist_link = {paper || salus-mlsys20.pdf},
+    publist_link = {slides || salus-mlsys20-talk.pptm},
+    publist_link = {poster || salus-mlsys20-poster.pdf},
+    publist_link = {code || https://github.com/SymbioticLab/Salus},
+    publist_badge = {Artifacts Available},
+    publist_badge = {Artifacts Evaluated Functional},
+    publist_badge = {Artifacts Replicated},
+    publist_topic = {Systems for AI},
+    publist_abstract = {
+        Unlike traditional resources such as CPU or the network, modern GPUs do not natively support
+        fine-grained sharing primitives.
+        Consequently, implementing common policies such as time sharing and preemption are expensive. Worse,
+        when a deep learning (DL) application cannot completely use a GPU's resources, the GPU cannot be efficiently shared
+        between multiple applications, leading to GPU underutilization.
+
+        We present Salus to enable two GPU sharing primitives: __fast job
+        switching__ and __memory sharing__, to achieve fine-grained GPU sharing
+        among multiple DL applications. Salus is an efficient, consolidated
+        execution service that exposes the GPU to different DL applications, and it
+        enforces fine-grained sharing by performing iteration scheduling and
+        addressing associated memory management issues. We show that these primitives
+        can then be used to implement flexible sharing policies. Our integration of
+        Salus with TensorFlow and evaluation on popular DL jobs shows that Salus
+        can improve the average completion time of DL training jobs by $3.19\times$, GPU utilization for
+        hyper-parameter tuning by $2.38\times$, and GPU utilization of DL inference applications by $42\times$ over not sharing
+        the GPU and $6\times$ over NVIDIA MPS with small overhead.
+    },
+}
+
+@inproceedings{fluid:mlsys21,
+    title = {{Fluid: Resource-aware Hyperparameter Tuning Engine}},
+    author = {Yu, Peifeng and Liu, Jiachen and Chowdhury, Mosharaf},
+    booktitleaddon = {MLSys'21},
+    year = {2021},
+
+    publist_confkey = {MLSys'21},
+    publist_link = {paper || fluid-mlsys21.pdf},
+    publist_link = {slides || fluid-mlsys21.pptx},
+    publist_link = {poster || fluid-mlsys21-poster.pdf},
+    publist_link = {code || https://github.com/SymbioticLab/fluid},
+    publist_link = {video || https://mlsys.org/virtual/2021/session/1671},
+    publist_topic = {Systems for AI},
+    publist_abstract = {
+        Current hyperparameter tuning solutions lack complementary execution engines to efficiently leverage distributed
+        computation, thus ignoring the possibility of intra- and inter-GPU sharing, which exhibits poor resource usage.
+        In this paper, we present Fluid, a generalized hyperparameter tuning execution engine, that coordinates between
+        hyperparameter tuning jobs and cluster resources. Fluid schedules evaluation trials in such jobs using a waterfilling
+        approach to make the best use of resources both at intra- and inter-GPU granularities to speed up the tuning
+        process. By abstracting a hyperparameter tuning job as a sequence of TrialGroup, Fluid can boost the performance
+        of diverse hyperparameter tuning solutions. Our experiments show that Fluid can speed up synchronous BOHB by
+        100\%, and BOHB and ASHA by 30\% while having similar final accuracy.
+    },
+}

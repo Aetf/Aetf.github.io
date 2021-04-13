@@ -1,0 +1,19 @@
+{%- if post.tags and post.tags.length and theme.post_meta.tags -%}
+<div class="flex-break"></div>
+<div class="post-header-tags">
+    <span class="post-tag" >
+        <span class="post-meta-item-icon">
+            <i class="fa fa-tags"></i>
+        </span>
+        {%- set comma = joiner(__('symbol.comma')) -%}
+        {%- for tag in post.tags.toArray() -%}
+        {{- comma() -}}
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+            <a href="{{ url_for(tag.path) }}" itemprop="url" rel="index">
+                <span itemprop="name">{{ tag.name }}</span>
+            </a>
+        </span>
+        {%- endfor %}
+    </span>
+</div>
+{%- endif %}

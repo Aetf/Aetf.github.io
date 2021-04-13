@@ -1,6 +1,0 @@
-@misc{yu18sysml,
-    title={{Salus: Fine-Grained GPU Sharing Among CNN Applications}},
-    author={Yu, Peifeng and Chowdhury, Mosharaf},
-    year = {2018},
-    howpublished = {{Poster presented at: SysML}},
-}

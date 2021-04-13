@@ -1,0 +1,21 @@
+.katex { font-size: 1em !important; } /* align KaTeX font-size to surrounding text */
+
+// for equation numbering. This is copied from
+// https://github.com/goessner/markdown-it-texmath/blob/master/css/texmath.css
+// to avoid an additional css file
+eq { display: inline-block; }
+eqn { display: block}
+section.eqno {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
+}
+section.eqno > eqn {
+    width: 100%;
+    margin-left: 3em;
+}
+section.eqno > span {
+    width:3em;
+    text-align:right;
+}

@@ -2,12 +2,12 @@
 date: 2017-11-08 00:38:16
 comments: false
 title: Projects
-hidetitle: true
-notoc: true
+toc:
+  enable: false
 ---
 
-{% note danger %}
-__Under Construction__
+{% note info %}
+Not quite complete. Please go to my [GitHub](https://github.com/Aetf) for what I'm currently working on.
 {% endnote %}
 
 ### Pet Projects
@@ -18,15 +18,11 @@ __Under Construction__
 - [QBencode][]: Bencode read and write support in Qt
 - [libtsm][]: My fork of Terminal-emulator State Machine
 - [kmscon][]: My fork of Linux KMS/DRM based virtual Console Emulator
-- [Sublime-Assembly-GoAsm][]: A Sublime Text 3 plugin providing syntax highlighting for x86/x86-64 assembly code in GoAsm style.
 
-- [plocate][]: Locate implementation with extra filtering features, compatible with `mlocate.db` format
-- [python-realitymarble][]: config file version control written in python
-- [pac][]: Small wrapper around pacaur to mimic yaourts search feature. With various fixes
-- [pyplot_google_map][]: matlab function `plot_google_map` ported to python
 
 ### Blog Related
 
+- [hexo-next-publist][]: Filterable publication list plugin for Hexo
 - [hexo-prism-plus][]: Better code block highlighting with Prism. Ported from [md-prism-highlight][]
 - [hexo-theme-next][]: Elegant theme for Hexo, my own forked version
 - [hexo-excerpt][]: My fork of automatic excerpt generator for Hexo
@@ -37,6 +33,11 @@ __Under Construction__
 
 ### Old Projects
 
+- [Sublime-Assembly-GoAsm][]: A Sublime Text 3 plugin providing syntax highlighting for x86/x86-64 assembly code in GoAsm style.
+- [plocate][]: Locate implementation with extra filtering features, compatible with `mlocate.db` format
+- [python-realitymarble][]: config file version control written in python
+- [pac][]: Small wrapper around pacaur to mimic yaourts search feature. With various fixes
+- [pyplot_google_map][]: matlab function `plot_google_map` ported to python
 - [ClossANN][]: An implementation of cross entropy loss function in neural Network with a training GUI written in Qt. The code for my bachelor's dissertation
 - [ACCompiler][]: A simple compiler front end which accepts a C-like gramma
 - [KinectControl][]: Control mouse using Kinect. May only work for pre-beta version of Kinect driver.
@@ -71,3 +72,4 @@ __Under Construction__
 [TorrentMigrator]: https://github.com/Aetf/TorrentMigrator
 [2048ASM]: https://github.com/Aetf/2048ASM
 
+[hexo-next-publist]: https://github.com/Aetf/hexo-next-publist

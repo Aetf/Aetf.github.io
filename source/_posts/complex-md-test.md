@@ -7,34 +7,9 @@ tags: [Test, Markdown]
 gittime: off
 ---
 
-*   [Overview](#overview)
-    +   [Philosophy](#philosophy)
-    +   [Inline HTML](#html)
-    +   [Automatic Escaping for Special Characters](#autoescape)
-*   [Block Elements](#block)
-    +   [Paragraphs and Line Breaks](#p)
-    +   [Headers](#header)
-    +   [Blockquotes](#blockquote)
-    +   [Lists](#list)
-    +   [Code Blocks](#precode)
-    +   [Horizontal Rules](#hr)
-    +   [Callouts](#callouts)
-*   [Span Elements](#span)
-    +   [Labels](#labels)
-    +   [Links](#link)
-    +   [Emphasis](#em)
-    +   [Code](#code)
-    +   [Images](#img)
-*   [Miscellaneous](#misc)
-    +   [Backslash Escapes](#backslash)
-    +   [Automatic Links](#autolink)
+## Overview
 
-
-* * *
-
-<h2 id="overview">Overview</h2>
-
-<h3 id="philosophy">Philosophy</h3>
+### Philosophy
 
 Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
 
@@ -62,7 +37,7 @@ used email.
 
 
 
-<h3 id="html">Inline HTML</h3>
+### Inline HTML
 
 Markdown's syntax is intended for one purpose: to be used as a
 format for *writing* for the web.
@@ -113,7 +88,7 @@ Unlike block-level HTML tags, Markdown syntax *is* processed within
 span-level tags.
 
 
-<h3 id="autoescape">Automatic Escaping for Special Characters</h3>
+### Automatic Escaping for Special Characters
 
 In HTML, there are two characters that demand special treatment: `<`
 and `&`. Left angle brackets are used to start tags; ampersands are
@@ -169,13 +144,9 @@ terrible format for writing about HTML syntax, because every single `<`
 and `&` in your example code needs to be escaped.)
 
 
-* * *
+## Block Elements
 
-
-<h2 id="block">Block Elements</h2>
-
-
-<h3 id="p">Paragraphs and Line Breaks</h3>
+### Paragraphs and Line Breaks
 
 A paragraph is simply one or more consecutive lines of text, separated
 by one or more blank lines. (A blank line is any line that looks like a
@@ -199,9 +170,7 @@ work best -- and look better -- when you format them with hard breaks.
   [bq]: #blockquote
   [l]:  #list
 
-
-
-<h3 id="header">Headers</h3>
+### Headers
 
 Markdown supports two styles of headers, [Setext] [1] and [atx] [2].
 
@@ -238,7 +207,9 @@ determines the header level.) :
     ### This is an H3 ######
 
 
-<h3 id="blockquote">Blockquotes</h3>
+### Blockquotes
+
+#### Normal
 
 Markdown uses email-style `>` characters for blockquoting. If you're
 familiar with quoting passages of text in an email message, then you
@@ -271,6 +242,8 @@ line of a hard-wrapped paragraph:
     > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
     id sem consectetuer libero luctus adipiscing.
 
+#### Nesting
+
 Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by
 adding additional levels of `>`:
 
@@ -296,6 +269,8 @@ Any decent text editor should make email-style quoting easy. For
 example, with BBEdit, you can make a selection and choose Increase
 Quote Level from the Text menu.
 
+#### Tag plugins
+
 If you want more control over footer of the quote, use a block tag:
 
 <!-- The following code block has to be formatted like this due to automatic escaping of tags -->
@@ -303,6 +278,9 @@ If you want more control over footer of the quote, use a block tag:
     {% blockquote David Levithan, Wide Awake %}
 Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.
 {% endblockquote %}
+
+This will produce a styled footer. Notice how the margin is still correct before and after the
+blockquote.
 
 {% blockquote David Levithan, Wide Awake google.com Google %}
 Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.
@@ -323,7 +301,7 @@ Some quote
 {% endcenterquote %}
 
 
-<h3 id="list">Lists</h3>
+### Lists
 
 Markdown supports ordered (numbered) and unordered (bulleted) lists.
 
@@ -483,7 +461,7 @@ line. To avoid this, you can backslash-escape the period:
 
 
 
-<h3 id="precode">Code Blocks</h3>
+### Code Blocks
 
 Pre-formatted code blocks are used for writing about programming or
 markup source code. Rather than forming normal paragraphs, the lines
@@ -546,7 +524,7 @@ Regular Markdown syntax is not processed within code blocks. E.g.,
 asterisks are just literal asterisks within a code block. This means
 it's also easy to use Markdown to write about Markdown's own syntax.
 
-<h3 id="hr">Horizontal Rules</h3>
+### Horizontal Rules
 
 You can produce a horizontal rule tag (`<hr />`) by placing three or
 more hyphens, asterisks, or underscores on a line by themselves. If you
@@ -563,7 +541,7 @@ following lines will produce a horizontal rule:
 
     ---------------------------------------
 
-<h3 id="callouts">Callouts</h3>
+### Callouts
 
 All available types:
 
@@ -591,11 +569,9 @@ This is a warning callout.
 This is a danger callout.
 {% endnote %}
 
-* * *
+## Span Elements
 
-<h2 id="span">Span Elements</h2>
-
-<h3 id="labels">Labels</h3>
+### Labels
 
     {% label default@A default %}
     {% label primary@The primary %}
@@ -611,7 +587,7 @@ This is a danger callout.
 {% label warning@A warning %}
 {% label danger@A danger %}
 
-<h3 id="link">Links</h3>
+### Links
 
 Markdown supports two style of links: *inline* and *reference*.
 
@@ -763,7 +739,7 @@ you can add links without interrupting the narrative flow of your
 prose.
 
 
-<h3 id="em">Emphasis</h3>
+### Emphasis
 
 Markdown treats asterisks (`*`) and underscores (`_`) as indicators of
 emphasis. Text wrapped with one `*` or `_` will be wrapped with an
@@ -806,7 +782,7 @@ escape it:
 
 
 
-<h3 id="code">Code</h3>
+### Code
 
 To indicate a span of code, wrap it with backtick quotes (`` ` ``).
 Unlike a pre-formatted code block, a code span indicates code within a
@@ -861,8 +837,12 @@ to produce:
     equivalent of <code>&amp;mdash;</code>.</p>
 
 
+#### Code from file
 
-<h3 id="img">Images</h3>
+{% includecode test.cpp cpp %}
+
+
+### Images
 
 Admittedly, it's fairly difficult to devise a "natural" syntax for
 placing images into a plain text document format.
@@ -902,9 +882,9 @@ use regular HTML `<img>` tags.
 * * *
 
 
-<h2 id="misc">Miscellaneous</h2>
+## Miscellaneous
 
-<h3 id="autolink">Automatic Links</h3>
+### Automatic Links
 
 Markdown supports a shortcut style for creating "automatic" links for URLs and email addresses: simply surround the URL or email address with angle brackets. What this means is that if you want to show the actual text of a URL or email address, and also have it be a clickable link, you can do this:
 
@@ -937,7 +917,7 @@ will probably eventually start receiving spam.)
 
 
 
-<h3 id="backslash">Backslash Escapes</h3>
+### Backslash Escapes
 
 Markdown allows you to use backslash escapes to generate literal
 characters which would otherwise have special meaning in Markdown's

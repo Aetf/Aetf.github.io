@@ -16,7 +16,8 @@ function openSidebarTag(args) {
         title = _.trim(title);
         title = `title="${title}"`;
     }
-    return `<a href="" class="open-sidebar" ${title} >${text}</a>`;
+    // the href has to be a fragment, so it's pjax safe
+    return `<a href="#" class="open-sidebar" ${title} >${text}</a>`;
 };
 
 hexo.extend.tag.register('open_sidebar', openSidebarTag, { ends: false });

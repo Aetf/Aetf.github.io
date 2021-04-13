@@ -1,7 +1,0 @@
-@inproceedings{hotos17,
-    title = {No! {Not} {Another} {Deep} {Learning} {Framework}},
-    author = {Nguyen, Linh and Yu, Peifeng and Chowdhury, Mosharaf},
-    booktitle = {Proceedings of the 16th {Workshop} on {Hot} {Topics} in {Operating} {Systems}},
-    year = {2017},
-    pages = {88--93},
-}

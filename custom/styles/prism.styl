@@ -1,0 +1,27 @@
+// some tweaks to the prismjs toolbar
+div.code-toolbar > .toolbar
+    // reset the line-height in theme
+    line-height normal
+    // sane layout
+    display flex
+
+    // for individual button
+    .toolbar-item
+        // sane layout
+        display inline-flex !important
+        // less crowded
+        margin 0 .1em
+
+        span
+            cursor default
+        button
+            cursor pointer
+            outline none
+
+// leaner command line prompt
+pre.command-line code .command-line-prompt
+    span[data-user]::before
+        content attr(data-user) " $"
+
+    span[data-user="root"]::before
+        content attr(data-user) " #"

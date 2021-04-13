@@ -43,7 +43,7 @@ This section gives a detailed introduction for important features.
 ### Config Page
 As already covered in my {% post_link gsoc-kdevelop-lldb-status previous post %}, the LLDB plulgin provides the same configuration interface as the good old GDB one. When editing a Debug configuration, the combox at the top-right corner in the Edit Launch Configuration dialog lets you select either GDB or LLDB as backend.
 
-[![LLDB Config Page](/assets/img/body_gsoc-kdevelop-lldb-status-lldbconfigpage.png "LLDB Config Page")](/assets/img/body_gsoc-kdevelop-lldb-status-lldbconfigpage.png)
+![LLDB Config Page](/assets/img/gsoc-kdevelop-lldb-status-lldbconfigpage.png "LLDB Config Page")
 
 While the defaults should work in most cases, the LLDB backend is configurable in many aspects. Options are grouped into three categories.
 
@@ -71,12 +71,12 @@ While the defaults should work in most cases, the LLDB backend is configurable i
 ### Breakpoints
 Breakpoints is a must for any debugging tool to be useful. And the LLDB-powered debugging backend also provides good breakpoint support. Apart from setting breakpoints by clicking on the left side of the source file, the breakpoints tool view shows all breakpoints in the project as usual.
 
-[![Breakpoints Tool view](/assets/img/body_gsoc-kdevelop-lldb-breakpoints.png "Breakpoints Tool view")](/assets/img/body_gsoc-kdevelop-lldb-breakpoints.png)
+![Breakpoints Tool view](/assets/img/gsoc-kdevelop-lldb-breakpoints.png "Breakpoints Tool view")
 
 ### Framestack
 Easily getting lost when debugging multi-threaded program? Framestack tool view comes to rescue. Navigating among threads and frames is as easy as clicking the corresponding item. A little difference from GDB is, low level functions like `_start` and `__libc_start_main` are also shown in the list.
 
-[![Framestack tool view](/assets/img/thumbnail_gsoc-kdevelop-lldb-framestack.png "Framestack tool view")](/assets/img/thumbnail_gsoc-kdevelop-lldb-framestack.png)
+![Framestack tool view](/assets/img/thumb_gsoc-kdevelop-lldb-framestack.png "Framestack tool view")
 
 ### Variables
 The variables tool view shows local variables in the current frame, as well as values of manually set watches. Thanks to the newly written data formatter (equivalent to pretty printers in GDB), the LLDB backend understands common `STL` and `Qt` types, as well as a few `KDE` types. This means, `std::string` and `QString` are shown as string. Array-like types (various list/vector) and dictionary-like types (various map/set) are also shown in a human readable format.
@@ -86,11 +86,11 @@ The variables tool view shows local variables in the current frame, as well as v
 Unicode values are safely escaped and unescaped when transfered between KDevelop and the LLDB MI Driver, this means they can be correctly displayed in the UI, rather than showing garbage symbols as the case for pretty printers in GDB.
 {% endnote %}
 
-[![Variables tool view](/assets/img/thumbnail_gsoc-kdevelop-lldb-variables.png "Variables tool view")](/assets/img/thumbnail_gsoc-kdevelop-lldb-variables.png)
+![Variables tool view](/assets/img/thumb_gsoc-kdevelop-lldb-variables.png "Variables tool view")
 
 By hovering mouse on a variable name in the source file, it's value is revealed in a popup, correctly formatted. Clicking `Watch this` adds this variable as a manually set watch. Unfortunately, `Stop on change` doesn't work yet, due to the lack of necessary commands in the LLDB MI Driver.
 
-[![Hover over a symbol](/assets/img/body_gsoc-kdevelop-lldb-hover.png "Hover over a symbol")](/assets/img/body_gsoc-kdevelop-lldb-hover.png)
+![Hover over a symbol](/assets/img/gsoc-kdevelop-lldb-hover.png "Hover over a symbol")
 
 {% note info  %}
 #### Using data formatter scripts outside KDevelop
@@ -102,7 +102,7 @@ The scripts usually can be found in `/usr/share/kdevlldb/formatters` after the i
 ### Debugger Console
 The debugger console is totally reworked. The new 'repeat' mode can save you a few types if you want to resend the last command.
 
-[![Debugger console](/assets/img/body_gsoc-kdevelop-lldb-debuggerconsole.png "Debugger console")](/assets/img/body_gsoc-kdevelop-lldb-debuggerconsole.png)
+![Debugger console](/assets/img/gsoc-kdevelop-lldb-debuggerconsole.png "Debugger console")
 
 ### Remote Debugging
 Remote debugging has also been redesigned and should be easier to use. The configuration is largely simplified. After specifying the address to the remote debugging server and a writable working directory, KDevelop will take care of uploading and starting the inferior.

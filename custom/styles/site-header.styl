@@ -1,0 +1,26 @@
+.site-nav .menu
+    // Reduce the spacing between site title and nav bar
+    padding-top 0
+
+    // the default line height causes icon to be too far away from the text
+    .menu-item a
+        line-height normal
+
+    // larger icon in header navi bar
+    .menu-item i.fa
+        font-size 1.5em
+
+// brand icon
+// fancier site brand
+.brand 
+    border-radius 20px 1px 20px 1px
+    padding 0px 20px
+
+    .site-title
+        display flex
+        align-items center
+        &::before
+            content "all_inclusive"
+            display inline-block
+            margin-right 10px
+            material-icons-mixin()

@@ -1,0 +1,10 @@
+{%- if theme.ocs_site_verification | default('', true) | length > 0 -%}
+  <meta name="ocs-site-verification" content="{{ theme.ocs_site_verification }}" />
+{%- endif %}
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+{# This requires a color scheme, and is loaded in main style as min-color #}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Primer/16.1.2/tooltips.min.css"
+      rel="stylesheet">

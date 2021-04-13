@@ -1,8 +1,9 @@
 ---
 layout: page
+title: Home
 comments: false
-hidetitle: true
-notoc: true
+toc:
+  enable: false
 ---
 
 - Congratuations!
@@ -14,6 +15,6 @@ notoc: true
 - This is also an archive
     * I keep dumping other [silly ideas](/blog) ;)
 - Feel absolutely free to {% open_sidebar get in touch %} with me if you find anything interesting!
-- Finally, want some [xkcd](https://xkcd.com/)? Try refresh and see a few selected ones that I really love.
+- Finally, want some [xkcd](https://xkcd.com/)? Try [reload]() and see a few selected ones that I really love.
 
 {% random_xkcd %}

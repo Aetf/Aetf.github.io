@@ -1,0 +1,44 @@
+// prevent the page from jumping due to the vertical scrollbar
+// this works because vw accounts for the scrollbar and % doesn’t
+// see: https://css-tricks.com/elegant-fix-jumping-scrollbar-issue/
+html
+    margin-left calc(100vw - 100%)
+
+// a helper class to break row in a flex
+.flex-break
+    flex-basis: 100%
+
+// provide a mixin that is the same as .material-icons
+material-icons-mixin()
+    font-family: 'Material Icons'
+    font-weight: normal
+    font-style: normal
+    font-size: 24px  /* Preferred icon size */
+    display: inline-block
+    line-height: 1
+    text-transform: none
+    letter-spacing: normal
+    word-wrap: normal
+    white-space: nowrap
+    direction: ltr
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale
+
+    /* Support for IE. */
+    font-feature-settings: 'liga'
+
+.material-icons
+    vertical-align middle
+    margin-top -1px
+
+@import 'site-header'
+@import 'post'
+@import 'page'
+@import 'math'
+@import 'prism'

@@ -42,7 +42,7 @@ tree ~/stage/lib64/cmake/KDevPlatform
 
 We just need a way to tell cmake where they are by appending that path to `CMAKE_PREFIX_PATH` when configuring KDevelop.
 
-```bash preset=shell output=2-5
+```bash preset=shell output=3-5
 mkdir build && cd build
 cmake -DCMAKE_PREFIX_PATH=~/stage/lib64/cmake \
                          -DCMAKE_BUILD_TYPE=Debug \

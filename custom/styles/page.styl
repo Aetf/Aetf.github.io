@@ -1,0 +1,30 @@
+// do not show page header
+.page .post-header
+    display none
+
+// fix button color in publication list filters
+.publist .btn
+    padding 0 10px
+    background-color transparent
+    color var(--link-color)
+    border-color var(--link-color)
+
+    &:hover
+        background-color transparent
+        color var(--link-hover-color)
+        border-color var(--link-hover-color)
+
+.post-body
+    /* use medium font size no matter what screen resolution is */
+    font-size: $font-size-medium !important;
+    /* default is 2 in hexo-theme-next */
+    line-height: 2;
+
+    /* if the heading is the first child, do not use extra top margin */
+    h1, h2, h3, h4, h5 {
+        &:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+    }
+

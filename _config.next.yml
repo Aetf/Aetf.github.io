@@ -1,0 +1,445 @@
+# ---------------------------------------------------------------
+# Theme Core Configuration Settings
+# See: https://theme-next.js.org/docs/theme-settings/
+# ---------------------------------------------------------------
+
+# Remove unnecessary files after hexo generate.
+minify: true
+
+# ---------------------------------------------------------------
+# Scheme Settings
+# ---------------------------------------------------------------
+
+# Schemes
+scheme: Muse
+
+# Dark Mode
+darkmode: false
+
+
+# ---------------------------------------------------------------
+# Site Information Settings
+# ---------------------------------------------------------------
+
+favicon:
+  small: /assets/favicon/favicon-16x16.png
+  medium: /assets/favicon/favicon-32x32.png
+  apple_touch_icon: /assets/favicon/apple-touch-icon.png
+  safari_pinned_tab: /assets/favicon/safari-pinned-tab.svg
+  android_manifest: /assets/favicon/manifest.json
+  ms_browserconfig: /assets/favicon/browserconfig.xml
+
+# Creative Commons 4.0 International License.
+# See: https://creativecommons.org/about/cclicenses/
+# Available values of license: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+# You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
+# CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
+creative_commons:
+  license: by-nc-sa
+  sidebar: true
+  post: true
+  language:
+
+# ---------------------------------------------------------------
+# Custom Page Settings
+# See: https://theme-next.js.org/docs/theme-settings/custom-pages
+# ---------------------------------------------------------------
+
+# https://theme-next.js.org/docs/advanced-settings/custom-files.html
+custom_file_path:
+  head: custom/head.njk
+  postMeta: custom/post-meta.njk
+  bodyEnd: custom/body-end.njk
+  style: custom/styles/index.styl
+  variable: custom/styles/variable.styl
+
+# TagCloud settings for tags page.
+tagcloud:
+  min: 12 # Minimun font size in px
+  max: 30 # Maxium font size in px
+  amount: 200 # Total amount of tags
+  orderby: name # Order of tags
+  order: 1 # Sort order
+
+
+# ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+
+# Usage: `Key: /link/ || icon`
+# Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-senstive.
+# Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
+# External url should start with http:// or https://
+menu:
+  home: / || fa fa-home
+  about: /about/ || fa fa-user
+  projects: /projects/ || fa fa-code
+  research: /research/ || fa fa-rocket
+  articles: /blog/ || fa fa-book
+
+# Enable / Disable menu icons / item badges.
+menu_settings:
+  icons: true
+  badges: false
+
+
+# ---------------------------------------------------------------
+# Sidebar Settings
+# See: https://theme-next.js.org/docs/theme-settings/sidebar
+# ---------------------------------------------------------------
+
+sidebar:
+  # Sidebar Position.
+  position: right
+
+  # Sidebar Display (only for Muse | Mist), available values:
+  #  - post    expand on posts automatically. Default.
+  #  - always  expand for all pages automatically.
+  #  - hide    expand only when click on the sidebar toggle icon.
+  #  - remove  totally remove sidebar including sidebar toggle.
+  display: post
+
+# Sidebar Avatar
+avatar:
+  url: /assets/img/avatar.jpg
+
+# Social Links
+# Usage: `Key: permalink || icon`
+# Key is the link label showing to end users.
+# Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
+social:
+  E-Mail: "mailto:aetf@unlimited-code.works || fa fa-envelope"
+  GitHub: https://github.com/Aetf || fab fa-github
+  LinkedIn: https://www.linkedin.com/in/peifengyu || fab fa-linkedin
+  StackOverflow: https://stackoverflow.com/users/2441376/aetf || fab fa-stack-overflow
+
+social_icons:
+  enable: true
+  icons_only: true
+  transition: true
+
+# Blog rolls
+links_settings:
+  icon: fa fa-link
+  title: Friends' Links
+  layout: block
+
+links:
+  SilentMing's Gensokyo: http://silentming.net/
+  Chen Gao: https://gaochen315.github.io/
+  Yuliang Zou: http://yuliang.vision/
+  Haizhong Zheng: http://zhenghaizhong.com
+  Zhijing Li: https://tissue3.github.io/
+
+# Table of Contents in the Sidebar
+# Front-matter variable (unsupport wrap expand_all).
+toc:
+  enable: true
+  # Automatically add list number to toc.
+  number: true
+  # If true, all words will placed on next lines if header width longer then sidebar width.
+  wrap: true
+
+# ---------------------------------------------------------------
+# Footer Settings
+# See: https://theme-next.js.org/docs/theme-settings/footer
+# ---------------------------------------------------------------
+
+# Show multilingual switcher in footer.
+language_switcher: false
+
+footer:
+  # Specify the year when the site was setup. If not defined, current year will be used.
+  since: 2015
+
+  # Icon between year and copyright info.
+  icon:
+    # Icon name in Font Awesome. See: https://fontawesome.com/icons
+    name: fa fa-heart
+    # If you want to animate the icon, set it to true.
+    animated: true
+    # Change the color of icon, using Hex Code.
+    color: "#808080"
+
+  # Powered by Hexo & NexT
+  powered: true
+
+# ---------------------------------------------------------------
+# Post Settings
+# See: https://theme-next.js.org/docs/theme-settings/posts
+# ---------------------------------------------------------------
+
+# Automatically excerpt description in homepage as preamble text.
+## Disable this as we use hexo-excerpt to generate excerpt
+## Dependencies: hexo-excerpt
+excerpt_description: false
+
+# Read more button
+# If true, the read more button will be displayed in excerpt section.
+read_more_btn: true
+
+# Post meta display settings
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at:
+    enable: true
+    another_day: true
+  categories: false
+  # show tags in header/footer
+  # implemented in custom/post-meta.njk and custom/styles/post-meta.styl
+  tags: true
+  footer_tags: false
+# Use icon instead of the symbol # to indicate the tag at the bottom of the post
+tag_icon: false
+
+# Show previous post and next post in post footer if exists
+# Available values: left | right | false
+post_navigation: left
+
+# ---------------------------------------------------------------
+# Tags Settings
+# See: https://theme-next.js.org/docs/tag-plugins/
+# ---------------------------------------------------------------
+
+# Note tag (bootstrap callout)
+note:
+  # Note tag style values:
+  #  - simple    bootstrap callout old alert style. Default.
+  #  - modern    bootstrap callout new (v2-v3) alert style.
+  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
+  #  - disabled  disable all CSS styles import of note tag.
+  style: modern
+  icons: false
+  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
+  # Offset also applied to label tag variables. This option can work with disabled note tag.
+  light_bg_offset: 0
+
+# Tabs tag
+tabs:
+  transition:
+    tabs: false
+    labels: true
+
+# PDF tag
+# NexT will try to load pdf files natively, if failed, pdf.js will be used.
+# So, you have to install the dependency of pdf.js if you want to use pdf tag and make it available to all browsers.
+# Dependencies: https://github.com/next-theme/theme-next-pdf
+pdf:
+  enable: false
+  # Default height
+  height: 500px
+
+# Mermaid tag
+mermaid:
+  enable: false
+  # Available themes: default | dark | forest | neutral
+  theme: forest
+
+# ---------------------------------------------------------------
+# Misc Theme Settings
+# See: https://theme-next.js.org/docs/theme-settings/miscellaneous
+# ---------------------------------------------------------------
+
+# Preconnect CDN for fonts and plugins.
+# For more information: https://www.w3.org/TR/resource-hints/#preconnect
+preconnect: false
+
+# Set the text alignment in posts / pages.
+text_align:
+  # Available values: start | end | left | right | center | justify | justify-all | match-parent
+  desktop: justify
+  mobile: justify
+
+# Reduce padding / margin indents on devices with narrow width.
+mobile_layout_economy: false
+
+# Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
+android_chrome_color: "#87daff"
+
+back2top:
+  enable: true
+  # Back to top in sidebar.
+  sidebar: false
+  # Scroll percent label in b2t button.
+  scrollpercent: true
+
+# Reading progress bar
+reading_progress:
+  enable: false
+  # Available values: top | bottom
+  position: top
+  color: "#37c6c0"
+  height: 3px
+
+# ---------------------------------------------------------------
+# SEO Settings
+# See: https://theme-next.js.org/docs/theme-settings/seo
+# ---------------------------------------------------------------
+
+# Automatically add external URL with Base64 encrypt & decrypt.
+exturl: false
+# If true, an icon will be attached to each external URL
+exturl_icon: true
+
+# Google Webmaster tools verification.
+# See: https://developers.google.com/search
+google_site_verification:
+
+# Bing Webmaster tools verification.
+# See: https://www.bing.com/webmasters
+bing_site_verification:
+
+# Yandex Webmaster tools verification.
+# See: https://webmaster.yandex.ru
+yandex_site_verification:
+
+# Baidu Webmaster tools verification.
+# See: https://ziyuan.baidu.com/site
+baidu_site_verification:
+
+# KDE Store site verfication
+ocs_site_verification: 9589b7319f5e5a86375fe6d729cb8c11
+
+
+# ---------------------------------------------------------------
+# Third Party Plugins & Services Settings
+# See: https://theme-next.js.org/docs/third-party-services/
+# More plugins: https://github.com/next-theme/awesome-next
+# You may need to install the corresponding dependency packages
+# ---------------------------------------------------------------
+
+# Math Formulas Render Support
+# Warning: Please install / uninstall the relevant renderer according to the documentation.
+# See: https://theme-next.js.org/docs/third-party-services/math-equations
+math:
+  # Default (false) will load mathjax / katex script on demand.
+  # That is it only render those page which has `mathjax: true` in front-matter.
+  # If you set it to true, it will load mathjax / katex srcipt EVERY PAGE.
+  every_page: false
+
+  katex:
+    enable: true
+    # See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex
+    copy_tex: false
+
+# Easily enable fast Ajax navigation on your website.
+# For more information: https://github.com/next-theme/pjax
+## TODO: fix pjax scroll restore option once new version of the theme is released
+pjax: true
+
+# A JavaScript library for zooming images like Medium.
+# Warning: Do not enable both `fancybox` and `mediumzoom`.
+# For more information: https://medium-zoom.francoischalifour.com
+mediumzoom: true
+
+# Vanilla JavaScript plugin for lazyloading images.
+lazyload: true
+
+# Pangu Support
+# For more information: https://github.com/vinta/pangu.js
+pangu: true
+
+# ---------------------------------------------------------------
+# Comments Settings
+# See: https://theme-next.js.org/docs/third-party-services/comments
+# ---------------------------------------------------------------
+
+# Multiple Comment System Support
+comments:
+  # Available values: tabs | buttons
+  style: tabs
+  # Choose a comment system to be displayed by default.
+  # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
+  active: disqus
+  # Setting `true` means remembering the comment system selected by the visitor.
+  storage: true
+  # Lazyload all comment systems.
+  lazyload: true
+  # Modify texts or order for any navs, here are some examples.
+  nav:
+    #disqus:
+    #  text: Load Disqus
+    #  order: -1
+    #gitalk:
+    #  order: -2
+
+# Disqus
+# For more information: https://disqus.com
+disqus:
+  enable: true
+  shortname: unlimitedcodeworks
+  count: true
+
+# ---------------------------------------------------------------
+# Statistics and Analytics
+# See: https://theme-next.js.org/docs/third-party-services/statistics-and-analytics
+# ---------------------------------------------------------------
+
+# Google Analytics
+# See: https://analytics.google.com
+google_analytics:
+  tracking_id: UA-77865381-1
+
+# ---------------------------------------------------------------
+# Search Services
+# See: https://theme-next.js.org/docs/third-party-services/search-services
+# ---------------------------------------------------------------
+
+# Local Search
+# Dependencies: https://github.com/next-theme/hexo-generator-searchdb
+local_search:
+  enable: true
+  # If auto, trigger search by changing input.
+  # If manual, trigger search by pressing enter key or search button.
+  trigger: auto
+  # Show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
+  # Unescape html strings to the readable one.
+  unescape: false
+  # Preload the search data when the page loads.
+  preload: false
+
+
+# ---------------------------------------------------------------
+# Animation Settings
+# ---------------------------------------------------------------
+
+# Use Animate.css to animate everything.
+# For more information: https://animate.style
+motion:
+  enable: true
+  async: true
+  transition:
+    # All available transition variants: https://theme-next.js.org/animate/
+    post_block: fadeInDown
+    # do not animate header and body separately
+    post_header: ''
+    post_body: ''
+    coll_header: ''
+    # Only for Pisces | Gemini.
+    sidebar: slideUpIn
+
+# Progress bar in the top during page loading.
+# For more information: https://github.com/rstacruz/nprogress
+nprogress:
+  enable: true
+  spinner: true
+
+#! ==============================================================
+#! DO NOT EDIT THE FOLLOWING SETTINGS
+#! UNLESS YOU KNOW WHAT YOU ARE DOING
+#! See: https://theme-next.js.org/docs/advanced-settings/vendors
+#! ==============================================================
+
+# It's recommended to use the same version as in `_vendors.yml` to avoid potential problems.
+# Remember to use the HTTPS protocol of CDN links when you enable HTTPS on your site.
+vendors:
+  # The CDN provider of NexT internal scripts.
+  # Available values: local | jsdelivr | unpkg | cdnjs
+  # Warning: If you are using the latest master branch of NexT, please set `internal: local`
+  internal: local
+  # The default CDN provider of third-party plugins.
+  # Available values: local | jsdelivr | unpkg | cdnjs
+  # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
+  plugins: cdnjs

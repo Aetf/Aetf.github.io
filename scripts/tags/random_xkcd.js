@@ -1,40 +1,36 @@
 'use strict';
 
 const util = require('util');
-const Promise = require('bluebird');
+const crypto = require('crypto');
 
 const xkcd_get = util.promisify(require('xkcd-api').get);
 
-function randomXkcd() {
-    var comics = this.site.data.xkcd;
+async function randomXkcd() {
+    const comics = this.site.data.xkcd || [];
+    const infos = await Promise.all(comics.map(c => xkcd_get(c)));
+    // build a JSON list with less info to include in the page
+    const list = infos.map(el => ({
+        num: el.num,
+        alt: el.alt,
+        title: el.title,
+        img: el.img
+    }));
 
-    return Promise.all(comics.map(c => xkcd_get(c))).then(infos => {
-        // make it into a dict for easier lookup
-        // build a list with less info
-        var comics = infos.map(el => {
-            return {
-                num: el.num,
-                alt: el.alt,
-                title: el.title,
-                img: el.img
-            };
-        });
-        var json = JSON.stringify(comics);
-
-        return `<a ref="external" target="_blank"><img class="no-fancybox" data-proofer-ignore/></a>
-        <script type="text/javascript">
-            var xkcd_infos = ${json};
-            var thecomic = xkcd_infos[Math.floor(Math.random() * xkcd_infos.length)];
-            var scripts = document.getElementsByTagName('script'),
-                currentScript = scripts[scripts.length - 1],
-                atag = currentScript.previousElementSibling;
-            atag.setAttribute('href', 'https://xkcd.com/' + thecomic.num);
-            atag.firstChild.setAttribute('src', thecomic.img);
-            atag.firstChild.setAttribute('alt', thecomic.title);
-            atag.firstChild.setAttribute('title', thecomic.alt);
-            //currentScript.parentNode.insertBefore(newNode, currentScript.nextSibling);
-        </script>`;
-    });
+    const tag_id = crypto.randomBytes(4).toString('hex');
+    return `<a id="${tag_id}" ref="external" target="_blank"><img data-proofer-ignore/></a>
+    <script type="text/javascript" data-pjax>
+        (() => {
+            window.xkcd_infos = window.xkcd_infos || ${JSON.stringify(list)};
+            const thecomic = xkcd_infos[Math.floor(Math.random() * xkcd_infos.length)];
+            const atag = document.getElementById("${tag_id}");
+            if (atag) {
+                atag.setAttribute('href', 'https://xkcd.com/' + thecomic.num);
+                atag.firstChild.setAttribute('src', thecomic.img);
+                atag.firstChild.setAttribute('alt', thecomic.title);
+                atag.firstChild.setAttribute('title', thecomic.alt);
+            }
+        })();
+    </script>`;
 }
 
 hexo.extend.tag.register('random_xkcd', randomXkcd, { ends: false, async: true });

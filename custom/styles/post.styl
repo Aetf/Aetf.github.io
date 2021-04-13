@@ -1,0 +1,23 @@
+// hexo-theme-next renders tags at footer by default
+if !hexo-config('post_meta.footer_tags')
+    .post-tags
+        display none
+
+// normally, blockquote contains p, which has margin-bottom: 20px,
+// and the margin can go outside of the blockquote due to margin collapsing,
+// resulting in nice paragraph spacing around the blockquote.
+// But when the last child of the blockquote is a footer, it lacks the
+// margin-bottom, causing the following paragraph to be too close to
+// the blockquote.
+// Test case: $2.3.3 Tag plugins
+blockquote footer:last-child
+    margin-bottom 20px
+
+// Prismjs expects code font to be the same as surrounding
+// otherwise the line number doesn't align correctly.
+code
+    font-size 1em !important
+
+// limit max height of the code block
+pre
+    max-height 30em

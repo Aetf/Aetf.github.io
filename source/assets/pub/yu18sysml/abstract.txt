@@ -1,7 +1,0 @@
-In this paper, we present Salus, a framework-independent runtime to enable fine-grained sharing of a single
-GPU among multiple memory-intensive CNN applications. Salus implements an efficient, consolidated execution
-service that exposes the GPU to different CNN applications and enforces fine-grained sharing by performing
-low-level memory management, managing GPU task scheduling, and addressing associated issues such as deadlock
-prevention and GPU-to-host memory paging. Not only can Salus enable multiple CNN jobs to share a single GPU,
-it can enforce sharing policies to provide fairness and prioritization as well. Our integration of Salus with
-TensorFlow shows that it can improve GPU utilization by up to 20x.

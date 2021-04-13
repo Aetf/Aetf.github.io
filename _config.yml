@@ -14,14 +14,12 @@ language:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://unlimitedcodeworks.xyz
+url: https://unlimited-code.works
 root: /
 permalink: blog/:year/:month/:day/:title/
-permalink_defaults:
 
 # Directory
 source_dir: source
-public_dir: build/output
 
 tag_dir: tags
 archive_dir: archives
@@ -34,7 +32,8 @@ skip_render:
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+external_link:
+    enable: true # Open external links in new tab
 filename_case: 1
 render_drafts: false
 post_asset_folder: false
@@ -74,12 +73,8 @@ time_format: HH:mm:ss
 
 # Markdown rendering
 ## Markdown-it config
-## dependency: hexo-renderer-markdown-it, @aetf/markdown-it-katex
+## dependency: hexo-renderer-markdown-it, markdown-it-texmath
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
-## Note: hexo-renderer-markdown-it only supports passing in plugin option in master branch later than
-##       commit 7d09d25958d3c618b4f049f1995962038d2b829d
-## Note: math support also requires math.enabled = true in _data/next.yml, remember to match the version
-##       of loaded css file
 markdown:
     render:
         html: true
@@ -94,9 +89,10 @@ markdown:
         - markdown-it-ins
         - markdown-it-sub
         - markdown-it-sup
-        - name: "@aetf/markdown-it-katex"
+        - name: "markdown-it-texmath"
           options:
-              trust: true
+              katexOptions:
+                  trust: true
     anchors:
         level: 2
         permalink: true
@@ -112,7 +108,6 @@ markdown:
 ## Themes: https://hexo.io/themes/
 
 # Use the theme-next theme
-## theme config override in _data/next.yml
 theme: next
 
 # Feed
@@ -138,44 +133,55 @@ responsive_images:
     pattern: '**/*.+(gif|png|jpg|jpeg)'
     sizes:
         body:
+            fit: inside
             width: 700
-        thumbnail:
+        thumb:
+            fit: inside
             width: 300
         huge:
-            width: 1000
+            width: 2000
+            height: 1500
+            fit: inside
             withoutEnlargement: false
 
 
 # Code highlighting
+## see also additional theme config: codeblock
 ## disable builtin one
 highlight:
     enable: false
+prismjs:
+    enable: false
+
 ## dependency: hexo-prism-plus
 code_dir: assets/code
 prism_plus:
     enable: true
     # Custom Prism path
-    vendors:
-        base_url: /assets/theme/
-        prism:
-            - prism.js
-        prism_css:
-            - prism.css
+    vendor_base_url: /assets/theme/
+    plugins:
+        - normalize-whitespace
+        - line-numbers
+        - line-highlight
+        - command-line
+        - toolbar
+        - copy-to-clipboard
+        - show-language
     # Default language if not specified inline in code blocks
     default_lang: clike
     # Default preset if no preset is specified inline
-    default_preset:
-        lineno: true
-        classes:
-        styles:
-            max-height: 30em
     # All available presets
     presets:
+        default:
+            lineno: true
+            styles:
+                max-height: 30em
+            prismjs-copy-timeout: 500
         shell:
             lineno: false
             classes: [ command-line ]
             user: aetf
-            host: localhost
+            prismjs-copy-timeout: 500
             styles:
                 max-height: 30em
 
@@ -187,8 +193,8 @@ excerpt:
         - .header-anchor
         - .note.info
 
-# URL redirection to help migration
-## dependency: hexo-alias-generator
+# URL redirection to help search engine indexing
+## dependency: hexo-generator-alias
 alias:
     blog/1970/11/18/a-really-complex-markdown-test/index.html: blog/1970/11/18/complex-md-test/index.html
     blog/2016/05/13/gsoc-communicating-with-lldb/index.html: blog/2016/05/17/gsoc-communicating-with-lldb/index.html
@@ -205,6 +211,15 @@ alias:
     blog/2013/02/07/hdu-3234-exclusive-or/index.html: blog/2013/02/07/hdu-3234/index.html
     blog/2013/12/23/njupt-1362-qi-che-jia-you-xing-shi-wen-ti/index.html: blog/2013/12/23/njupt-1362/index.html
 
+# Publication list settings
+## dependency: hexo-next-publist
+publist:
+    strict: true
+
+# Minify CSS using clean-css
+## dependency: hexo-clean-css
+clean_css:
+    level: 2
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
