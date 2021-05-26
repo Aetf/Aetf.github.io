@@ -49,6 +49,6 @@
     });
 
     // make sure Prism doesn't auto load
-    Prism = Prism || { };
-    Prism.manual = true;
+    window.Prism = window.Prism || { };
+    window.Prism.manual = true;
 })();

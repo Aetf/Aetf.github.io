@@ -34,7 +34,7 @@
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-markdown-it": "^5.0.0",
     "hexo-renderer-stylus": "^2.0.1",
-    "hexo-theme-next": "^8.3.0",
+    "hexo-theme-next": "^8.4.0",
     "katex": "^0.13.2",
     "lodash": "^4.17.21",
     "markdown-it-texmath": "^0.8.0",
