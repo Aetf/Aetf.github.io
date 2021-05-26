@@ -47,8 +47,4 @@
     document.addEventListener('pjax:success', () => {
         openSidebarLink();
     });
-
-    // make sure Prism doesn't auto load
-    window.Prism = window.Prism || { };
-    window.Prism.manual = true;
 })();
