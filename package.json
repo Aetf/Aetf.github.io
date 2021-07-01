@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "hexo": "^5.4.0",
-    "hexo-clean-css": "^1.0.0",
+    "hexo-clean-css": "^2.0.0",
     "hexo-deployer-rsync": "^1.0.0",
     "hexo-excerpt": "^1.1.6",
     "hexo-filter-responsive-images": "^1.7.0",
@@ -37,7 +37,7 @@
     "hexo-theme-next": "^8.5.0",
     "katex": "^0.13.2",
     "lodash": "^4.17.21",
-    "markdown-it-texmath": "^0.8.0",
+    "markdown-it-texmath": "^0.9.0",
     "prism-themes": "^1.6.0",
     "xkcd-api": "^1.2.0"
   },
