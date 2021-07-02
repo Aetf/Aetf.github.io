@@ -6,8 +6,7 @@ TEMPDIR=$(mktemp -d)
 # make sure all children are killed
 function cleanup() {
     rm -rf "$TEMPDIR"
-    trap " " SIGTERM
-    kill -- -$$
+    kill "$NODE_PID"
 }
 
 trap 'exit_code=$? && cleanup && exit $exit_code' SIGINT SIGTERM EXIT
@@ -15,6 +14,7 @@ trap 'exit_code=$? && cleanup && exit $exit_code' SIGINT SIGTERM EXIT
 # start server in background
 echo '::group::Waiting server'
 npm run serve &
+NODE_PID=$!
 
 # download linkcheck while the server starting
 RELEASE_DATA=$(curl -s https://api.github.com/repos/filiph/linkcheck/releases/latest)
