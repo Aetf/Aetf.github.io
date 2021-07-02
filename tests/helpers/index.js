@@ -26,6 +26,10 @@ async function getRoute(path) {
     return await JSDOM.fromFile(pathFn.join(PUBLIC_DIR, path));
 }
 
+async function getRouteFile(path) {
+    return await fs.readFile(pathFn.join(PUBLIC_DIR, path), { encoding: 'utf-8' });
+}
+
 async function getHexo(level) {
     const Hexo = require('hexo');
     const hexo = new Hexo();
@@ -35,5 +39,6 @@ async function getHexo(level) {
 }
 
 module.exports.getRoute = getRoute;
+module.exports.getRouteFile = getRouteFile;
 module.exports.getHexo = getHexo;
 module.exports.listRoutes = listRoutes;
