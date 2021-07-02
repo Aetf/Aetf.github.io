@@ -67,11 +67,14 @@ jobs:
     - name: Check links with linkcheck
       run: |
         npm run serve &
-        curl -JOL 'https://github.com/filiph/linkcheck/releases/latest/download/linkcheck-linux-x64.exe'
-        chmod +x ./linkcheck-linux-x64.exe
+        # download linkcheck while the server starting
+        RELEASE_DATA=$(curl https://api.github.com/repos/filiph/linkcheck/releases/latest)
+        LINKCHECK=$(printf "%s" "$RELEASE_DATA" | jq -r '.assets | map(select(.name | test("linux.*x64")))[0].browser_download_url')
+        curl -JL "$LINKCHECK" | tar xz
         timeout 15 bash -c 'until echo > /dev/tcp/localhost/4000; do sleep 0.5; done'
-        ./linkcheck-linux-x64.exe -e --no-check-anchors --skip-file tools/link-check-skip.txt :4000 \
-        || ./linkcheck-linux-x64.exe -e --no-check-anchors --skip-file tools/link-check-skip.txt :4000
+        # redo the check to avoid transient errors
+        ./linkcheck/linkcheck -e --no-check-anchors --skip-file tools/link-check-skip.txt :4000 \
+        || ./linkcheck/linkcheck -e --no-check-anchors --skip-file tools/link-check-skip.txt :4000
 
   deploy:
     needs: [build, linkcheck]
