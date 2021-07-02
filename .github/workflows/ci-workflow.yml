@@ -40,16 +40,7 @@ jobs:
     - name: Unit tests
       run: npm test
     - name: Link checks
-      run: |
-        npm run serve &
-        # download linkcheck while the server starting
-        RELEASE_DATA=$(curl https://api.github.com/repos/filiph/linkcheck/releases/latest)
-        LINKCHECK=$(printf "%s" "$RELEASE_DATA" | jq -r '.assets | map(select(.name | test("linux.*x64")))[0].browser_download_url')
-        curl -JL "$LINKCHECK" | tar xz
-        timeout 15 bash -c 'until echo > /dev/tcp/localhost/4000; do sleep 0.5; done'
-        # redo the check to avoid transient errors
-        ./linkcheck/linkcheck -e --no-check-anchors --skip-file tools/link-check-skip.txt :4000 \
-        || ./linkcheck/linkcheck -e --no-check-anchors --skip-file tools/link-check-skip.txt :4000
+      run: tools/link-check.sh
 
     - name: Upload hexo database
       uses: actions/upload-artifact@v2
