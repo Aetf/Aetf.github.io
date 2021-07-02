@@ -7,6 +7,9 @@ on:
   pull_request:
     branches: [ develop ]
 
+env:
+  CACHE_VERSION: v1
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,11 +27,13 @@ jobs:
       id: cache
       with:
         path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        key: ${{ runner.os }}-node-${{ env.CACHE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
-          ${{ runner.os }}-node-
+          ${{ runner.os }}-node-${{ env.CACHE_VERSION }}
     - run: npm ci
-    - run: npm run build
+    - run: |
+        npm run clean
+        npm run build
     - run: npm test
     - name: Upload hexo database
       uses: actions/upload-artifact@v2
@@ -55,9 +60,9 @@ jobs:
       id: cache
       with:
         path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        key: ${{ runner.os }}-node-${{ env.CACHE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
-          ${{ runner.os }}-node-
+          ${{ runner.os }}-node-${{ env.CACHE_VERSION }}
     - run: npm ci
     - name: Download hexo database
       uses: actions/download-artifact@v2
@@ -94,9 +99,9 @@ jobs:
       id: cache
       with:
         path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        key: ${{ runner.os }}-node-${{ env.CACHE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
-          ${{ runner.os }}-node-
+          ${{ runner.os }}-node-${{ env.CACHE_VERSION }}
     - run: npm ci
     - name: Download hexo database
       uses: actions/download-artifact@v2
