@@ -1,19 +1,25 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+TEMPDIR=$(mktemp -d)
+
 # make sure all children are killed
-trap 'exit_code=$?; kill -- -$$' EXIT
-trap 'exit $exit_code' INT TERM
+function cleanup() {
+    rm -rf "$TEMPDIR"
+    trap " " SIGTERM
+    kill -- -$$
+}
+
+trap 'exit_code=$? && cleanup && exit $exit_code' SIGINT SIGTERM EXIT
 
 # start server in background
 echo '::group::Waiting server'
 npm run serve &
 
 # download linkcheck while the server starting
-TEMPDIR=$(mktemp -d)
 RELEASE_DATA=$(curl -s https://api.github.com/repos/filiph/linkcheck/releases/latest)
 LINKCHECK_TAR_XZ=$(printf "%s" "$RELEASE_DATA" | jq -r '.assets | map(select(.name | test("linux.*x64")))[0].browser_download_url')
-curl -JL "$LINKCHECK_TAR_XZ" | tar -C "$TEMPDIR" -xz
+curl -sJL "$LINKCHECK_TAR_XZ" | tar -C "$TEMPDIR" -xz
 LINKCHECK=$TEMPDIR/linkcheck/linkcheck
 
 timeout 15 bash -c 'until echo > /dev/tcp/localhost/4000; do sleep 0.5; done' 2>/dev/null
