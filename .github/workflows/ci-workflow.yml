@@ -29,7 +29,7 @@ jobs:
         path: ~/.npm
         key: ${{ runner.os }}-node-${{ env.CACHE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
-          ${{ runner.os }}-node-${{ env.CACHE_VERSION }}
+          ${{ runner.os }}-node-${{ env.CACHE_VERSION }}-
     - run: npm ci
 
     - name: Build hexo site
@@ -79,7 +79,7 @@ jobs:
         path: ~/.npm
         key: ${{ runner.os }}-node-${{ env.CACHE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
-          ${{ runner.os }}-node-${{ env.CACHE_VERSION }}
+          ${{ runner.os }}-node-${{ env.CACHE_VERSION }}-
     - run: npm ci
     - name: Download hexo database
       uses: actions/download-artifact@v2
