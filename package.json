@@ -35,16 +35,16 @@
     "hexo-renderer-markdown-it": "^5.0.0",
     "hexo-renderer-stylus": "^2.0.1",
     "hexo-theme-next": "^8.7.0",
-    "katex": "^0.13.2",
+    "katex": "^0.13.13",
     "lodash": "^4.17.21",
-    "markdown-it-texmath": "^0.9.0",
-    "prism-themes": "^1.6.0",
+    "markdown-it-texmath": "^0.9.1",
+    "prism-themes": "^1.8.0",
     "xkcd-api": "^1.2.0"
   },
   "devDependencies": {
     "ava": "^3.15.0",
     "hexo-cli": "^4.2.0",
     "hexo-server": "^2.0.0",
-    "jsdom": "^16.5.2"
+    "jsdom": "^17.0.0"
   }
 }
