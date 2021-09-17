@@ -1,0 +1,10 @@
+# Some random links in the complex-md-test
+http://docutils.sourceforge.net/mirror/setext.html
+http://www.aaronsw.com/2002/atx/
+http://textism.com/tools/textile/
+http://docutils.sourceforge.net/rst.html
+http://www.triptico.com/software/grutatxt.html
+http://ettext.taint.org/doc/
+
+# CSDN connection is always bad, we know the link is there, so don't bother checking it
+csdn\.net
