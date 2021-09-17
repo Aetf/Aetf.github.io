@@ -12,7 +12,7 @@ resource utilization, to better hyperparameter tuning execution engine providing
 in the cluster. Currently, I'm working on new inference servering frameworks with better support for
 dynamic neural networks.
 
-For a complete list of my past experience, please refer to my [CV](/assets/dl/cv.pdf) (last updated: Jul. 2021).
+For a complete list of my past experience, please refer to my [CV](/assets/dl/cv.pdf) (last updated: Sep. 2021).
 
 {% publist peifeng %}
 version: 2
