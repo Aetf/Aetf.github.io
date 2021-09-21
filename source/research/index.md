@@ -9,7 +9,7 @@ toc:
 Most of my research happens in _improving computer system infrastructure for deep learning applications_.
 This ranges from GPU sharing primitives to facilitate better scheduling and improve
 resource utilization, to better hyperparameter tuning execution engine providing better utilization
-in the cluster. Currently, I'm working on new inference servering frameworks with better support for
+in the cluster. Currently, I'm working on new inference serving frameworks with better support for
 dynamic neural networks.
 
 For a complete list of my past experience, please refer to my [CV](/assets/dl/cv.pdf) (last updated: Sep. 2021).
