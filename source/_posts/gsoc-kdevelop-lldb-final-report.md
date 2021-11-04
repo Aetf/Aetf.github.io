@@ -35,7 +35,7 @@ for a complete list.
 [Bug 28026]: https://llvm.org/bugs/show_bug.cgi?id=28026 "LLDB-MI doesn't properly output CLI command response using console-stream-output stream"
 
 ### Build KDevelop From Source
-While the LLDB plugin has been merged into the master branch in [KDevelop repository](https://invent.kde.org/kdevelop/kdevelop), it is not included in any release yet, so you need to build KDevelop from source. You can find step-by-step guides on [the community wiki](https://community.kde.org/KDevelop/HowToCompile_v5) and [Kevin's blog](http://kfunk.org/2016/02/16/building-kdevelop-5-from-source-on-ubuntu-15-10/). Also, if you don't want to use `kdesrc-build`, be sure to refer to {% post_link build-kdevelop-against-custom-kdevplatform my post%} for how to avoid messing up with system installed KDevelop.
+While the LLDB plugin has been merged into the master branch in [KDevelop repository](https://invent.kde.org/kdevelop/kdevelop), it is not included in any release yet, so you need to build KDevelop from source. You can find step-by-step guides on [the community wiki](https://community.kde.org/KDevelop/HowToCompile_v5). Also, if you don't want to use `kdesrc-build`, be sure to refer to {% post_link build-kdevelop-against-custom-kdevplatform my post%} for how to avoid messing up with system installed KDevelop.
 
 ## Features
 This section gives a detailed introduction for important features.
