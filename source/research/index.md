@@ -53,4 +53,11 @@ venues:
       name: AI for Seciety - A Michigan AI Symposium
       date: 2018-11-10
       url: https://www.eecs.umich.edu/cse/events/2018-ai-symposium/
+  'IEEE Micro':
+    category: Journals
+    occurrences:
+    - key: 'IEEE Micro 41(5)'
+      name: 'IEEE Micro Volume 41, Issue 5'
+      date: 2021-09-30
+      url: https://www.computer.org/csdl/magazine/mi/2021/05
 {% endpublist %}
