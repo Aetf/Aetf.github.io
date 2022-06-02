@@ -72,6 +72,32 @@
     },
 }
 
+@online{salus:arxiv19,
+    title         = {Salus: Fine-Grained {GPU} Sharing Primitives for Deep Learning Applications},
+    author        = {Peifeng Yu and Mosharaf Chowdhury},
+    year          = {2019},
+    month         = {Feb},
+    eprint        = {1902.04610},
+    eprintprefix  = {arXiv},
+    eprintclass   = {cs.DC},
+
+    publist_confkey = {arXiv:1902.04610},
+    publist_link = {paper || https://arxiv.org/abs/1902.04610},
+    publist_abstract = {
+        GPU computing is becoming increasingly more popular with the proliferation of deep learning (DL) applications.
+        However, unlike traditional resources such as CPU or the network, modern GPUs do not natively support fine-grained sharing primitives.
+        Consequently, implementing common policies such as time sharing and preemption are expensive.
+        Worse, when a DL application cannot completely use a GPU's resources, the GPU cannot be efficiently shared between multiple applications, leading to GPU underutilization.
+
+        We present Salus to enable two GPU sharing primitives: fast job switching and memory sharing, in order to achieve fine-grained GPU sharing among multiple DL applications.
+        Salus implements an efficient, consolidated execution service that exposes the GPU to different DL applications, and enforces fine-grained sharing by performing iteration scheduling and addressing associated memory management issues.
+        We show that these primitives can then be used to implement flexible sharing policies such as fairness, prioritization, and packing for various use cases.
+        Our integration of Salus with TensorFlow and evaluation on popular DL jobs show that Salus can improve the average completion time of DL training jobs by $3.19\times$,
+        GPU utilization for hyper-parameter tuning by $2.38\times$,
+        and GPU utilization of DL inference applications by $42\times$ over not sharing the GPU and $7\times$ over NVIDIA MPS with small overhead.
+    }
+}
+
 @inproceedings{salus:mlsys20,
     author    = {Peifeng Yu and Mosharaf Chowdhury},
     booktitle = {Proceedings of Machine Learning and Systems 2},
@@ -162,3 +188,44 @@
         in datacenter-scale GPU deployments.
     }
 }
+
+@phdthesis{peifeng:dissertation,
+    title                    = {Application-Aware Scheduling in Deep Learning Software Stacks},
+    author                   = {Peifeng Yu},
+    institution              = {University of Michigan},
+    year                     = {2022},
+    month                    = {August},
+
+    publist_confkey          = {deepblue:xxxx.xx/xxxxxx},
+    publist_link             = {paper || peifeng-dissertation.pdf},
+    publist_link             = {slides || peifeng-dissertation.pptx},
+    publist_abstract         = {
+        Deep Learning (DL) has pervaded many areas of computing due to the confluence of the explosive growth of large-scale computing capabilities, availability of datasets, and advances in learning techniques.
+        However, the infrastructure that supports DL is still in its early stage, bearing mismatches among the hardware, the software stack, and DL applications.
+        On the one hand, despite the emergence of new unique hardware and new use cases, the software stack that abstracts and schedules these hardware resources remains largely unchanged.
+        On the other hand, user-defined performance metrics common in DL applications urge better schedulers tailored to the application's specific needs.
+        Motivated by the mismatch, this dissertation revisits the system design across the stack, with a focus on the synergy between schedulers and application/system-specific information.
+
+        At the bottom level, the ever-growing adoption of specialized hardware like GPUs poses challenges to efficient usage.
+        Due to the lack of operating system arbitration, applications usually assume exclusive access, making the otherwise underutilized resources unusable for other jobs on the same host.
+        We therefore design Salus to realize proper efficient GPU sharing.
+        It leverages DL applications' specific usage patterns to schedule iterations and manage memory allocations, providing two missing primitives: fast job switching and memory sharing.
+
+        However, even with an efficient execution platform, it is still not trivial to harvest the hardware's full potential for higher-level applications. We investigate two such cases sitting on opposite sides of a model's lifecycle: hyperparameter tuning and inference serving.
+
+        Hyperparameter tuning -- which constitutes a great portion of DL cluster usage given the proliferation of distributed resources in clusters -- generates many small interdependent training trials.
+        Existing tuning algorithms are oblivious of advanced execution strategies like intra-GPU sharing and inter-GPU execution, often causing poor resource utilization.
+        Hence, we propose Fluid as a generalized hyperparameter tuning execution engine, that coordinates between tuning jobs and cluster resources.
+        Fluid schedules training trials in such jobs using a water-filling approach to make the best use of resources at both intra- and inter-GPU granularity to speed up hyperparameter tuning.
+
+        Moving on, inference serving also requires careful scheduling to achieve tight latency guarantees and maintain high utilization.
+        Existing serving solutions assume inference execution times to be data-independent and thus highly predictable.
+        However, with the rise of dynamic neural networks, data-dependent inferences see higher variance in execution times and become less predictable by a single, point estimation of the true running times.
+        With Orloj, we show that treating and modeling inference execution times as probability distributions bring large gains for scheduling inference requests in the presence of SLO constraints.
+
+        In this dissertation, we consider combining application/system-specific information with scheduling design as a means of efficiently supporting new hardware and new DL application use cases.
+        Nevertheless, the pursuit of higher efficiency never ends.
+        This dissertation tries to lay down the necessary mechanisms with the hope that our crude work may be a basis for further research to better scheduling algorithms and more efficient systems in the DL infrastructure.
+    }
+}
+

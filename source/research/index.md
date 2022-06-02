@@ -7,21 +7,34 @@ toc:
 ---
 
 Most of my research happens in _improving computer system infrastructure for deep learning applications_.
-This ranges from GPU sharing primitives to facilitate better scheduling and improve
-resource utilization, to better hyperparameter tuning execution engine providing better utilization
-in the cluster. Currently, I'm working on new inference serving frameworks with better support for
-dynamic neural networks.
+This ranges from GPU sharing primitives to facilitate better scheduling and improve resource utilization, to better hyperparameter tuning execution engine providing better utilization in the cluster.
+I recently joined Google working on GPU and accelerators in the cluster.
 
-For a complete list of my past experience, please refer to my [CV](/assets/dl/cv.pdf) (last updated: Sep. 2021).
+For a complete list of my experience, please refer to my [CV](/assets/dl/cv.pdf) (last updated: Sep. 2021).
 
 {% publist peifeng %}
 version: 2
 pub_dir: assets/pub
+show_unpublished: false
 highlight_authors: [ 'Peifeng Yu' ]
 extra_filters:
 - name: Category
   path: conf.cat
 venues:
+  arXiv:
+    category: Technical Reports
+    occurrences:
+    - key: arXiv-all
+      matches: ^arXiv:(.+)$
+      name: arXiv
+      url: https://arxiv.org/abs/$1
+  Dissertation:
+    category: Technical Reports
+    occurrences:
+    - key: deepblue
+      matches: ^deepblue:(.+)$
+      name: PhD Dissertation
+      url: https://hdl.handle.net/$1
   MLSys:
     category: Conferences
     occurrences:
