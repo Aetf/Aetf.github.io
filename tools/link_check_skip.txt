@@ -8,3 +8,6 @@ http://ettext.taint.org/doc/
 
 # CSDN connection is always bad, we know the link is there, so don't bother checking it
 csdn\.net
+
+# github.com too many request
+https://github.com/Aetf
