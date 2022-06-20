@@ -15,7 +15,7 @@ For a complete list of my experience, please refer to my [CV](/assets/dl/cv.pdf)
 {% publist peifeng %}
 version: 2
 pub_dir: assets/pub
-show_unpublished: false
+show_unpublished: true
 highlight_authors: [ 'Peifeng Yu' ]
 extra_filters:
 - name: Category
