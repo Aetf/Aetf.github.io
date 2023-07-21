@@ -7,7 +7,7 @@ title: Unlimited Code Works
 subtitle: A pessimist because of intelligence, but an optimist because of will.
 description:
 author: Peifeng Yu
-timezone: America/Detroit
+timezone: America/Los_Angeles
 language:
     - en
     - zh-CN
@@ -203,6 +203,7 @@ alias:
     blog/2016/06/27/gsoc-mid-term-evaluation/index.html: blog/2016/06/29/gsoc-midterm-evaluation/index.html
     blog/2016/06/28/gsoc-mid-term-evaluation/index.html: blog/2016/06/29/gsoc-midterm-evaluation/index.html
     blog/2016/06/10/build-kdevelop-against-custom-kdevplatform/index.html: blog/2016/08/03/build-kdevelop-against-custom-kdevplatform/index.html
+    blog/2016/04/23/gsoc-kdevelop-lldb-support/index.html: blog/2016/04/22/gsoc-kdevelop-lldb-support/index.html
     blog/2013/02/05/usaco-241-the-tamworth-two/index.html: blog/2013/02/05/usaco-2-4-1/index.html
     blog/2013/02/16/usaco-314-shaping-regions/index.html: blog/2013/02/16/usaco-3-1-4/index.html
     blog/2013/02/05/usaco-231-longest-prefix/index.html: blog/2013/02/05/usaco-2-3-1/index.html

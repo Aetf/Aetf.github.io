@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Timezone
-      run: sudo timedatectl set-timezone America/Detroit
+      run: sudo timedatectl set-timezone America/Los_Angeles
 
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
       with:
-        node-version: 16
+        node-version: 18
     # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.)
     - name: Cache node modules
       uses: actions/cache@v2
@@ -56,7 +56,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Timezone
-      run: sudo timedatectl set-timezone America/Detroit
+      run: sudo timedatectl set-timezone America/Los_Angeles
 
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
