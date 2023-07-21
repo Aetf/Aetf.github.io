@@ -157,8 +157,6 @@ prismjs:
 code_dir: assets/code
 prism_plus:
     enable: true
-    # Custom Prism path
-    vendor_base_url: /assets/theme/
     plugins:
         - normalize-whitespace
         - line-numbers
