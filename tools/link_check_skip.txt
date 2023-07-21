@@ -11,3 +11,7 @@ csdn\.net
 
 # github.com too many request
 https://github.com/Aetf
+
+# Temporary rule as the canonical link for the article changes
+https://unlimited-code.works/blog/2016/04/22/gsoc-kdevelop-lldb-support/
+
