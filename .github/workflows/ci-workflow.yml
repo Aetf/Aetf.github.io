@@ -18,9 +18,9 @@ jobs:
       run: sudo timedatectl set-timezone America/Los_Angeles
 
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v3
       with:
-        node-version: 20
+        node-version: latest
     # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.)
     - name: Cache node modules
       uses: actions/cache@v2
@@ -59,9 +59,9 @@ jobs:
       run: sudo timedatectl set-timezone America/Los_Angeles
 
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v3
       with:
-        node-version: 20
+        node-version: latest
     # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.)
     - name: Cache node modules
       uses: actions/cache@v2
