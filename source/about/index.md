@@ -6,11 +6,10 @@ toc:
   enable: false
 ---
 
-Some words about myself now. My name is Peifeng Yu (Aetf is my nickname) and I'm
-a PhD student at the University of Michigan,
-working with Professor [Mosharaf Chowdhury](https://www.mosharaf.com).
-While doing research in system and networking, I mostly dabble in GPU and 
-infrastructure for deep learning systems.
+Some words about myself now. My name is Peifeng Yu (Aetf is my nickname).
+I earned by PhD degree at the University of Michigan, working with Professor [Mosharaf Chowdhury](https://www.mosharaf.com).
+While doing research in system and networking, I mostly dabble in GPU and infrastructure for deep learning systems.
+After graduation, I continue to work on infrastructure supports for accelerators at Google.
 
 ![A picture of me!](/assets/img/me.jpg)
 
