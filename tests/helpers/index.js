@@ -1,10 +1,6 @@
 const fs = require('fs/promises');
 const pathFn = require('path');
 const { JSDOM } = require('jsdom');
-const SegfaultHandler = require('segfault-handler');
-
-SegfaultHandler.registerHandler();
-
 
 const PUBLIC_DIR = pathFn.resolve(__dirname, "..", "..", "public");
 

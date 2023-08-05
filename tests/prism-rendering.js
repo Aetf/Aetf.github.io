@@ -4,7 +4,6 @@ const SegfaultHandler = require('segfault-handler');
 
 SegfaultHandler.registerHandler();
 
-
 test('prism bundle contains language', async t => {
     const js = await getRouteFile('assets/prism-bundle.js');
     t.regex(js, /prism-bash/);

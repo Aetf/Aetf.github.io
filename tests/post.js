@@ -4,7 +4,6 @@ const SegfaultHandler = require('segfault-handler');
 
 SegfaultHandler.registerHandler();
 
-
 test('has tags in header', async t => {
     const dom = await getRoute('blog/2016/08/20/gsoc-kdevelop-lldb-final-report/index.html');
     const elems = dom.window.document.body.querySelectorAll('.post-header-tags');
