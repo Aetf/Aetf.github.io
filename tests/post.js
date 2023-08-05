@@ -1,8 +1,5 @@
 const test = require('ava');
 const { getRoute, listRoutes } = require('./helpers');
-const SegfaultHandler = require('segfault-handler');
-
-SegfaultHandler.registerHandler();
 
 test('has tags in header', async t => {
     const dom = await getRoute('blog/2016/08/20/gsoc-kdevelop-lldb-final-report/index.html');

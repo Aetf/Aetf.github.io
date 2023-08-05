@@ -1,8 +1,5 @@
 const test = require('ava');
 const { getRoute } = require('./helpers');
-const SegfaultHandler = require('segfault-handler');
-
-SegfaultHandler.registerHandler();
 
 test('home page contains OCS site verification', async t => {
     const dom = await getRoute('index.html');

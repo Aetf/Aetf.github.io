@@ -1,9 +1,6 @@
 const test = require('ava');
 const fs = require('fs/promises');
 const { getHexo } = require('./helpers');
-const SegfaultHandler = require('segfault-handler');
-
-SegfaultHandler.registerHandler();
 
 const saveHtml = false;
 
