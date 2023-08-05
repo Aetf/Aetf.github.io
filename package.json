@@ -37,7 +37,7 @@
     "hexo-theme-next": "^8.8.1",
     "katex": "^0.13.13",
     "lodash": "^4.17.21",
-    "markdown-it-texmath": "^0.9.1",
+    "markdown-it-texmath": "^1.0.0",
     "prism-themes": "^1.8.0",
     "xkcd-api": "^1.2.0"
   },
