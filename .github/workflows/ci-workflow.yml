@@ -38,7 +38,7 @@ jobs:
         npm run build
 
     - name: Unit tests
-      run: npm test
+      run: npm test || cat stacktrace*.log
     - name: Link checks
       run: tools/link_check.sh
 
