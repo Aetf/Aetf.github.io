@@ -73,7 +73,7 @@ jobs:
           ${{ runner.os }}-node-${{ env.CACHE_VERSION }}-
     - run: npm ci
     - name: Download hexo database
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: hexo-db
 
