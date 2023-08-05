@@ -35,7 +35,7 @@
     "hexo-renderer-markdown-it": "^7.1.0",
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-theme-next": "^8.8.1",
-    "katex": "^0.13.13",
+    "katex": "^0.16.0",
     "lodash": "^4.17.21",
     "markdown-it-texmath": "^1.0.0",
     "prism-themes": "^1.8.0",
