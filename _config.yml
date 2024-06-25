@@ -226,7 +226,7 @@ deploy:
     type: rsync
     host: archvps.hosts.unlimited-code.works
     user: aetf
-    root: /srv/http/blog
+    root: /mnt/storage/webroot/blog
     port: 59901
     delete: true
     verbose: true
