@@ -10,7 +10,7 @@ Most of my research happens in _improving computer system infrastructure for dee
 This ranges from GPU sharing primitives to facilitate better scheduling and improve resource utilization, to better hyperparameter tuning execution engine providing better utilization in the cluster.
 I recently joined Google working on GPU and accelerators in the cluster.
 
-For a complete list of my experience, please refer to my [CV](/assets/dl/cv.pdf) (last updated: Sep. 2021).
+For a complete list of my experience, please refer to my [CV](/assets/dl/cv.pdf) (last updated: Jun. 2024).
 
 {% publist peifeng %}
 version: 2
