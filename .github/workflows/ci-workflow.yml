@@ -4,6 +4,7 @@ name: Hexo Site CI
 # or pull request to the develop branch
 on:
   push:
+    branches: [ develop ]
   pull_request:
     branches: [ develop ]
 
