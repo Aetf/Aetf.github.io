@@ -18,7 +18,7 @@ jobs:
     - name: Timezone
       run: sudo timedatectl set-timezone America/Los_Angeles
 
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
         node-version: latest
@@ -59,7 +59,7 @@ jobs:
     - name: Timezone
       run: sudo timedatectl set-timezone America/Los_Angeles
 
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
         node-version: latest
