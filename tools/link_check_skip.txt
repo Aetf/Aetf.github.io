@@ -15,3 +15,5 @@ https://github.com/Aetf
 # Temporary rule as the canonical link for the article changes
 https://unlimited-code.works/blog/2016/04/22/gsoc-kdevelop-lldb-support/
 
+# Umich links not working but is correct
+https://www.eecs.umich.edu/cse/events/2018-ai-symposium/
