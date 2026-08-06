@@ -6,7 +6,9 @@ const crypto = require('crypto');
 const xkcd_get = util.promisify(require('xkcd-api').get);
 
 async function randomXkcd() {
-    const comics = this.site.data.xkcd || [];
+    // Hexo >= 7 invokes tags with the nunjucks render context as `this`, which has no
+    // `site`. Go through hexo's locals instead, which works on every version.
+    const comics = hexo.locals.get('data').xkcd || [];
     const infos = await Promise.all(comics.map(c => xkcd_get(c)));
     // build a JSON list with less info to include in the page
     const list = infos.map(el => ({
