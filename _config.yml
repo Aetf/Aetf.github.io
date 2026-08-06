@@ -147,7 +147,16 @@ responsive_images:
 
 # Code highlighting
 ## see also additional theme config: codeblock
-## disable builtin one
+## Disable the builtin one so hexo-prism-plus gets the code blocks. Hexo 7 replaced the
+## `highlight.enable`/`prismjs.enable` switches with `syntax_highlighter`; the old keys are
+## silently ignored, and leaving `syntax_highlighter` unset falls back to highlight.js, whose
+## `backtick_code_block` filter shares priority 10 with prism-plus but is registered first,
+## so it would consume every fence before prism-plus ever sees it. Empty means "none".
+syntax_highlighter:
+## Hexo 7 also dropped the `highlight`/`prismjs` default config blocks, but NexT still reads
+## `config.highlight.wrap` and `config.prismjs.preprocess` when computing its client-side
+## `hljswrap`/`prism` flags. Keep them so those stay `false` instead of silently becoming
+## `undefined` and dropping out of the emitted next-config JSON.
 highlight:
     enable: false
 prismjs:
