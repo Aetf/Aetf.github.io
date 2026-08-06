@@ -22,6 +22,12 @@ https://www.eecs.umich.edu/cse/events/2018-ai-symposium/
 hdl\.handle\.net
 deepblue\.lib\.umich\.edu
 
+# The two talk recordings linked from /research (Fluid, MLSys'21). YouTube rate-limits
+# datacenter IPs, so from GitHub Actions these intermittently come back 302 => HTTP 429.
+# Both return 200 from a normal connection. 429 is an HTTP status rather than a connection
+# failure, so `--connection-failures-as-warnings` in link_check.sh does not cover it.
+https://www\.youtube\.com/watch
+
 # Remove after next-theme/hexo-theme-next@0708dc7e18cc06a80204c0d173799dabcc45a084 is included in a release
 # Temp rule that skips bad muse.js link
 muse.js
