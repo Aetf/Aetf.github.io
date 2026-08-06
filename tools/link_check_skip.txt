@@ -15,6 +15,13 @@ https://github.com/Aetf
 # Umich links not working but is correct
 https://www.eecs.umich.edu/cse/events/2018-ai-symposium/
 
+# The dissertation handle on /research resolves fine in a browser, but Deep Blue sits
+# behind Cloudflare bot management: the first hit from a fresh IP gets a 200 and every
+# subsequent one gets a 403, so a full crawl (which hits it twice, times 5 retries)
+# always fails, and from GitHub Actions IP ranges it is 403 from the start.
+hdl\.handle\.net
+deepblue\.lib\.umich\.edu
+
 # Remove after next-theme/hexo-theme-next@0708dc7e18cc06a80204c0d173799dabcc45a084 is included in a release
 # Temp rule that skips bad muse.js link
 muse.js
