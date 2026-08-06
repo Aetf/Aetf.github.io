@@ -44,7 +44,7 @@ jobs:
       run: tools/link_check.sh
 
     - name: Upload hexo database
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: hexo-db
         path: |
@@ -74,7 +74,7 @@ jobs:
           ${{ runner.os }}-node-${{ env.CACHE_VERSION }}-
     - run: npm ci
     - name: Download hexo database
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v8
       with:
         name: hexo-db
 
