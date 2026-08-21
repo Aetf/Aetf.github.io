@@ -1,5 +1,6 @@
-const test = require('ava');
-const { getRoute } = require('./helpers');
+import test from 'ava';
+
+import { getRoute } from './helpers/index.js';
 
 test('home page contains OCS site verification', async t => {
     const dom = await getRoute('index.html');

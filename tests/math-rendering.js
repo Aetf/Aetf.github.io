@@ -1,6 +1,8 @@
-const test = require('ava');
-const fs = require('fs/promises');
-const { getHexo } = require('./helpers');
+import fs from 'fs/promises';
+
+import test from 'ava';
+
+import { getHexo } from './helpers/index.js';
 
 const saveHtml = false;
 

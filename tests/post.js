@@ -1,5 +1,6 @@
-const test = require('ava');
-const { getRoute, listRoutes } = require('./helpers');
+import test from 'ava';
+
+import { getRoute, listRoutes } from './helpers/index.js';
 
 test('has tags in header', async t => {
     const dom = await getRoute('blog/2016/08/20/gsoc-kdevelop-lldb-final-report/index.html');
