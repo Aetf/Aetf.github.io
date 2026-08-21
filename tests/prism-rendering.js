@@ -1,5 +1,6 @@
-const test = require('ava');
-const { getRouteFile } = require('./helpers');
+import test from 'ava';
+
+import { getRouteFile } from './helpers/index.js';
 
 test('prism bundle contains language', async t => {
     const js = await getRouteFile('assets/prism-bundle.js');

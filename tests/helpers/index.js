@@ -1,7 +1,10 @@
-const fs = require('fs/promises');
-const pathFn = require('path');
-const { JSDOM } = require('jsdom');
+import fs from 'fs/promises';
+import pathFn from 'path';
+import { fileURLToPath } from 'url';
 
+import { JSDOM } from 'jsdom';
+
+const __dirname = pathFn.dirname(fileURLToPath(import.meta.url));
 const PUBLIC_DIR = pathFn.resolve(__dirname, "..", "..", "public");
 
 async function recursiveRoutes(basedir, prefixUrl) {
@@ -18,27 +21,23 @@ async function recursiveRoutes(basedir, prefixUrl) {
     return fileRoutes.concat(subRoutes);
 }
 
-async function listRoutes() {
+export async function listRoutes() {
     return await recursiveRoutes(pathFn.join(PUBLIC_DIR, 'blog'), '/');
 }
 
-async function getRoute(path) {
+export async function getRoute(path) {
     return await JSDOM.fromFile(pathFn.join(PUBLIC_DIR, path));
 }
 
-async function getRouteFile(path) {
+export async function getRouteFile(path) {
     return await fs.readFile(pathFn.join(PUBLIC_DIR, path), { encoding: 'utf-8' });
 }
 
-async function getHexo(level) {
-    const Hexo = require('hexo');
+export async function getHexo(level) {
+    // import lazily so tests not using hexo don't pay for loading it
+    const { default: Hexo } = await import('hexo');
     const hexo = new Hexo();
     hexo.log.level = level || 40 // WARN;
     await hexo.init();
     return hexo;
 }
-
-module.exports.getRoute = getRoute;
-module.exports.getRouteFile = getRouteFile;
-module.exports.getHexo = getHexo;
-module.exports.listRoutes = listRoutes;
